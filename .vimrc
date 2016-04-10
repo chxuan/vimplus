@@ -320,12 +320,12 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'Yggdroot/indentLine'
 Bundle 'FuzzyFinder'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'https://github.com/wincent/command-t.git'
 Bundle 'vim-scripts/a.vim'
 Bundle 'vim-scripts/DoxygenToolkit.vim'
 Bundle 'vim-scripts/SQLComplete.vim'
 Bundle 'vim-scripts/txt.vim'
-Bundle 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
