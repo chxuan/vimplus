@@ -1,10 +1,14 @@
 #!/bin/bash
 
 echo "安装将花费一定时间，请耐心等待直到安装完成！"
-cd ~
 
-rm -rf .vimrc .ycm_extra_conf.py
-wget https://raw.github.com/chxuan/vimplus/master/.vimrc https://raw.github.com/chxuan/vimplus/master/.ycm_extra_conf.py
+rm -rf ~/.vimrc
+rm -rf ~/.ycm_extra_conf.py
+
+cp .vimrc ~
+cp .ycm_extra_conf.py ~
+
+cd ~
 
 echo "正在克隆Vundle.vim！"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
