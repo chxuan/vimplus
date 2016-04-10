@@ -23,7 +23,7 @@ set rtp+=$GOROOT/misc/vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 set cul "高亮光标所在行
-set cuc
+"set cuc
 set shortmess=atI   " 启动的时候不显示那个援助乌干达儿童的提示  
 set go=             " 不要图形按钮  
 "color desert     " 设置背景主题  
