@@ -326,6 +326,7 @@ Bundle 'vim-scripts/a.vim'
 Bundle 'vim-scripts/DoxygenToolkit.vim'
 Bundle 'vim-scripts/SQLComplete.vim'
 Bundle 'vim-scripts/txt.vim'
+Bundle 'vim-scripts/taglist.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -374,7 +375,15 @@ nnoremap <leader>j :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>k :YcmCompleter GoToDefinition<CR>
 "nnoremap <leader><F4> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "nnoremap <leader>p :YcmCompleter GoToImplementationElseDeclaration<CR>
-nmap <F4> :YcmDiags<CR>
+nmap <F5> :YcmDiags<CR>
 
 "a.vim: Alternate Files quickly配置
 nnoremap <silent> <F2> :A<CR>
+
+"taglist配置
+let TList_Show_One_File = 1
+let TList_Exit_OnlyWidnow = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_File_Fold_Auto_Close = 1
+map <F4> :Tlist<CR>
+imap <F4> <ESC> :Tlist<CR>
