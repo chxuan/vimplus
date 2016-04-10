@@ -375,3 +375,6 @@ nnoremap <leader>k :YcmCompleter GoToDefinition<CR>
 "nnoremap <leader><F4> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "nnoremap <leader>p :YcmCompleter GoToImplementationElseDeclaration<CR>
 nmap <F4> :YcmDiags<CR>
+
+"a.vim: Alternate Files quickly配置
+nnoremap <silent> <F2> :A<CR>
