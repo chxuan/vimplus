@@ -8,7 +8,9 @@ rm -rf ~/.ycm_extra_conf.py
 cp .vimrc ~
 cp .ycm_extra_conf.py ~
 
-cd ~
+mkdir ~/.vim
+rm -rf ~/.vim/plugin
+cp -R ./plugin ~/.vim
 
 echo "正在克隆Vundle.vim！"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -17,9 +19,7 @@ echo "正在安装bundle程序，安装完成后将自动退出，请耐心等�
 vim -c "PluginInstall" -c "q" -c "q"
 
 echo "bundle程序安装完成，接下来编译YCM，请耐心等待！"
-cd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer
+~/.vim/bundle/YouCompleteMe/install.py --clang-completer
 
-cd ~
 echo "vimplus已经完全安装完成！"
 
