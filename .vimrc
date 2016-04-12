@@ -386,6 +386,6 @@ map <F4> :Tlist<CR>
 imap <F4> <ESC> :Tlist<CR>
 
 "主题
-set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+"set background=dark
+"let g:solarized_termcolors=256
+"colorscheme solarized
