@@ -319,6 +319,7 @@ Bundle 'Yggdroot/indentLine'
 Bundle 'FuzzyFinder'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'https://github.com/wincent/command-t.git'
+Bundle 'octol/vim-cpp-enhanced-highlight'
 Bundle 'vim-scripts/a.vim'
 Bundle 'vim-scripts/DoxygenToolkit.vim'
 Bundle 'vim-scripts/SQLComplete.vim'
@@ -389,3 +390,8 @@ imap <F4> <ESC> :Tlist<CR>
 "set background=dark
 "let g:solarized_termcolors=256
 "colorscheme solarized
+
+"语法高亮
+let g:cpp_class_scope_highlight = 1
+let g:cpp_experimental_template_highlight = 1
+let c_no_curly_error = 1
