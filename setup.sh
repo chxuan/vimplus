@@ -21,7 +21,8 @@ echo "正在安装bundle程序，安装完成后将自动退出，请耐心等�
 vim -c "PluginInstall" -c "q" -c "q"
 
 echo "bundle程序安装完成，接下来编译YCM，请耐心等待！"
-~/.vim/bundle/YouCompleteMe/install.py --clang-completer
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
 
 echo "vimplus已经完全安装完成！"
 
