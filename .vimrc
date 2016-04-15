@@ -107,6 +107,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'FuzzyFinder'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'majutsushi/tagbar'
 Bundle 'https://github.com/wincent/command-t.git'
 Bundle 'octol/vim-cpp-enhanced-highlight'
 Bundle 'vim-airline/vim-airline'
@@ -114,7 +115,6 @@ Bundle 'vim-scripts/a.vim'
 Bundle 'vim-scripts/DoxygenToolkit.vim'
 Bundle 'vim-scripts/SQLComplete.vim'
 Bundle 'vim-scripts/txt.vim'
-Bundle 'vim-scripts/taglist.vim'
 
 call vundle#end()            
 filetype plugin indent on    
@@ -154,13 +154,11 @@ nmap <F5> :YcmDiags<CR>
 "a.vim: .h -> .cpp or .cpp -> .h
 nnoremap <silent> <F2> :A<CR>
 
-" taglist
-let TList_Show_One_File = 1
-let TList_Exit_OnlyWidnow = 1
-let Tlist_Use_Right_Window = 1
-let Tlist_File_Fold_Auto_Close = 1
-map <F4> :Tlist<CR>
-imap <F4> <ESC> :Tlist<CR>
+" tagbar
+let g:tagbar_ctags_bin = '/usr/bin/ctags'
+let g:tagbar_width = 30
+map <F4> :TagbarToggle<CR>
+imap <F4> <ESC> :TagbarToggle<CR>
 
 " colorscheme
 set background=dark
@@ -176,3 +174,9 @@ let c_no_curly_error = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+nnoremap <C-N> :bn<CR>
+nnoremap <C-P> :bp<CR>
