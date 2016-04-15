@@ -2,6 +2,12 @@
 
 echo "安装将花费一定时间，请耐心等待直到安装完成！"
 
+if which apt-get > /dev/null; then
+    sudo apt-get install -y vim ctags
+elif which yum > /dev/null; then
+    sudo yum install -y vim ctags
+fi
+
 rm -rf ~/.vimrc
 rm -rf ~/.ycm_extra_conf.py
 
