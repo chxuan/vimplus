@@ -21,14 +21,22 @@ vimplus是vim的超级配置安装程序。
 
 > - git clone https://github.com/chxuan/vimplus.git
 > - cd ./vimplus
-> - ./setup.sh
+> - sudo ./setup.sh
 
 运行setup.sh脚本程序将会自动安装并配置好vim，安装大约需要花费40分钟，主要是下载编译[Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe)比较耗时，请耐心等待直到安装完成^_^
 
+主要功能快捷键
+-------------
+> - 查看文件目录(F3)
+> - 显示函数、全局变量、宏定义(F4)
+> - 显示静态代码分析结果(F5)
+> - .h .cpp文件快速切换(F2)
+> - 打开include文件(j + i)
+> - 转到声明(j + j)
+> - 转到定义(j + k)
+> - 同一窗口buffer切换(Ctrl + P/Ctrl + N)
+> - 光标位置切换(Ctrl + O/Ctrl + I)
 
-
-
-
-
-
-
+安装完成后
+-------------
+运行setup.sh脚本程序一键安装完成后，HOME目录将会存在[.ycm_extra_conf.py](https://raw.githubusercontent.com/chxuan/vimplus/master/.ycm_extra_conf.py)，该文件就是YCM实现C++等语言语法补全功能的配置文件，一般我会在HOME目录放一个，然后每一个项目拷贝一个[.ycm_extra_conf.py](https://raw.githubusercontent.com/chxuan/vimplus/master/.ycm_extra_conf.py)，更改[.ycm_extra_conf.py](https://raw.githubusercontent.com/chxuan/vimplus/master/.ycm_extra_conf.py)文件里面的flags 变量的值即可实现相关include文件的语法补全功能。
