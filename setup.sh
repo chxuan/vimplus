@@ -20,6 +20,15 @@ rm -rf ~/.vim/colors
 cp -R ./plugin ~/.vim
 cp -R ./colors ~/.vim
 
+mkdir ~/.fonts
+rm -rf ~/.fonts/PowerlineSymbols.otf
+cp ./fonts/PowerlineSymbols.otf ~/.fonts
+fc-cache -vf ~/.fonts
+
+mkdir -p ~/.config/fontconfig/conf.d
+rm -rf ~/.config/fontconfig/conf.d/10-powerline-symbols.conf
+cp ./fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d
+
 echo "正在克隆Vundle.vim！"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
