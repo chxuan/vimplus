@@ -2,7 +2,7 @@ vimplus
 ===================
 
 
-vimplus是vim的超级配置安装程序。
+vimplus是vim的超级配置安装程序 [https://github.com/chxuan/vimplus.git](https://github.com/chxuan/vimplus.git)。
 
 ----------
 
@@ -16,7 +16,7 @@ vimplus是vim的超级配置安装程序。
 ![enter image description here](https://camo.githubusercontent.com/1f3f922431d5363224b20e99467ff28b04e810e2/687474703a2f2f692e696d6775722e636f6d2f304f50346f6f642e676966)
 
 
-安装配置
+安装配置(Ubuntu、Centos)
 -------------
 
 > - git clone https://github.com/chxuan/vimplus.git
@@ -40,3 +40,4 @@ vimplus是vim的超级配置安装程序。
 安装完成后
 -------------
 运行setup.sh脚本程序一键安装完成后，HOME目录将会存在[.ycm_extra_conf.py](https://raw.githubusercontent.com/chxuan/vimplus/master/.ycm_extra_conf.py)，该文件就是YCM实现C++等语言语法补全功能的配置文件，一般我会在HOME目录放一个，然后每一个项目拷贝一个[.ycm_extra_conf.py](https://raw.githubusercontent.com/chxuan/vimplus/master/.ycm_extra_conf.py)，更改[.ycm_extra_conf.py](https://raw.githubusercontent.com/chxuan/vimplus/master/.ycm_extra_conf.py)文件里面的flags 变量的值即可实现相关include文件的语法补全功能。
+
