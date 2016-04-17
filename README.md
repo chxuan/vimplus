@@ -31,9 +31,9 @@ vimplus是vim的超级配置安装程序 [https://github.com/chxuan/vimplus.git]
 > - 显示函数、全局变量、宏定义(F4)
 > - 显示静态代码分析结果(F5)
 > - .h .cpp文件快速切换(F2)
-> - 打开include文件(j + i)
-> - 转到声明(j + j)
-> - 转到定义(j + k)
+> - 打开include文件(u + o)
+> - 转到声明(u + u)
+> - 转到定义(u + i)
 > - 同一窗口buffer切换(Ctrl + P/Ctrl + N)
 > - 光标位置切换(Ctrl + O/Ctrl + I)
 
