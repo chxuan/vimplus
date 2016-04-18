@@ -175,12 +175,8 @@ let c_no_curly_error = 1
 " airline
 let g:airline_theme="luna"
 let g:airline_powerline_fonts = 1
-let g:airline_section_b = '%{strftime("%c")}'
-let g:airline_section_y = 'BN: %{bufnr("%")}'
-"set guifont=PowerlineSymbols\ for\ Powerline
-"set guifont=Ubuntu\ Mono\ derivative\ Powerline
-"let g:Powerline_symbols='unicode'
-"let Powerline_symbols='compatible'
+"let g:airline_section_b = '%{strftime("%c")}'
+"let g:airline_section_y = 'BN: %{bufnr("%")}'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
