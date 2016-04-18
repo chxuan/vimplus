@@ -106,10 +106,9 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'FuzzyFinder'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'kien/ctrlp.vim'
 Bundle 'majutsushi/tagbar'
-Bundle 'https://github.com/wincent/command-t.git'
 Bundle 'octol/vim-cpp-enhanced-highlight'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
@@ -189,3 +188,9 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
+
+"ctrlp
+let g:ctrlp_map = '<c-f>'
+let g:ctrlp_cmd = ':CtrlP'
+let g:ctrlp_working_path_mode = '0'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
