@@ -45,4 +45,5 @@ vimplus是vim的超级配置安装程序 [https://github.com/chxuan/vimplus.git]
 五、注意事项
 -------------
 > - 如果网络条件不好可能安装失败，基本上是Valloric/YouCompleteMe安装失败，安装失败后需要将~/.vim/bundle文件夹下的YouCompleteMe目录删除，然后重新执行setup.sh即可，重新安装时，程序将自动安装安装失败的插件。
+> - 如果网络条件实在不好，导致ycm一直下载下来（下载完成大约200MB左右），我这里有已经下载好了的压缩包[YouCompleteMe.tar.gz](http://share.weiyun.com/fde608d0c4fb6682daf05756e12a3132)，解压到~/.vim/bundle/，然后进入YouCompleteMe目录，执行python ./install.py --clang-completer即可。
 > - 在ubuntu16.04LTS下安装可能会失败(Valloric/YouCompleteMe安装失败)，因为vim默认支持python3进行插件编译，安装失败后，手动进入~/.vim/bundle/YouCompleteMe，然后运行python3 ./install.py --clang-completer即可。
