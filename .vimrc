@@ -165,6 +165,7 @@ imap <F4> <ESC> :TagbarToggle<CR>
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+"colorscheme monokai
 
 " cpp_class_scope_highlight
 let g:cpp_class_scope_highlight = 1
