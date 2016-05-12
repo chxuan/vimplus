@@ -9,7 +9,7 @@ vimplus是vim的超级配置安装程序 [https://github.com/chxuan/vimplus.git]
 
 一、运行截图
 -------------
-该图是我配置过后vim的真实截图
+该图是我配置过后vim的真实截图，多个主题任意切换
 ![enter image description here](https://raw.githubusercontent.com/chxuan/vimplus/master/screenshot/screenshot2.gif)
 
 下面这幅图是借用[Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe)来展示强大的C++补全功能
