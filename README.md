@@ -1,49 +1,146 @@
-vimplus
-===================
+vimplus: An automatic configuration program for vim
+===============================================
 
 
-vimplus是vim的超级配置安装程序 [https://github.com/chxuan/vimplus.git](https://github.com/chxuan/vimplus.git)。
+Intro
+-----
 
-----------
+I usually use vim to write a C++ program, so in order to allow me to write C ++ more enjoyable, I made some vim automatically configured, the following I will be a presentation of my vimplus.
+
+Screenshots
+------------
+This figure is below a real shot after I configured vim.
+![enter image description here](https://raw.githubusercontent.com/chxuan/vimplus/master/screenshot/screenshot.png)
+
+Installation
+------------
+
+### Ubuntu Installation
+
+    git clone https://github.com/chxuan/vimplus.git
+    cd ./vimplus
+    sudo ./install.sh
+
+Run the `install.sh` script will automatically install and configure vim, installation takes about 40 minutes, mainly download compiler [Valloric/YouCompleteMe][1] time-consuming, please wait until the installation is complete ^ _ ^.
+
+The installation script will automatically install some software below:
+ - vim
+ - g++ 
+ - ctags 
+ - cmake
+ - python2
+ - python3
+
+and some plugins below:
+
+ - [Vundle][2]
+ - [YouCompleteMe][3]
+ - [NerdTree][4]
+ - [nerdcommenter][5]
+ - [Airline][6]
+ - [taglist][7]
+ - [auto-pairs][8]
+ - [DoxygenToolkit][9]
+ - [ctrlp][10]
+ - [tagbar][11]
+ - etc...
+
+### Centos Installation
+
+    git clone https://github.com/chxuan/vimplus.git
+    cd ./vimplus
+    sudo ./install.sh
+
+Run the `install.sh` script will automatically install and configure vim, installation takes about 40 minutes, mainly download compiler [Valloric/YouCompleteMe][12] time-consuming, please wait until the installation is complete ^ _ ^.
+
+The installation script will automatically install some software below:
+ - vim
+ - g++ 
+ - ctags 
+ - cmake
+ - python2
+ - python3
+
+and some plugins below:
+
+ - [Vundle][13]
+ - [YouCompleteMe][14]
+ - [NerdTree][15]
+ - [nerdcommenter][16]
+ - [Airline][17]
+ - [taglist][18]
+ - [auto-pairs][19]
+ - [DoxygenToolkit][20]
+ - [ctrlp][21]
+ - [tagbar][22]
+ - etc...
+
+Configuration ycm
+------------
+
+Run the `install.sh` script after the installation is complete, `HOME` directory will exist [.ycm_extra_conf.py][23] and `.vimrc`, the file is YCM implement C++ and other languages syntax completion function profile, I would put a general in the `HOME` directory, then copy `each project` a [.ycm_extra_conf.py][24],**don't** just copy/paste that file somewhere and expect things to magically work; **your project needs different flags**. Hint: just replace the strings in the `flags` variable with compilation flags necessary for your project. That should be enough for 99% of projects.
+
+Features
+------------
+
+### Syntax completion
+
+[YouCompleteMe][25] plugin provides syntax completion function, and YouCompleteMe is a fast, as-you-type, fuzzy-search code completion engine for Vim.
+![此处输入图片的描述][26]
+
+### Beautiful theme
+vimplus has some beautiful themes.
+![此处输入图片的描述][27]
+
+ShortcutKey
+------------
+
+ - Directory tree `<F3>`
+ - Display functions, global variables, macro definitions `<F4>`
+ - Display static code analysis `<F5>`
+ - .h .cpp file quickly switch `<F2>`
+ - Go to declaration `<f + u>`
+ - Go to definition `<f + i>`
+ - Open the include file `<f + o>`
+ - Buffer switch `<Ctrl + P/Ctrl + N>`
+ - Cursor position switch `<Ctrl + O/Ctrl + I>`
+ - Fuzzy Find File `<Ctrl + f>`
+
+### **Warning**
+
+ 1. If poor network conditions may fail to install, basically [Valloric/YouCompleteMe][28] installation fails, after a failed installation will need to `rm -rf ~/.vim/bundle/YouCompleteMe`, and then re-execute the `install.sh` can be re-installed, the program will automatically install the plug-in installation fails,**or I have** [YouCompleteMe.tar.gz][29],download it and then `tar -xvf YouCompleteMe.tar.gz -C ~/.vim/bundle/`,then `cd ~/.vim/bundle/YouCompleteMe` and run `python ./install.py --clang-completer`.
+ 2. In `ubuntu16.04LTS` installation may fail([Valloric/YouCompleteMe][30] installation fails), **because vim default support for plug python3 compiled**, after a failed installation, manually `cd ~/.vim/bundle/YouCompleteMe`, then run `python3 ./install.py - -clang-completer`.
 
 
-一、运行截图
--------------
-该图是我配置过后vim的真实截图，多个主题任意切换
-![enter image description here](https://raw.githubusercontent.com/chxuan/vimplus/master/screenshot/screenshot2.gif)
-
-下面这幅图是借用[Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe)来展示强大的C++补全功能
-![enter image description here](https://camo.githubusercontent.com/1f3f922431d5363224b20e99467ff28b04e810e2/687474703a2f2f692e696d6775722e636f6d2f304f50346f6f642e676966)
 
 
-二、安装配置(Ubuntu、Centos)
--------------
-
-> - git clone https://github.com/chxuan/vimplus.git
-> - cd ./vimplus
-> - sudo ./setup.sh
-
-运行setup.sh脚本程序将会自动安装并配置好vim，安装大约需要花费40分钟，主要是下载编译[Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe)比较耗时，请耐心等待直到安装完成^_^
-
-三、主要功能快捷键
--------------
-> - 查看文件目录(F3)
-> - 显示函数、全局变量、宏定义(F4)
-> - 显示静态代码分析结果(F5)
-> - .h .cpp文件快速切换(F2)
-> - 转到声明(f + u)
-> - 转到定义(f + i)
-> - 打开include文件(f + o)
-> - 同一窗口buffer切换(Ctrl + P/Ctrl + N)
-> - 光标位置切换(Ctrl + O/Ctrl + I)
-> - 模糊查找当前目录及其子目录下的文件(Ctrl + f)
-
-四、安装完成后
--------------
-运行setup.sh脚本程序一键安装完成后，HOME目录将会存在[.ycm_extra_conf.py](https://raw.githubusercontent.com/chxuan/vimplus/master/.ycm_extra_conf.py)，该文件就是YCM实现C++等语言语法补全功能的配置文件，一般我会在HOME目录放一个，然后每一个项目拷贝一个[.ycm_extra_conf.py](https://raw.githubusercontent.com/chxuan/vimplus/master/.ycm_extra_conf.py)，更改[.ycm_extra_conf.py](https://raw.githubusercontent.com/chxuan/vimplus/master/.ycm_extra_conf.py)文件里面的flags 变量的值即可实现相关include文件的语法补全功能。
-
-五、注意事项
--------------
-> - 如果网络条件不好可能安装失败，基本上是Valloric/YouCompleteMe安装失败，安装失败后需要将~/.vim/bundle文件夹下的YouCompleteMe目录删除，然后重新执行setup.sh即可，重新安装时，程序将自动安装安装失败的插件。
-> - 如果网络条件实在不好，导致ycm一直下载下来（下载完成大约200MB左右），我这里有已经下载好了的压缩包[YouCompleteMe.tar.gz](http://share.weiyun.com/fde608d0c4fb6682daf05756e12a3132)，解压到~/.vim/bundle/，然后进入YouCompleteMe目录，执行python ./install.py --clang-completer即可。
-> - 在ubuntu16.04LTS下安装可能会失败(Valloric/YouCompleteMe安装失败)，因为vim默认支持python3进行插件编译，安装失败后，手动进入~/.vim/bundle/YouCompleteMe，然后运行python3 ./install.py --clang-completer即可。
+  [1]: https://github.com/Valloric/YouCompleteMe
+  [2]: https://github.com/VundleVim/Vundle.vim
+  [3]: https://github.com/Valloric/YouCompleteMe
+  [4]: https://github.com/scrooloose/nerdtree
+  [5]: https://github.com/scrooloose/nerdcommenter
+  [6]: https://github.com/vim-airline/vim-airline
+  [7]: https://github.com/vim-scripts/taglist.vim
+  [8]: https://github.com/jiangmiao/auto-pairs
+  [9]: https://github.com/vim-scripts/DoxygenToolkit.vim
+  [10]: https://github.com/kien/ctrlp.vim
+  [11]: https://github.com/majutsushi/tagbar
+  [12]: https://github.com/Valloric/YouCompleteMe
+  [13]: https://github.com/VundleVim/Vundle.vim
+  [14]: https://github.com/Valloric/YouCompleteMe
+  [15]: https://github.com/scrooloose/nerdtree
+  [16]: https://github.com/scrooloose/nerdcommenter
+  [17]: https://github.com/vim-airline/vim-airline
+  [18]: https://github.com/vim-scripts/taglist.vim
+  [19]: https://github.com/jiangmiao/auto-pairs
+  [20]: https://github.com/vim-scripts/DoxygenToolkit.vim
+  [21]: https://github.com/kien/ctrlp.vim
+  [22]: https://github.com/majutsushi/tagbar
+  [23]: https://github.com/chxuan/vimplus/blob/master/.ycm_extra_conf.py
+  [24]: https://github.com/chxuan/vimplus/blob/master/.ycm_extra_conf.py
+  [25]: https://github.com/VundleVim/Vundle.vim
+  [26]: https://camo.githubusercontent.com/1f3f922431d5363224b20e99467ff28b04e810e2/687474703a2f2f692e696d6775722e636f6d2f304f50346f6f642e676966
+  [27]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshot/screenshot2.gif
+  [28]: https://github.com/Valloric/YouCompleteMe
+  [29]: https://share.weiyun.com/fde608d0c4fb6682daf05756e12a3132
+  [30]: https://github.com/Valloric/YouCompleteMe
