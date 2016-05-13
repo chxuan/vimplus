@@ -107,6 +107,7 @@ Shortcuts
  - Fuzzy Find File `<Ctrl + f>`
 
 ### <span id="Warning">**Warning**</span>
+------------
 
  1. If poor network conditions may fail to install, basically [Valloric/YouCompleteMe][28] installation fails, after a failed installation will need to `rm -rf ~/.vim/bundle/YouCompleteMe`, and then re-execute the `install.sh` can be re-installed, the program will automatically install the plug-in installation fails,**or I have** [YouCompleteMe.tar.gz][29],download it and then `tar -xvf YouCompleteMe.tar.gz -C ~/.vim/bundle/`,then `cd ~/.vim/bundle/YouCompleteMe` and run `python ./install.py --clang-completer`.
  2. In `ubuntu16.04LTS` installation may fail([Valloric/YouCompleteMe][30] installation fails), **because vim default support for plug python3 compiled**, after a failed installation, manually `cd ~/.vim/bundle/YouCompleteMe`, then run `python3 ./install.py --clang-completer`.
