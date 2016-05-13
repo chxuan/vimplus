@@ -92,7 +92,7 @@ Features
 vimplus has some beautiful themes.
 ![此处输入图片的描述][27]
 
-ShortcutKey
+Shortcuts
 ------------
 
  - Directory tree `<F3>`
