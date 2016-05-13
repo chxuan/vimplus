@@ -5,7 +5,7 @@ vimplus: An automatic configuration program for vim
 Intro
 -----
 
-I usually use vim to write a C++ program, so in order to allow me to write C ++ more enjoyable, I made some vim automatically configured, the following I will be a presentation of my vimplus.
+I usually use vim to write a C++ program, so in order to allow me to write C++ more enjoyable, I made some vim automatically configured, the following I will be a presentation of my vimplus.
 
 Screenshots
 ------------
