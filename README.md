@@ -143,5 +143,5 @@ Shortcuts
   [26]: https://camo.githubusercontent.com/1f3f922431d5363224b20e99467ff28b04e810e2/687474703a2f2f692e696d6775722e636f6d2f304f50346f6f642e676966
   [27]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshot/screenshot2.gif
   [28]: https://github.com/Valloric/YouCompleteMe
-  [29]: https://share.weiyun.com/fde608d0c4fb6682daf05756e12a3132
+  [29]: http://pan.baidu.com/s/1kUIa1kN
   [30]: https://github.com/Valloric/YouCompleteMe
