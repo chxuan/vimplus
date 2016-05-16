@@ -120,6 +120,12 @@ Bundle 'vim-scripts/txt.vim'
 call vundle#end()            
 filetype plugin indent on    
 
+"change-colorscheme
+map <F12> :NextColorScheme<CR>
+imap <F12> <ESC> :NextColorScheme<CR>
+map <F11> :PreviousColorScheme<CR>
+imap <F11> <ESC> :PreviousColorScheme<CR>
+
 " nerdtree
 map <F3> :NERDTreeToggle<CR>
 imap <F3> <ESC> :NERDTreeToggle<CR>
@@ -195,3 +201,4 @@ let g:ctrlp_map = '<c-f>'
 let g:ctrlp_cmd = ':CtrlP'
 let g:ctrlp_working_path_mode = '0'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
