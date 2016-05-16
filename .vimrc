@@ -1,6 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 显示相关  
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" genernal settings
 syntax enable
 syntax on
 set t_Co=256
@@ -58,10 +56,7 @@ filetype on
 filetype plugin on
 filetype indent on
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""新文件标题
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" create file settings
 autocmd BufNewFile *.cpp,*.cc,*.c,*.hpp,*.h,*.sh,*.py exec ":call SetTitle()" 
 func SetTitle() 
 	if expand("%:e") == 'sh'
@@ -121,7 +116,7 @@ Bundle 'vim-scripts/txt.vim'
 call vundle#end()            
 filetype plugin indent on    
 
-"change-colorscheme
+" change-colorscheme
 map <F12> :NextColorScheme<CR>
 imap <F12> <ESC> :NextColorScheme<CR>
 map <F11> :PreviousColorScheme<CR>
@@ -159,7 +154,7 @@ nnoremap <leader>u :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>i :YcmCompleter GoToDefinition<CR>
 nmap <F5> :YcmDiags<CR>
 
-"a.vim: .h -> .cpp or .cpp -> .h
+" a.vim: .h -> .cpp or .cpp -> .h
 nnoremap <silent> <F2> :A<CR>
 
 " tagbar
@@ -197,7 +192,7 @@ let g:airline_right_alt_sep = ''
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
 
-"ctrlp
+" ctrlp
 let g:ctrlp_map = '<c-f>'
 let g:ctrlp_cmd = ':CtrlP'
 let g:ctrlp_working_path_mode = '0'
