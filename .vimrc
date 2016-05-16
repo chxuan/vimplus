@@ -101,6 +101,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'L9'
+Plugin 'chxuan/change-colorscheme'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
