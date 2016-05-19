@@ -10,7 +10,9 @@ set showcmd
 set scrolloff=3     
 set laststatus=2
 set autoindent
+set smartindent
 set cindent
+set cinoptions=g0,:0,N-s,(0
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
