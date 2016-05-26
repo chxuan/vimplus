@@ -125,7 +125,7 @@ Shortcuts
   [7]: https://github.com/vim-scripts/taglist.vim
   [8]: https://github.com/jiangmiao/auto-pairs
   [9]: https://github.com/vim-scripts/DoxygenToolkit.vim
-  [10]: https://github.com/kien/ctrlp.vim
+  [10]: https://github.com/ctrlpvim/ctrlp.vim
   [11]: https://github.com/majutsushi/tagbar
   [12]: https://github.com/chxuan/change-colorscheme
   [13]: https://github.com/Valloric/YouCompleteMe
@@ -137,7 +137,7 @@ Shortcuts
   [19]: https://github.com/vim-scripts/taglist.vim
   [20]: https://github.com/jiangmiao/auto-pairs
   [21]: https://github.com/vim-scripts/DoxygenToolkit.vim
-  [22]: https://github.com/kien/ctrlp.vim
+  [22]: https://github.com/ctrlpvim/ctrlp.vim
   [23]: https://github.com/majutsushi/tagbar
   [24]: https://github.com/chxuan/change-colorscheme
   [25]: https://github.com/chxuan/vimplus/blob/master/.ycm_extra_conf.py
