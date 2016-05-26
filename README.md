@@ -107,7 +107,7 @@ Shortcuts
  - Buffer switch `<Ctrl + P/Ctrl + N>`
  - Cursor position switch `<Ctrl + O/Ctrl + I>`
  - Fuzzy Find File `<Ctrl + f>`
- - Change the colorscheme `<F11/F12>`
+ - Change the colorscheme `<F10/F9>`
 
 ### <span id="Warning">**Warning**</span>
 ------------

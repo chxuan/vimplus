@@ -22,7 +22,9 @@ cp -R ./colors ~/.vim
 
 mkdir ~/.fonts
 rm -rf ~/.fonts/PowerlineSymbols.otf
+rm -rf ~/.fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf
 cp ./fonts/PowerlineSymbols.otf ~/.fonts
+cp ./fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf ~/.fonts
 fc-cache -vf ~/.fonts
 
 mkdir -p ~/.config/fontconfig/conf.d

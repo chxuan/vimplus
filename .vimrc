@@ -114,15 +114,16 @@ Plugin 'vim-scripts/a.vim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'vim-scripts/SQLComplete.vim'
 Plugin 'vim-scripts/txt.vim'
+Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()            
 filetype plugin indent on    
 
 " change-colorscheme
-map <F12> :NextColorScheme<CR>
-imap <F12> <ESC> :NextColorScheme<CR>
-map <F11> :PreviousColorScheme<CR>
-imap <F11> <ESC> :PreviousColorScheme<CR>
+map <F10> :NextColorScheme<CR>
+imap <F10> <ESC> :NextColorScheme<CR>
+map <F9> :PreviousColorScheme<CR>
+imap <F9> <ESC> :PreviousColorScheme<CR>
 
 " nerdtree
 map <F3> :NERDTreeToggle<CR>
