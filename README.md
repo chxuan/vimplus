@@ -38,7 +38,6 @@ and some plugins below:
  - [NerdTree][4]
  - [nerdcommenter][5]
  - [Airline][6]
- - [taglist][7]
  - [auto-pairs][8]
  - [DoxygenToolkit][9]
  - [ctrlp][10]
@@ -72,7 +71,6 @@ and some plugins below:
  - [NerdTree][19]
  - [nerdcommenter][20]
  - [Airline][21]
- - [taglist][22]
  - [auto-pairs][23]
  - [DoxygenToolkit][24]
  - [ctrlp][25]
@@ -133,7 +131,6 @@ Shortcuts
   [4]: https://github.com/scrooloose/nerdtree
   [5]: https://github.com/scrooloose/nerdcommenter
   [6]: https://github.com/vim-airline/vim-airline
-  [7]: https://github.com/vim-scripts/taglist.vim
   [8]: https://github.com/jiangmiao/auto-pairs
   [9]: https://github.com/vim-scripts/DoxygenToolkit.vim
   [10]: https://github.com/ctrlpvim/ctrlp.vim
