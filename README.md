@@ -84,17 +84,22 @@ Configuration ycm
 
 Run the `install.sh` script after the installation is complete, `HOME` directory will exist [.ycm_extra_conf.py][27] and `.vimrc`, the file is YCM implement C++ and other languages syntax completion function profile, I would put a general in the `HOME` directory, then copy `each project` a [.ycm_extra_conf.py][28],**don't** just copy/paste that file somewhere and expect things to magically work; **your project needs different flags**. Hint: just replace the strings in the `flags` variable with compilation flags necessary for your project. That should be enough for 99% of projects.
 
+Note
+------------
+
+ 1. In order to use [vim-devicons][29], you have to set font, if you don't have guifont set and are not running gvim you will need to set the terminal font(you have to set this font:`Droid Sans Mono for Powerline Nerd Font Complete`).
+
 Features
 ------------
 
 ### Syntax completion
 
-[YouCompleteMe][29] plugin provides syntax completion function, and YouCompleteMe is a fast, as-you-type, fuzzy-search code completion engine for Vim.
-![此处输入图片的描述][30]
+[YouCompleteMe][30] plugin provides syntax completion function, and YouCompleteMe is a fast, as-you-type, fuzzy-search code completion engine for Vim.
+![此处输入图片的描述][31]
 
 ### Change the colorscheme
-[change-colorscheme][31] plugin provides quick change theme function.
-![此处输入图片的描述][32]
+[change-colorscheme][32] plugin provides quick change theme function.
+![此处输入图片的描述][33]
 
 Shortcuts
 ------------
@@ -114,8 +119,8 @@ Shortcuts
 ### <span id="Warning">**Warning**</span>
 ------------
 
- 1. If poor network conditions may fail to install, basically [Valloric/YouCompleteMe][33] installation fails, after a failed installation will need to `rm -rf ~/.vim/bundle/YouCompleteMe`, and then re-execute the `install.sh` can be re-installed, the program will automatically install the plug-in installation fails,**or I have** [YouCompleteMe.tar.gz][34],download it and then `tar -xvf YouCompleteMe.tar.gz -C ~/.vim/bundle/`,then `cd ~/.vim/bundle/YouCompleteMe` and run `python ./install.py --clang-completer`.
- 2. In `ubuntu16.04LTS` installation may fail([Valloric/YouCompleteMe][35] installation fails), **because vim default support for plug python3 compiled**, after a failed installation, manually `cd ~/.vim/bundle/YouCompleteMe`, then run `python3 ./install.py --clang-completer`.
+ 1. If poor network conditions may fail to install, basically [Valloric/YouCompleteMe][34] installation fails, after a failed installation will need to `rm -rf ~/.vim/bundle/YouCompleteMe`, and then re-execute the `install.sh` can be re-installed, the program will automatically install the plug-in installation fails,**or I have** [YouCompleteMe.tar.gz][35],download it and then `tar -xvf YouCompleteMe.tar.gz -C ~/.vim/bundle/`,then `cd ~/.vim/bundle/YouCompleteMe` and run `python ./install.py --clang-completer`.
+ 2. In `ubuntu16.04LTS` installation may fail([Valloric/YouCompleteMe][36] installation fails), **because vim default support for plug python3 compiled**, after a failed installation, manually `cd ~/.vim/bundle/YouCompleteMe`, then run `python3 ./install.py --clang-completer`.
 
 
   [1]: https://github.com/Valloric/YouCompleteMe
@@ -146,10 +151,11 @@ Shortcuts
   [26]: https://github.com/chxuan/change-colorscheme
   [27]: https://github.com/chxuan/vimplus/blob/master/.ycm_extra_conf.py
   [28]: https://github.com/chxuan/vimplus/blob/master/.ycm_extra_conf.py
-  [29]: https://github.com/VundleVim/Vundle.vim
-  [30]: https://camo.githubusercontent.com/1f3f922431d5363224b20e99467ff28b04e810e2/687474703a2f2f692e696d6775722e636f6d2f304f50346f6f642e676966
-  [31]: https://github.com/chxuan/change-colorscheme
-  [32]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshot/screenshot2.gif
-  [33]: https://github.com/Valloric/YouCompleteMe
-  [34]: http://pan.baidu.com/s/1kUIa1kN
-  [35]: https://github.com/Valloric/YouCompleteMe
+  [29]: https://github.com/ryanoasis/vim-devicons
+  [30]: https://github.com/VundleVim/Vundle.vim
+  [31]: https://camo.githubusercontent.com/1f3f922431d5363224b20e99467ff28b04e810e2/687474703a2f2f692e696d6775722e636f6d2f304f50346f6f642e676966
+  [32]: https://github.com/chxuan/change-colorscheme
+  [33]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshot/screenshot2.gif
+  [34]: https://github.com/Valloric/YouCompleteMe
+  [35]: http://pan.baidu.com/s/1kUIa1kN
+  [36]: https://github.com/Valloric/YouCompleteMe
