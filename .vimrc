@@ -117,6 +117,8 @@ Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'vim-scripts/SQLComplete.vim'
 Plugin 'vim-scripts/txt.vim'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'ryanoasis/powerline-extra-symbols'
+Plugin 'gorodinskiy/vim-coloresque'
 
 call vundle#end()            
 filetype plugin indent on    
@@ -205,3 +207,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 " vim-devicons
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+
+" powerline-extra-symbols
+let g:airline_left_sep = "\uE0B4"
+let g:airline_right_sep = "\uE0B6"
+let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
