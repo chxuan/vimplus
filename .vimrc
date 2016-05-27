@@ -203,3 +203,5 @@ let g:ctrlp_cmd = ':CtrlP'
 let g:ctrlp_working_path_mode = '0'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
+" vim-devicons
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
