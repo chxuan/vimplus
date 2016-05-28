@@ -122,7 +122,6 @@ Features
 ![此处输入图片的描述][37]
 
 ### vim-airline
-![此处输入图片的描述][37]
 
 Lean & mean status/tabline for vim that's light as air.
 ![此处输入图片的描述][38]
@@ -130,6 +129,7 @@ Lean & mean status/tabline for vim that's light as air.
 ### vim-coloresque
 
 css/less/sass/html color preview for vim.
+![此处输入图片的描述][38]
 
 ### Change the colorscheme
 
