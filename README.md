@@ -122,6 +122,7 @@ Features
 ![此处输入图片的描述][37]
 
 ### vim-airline
+![此处输入图片的描述][37]
 
 Lean & mean status/tabline for vim that's light as air.
 ![此处输入图片的描述][38]
