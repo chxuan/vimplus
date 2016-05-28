@@ -131,13 +131,6 @@ Lean & mean status/tabline for vim that's light as air.
 css/less/sass/html color preview for vim.
 ![此处输入图片的描述][39]
 
-### vim-devicons
-
-adds font icons (glyphs ★♨☢) to programming languages, libraries, and web developer filetypes for: NERDTree, powerline, vim-airline, ctrlp, unite, lightline.vim, vim-startify, vimfiler, and flagship.
-![此处输入图片的描述][40]
-![此处输入图片的描述][41]
-![此处输入图片的描述][42]
-
 ### Change the colorscheme
 
 [change-colorscheme][43] plugin provides quick change theme function.
