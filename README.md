@@ -134,7 +134,9 @@ css/less/sass/html color preview for vim.
 ### vim-devicons
 
 adds font icons (glyphs ★♨☢) to programming languages, libraries, and web developer filetypes for: NERDTree, powerline, vim-airline, ctrlp, unite, lightline.vim, vim-startify, vimfiler, and flagship.
-![此处输入图片的描述][40]![此处输入图片的描述][41]![此处输入图片的描述][42]
+![此处输入图片的描述][40]
+![此处输入图片的描述][41]
+![此处输入图片的描述][42]
 
 ### Change the colorscheme
 
