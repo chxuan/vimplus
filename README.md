@@ -119,8 +119,12 @@ Lean & mean status/tabline for vim that's light as air.
 ![此处输入图片的描述][38]
 
 ### vim-coloresque
-css
-![image][39]
+![此处输入图片的描述][39]
+
+### vim-devicons
+![此处输入图片的描述][40]
+![此处输入图片的描述][41]
+![此处输入图片的描述][42]
 
 ### Change the colorscheme
 [change-colorscheme][43] plugin provides quick change theme function.
