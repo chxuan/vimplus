@@ -105,6 +105,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/MatchTagAlways'
+Plugin 'docunext/closetag.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
