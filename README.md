@@ -4,7 +4,6 @@ vimplus: An automatic configuration program for vim
 
 Intro
 -----
-
 I usually use vim to write a C++ program, so in order to allow me to write C++ more enjoyable, I made some vim automatically configured, the following I will be a presentation of my vimplus.
 
 Screenshots
@@ -14,7 +13,6 @@ This figure is below a real shot after I configured vim.
 
 Installation
 ------------
-
 ### Ubuntu Installation
 
     git clone https://github.com/chxuan/vimplus.git
@@ -85,17 +83,14 @@ and some plugins below:
 
 Configuration ycm
 ------------
-
 Run the `install.sh` script after the installation is complete, `HOME` directory will exist [.ycm_extra_conf.py][31] and `.vimrc`, the file is YCM implement C++ and other languages syntax completion function profile, I would put a general in the `HOME` directory, then copy `each project` a [.ycm_extra_conf.py][32],**don't** just copy/paste that file somewhere and expect things to magically work; **your project needs different flags**. Hint: just replace the strings in the `flags` variable with compilation flags necessary for your project. That should be enough for 99% of projects.
 
 Note
 ------------
-
  1. In order to use [vim-devicons][33], you have to set font, if you don't have guifont set and are not running gvim you will need to set the terminal font(you have to set this font:`Droid Sans Mono for Powerline Nerd Font Complete`).
  
 Shortcuts
 ------------
-
  - Directory tree `<F3>`
  - Display functions, global variables, macro definitions `<F4>`
  - Display static code analysis `<F5>`
@@ -110,35 +105,29 @@ Shortcuts
 
 Features
 ------------
-
 ### Syntax completion
 
 [YouCompleteMe][34] plugin provides syntax completion function, and YouCompleteMe is a fast, as-you-type, fuzzy-search code completion engine for Vim.
 ![此处输入图片的描述][35]
 
 ### Full path fuzzy file, buffer, mru, tag
-
 [ctrlp][36] plugin provides full path fuzzy file, buffer, mru, tag, ... finder for Vim.
 ![此处输入图片的描述][37]
 
 ### vim-airline
-
 Lean & mean status/tabline for vim that's light as air.
 ![此处输入图片的描述][38]
 
 ### vim-coloresque
-
-css/less/sass/html color preview for vim.
-![此处输入图片的描述][38]
+css
+![image][39]
 
 ### Change the colorscheme
-
 [change-colorscheme][43] plugin provides quick change theme function.
 ![此处输入图片的描述][44]
 
 ### <span id="Warning">**Warning**</span>
 ------------
-
  1. If poor network conditions may fail to install, basically [Valloric/YouCompleteMe][45] installation fails, after a failed installation will need to `rm -rf ~/.vim/bundle/YouCompleteMe`, and then re-execute the `install.sh` can be re-installed, the program will automatically install the plug-in installation fails,**or I have** [YouCompleteMe.tar.gz][46],download it and then `tar -xvf YouCompleteMe.tar.gz -C ~/.vim/bundle/`,then `cd ~/.vim/bundle/YouCompleteMe` and run `python ./install.py --clang-completer`.
  2. In `ubuntu16.04LTS` installation may fail([Valloric/YouCompleteMe][47] installation fails), **because vim default support for plug python3 compiled**, after a failed installation, manually `cd ~/.vim/bundle/YouCompleteMe`, then run `python3 ./install.py --clang-completer`.
 
