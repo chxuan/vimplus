@@ -10,7 +10,7 @@ I usually use vim to write a C++ program, so in order to allow me to write C++ m
 Screenshots
 ------------
 This figure is below a real shot after I configured vim.
-![enter image description here](https://raw.githubusercontent.com/chxuan/vimplus/master/screenshot/screenshot.png)
+![enter image description here](https://raw.githubusercontent.com/chxuan/vimplus/master/screenshot/main.png)
 
 Installation
 ------------
