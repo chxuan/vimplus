@@ -10,7 +10,7 @@ I usually use vim to write a C++ program, so in order to allow me to write C++ m
 Screenshots
 ------------
 This figure is below a real shot after I configured vim.
-![enter image description here](https://raw.githubusercontent.com/chxuan/vimplus/master/screenshot/main.png)
+![enter image description here](https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/main.png)
 
 Installation
 ------------
@@ -160,7 +160,7 @@ Shortcuts
   [34]: https://github.com/VundleVim/Vundle.vim
   [35]: https://camo.githubusercontent.com/1f3f922431d5363224b20e99467ff28b04e810e2/687474703a2f2f692e696d6775722e636f6d2f304f50346f6f642e676966
   [36]: https://github.com/chxuan/change-colorscheme
-  [37]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshot/screenshot2.gif
+  [37]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/change-colorscheme.gif
   [38]: https://github.com/Valloric/YouCompleteMe
   [39]: http://pan.baidu.com/s/1kUIa1kN
   [40]: https://github.com/Valloric/YouCompleteMe
