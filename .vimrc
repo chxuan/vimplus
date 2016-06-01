@@ -211,6 +211,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 
 " powerline-extra-symbols
-let g:airline_left_sep = "\uE0B4"
-let g:airline_right_sep = "\uE0B6"
-let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
+"let g:airline_left_sep = "\uE0B4"
+"let g:airline_right_sep = "\uE0B6"
+"let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
