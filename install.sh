@@ -3,7 +3,7 @@
 echo "安装将花费一定时间，请耐心等待直到安装完成！"
 
 if which apt-get > /dev/null; then
-    sudo apt-get install -y vim ctags build-essential cmake python-dev python3-dev
+    sudo apt-get install -y vim ctags build-essential cmake python-dev python3-dev fontconfig
 elif which yum > /dev/null; then
     sudo yum install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel
 fi
