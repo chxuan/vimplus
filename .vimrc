@@ -133,9 +133,7 @@ imap <F9> <ESC> :PreviousColorScheme<CR>
 " nerdtree
 map <F3> :NERDTreeToggle<CR>
 imap <F3> <ESC> :NERDTreeToggle<CR>
-"当打开vim且没有文件时自动打开NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
-" 只剩 NERDTree时自动关闭
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Doxygen
