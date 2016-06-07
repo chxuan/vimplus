@@ -124,6 +124,9 @@ Plugin 'gorodinskiy/vim-coloresque'
 call vundle#end()            
 filetype plugin indent on    
 
+" load vim default plugin
+runtime macros/matchit.vim
+
 " change-colorscheme
 map <F10> :NextColorScheme<CR>
 imap <F10> <ESC> :NextColorScheme<CR>
