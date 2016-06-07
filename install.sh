@@ -1,6 +1,8 @@
 #!/bin/bash
 
-if which apt-get > /dev/null; then
+if which zypper > /dev/null; then
+    sudo zypper in -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel
+elif which apt-get > /dev/null; then
     sudo apt-get install -y vim ctags build-essential cmake python-dev python3-dev fontconfig
 elif which yum > /dev/null; then
     sudo yum install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel
