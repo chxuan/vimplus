@@ -95,9 +95,9 @@ Shortcuts
  - Display functions, global variables, macro definitions `<F4>`
  - Display static code analysis `<F5>`
  - .h .cpp file quickly switch `<F2>`
- - Go to declaration `<f + u>`
- - Go to definition `<f + i>`
- - Open the include file `<f + o>`
+ - Go to declaration `<, + u>`
+ - Go to definition `<, + i>`
+ - Open the include file `<, + o>`
  - Buffer switch `<Ctrl + P/Ctrl + N>`
  - Cursor position switch `<Ctrl + O/Ctrl + I>`
  - Fuzzy Find File `<Ctrl + f>`
