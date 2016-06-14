@@ -1,3 +1,12 @@
+"
+"                       __   _(_)_ __ ___  _ __ ___
+"                       \ \ / / | '_ ` _ \| '__/ __|
+"                        \ V /| | | | | | | | | (__
+"                       (_)_/ |_|_| |_| |_|_|  \___|
+"
+" Author: chxuan <787280310@qq.com>
+" Source: https://github.com/chxuan/vimplus
+
 " genernal settings
 syntax enable
 syntax on
