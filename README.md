@@ -55,7 +55,7 @@ and some plugins below:
     cd ./vimplus
     sudo ./install.sh
 
-Run the `install.sh` script will automatically install and configure vim, installation takes about 40 minutes, mainly download compiler [Valloric/YouCompleteMe][18] time-consuming, please wait until the installation is complete ^ _ ^,**if the installation fails**, please see [Warning](#Warning).
+Run the `install.sh` script will automatically install and configure vim, installation takes about 40 minutes, mainly download compiler [Valloric/YouCompleteMe][18] time-consuming, please wait until the installation is complete :smile:,**if the installation fails**, please see [Warning](#Warning).
 
 The installation script will automatically install some software below:
  - vim
