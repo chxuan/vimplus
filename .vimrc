@@ -130,6 +130,7 @@ Plugin 'vim-scripts/SQLComplete.vim'
 Plugin 'vim-scripts/txt.vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'will133/vim-dirdiff'
 
 call vundle#end()            
 filetype plugin indent on    
