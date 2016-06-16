@@ -15,9 +15,11 @@ Installation
 ------------
 ### Ubuntu Installation
 
-    git clone https://github.com/chxuan/vimplus.git
-    cd ./vimplus
-    sudo ./install.sh
+```bash
+git clone https://github.com/chxuan/vimplus.git
+cd ./vimplus
+sudo ./install.sh
+```
 
 Run the `install.sh` script will automatically install and configure vim, installation takes about 40 minutes, mainly download compiler [Valloric/YouCompleteMe][2] time-consuming, please wait until the installation is complete :smile:,**if the installation fails**, please see [Warning](#Warning).
 
@@ -52,9 +54,11 @@ and some plugins below:
 
 ### Centos Installation
 
-    git clone https://github.com/chxuan/vimplus.git
-    cd ./vimplus
-    sudo ./install.sh
+```bash
+git clone https://github.com/chxuan/vimplus.git
+cd ./vimplus
+sudo ./install.sh
+```
 
 Run the `install.sh` script will automatically install and configure vim, installation takes about 40 minutes, mainly download compiler [Valloric/YouCompleteMe][20] time-consuming, please wait until the installation is complete :smile:,**if the installation fails**, please see [Warning](#Warning).
 
