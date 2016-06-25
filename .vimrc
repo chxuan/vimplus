@@ -133,6 +133,7 @@ Plugin 'vim-scripts/txt.vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'will133/vim-dirdiff'
+Plugin 'haya14busa/incsearch.vim'
 
 call vundle#end()            
 filetype plugin indent on    
@@ -222,3 +223,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 " vim-devicons
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+
+" incsearch.vim
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
