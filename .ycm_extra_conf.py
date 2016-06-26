@@ -74,15 +74,11 @@ flags = [
 '-isystem',
 '/usr/include/c++/5',
 '-isystem',
-'/usr/include/c++/5.1',
-'-isystem',
-'/usr/include/c++/5.2',
-'-isystem',
-'/usr/include/c++/5.3',
+'/usr/include/c++/5.4.0',
 '-isystem',
 '/usr/include/c++/6',
 '-isystem',
-'/usr/include/c++/6.1',
+'/usr/include/c++/6.1.0',
 
 #'-isystem',
 # This path will only work on OS X, but extra paths that don't exist are not
