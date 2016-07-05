@@ -13,7 +13,7 @@ This figure is below a real shot after I configured vim.
 
 Installation
 ------------
-### Ubuntu Installation(Support Ubuntu16.04LTS)
+### Ubuntu Installation(Support Ubuntu 16.04 LTS)
 
 ```bash
 git clone https://github.com/chxuan/vimplus.git
