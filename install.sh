@@ -12,9 +12,10 @@ then
             libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev ruby-dev
         sudo apt-get remove -y vim vim-runtime gvim
         sudo apt-get remove -y vim-tiny vim-common vim-gui-common
-        cd ~
-        rm -rf vim
-        git clone https://github.com/vim/vim.git
+
+        rm -rf ~/vim
+        rm -rf /usr/share/vim/vim74
+        git clone https://github.com/vim/vim.git ~/vim
         cd vim
         ./configure --with-features=huge \
             --enable-multibyte \
@@ -26,8 +27,8 @@ then
             --enable-gui=gtk2 --enable-cscope --prefix=/usr
         make VIMRUNTIMEDIR=/usr/share/vim/vim74
         sudo make install
-        cd ~
-        rm -rf vim
+        cd -
+        rm -rf ~/vim
     else
         sudo apt-get install -y vim
     fi
