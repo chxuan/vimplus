@@ -16,7 +16,7 @@ then
         sudo rm -rf ~/vim
         sudo rm -rf /usr/share/vim/vim74
         git clone https://github.com/vim/vim.git ~/vim
-        cd vim
+        cd ~/vim
         ./configure --with-features=huge \
             --enable-multibyte \
             --enable-rubyinterp \
