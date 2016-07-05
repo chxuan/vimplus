@@ -28,7 +28,6 @@ then
         make VIMRUNTIMEDIR=/usr/share/vim/vim74
         sudo make install
         cd -
-        sudo rm -rf ~/vim
     else
         sudo apt-get install -y vim
     fi
