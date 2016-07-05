@@ -1,9 +1,39 @@
 #!/bin/bash
 
-if which apt-get > /dev/null; then
-    sudo apt-get install -y vim ctags build-essential cmake python-dev python3-dev fontconfig
-elif which yum > /dev/null; then
-    sudo yum install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel
+if which apt-get > /dev/null
+then
+    sudo apt-get install -y ctags build-essential cmake python-dev python3-dev fontconfig git
+    var=$(sudo cat /etc/lsb-release | grep "DISTRIB_RELEASE")
+    systemVersion='DISTRIB_RELEASE=16.04'
+    if [ $var == $systemVersion ]
+    then
+        sudo apt-get install -y libncurses5-dev libgnome2-dev libgnomeui-dev \
+            libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
+            libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev ruby-dev
+        sudo apt-get remove -y vim vim-runtime gvim
+        sudo apt-get remove -y vim-tiny vim-common vim-gui-common
+        cd ~
+        rm -rf vim
+        git clone https://github.com/vim/vim.git
+        cd vim
+        ./configure --with-features=huge \
+            --enable-multibyte \
+            --enable-rubyinterp \
+            --enable-pythoninterp \
+            --with-python-config-dir=/usr/lib/python2.7/config \
+            --enable-perlinterp \
+            --enable-luainterp \
+            --enable-gui=gtk2 --enable-cscope --prefix=/usr
+        make VIMRUNTIMEDIR=/usr/share/vim/vim74
+        sudo make install
+        cd ~
+        rm -rf vim
+    else
+        sudo apt-get install -y vim
+    fi
+elif which yum > /dev/null
+then
+    sudo yum install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel git
 fi
 
 rm -rf ~/.vimrc
