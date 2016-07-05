@@ -13,10 +13,10 @@ then
         sudo apt-get remove -y vim vim-runtime gvim
         sudo apt-get remove -y vim-tiny vim-common vim-gui-common
 
-        rm -rf ~/vim
-        rm -rf /usr/share/vim/vim74
+        sudo rm -rf ~/vim
+        sudo rm -rf /usr/share/vim/vim74
         git clone https://github.com/vim/vim.git ~/vim
-        cd vim
+        sudo cd vim
         ./configure --with-features=huge \
             --enable-multibyte \
             --enable-rubyinterp \
@@ -27,8 +27,8 @@ then
             --enable-gui=gtk2 --enable-cscope --prefix=/usr
         make VIMRUNTIMEDIR=/usr/share/vim/vim74
         sudo make install
-        cd -
-        rm -rf ~/vim
+        sudo cd -
+        sudo rm -rf ~/vim
     else
         sudo apt-get install -y vim
     fi
@@ -37,35 +37,35 @@ then
     sudo yum install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel git
 fi
 
-rm -rf ~/.vimrc
-rm -rf ~/.ycm_extra_conf.py
+sudo rm -rf ~/.vimrc
+sudo rm -rf ~/.ycm_extra_conf.py
 
-cp .vimrc ~
-cp .ycm_extra_conf.py ~
+sudo cp .vimrc ~
+sudo cp .ycm_extra_conf.py ~
 
-mkdir ~/.vim
-rm -rf ~/.vim/plugin
-rm -rf ~/.vim/colors
-cp -R ./plugin ~/.vim
-cp -R ./colors ~/.vim
+sudo mkdir ~/.vim
+sudo rm -rf ~/.vim/plugin
+sudo rm -rf ~/.vim/colors
+sudo cp -R ./plugin ~/.vim
+sudo cp -R ./colors ~/.vim
 
-mkdir ~/.fonts
-rm -rf ~/.fonts/PowerlineSymbols.otf
-rm -rf ~/.fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf
-cp ./fonts/PowerlineSymbols.otf ~/.fonts
-cp ./fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf ~/.fonts
+sudo mkdir ~/.fonts
+sudo rm -rf ~/.fonts/PowerlineSymbols.otf
+sudo rm -rf ~/.fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf
+sudo cp ./fonts/PowerlineSymbols.otf ~/.fonts
+sudo cp ./fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf ~/.fonts
 fc-cache -vf ~/.fonts
 
-mkdir -p ~/.config/fontconfig/conf.d
-rm -rf ~/.config/fontconfig/conf.d/10-powerline-symbols.conf
-cp ./fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d
+sudo mkdir -p ~/.config/fontconfig/conf.d
+sudo rm -rf ~/.config/fontconfig/conf.d/10-powerline-symbols.conf
+sudo cp ./fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 vim -c "PluginInstall" -c "q" -c "q"
 
-cd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer
+sudo cd ~/.vim/bundle/YouCompleteMe
+sudo ./install.py --clang-completer
 
 echo "Done!"
 
