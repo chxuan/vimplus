@@ -16,7 +16,7 @@ then
         sudo rm -rf ~/vim
         sudo rm -rf /usr/share/vim/vim74
         git clone https://github.com/vim/vim.git ~/vim
-        sudo cd vim
+        cd vim
         ./configure --with-features=huge \
             --enable-multibyte \
             --enable-rubyinterp \
@@ -27,7 +27,7 @@ then
             --enable-gui=gtk2 --enable-cscope --prefix=/usr
         make VIMRUNTIMEDIR=/usr/share/vim/vim74
         sudo make install
-        sudo cd -
+        cd -
         sudo rm -rf ~/vim
     else
         sudo apt-get install -y vim
@@ -64,7 +64,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 vim -c "PluginInstall" -c "q" -c "q"
 
-sudo cd ~/.vim/bundle/YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe
 sudo ./install.py --clang-completer
 
 echo "Done!"
