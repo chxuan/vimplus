@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rm -rf ~/.vimrc
-rm -rf ~/.vim
+sudo rm -rf ~/.vimrc
+sudo rm -rf ~/.vim
 
 echo "Done!"
 
