@@ -39,25 +39,25 @@ fi
 sudo rm -rf ~/.vimrc
 sudo rm -rf ~/.ycm_extra_conf.py
 
-sudo cp .vimrc ~
-sudo cp .ycm_extra_conf.py ~
+cp .vimrc ~
+cp .ycm_extra_conf.py ~
 
-sudo mkdir ~/.vim
+mkdir ~/.vim
 sudo rm -rf ~/.vim/plugin
 sudo rm -rf ~/.vim/colors
-sudo cp -R ./plugin ~/.vim
-sudo cp -R ./colors ~/.vim
+cp -R ./plugin ~/.vim
+cp -R ./colors ~/.vim
 
-sudo mkdir ~/.fonts
+mkdir ~/.fonts
 sudo rm -rf ~/.fonts/PowerlineSymbols.otf
 sudo rm -rf ~/.fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf
-sudo cp ./fonts/PowerlineSymbols.otf ~/.fonts
-sudo cp ./fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf ~/.fonts
+cp ./fonts/PowerlineSymbols.otf ~/.fonts
+cp ./fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf ~/.fonts
 fc-cache -vf ~/.fonts
 
-sudo mkdir -p ~/.config/fontconfig/conf.d
+mkdir -p ~/.config/fontconfig/conf.d
 sudo rm -rf ~/.config/fontconfig/conf.d/10-powerline-symbols.conf
-sudo cp ./fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d
+cp ./fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
