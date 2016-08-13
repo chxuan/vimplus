@@ -13,7 +13,7 @@ This figure is below a real shot after I configured vim.
 
 Installation
 ------------
-### Ubuntu Installation(Supported Ubuntu 16.04 LTS)
+### Ubuntu x64 Installation(Supported Ubuntu 16.04 LTS)
 
 ```bash
 git clone https://github.com/chxuan/vimplus.git
@@ -54,7 +54,7 @@ and some plugins below:
  - [change-colorscheme][21](I am the author)
  - etc...
 
-### Centos Installation
+### Centos x64 Installation
 
 ```bash
 git clone https://github.com/chxuan/vimplus.git
