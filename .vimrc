@@ -134,6 +134,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'will133/vim-dirdiff'
 Plugin 'haya14busa/incsearch.vim'
+Plugin 'mhinz/vim-startify'
 
 call vundle#end()            
 filetype plugin indent on    
@@ -150,8 +151,8 @@ imap <F9> <ESC> :PreviousColorScheme<CR>
 " nerdtree
 map <F3> :NERDTreeToggle<CR>
 imap <F3> <ESC> :NERDTreeToggle<CR>
-autocmd vimenter * if !argc() | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"autocmd vimenter * if !argc() | NERDTree | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Doxygen
 let g:DoxygenToolkit_authorName="chxuan, 787280310@qq.com"
