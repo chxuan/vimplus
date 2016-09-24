@@ -9,12 +9,13 @@ then
     then
         sudo apt-get install -y libncurses5-dev libgnome2-dev libgnomeui-dev \
             libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
-            libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev ruby-dev
+            libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
         sudo apt-get remove -y vim vim-runtime gvim
-        sudo apt-get remove -y vim-tiny vim-common vim-gui-common
+        sudo apt-get remove -y vim-tiny vim-common vim-gui-common vim-nox
 
         sudo rm -rf ~/vim
         sudo rm -rf /usr/share/vim/vim74
+        sudo rm -rf /usr/share/vim/vim80
         git clone https://github.com/vim/vim.git ~/vim
         cd ~/vim
         ./configure --with-features=huge \
@@ -25,7 +26,7 @@ then
             --enable-perlinterp \
             --enable-luainterp \
             --enable-gui=gtk2 --enable-cscope --prefix=/usr
-        make VIMRUNTIMEDIR=/usr/share/vim/vim74
+        make VIMRUNTIMEDIR=/usr/share/vim/vim80
         sudo make install
         cd -
     else
