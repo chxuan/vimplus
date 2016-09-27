@@ -178,6 +178,14 @@ nnoremap <leader>i :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>o :YcmCompleter GoToInclude<CR>
 nmap <F5> :YcmDiags<CR>
 
+" ctags
+set tags+=/usr/include/tags
+set tags+=~/.vim/systags
+set tags+=~/.vim/x86_64-linux-gnu-systags
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_semantic_triggers = {} 
+let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
+
 " a.vim: .h -> .cpp or .cpp -> .h
 nnoremap <silent> <F2> :A<CR>
 
