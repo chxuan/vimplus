@@ -240,4 +240,4 @@ auto-pairs provides smart auto-completion for delimiters like (), {}, [], "", ''
   [62]: https://github.com/chxuan/change-colorscheme
   [63]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/change-colorscheme.gif
   [64]: https://github.com/Valloric/YouCompleteMe
-  [65]: http://pan.baidu.com/s/1kUIa1kN
+  [65]: http://pan.baidu.com/s/1kVdgsRl
