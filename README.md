@@ -118,7 +118,7 @@ Shortcuts
  - Cursor position switch `<Ctrl + O/Ctrl + I>`
  - Fuzzy Find File `<Ctrl + f>`
  - Surround `<ys{motion or text-object}{char}/cs{orig_char}{dest_char}/ds{char}>`
- - Comment code `<gcc/gcap/gc>`
+ - Comment code `<gcc/gcap/gc/,ca/,cA>`
  - DirDiff `:DirDiff <dir1> <dir2>`
  - Repeat `.`
  - Change the colorscheme `<F10/F9>`
