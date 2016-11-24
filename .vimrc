@@ -208,6 +208,7 @@ let c_no_curly_error = 1
 
 " airline
 let g:airline_theme="luna"
+" let g:airline_theme="badwolf"
 let g:airline_powerline_fonts = 1
 "let g:airline_section_b = '%{strftime("%c")}'
 "let g:airline_section_y = 'BN: %{bufnr("%")}'
