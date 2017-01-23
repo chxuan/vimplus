@@ -87,13 +87,9 @@ func SetTitle()
 		call setline(1,"#include <stdio.h>") 
 		call append(line("."), "") 
     elseif expand("%:e") == 'h'
-		call setline(1, "#ifndef _".toupper(expand("%:r"))."_H")
-		call setline(2, "#define _".toupper(expand("%:r"))."_H")
-		call setline(3, "#endif")
+		call setline(1, "#pragma once")
     elseif expand("%:e") == 'hpp'
-		call setline(1, "#ifndef _".toupper(expand("%:r"))."_H")
-		call setline(2, "#define _".toupper(expand("%:r"))."_H")
-		call setline(3, "#endif")
+		call setline(1, "#pragma once")
 	endif
 endfunc 
 autocmd BufNewFile * normal G
