@@ -236,7 +236,7 @@ auto-pairs provides smart auto-completion for delimiters like (), {}, [], "", ''
   [58]: https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.8.x/nerdtree-3.png
   [59]: https://camo.githubusercontent.com/70916a51f45b5729332803c5de303f6f1849fc50/68747470733a2f2f7261772e6769746875622e636f6d2f676f726f64696e736b69792f76696d2d636f6c6f7265737175652f6d61737465722f73637265656e2e706e67
   [60]: https://raw.githubusercontent.com/will133/vim-dirdiff/master/screenshot.png
-  [61]: https://github.com/mhinz/vim-startify/blob/master/pictures/startify-menu.png
+  [61]: https://raw.githubusercontent.com/mhinz/vim-startify/master/images/startify-menu.png
   [62]: https://github.com/chxuan/change-colorscheme
   [63]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/change-colorscheme.gif
   [64]: https://github.com/Valloric/YouCompleteMe
