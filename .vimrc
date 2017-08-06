@@ -179,7 +179,20 @@ set tags+=/usr/include/tags
 set tags+=~/.vim/systags
 set tags+=~/.vim/x86_64-linux-gnu-systags
 let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_semantic_triggers = {} 
+" let g:ycm_semantic_triggers = {} 
+let g:ycm_semantic_triggers =  {
+  \   'c' : ['->', '.','re![_a-zA-z0-9]'],
+  \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+  \             're!\[.*\]\s'],
+  \   'ocaml' : ['.', '#'],
+  \   'cpp,objcpp' : ['->', '.', '::','re![_a-zA-Z0-9]'],
+  \   'perl' : ['->'],
+  \   'php' : ['->', '::'],
+  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+  \   'ruby' : ['.', '::'],
+  \   'lua' : ['.', ':'],
+  \   'erlang' : [':'],
+  \ }
 let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
 
 " a.vim: .h -> .cpp or .cpp -> .h
