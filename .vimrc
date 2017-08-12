@@ -104,6 +104,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'L9'
 Plugin 'chxuan/change-colorscheme'
+Plugin 'iamcco/mathjax-support-for-mkdp'
+Plugin 'iamcco/markdown-preview.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -247,3 +249,10 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+
+" markdown
+let g:mkdp_path_to_chrome = "firefox"
+nmap <silent> <F7> <Plug>MarkdownPreview
+imap <silent> <F7> <Plug>MarkdownPreview
+nmap <silent> <F8> <Plug>StopMarkdownPreview
+imap <silent> <F8> <Plug>StopMarkdownPreview
