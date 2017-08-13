@@ -135,7 +135,7 @@ set nofoldenable
 " vim自身命名行模式智能补全
 set wildmenu
 " 开启代码补全
-set completeopt=preview,menu 
+set completeopt=longest,menu 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 缓存设置
@@ -192,7 +192,6 @@ endfunc
 autocmd BufNewFile * normal G
 
 " Vundle
-set nocompatible              
 filetype off        
 
 set rtp+=~/.vim/bundle/Vundle.vim
