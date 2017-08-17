@@ -176,7 +176,7 @@ auto-pairs provides smart auto-completion for delimiters like (), {}, [], "", ''
  1. If poor network conditions may fail to install, basically [Valloric/YouCompleteMe][64] installation fails, after a failed installation will need to `rm -rf ~/.vim/bundle/YouCompleteMe`, and then re-execute the `install.sh` can be re-installed, the program will automatically install the plug-in installation fails,**or I have** [YouCompleteMe.tar.gz][65],download it and then `tar -xvf YouCompleteMe.tar.gz -C ~/.vim/bundle/`,then `cd ~/.vim/bundle/YouCompleteMe` and run `python ./install.py --clang-completer`.
 
 
-  [1]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/vimplus.png
+  [1]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/vimplus2.png
   [2]: https://github.com/Valloric/YouCompleteMe
   [3]: https://github.com/VundleVim/Vundle.vim
   [4]: https://github.com/Valloric/YouCompleteMe
