@@ -67,5 +67,8 @@ vim -c "PluginInstall" -c "q" -c "q"
 cd ~/.vim/bundle/YouCompleteMe
 sudo ./install.py --clang-completer
 
+cd ~
+sudo chown -R "$USER":"$USER" ~/.vim
+
 echo "Done!"
 
