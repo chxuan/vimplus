@@ -200,6 +200,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'L9'
 Plugin 'chxuan/change-colorscheme'
+Plugin 'Yggdroot/indentLine'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'wsdjeg/FlyGrep.vim'
@@ -372,3 +373,7 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Move to word
 map <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" indentLine
+let g:indentLine_enabled=0
+nmap <Leader><Leader>il :IndentLinesToggle<CR>
