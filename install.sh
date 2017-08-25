@@ -70,5 +70,5 @@ sudo ./install.py --clang-completer
 cd ~
 sudo chown -R "$USER":"$USER" ~/.vim
 
-echo "Done!"
+echo "Just enjoy it!"
 
