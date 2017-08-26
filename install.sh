@@ -70,5 +70,18 @@ sudo ./install.py --clang-completer
 cd ~
 sudo chown -R "$USER":"$USER" ~/.vim
 
-echo "Just enjoy it!"
-
+COLOR="$(tput setaf 6)"
+NORMAL="$(tput sgr0)"
+printf "${COLOR}"
+echo '        __                   __           '
+echo '__   __/_/___ ___     ____  / /_  _______ '
+echo '\ \ / / / __ `__ \   / __ \/ / / / / ___/ '
+echo ' \ V / / / / / / /  / /_/ / / /_/ (__  )  '
+echo '  \_/_/_/ /_/ /_/  / ,___/_/\____/____/   '
+echo '                  /_/                     ...is now installed!'
+echo ''
+echo ''
+echo 'Just enjoy it!'
+echo 'p.s. Follow me at https://github.com/chxuan.'
+echo ''
+printf "${NORMAL}"
