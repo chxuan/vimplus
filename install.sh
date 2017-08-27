@@ -73,12 +73,12 @@ sudo chown -R "$USER":"$USER" ~/.vim
 COLOR="$(tput setaf 6)"
 NORMAL="$(tput sgr0)"
 printf "${COLOR}"
-echo '        __                   __           '
-echo '__   __/_/___ ___     ____  / /_  _______ '
-echo '\ \ / / / __ `__ \   / __ \/ / / / / ___/ '
-echo ' \ V / / / / / / /  / /_/ / / /_/ (__  )  '
-echo '  \_/_/_/ /_/ /_/  / ,___/_/\____/____/   '
-echo '                  /_/                     ...is now installed!'
+echo '        __                __           '
+echo '__   __/_/___ ___  ____  / /_  _______ '
+echo '\ \ / / / __ `__ \/ __ \/ / / / / ___/ '
+echo ' \ V / / / / / / / /_/ / / /_/ (__  )  '
+echo '  \_/_/_/ /_/ /_/ ,___/_/\____/____/   '
+echo '               /_/                     ...is now installed!'
 echo ''
 echo ''
 echo 'Just enjoy it!'
