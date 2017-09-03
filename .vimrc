@@ -213,6 +213,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'rkulla/pydiction'
 Plugin 'Valloric/MatchTagAlways'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'docunext/closetag.vim'
@@ -379,3 +380,7 @@ nmap <Leader>w <Plug>(easymotion-overwin-w)
 " indentLine
 let g:indentLine_enabled=0
 nmap <Leader><Leader>il :IndentLinesToggle<CR>
+
+" pydiction
+let g:pydiction_location='~/.vim/bundle/pydiction/complete-dict'
+let g:pydiction_menu_height=10
