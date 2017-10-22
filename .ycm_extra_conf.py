@@ -62,10 +62,6 @@ flags = [
 
 # c/c++ include path
 '-isystem',
-'/usr/include',
-'-isystem',
-'/usr/local/include',
-'-isystem',
 '/usr/include/c++/4.8',
 '-isystem',
 '/usr/include/c++/4.8.5',
@@ -79,6 +75,10 @@ flags = [
 '/usr/include/c++/7',
 '-isystem',
 '/usr/include/c++/8',
+'-isystem',
+'/usr/include',
+'-isystem',
+'/usr/local/include',
 
 #'-isystem',
 # This path will only work on OS X, but extra paths that don't exist are not
