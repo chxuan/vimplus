@@ -4,8 +4,8 @@ if which apt-get > /dev/null
 then
     sudo apt-get install -y ctags build-essential cmake python-dev python3-dev fontconfig git
     var=$(sudo cat /etc/lsb-release | grep "DISTRIB_RELEASE")
-    systemVersion='DISTRIB_RELEASE=16.04'
-    if [ $var == $systemVersion ]
+    system_version='DISTRIB_RELEASE=16.04'
+    if [ $var == $system_version ]
     then
         sudo apt-get install -y libncurses5-dev libgnome2-dev libgnomeui-dev \
             libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
@@ -68,11 +68,13 @@ cd ~/.vim/bundle/YouCompleteMe
 sudo ./install.py --clang-completer
 
 cd ~
-sudo chown -R "$USER":"$USER" ~/.vim
+who_is=$(who)
+current_user=${who_is%% *}
+sudo chown -R ${current_user}:${current_user} ~/.vim
 
-COLOR="$(tput setaf 6)"
-NORMAL="$(tput sgr0)"
-printf "${COLOR}"
+color="$(tput setaf 6)"
+normal="$(tput sgr0)"
+printf "${color}"
 echo '        __                __           '
 echo '__   __/_/___ ___  ____  / /_  _______ '
 echo '\ \ / / / __ `__ \/ __ \/ / / / / ___/ '
@@ -84,4 +86,4 @@ echo ''
 echo 'Just enjoy it!'
 echo 'p.s. Follow me at https://github.com/chxuan.'
 echo ''
-printf "${NORMAL}"
+printf "${normal}"
