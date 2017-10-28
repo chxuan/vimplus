@@ -302,7 +302,10 @@ let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
 nnoremap <silent> <F2> :A<CR>
 
 " tagbar
-let g:tagbar_ctags_bin = '/usr/bin/ctags'
+
+" 用系统默认路径
+" let g:tagbar_ctags_bin = '/usr/bin/ctags' "linux
+" let g:tagbar_ctags_bin = '/usr/local/bin/ctags' "mac
 let g:tagbar_width = 30
 map <F4> :TagbarToggle<CR>
 imap <F4> <ESC> :TagbarToggle<CR>
