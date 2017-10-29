@@ -1,244 +1,188 @@
-![此处输入图片的描述][1]
+![][1]
 
 An automatic configuration program for vim
 ===============================================
 
-Intro
------
-I usually use vim to write a C++ program, so in order to allow me to write C++ more enjoyable, I made some vim automatically configured, the following I will be a presentation of my vimplus.
+![][2]
 
-Screenshots
+安装
 ------------
-This figure is below a real shot after I configured vim.
-![enter image description here](https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/main.png)
+### Mac OS X
 
-Installation
+- 安装[HomeBrew][3]
+
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+- 安装vimplus
+
+    git clone https://github.com/chxuan/vimplus.git
+    cd ./vimplus
+    ./install.sh
+
+### Ubuntu
+
+- 版本要求
+`ubuntu14.04`及其以上`64`位系统。
+
+- 安装vimplus
+
+    git clone https://github.com/chxuan/vimplus.git
+    cd ./vimplus
+    sudo ./install.sh
+
+### Centos
+
+- 版本要求
+`centos7`及其以上`64`位系统。
+
+- 安装vimplus
+
+    git clone https://github.com/chxuan/vimplus.git
+    cd ./vimplus
+    sudo ./install.sh
+
+部分插件列表
 ------------
-### Ubuntu x64 Installation(Supported Ubuntu 16.04 LTS)
-
-```bash
-git clone https://github.com/chxuan/vimplus.git
-cd ./vimplus
-sudo ./install.sh
-```
-
-Run the `install.sh` script will automatically install and configure vim, installation takes about 40 minutes, mainly download compiler [Valloric/YouCompleteMe][2] time-consuming, please wait until the installation is complete :smile:,**if the installation fails**, please see [Warning](#Warning).
-
-The installation script will automatically install some software below:
- - vim
- - g++ 
- - ctags 
- - cmake
- - python2
- - python3
-
-and some plugins below:
-
- - [Vundle][3]
- - [YouCompleteMe][4]
- - [NerdTree][5]
- - [nerdcommenter][6]
- - [Airline][7]
- - [auto-pairs][8]
- - [DoxygenToolkit][9]
- - [ctrlp][10]
- - [tagbar][11]
- - [vim-devicons][12]
- - [vim-surround][13]
- - [vim-commentary][14]
- - [vim-repeat][15]
- - [vim-endwise][16]
- - [tabular][17]
- - [vim-dirdiff][18]
- - [vim-coloresque][19]
- - [incsearch.vim][20]
- - [vim-startify][21]
- - [change-colorscheme][22](I am the author)
+ - [Vundle][4]
+ - [YouCompleteMe][5]
+ - [NerdTree][6]
+ - [nerdcommenter][7]
+ - [Airline][8]
+ - [auto-pairs][9]
+ - [DoxygenToolkit][10]
+ - [ctrlp][11]
+ - [tagbar][12]
+ - [vim-devicons][13]
+ - [vim-surround][14]
+ - [vim-commentary][15]
+ - [vim-repeat][16]
+ - [vim-endwise][17]
+ - [tabular][18]
+ - [vim-dirdiff][19]
+ - [vim-coloresque][20]
+ - [vim-easymotion][21]
+ - [incsearch.vim][22]
+ - [vim-startify][23]
+ - [markdown-preview][24]
+ - [change-colorscheme][25]
  - etc...
 
-### Centos x64 Installation
-
-```bash
-git clone https://github.com/chxuan/vimplus.git
-cd ./vimplus
-sudo ./install.sh
-```
-
-Run the `install.sh` script will automatically install and configure vim, installation takes about 40 minutes, mainly download compiler [Valloric/YouCompleteMe][23] time-consuming, please wait until the installation is complete :smile:,**if the installation fails**, please see [Warning](#Warning).
-
-The installation script will automatically install some software below:
- - vim
- - g++ 
- - ctags 
- - cmake
- - python2
- - python3
-
-and some plugins below:
-
- - [Vundle][24]
- - [YouCompleteMe][25]
- - [NerdTree][26]
- - [nerdcommenter][27]
- - [Airline][28]
- - [auto-pairs][29]
- - [DoxygenToolkit][30]
- - [ctrlp][31]
- - [tagbar][32]
- - [vim-devicons][33]
- - [vim-surround][34]
- - [vim-commentary][35]
- - [vim-repeat][36]
- - [vim-endwise][37]
- - [tabular][38]
- - [vim-dirdiff][39]
- - [vim-coloresque][40]
- - [incsearch.vim][41]
- - [vim-startify][42]
- - [change-colorscheme][43](I am the author)
- - etc...
-
-Configuration ycm
+快捷键
 ------------
-Run the `install.sh` script after the installation is complete, `HOME` directory will exist [.ycm_extra_conf.py][44] and `.vimrc`, the file is YCM implement C++ and other languages syntax completion function profile, I would put a general in the `HOME` directory, then copy `each project` a [.ycm_extra_conf.py][45],**don't** just copy/paste that file somewhere and expect things to magically work; **your project needs different flags**. Hint: just replace the strings in the `flags` variable with compilation flags necessary for your project. That should be enough for 99% of projects.
 
-Note
-------------
- 1. In order to use [vim-devicons][46], you have to set font, if you don't have guifont set and are not running gvim you will need to set the terminal font(you have to set this font:`Droid Sans Mono for Powerline Nerd Font Complete`).
- 
-Shortcuts
-------------
- - Directory tree `<F3>`
- - Display functions, global variables, macro definitions `<F4>`
- - Display static code analysis `<F5>`
- - .h .cpp file quickly switch `<F2>`
- - Go to declaration `<, + u>`
- - Go to definition `<, + i>`
- - Open the include file `<, + o>`
- - Buffer switch `<Ctrl + P/Ctrl + N>`
- - Cursor position switch `<Ctrl + O/Ctrl + I>`
- - Fuzzy Find File `<Ctrl + f>`
+ - 打开/关闭目录树 `<F3>`
+ - 显示函数、变量、宏列表 `<F4>`
+ - 分析语法错误 `<F5>`
+ - .h .cpp 文件切换 `<F2>`
+ - 转到函数实现 `<, + u>`
+ - 转到函数声明 `<, + i>`
+ - 打开include文件 `<, + o>`
+ - 窗口切换 `<Ctrl + P/Ctrl + N>`
+ - 光标位置切换 `<Ctrl + O/Ctrl + I>`
+ - 模糊搜索文件 `<Ctrl + f>`
  - Surround `<ys{motion or text-object}{char}/cs{orig_char}{dest_char}/ds{char}>`
- - Comment code `<gcc/gcap/gc/,ca/,cA>`
- - DirDiff `:DirDiff <dir1> <dir2>`
- - Repeat `.`
- - Change the colorscheme `<F10/F9>`
+ - 注释 `<gcc/gcap/gc/,ca/,cA>`
+ - 目录比较 `:DirDiff <dir1> <dir2>`
+ - 重复上次操作 `.`
+ - 改变主题颜色 `<F9/F10>`
+ - 单词跳转 `<, + w>`
+ - 启用/关闭markdown预览 `<F7/F8>`
 
-Features
+Q & A
 ------------
-### Syntax completion
 
-[YouCompleteMe][47] plugin provides syntax completion function, and YouCompleteMe is a fast, as-you-type, fuzzy-search code completion engine for Vim.
-![此处输入图片的描述][48]
+- **`安装vimplus后Airline等插件有乱码，怎么解决？`**
+linux和mac系统需设置终端字体为Droid Sans Mono for Powerline Nerd Font Complete。
 
-### Full path fuzzy file, buffer, mru, tag
-[ctrlp][49] plugin provides full path fuzzy file, buffer, mru, tag, ... finder for Vim.
-![此处输入图片的描述][50]
+- **`xshell连接远程主机使用NerdTree出现错位！！！`**
+执行rm -rf ~/vim/bundle/vim-devicons命令，将vim-devicons删除即可，或移动到其他地方。
 
-### vim-airline
-Lean & mean status/tabline for vim that's light as air.
-![此处输入图片的描述][51]
+- **`安装vimplus会经常失败，安装了几次都不成功！！！`**
+vimplus安装时需要访问外国网站，犹豫网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，这里有下载好的[YouCompleteMe.tar.gz][26]文件，下载后解压到~/.vim/bundle/目录，并进入YouCompleteMe目录执行sudo ./install.py --clang-completer即可安装。
 
-### vim-surround
-Surround a vim text object with a pair of symmetrical chars. We can also remove or change the ones already there.
-![此处输入图片的描述][52]
+- **`使用第三方库时怎么让ycm补全第三方库API？`**
+vimplus安装完毕之后，`~`目录下将会生成两个隐藏文件分别是.vimrc和.ycm_extra_conf.py，其中.vimrc是vim的配置文件，.ycm_extra_conf.py是ycm插件的配置文件，当你需要创建一个project时，需要将.ycm_extra_conf.py拷贝到project的顶层目录，通过修改该配置文件里面的`flags`变量来添加你的第三方库路径。
 
-### vim-commentary
-An extremely easy tool to toggle commentary in lines and visual selections. We only need to enter a mapping and a movement to do the action, as simple as that.
-![此处输入图片的描述][53]
+- **`安装vimplus完成后ycm不能够工作！！！`**
+这里的原因可能就有很多了，可能每个人遇到的问题不一样，但`vimplus`尽最大努力不让用户操心，需要注意的是ycm插件只支持`64`位的系统，更多信息请访问[ycm官网][27]。
 
-### auto-pairs
-auto-pairs provides smart auto-completion for delimiters like (), {}, [], "", '', ``.
-![此处输入图片的描述][54]
+- **`使用vimplus为什么不能补全JS、Go、Java等语言？`**
+目前vimplus只支持C、C++、Shell、vimscript、Python等语言补全，后序会支持更多的语言，若您真的需要使用其他语言，您可以在vimplus基础上扩展。
 
-### incsearch.vim
-![此处输入图片的描述][55]
+- **`以上没有我遇到的问题怎么办？`**
+您可以通过上网找解决方法，或提Issues，也可以通过发邮件方式`787280310@qq.com`一起讨论解决方法。
 
-### vim-devicons
-![此处输入图片的描述][56]
-![此处输入图片的描述][57]
-![此处输入图片的描述][58]
+- **`vimplus用起来真的太棒了，怎么办？`**
+那就麻烦您打赏一颗星星吧，给予我继续维护的动力。
 
-### vim-coloresque
-![此处输入图片的描述][59]
-
-### vim-dirdiff
-![此处输入图片的描述][60]
-
-### vim-startify
-![此处输入图片的描述][61]
-
-### Change the colorscheme
-[change-colorscheme][62] plugin provides quick change theme function.
-![此处输入图片的描述][63]
-
-### <span id="Warning">**Warning**</span>
+特性展示
 ------------
- 1. If poor network conditions may fail to install, basically [Valloric/YouCompleteMe][64] installation fails, after a failed installation will need to `rm -rf ~/.vim/bundle/YouCompleteMe`, and then re-execute the `install.sh` can be re-installed, the program will automatically install the plug-in installation fails,**or I have** [YouCompleteMe.tar.gz][65],download it and then `tar -xvf YouCompleteMe.tar.gz -C ~/.vim/bundle/`,then `cd ~/.vim/bundle/YouCompleteMe` and run `python ./install.py --clang-completer`.
+
+- YouCompleteMe 
+![][28]
+
+- ctrlp 
+![][29]
+
+- vim-airline
+![][30]
+
+- vim-surround
+![][31]
+
+- vim-commentary
+![][32]
+
+- auto-pairs
+![][33]
+
+- vim-easymotion
+![][34]
+
+- vim-devicons
+![][35]
+
+- vim-startify
+![][36]
+
+- markdown-preview
+![][37]
 
 
   [1]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/vimplus2.png
-  [2]: https://github.com/Valloric/YouCompleteMe
-  [3]: https://github.com/VundleVim/Vundle.vim
-  [4]: https://github.com/Valloric/YouCompleteMe
-  [5]: https://github.com/scrooloose/nerdtree
-  [6]: https://github.com/scrooloose/nerdcommenter
-  [7]: https://github.com/vim-airline/vim-airline
-  [8]: https://github.com/jiangmiao/auto-pairs
-  [9]: https://github.com/vim-scripts/DoxygenToolkit.vim
-  [10]: https://github.com/ctrlpvim/ctrlp.vim
-  [11]: https://github.com/majutsushi/tagbar
-  [12]: https://github.com/ryanoasis/vim-devicons
-  [13]: https://github.com/tpope/vim-surround
-  [14]: https://github.com/tpope/vim-commentary
-  [15]: https://github.com/tpope/vim-repeat
-  [16]: https://github.com/tpope/vim-endwise
-  [17]: https://github.com/godlygeek/tabular
-  [18]: https://github.com/will133/vim-dirdiff
-  [19]: https://github.com/gorodinskiy/vim-coloresque
-  [20]: https://github.com/haya14busa/incsearch.vim
-  [21]: https://github.com/mhinz/vim-startify
-  [22]: https://github.com/chxuan/change-colorscheme
-  [23]: https://github.com/Valloric/YouCompleteMe
-  [24]: https://github.com/VundleVim/Vundle.vim
-  [25]: https://github.com/Valloric/YouCompleteMe
-  [26]: https://github.com/scrooloose/nerdtree
-  [27]: https://github.com/scrooloose/nerdcommenter
-  [28]: https://github.com/vim-airline/vim-airline
-  [29]: https://github.com/jiangmiao/auto-pairs
-  [30]: https://github.com/vim-scripts/DoxygenToolkit.vim
-  [31]: https://github.com/ctrlpvim/ctrlp.vim
-  [32]: https://github.com/majutsushi/tagbar
-  [33]: https://github.com/ryanoasis/vim-devicons
-  [34]: https://github.com/tpope/vim-surround
-  [35]: https://github.com/tpope/vim-commentary
-  [36]: https://github.com/tpope/vim-repeat
-  [37]: https://github.com/tpope/vim-endwise
-  [38]: https://github.com/godlygeek/tabular
-  [39]: https://github.com/will133/vim-dirdiff
-  [40]: https://github.com/gorodinskiy/vim-coloresque
-  [41]: https://github.com/haya14busa/incsearch.vim
-  [42]: https://github.com/mhinz/vim-startify
-  [43]: https://github.com/chxuan/change-colorscheme
-  [44]: https://github.com/chxuan/vimplus/blob/master/.ycm_extra_conf.py
-  [45]: https://github.com/chxuan/vimplus/blob/master/.ycm_extra_conf.py
-  [46]: https://github.com/ryanoasis/vim-devicons
-  [47]: https://github.com/VundleVim/Vundle.vim
-  [48]: https://camo.githubusercontent.com/1f3f922431d5363224b20e99467ff28b04e810e2/687474703a2f2f692e696d6775722e636f6d2f304f50346f6f642e676966
-  [49]: https://github.com/ctrlpvim/ctrlp.vim
-  [50]: https://camo.githubusercontent.com/e15ac916ab9a14dd07135cb2d985cc7333200a38/687474703a2f2f692e696d6775722e636f6d2f614f63774877742e706e67
-  [51]: https://camo.githubusercontent.com/ba79534309330accd776a8d2a0712f7c4037d7f9/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3330363530322f313037323632332f34346332393261302d313439352d313165332d396365362d6463616461336631633533362e676966
-  [52]: https://camo.githubusercontent.com/1f02cead8bdcf894f26b0006c44068a33a7dc8e5/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f737572726f756e645f656e2e676966
-  [53]: https://camo.githubusercontent.com/2f5cb5bc9a964b0d9e623b5b3aff0314294ac841/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f636f6d6d656e746172795f656e2e676966
-  [54]: https://camo.githubusercontent.com/372b34413e710cdbc95c5a5c1f901baf9e77791d/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f736d617274696e7075745f656e2e676966
-  [55]: https://raw.githubusercontent.com/haya14busa/i/master/incsearch.vim/incremental_regex_building.gif
-  [56]: https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.8.x/nerdtree-1.png
-  [57]: https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.8.x/nerdtree-2.png
-  [58]: https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.8.x/nerdtree-3.png
-  [59]: https://camo.githubusercontent.com/70916a51f45b5729332803c5de303f6f1849fc50/68747470733a2f2f7261772e6769746875622e636f6d2f676f726f64696e736b69792f76696d2d636f6c6f7265737175652f6d61737465722f73637265656e2e706e67
-  [60]: https://raw.githubusercontent.com/will133/vim-dirdiff/master/screenshot.png
-  [61]: https://raw.githubusercontent.com/mhinz/vim-startify/master/images/startify-menu.png
-  [62]: https://github.com/chxuan/change-colorscheme
-  [63]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/change-colorscheme.gif
-  [64]: https://github.com/Valloric/YouCompleteMe
-  [65]: http://pan.baidu.com/s/1kVdgsRl
+  [2]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/main.png
+  [3]: https://brew.sh/
+  [4]: https://github.com/VundleVim/Vundle.vim
+  [5]: https://github.com/Valloric/YouCompleteMe
+  [6]: https://github.com/scrooloose/nerdtree
+  [7]: https://github.com/scrooloose/nerdcommenter
+  [8]: https://github.com/vim-airline/vim-airline
+  [9]: https://github.com/jiangmiao/auto-pairs
+  [10]: https://github.com/vim-scripts/DoxygenToolkit.vim
+  [11]: https://github.com/ctrlpvim/ctrlp.vim
+  [12]: https://github.com/majutsushi/tagbar
+  [13]: https://github.com/ryanoasis/vim-devicons
+  [14]: https://github.com/tpope/vim-surround
+  [15]: https://github.com/tpope/vim-commentary
+  [16]: https://github.com/tpope/vim-repeat
+  [17]: https://github.com/tpope/vim-endwise
+  [18]: https://github.com/godlygeek/tabular
+  [19]: https://github.com/will133/vim-dirdiff
+  [20]: https://github.com/gko/vim-coloresque
+  [21]: https://github.com/easymotion/vim-easymotion
+  [22]: https://github.com/haya14busa/incsearch.vim
+  [23]: https://github.com/mhinz/vim-startify
+  [24]: https://github.com/iamcco/markdown-preview.vim
+  [25]: https://github.com/chxuan/change-colorscheme
+  [26]: https://pan.baidu.com/s/1kVdgsRl
+  [27]: https://github.com/Valloric/YouCompleteMe
+  [28]: https://camo.githubusercontent.com/1f3f922431d5363224b20e99467ff28b04e810e2/687474703a2f2f692e696d6775722e636f6d2f304f50346f6f642e676966
+  [29]: https://camo.githubusercontent.com/e15ac916ab9a14dd07135cb2d985cc7333200a38/687474703a2f2f692e696d6775722e636f6d2f614f63774877742e706e67
+  [30]: https://camo.githubusercontent.com/ba79534309330accd776a8d2a0712f7c4037d7f9/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3330363530322f313037323632332f34346332393261302d313439352d313165332d396365362d6463616461336631633533362e676966
+  [31]: https://camo.githubusercontent.com/1f02cead8bdcf894f26b0006c44068a33a7dc8e5/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f737572726f756e645f656e2e676966
+  [32]: https://camo.githubusercontent.com/2f5cb5bc9a964b0d9e623b5b3aff0314294ac841/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f636f6d6d656e746172795f656e2e676966
+  [33]: https://camo.githubusercontent.com/372b34413e710cdbc95c5a5c1f901baf9e77791d/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f736d617274696e7075745f656e2e676966
+  [34]: https://camo.githubusercontent.com/d5f800b9602faaeccc2738c302776a8a11797a0e/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f333739373036322f323033393335392f61386539333864362d383939662d313165332d383738392d3630303235656138333635362e676966
+  [35]: https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.9.x/overall-screenshot.png
+  [36]: https://raw.githubusercontent.com/mhinz/vim-startify/master/images/startify-menu.png
+  [37]: https://cloud.githubusercontent.com/assets/5492542/15363504/839753be-1d4b-11e6-9ac8-def4d7122e8d.gif
