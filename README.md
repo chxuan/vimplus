@@ -11,45 +11,45 @@ An automatic configuration program for vim
 
 - 安装[HomeBrew][3]
  
-```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+    ```bash
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ```
 
 - 安装vimplus
 
-```bash
-git clone https://github.com/chxuan/vimplus.git
-cd ./vimplus
-./install.sh
-```
+    ```bash
+    git clone https://github.com/chxuan/vimplus.git
+    cd ./vimplus
+    ./install.sh
+    ```
 
 ### Ubuntu
 
 - 版本要求
 
-`ubuntu14.04`及其以上`64`位系统。
+    `ubuntu14.04`及其以上`64`位系统。
 
 - 安装vimplus
 
-```bash
-git clone https://github.com/chxuan/vimplus.git
-cd ./vimplus
-sudo ./install.sh
-```
+    ```bash
+    git clone https://github.com/chxuan/vimplus.git
+    cd ./vimplus
+    sudo ./install.sh
+    ```
 
 ### Centos
 
 - 版本要求
 
-`centos7`及其以上`64`位系统。
+    `centos7`及其以上`64`位系统。
 
 - 安装vimplus
 
-```bash
-git clone https://github.com/chxuan/vimplus.git
-cd ./vimplus
-sudo ./install.sh
-```
+    ```bash
+    git clone https://github.com/chxuan/vimplus.git
+    cd ./vimplus
+    sudo ./install.sh
+    ```
 
 部分插件列表
 ------------
