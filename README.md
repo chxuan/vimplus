@@ -127,7 +127,7 @@ Q & A
 
 - **`以上没有我遇到的问题怎么办？`**
 
-    您可以通过上网找解决方法，或提Issues，也可以通过发邮件方式`787280310@qq.com`一起讨论解决方法。
+    您可以通过上网找解决方法，或提[Issues][28]，也可以通过发邮件方式`787280310@qq.com`一起讨论解决方法。
 
 - **`vimplus用起来真的太棒了，怎么办？`**
 
@@ -138,43 +138,43 @@ Q & A
 
 - YouCompleteMe 
 
-    ![][28]
+    ![][29]
 
 - ctrlp 
 
-    ![][29]
+    ![][30]
 
 - vim-airline
 
-    ![][30]
+    ![][31]
 
 - vim-surround
 
-    ![][31]
+    ![][32]
 
 - vim-commentary
 
-    ![][32]
+    ![][33]
 
 - auto-pairs
 
-    ![][33]
+    ![][34]
 
 - vim-easymotion
 
-    ![][34]
+    ![][35]
 
 - vim-devicons
 
-    ![][35]
+    ![][36]
 
 - vim-startify
 
-    ![][36]
+    ![][37]
 
 - markdown-preview
 
-    ![][37]
+    ![][38]
 
 
   [1]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/vimplus2.png
@@ -204,13 +204,14 @@ Q & A
   [25]: https://github.com/chxuan/change-colorscheme
   [26]: https://pan.baidu.com/s/1kVdgsRl
   [27]: https://github.com/Valloric/YouCompleteMe
-  [28]: https://camo.githubusercontent.com/1f3f922431d5363224b20e99467ff28b04e810e2/687474703a2f2f692e696d6775722e636f6d2f304f50346f6f642e676966
-  [29]: https://camo.githubusercontent.com/e15ac916ab9a14dd07135cb2d985cc7333200a38/687474703a2f2f692e696d6775722e636f6d2f614f63774877742e706e67
-  [30]: https://camo.githubusercontent.com/ba79534309330accd776a8d2a0712f7c4037d7f9/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3330363530322f313037323632332f34346332393261302d313439352d313165332d396365362d6463616461336631633533362e676966
-  [31]: https://camo.githubusercontent.com/1f02cead8bdcf894f26b0006c44068a33a7dc8e5/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f737572726f756e645f656e2e676966
-  [32]: https://camo.githubusercontent.com/2f5cb5bc9a964b0d9e623b5b3aff0314294ac841/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f636f6d6d656e746172795f656e2e676966
-  [33]: https://camo.githubusercontent.com/372b34413e710cdbc95c5a5c1f901baf9e77791d/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f736d617274696e7075745f656e2e676966
-  [34]: https://camo.githubusercontent.com/d5f800b9602faaeccc2738c302776a8a11797a0e/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f333739373036322f323033393335392f61386539333864362d383939662d313165332d383738392d3630303235656138333635362e676966
-  [35]: https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.9.x/overall-screenshot.png
-  [36]: https://raw.githubusercontent.com/mhinz/vim-startify/master/images/startify-menu.png
-  [37]: https://cloud.githubusercontent.com/assets/5492542/15363504/839753be-1d4b-11e6-9ac8-def4d7122e8d.gif
+  [28]: https://github.com/chxuan/vimplus/issues
+  [29]: https://camo.githubusercontent.com/1f3f922431d5363224b20e99467ff28b04e810e2/687474703a2f2f692e696d6775722e636f6d2f304f50346f6f642e676966
+  [30]: https://camo.githubusercontent.com/e15ac916ab9a14dd07135cb2d985cc7333200a38/687474703a2f2f692e696d6775722e636f6d2f614f63774877742e706e67
+  [31]: https://camo.githubusercontent.com/ba79534309330accd776a8d2a0712f7c4037d7f9/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3330363530322f313037323632332f34346332393261302d313439352d313165332d396365362d6463616461336631633533362e676966
+  [32]: https://camo.githubusercontent.com/1f02cead8bdcf894f26b0006c44068a33a7dc8e5/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f737572726f756e645f656e2e676966
+  [33]: https://camo.githubusercontent.com/2f5cb5bc9a964b0d9e623b5b3aff0314294ac841/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f636f6d6d656e746172795f656e2e676966
+  [34]: https://camo.githubusercontent.com/372b34413e710cdbc95c5a5c1f901baf9e77791d/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f736d617274696e7075745f656e2e676966
+  [35]: https://camo.githubusercontent.com/d5f800b9602faaeccc2738c302776a8a11797a0e/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f333739373036322f323033393335392f61386539333864362d383939662d313165332d383738392d3630303235656138333635362e676966
+  [36]: https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.9.x/overall-screenshot.png
+  [37]: https://raw.githubusercontent.com/mhinz/vim-startify/master/images/startify-menu.png
+  [38]: https://cloud.githubusercontent.com/assets/5492542/15363504/839753be-1d4b-11e6-9ac8-def4d7122e8d.gif
