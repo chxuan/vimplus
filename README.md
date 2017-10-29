@@ -26,6 +26,7 @@ cd ./vimplus
 ### Ubuntu
 
 - 版本要求
+
 `ubuntu14.04`及其以上`64`位系统。
 
 - 安装vimplus
@@ -39,6 +40,7 @@ sudo ./install.sh
 ### Centos
 
 - 版本要求
+
 `centos7`及其以上`64`位系统。
 
 - 安装vimplus
