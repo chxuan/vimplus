@@ -86,7 +86,7 @@ An automatic configuration program for vim
  - 重复上次操作 `.`
  - 改变主题颜色 `<F9/F10>`
  - 单词跳转 `<, + w>`
- - 启用/关闭markdown预览 `<F7/F8>`
+ - 启用/关闭markdown实时预览 `<F7/F8>`
 
 Q & A
 ------------
