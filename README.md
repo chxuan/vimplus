@@ -10,14 +10,18 @@ An automatic configuration program for vim
 ### Mac OS X
 
 - 安装[HomeBrew][3]
-
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+ 
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 - 安装vimplus
 
-    git clone https://github.com/chxuan/vimplus.git
-    cd ./vimplus
-    ./install.sh
+```bash
+git clone https://github.com/chxuan/vimplus.git
+cd ./vimplus
+./install.sh
+```
 
 ### Ubuntu
 
@@ -26,9 +30,11 @@ An automatic configuration program for vim
 
 - 安装vimplus
 
-    git clone https://github.com/chxuan/vimplus.git
-    cd ./vimplus
-    sudo ./install.sh
+```bash
+git clone https://github.com/chxuan/vimplus.git
+cd ./vimplus
+sudo ./install.sh
+```
 
 ### Centos
 
@@ -37,9 +43,11 @@ An automatic configuration program for vim
 
 - 安装vimplus
 
-    git clone https://github.com/chxuan/vimplus.git
-    cd ./vimplus
-    sudo ./install.sh
+```bash
+git clone https://github.com/chxuan/vimplus.git
+cd ./vimplus
+sudo ./install.sh
+```
 
 部分插件列表
 ------------
@@ -119,33 +127,43 @@ vimplus安装完毕之后，`~`目录下将会生成两个隐藏文件分别是.
 ------------
 
 - YouCompleteMe 
+
 ![][28]
 
 - ctrlp 
+
 ![][29]
 
 - vim-airline
+
 ![][30]
 
 - vim-surround
+
 ![][31]
 
 - vim-commentary
+
 ![][32]
 
 - auto-pairs
+
 ![][33]
 
 - vim-easymotion
+
 ![][34]
 
 - vim-devicons
+
 ![][35]
 
 - vim-startify
+
 ![][36]
 
 - markdown-preview
+
 ![][37]
 
 
