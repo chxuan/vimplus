@@ -103,78 +103,78 @@ Q & A
 
 - **`安装vimplus后Airline等插件有乱码，怎么解决？`**
 
-linux和mac系统需设置终端字体为Droid Sans Mono for Powerline Nerd Font Complete。
+    linux和mac系统需设置终端字体为Droid Sans Mono for Powerline Nerd Font Complete。
 
 - **`xshell连接远程主机使用NerdTree出现错位！！！`**
 
-执行rm -rf ~/vim/bundle/vim-devicons命令，将vim-devicons删除即可，或移动到其他地方。
+    执行rm -rf ~/vim/bundle/vim-devicons命令，将vim-devicons删除即可，或移动到其他地方。
 
 - **`安装vimplus会经常失败，安装了几次都不成功！！！`**
 
-vimplus安装时需要访问外国网站，犹豫网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，这里有下载好的[YouCompleteMe.tar.gz][26]文件，下载后解压到~/.vim/bundle/目录，并进入YouCompleteMe目录执行sudo ./install.py --clang-completer即可安装。
+    vimplus安装时需要访问外国网站，犹豫网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，这里有下载好的[YouCompleteMe.tar.gz][26]文件，下载后解压到~/.vim/bundle/目录，并进入YouCompleteMe目录执行sudo ./install.py --clang-completer即可安装。
 
 - **`使用第三方库时怎么让ycm补全第三方库API？`**
 
-vimplus安装完毕之后，`~`目录下将会生成两个隐藏文件分别是.vimrc和.ycm_extra_conf.py，其中.vimrc是vim的配置文件，.ycm_extra_conf.py是ycm插件的配置文件，当你需要创建一个project时，需要将.ycm_extra_conf.py拷贝到project的顶层目录，通过修改该配置文件里面的`flags`变量来添加你的第三方库路径。
+    vimplus安装完毕之后，`~`目录下将会生成两个隐藏文件分别是.vimrc和.ycm_extra_conf.py，其中.vimrc是vim的配置文件，.ycm_extra_conf.py是ycm插件的配置文件，当你需要创建一个project时，需要将.ycm_extra_conf.py拷贝到project的顶层目录，通过修改该配置文件里面的`flags`变量来添加你的第三方库路径。
 
 - **`安装vimplus完成后ycm不能够工作！！！`**
 
-这里的原因可能就有很多了，可能每个人遇到的问题不一样，但`vimplus`尽最大努力不让用户操心，需要注意的是ycm插件只支持`64`位的系统，更多信息请访问[ycm官网][27]。
+    这里的原因可能就有很多了，可能每个人遇到的问题不一样，但`vimplus`尽最大努力不让用户操心，需要注意的是ycm插件只支持`64`位的系统，更多信息请访问[ycm官网][27]。
 
 - **`使用vimplus为什么不能补全JS、Go、Java等语言？`**
 
-目前vimplus只支持C、C++、Shell、vimscript、Python等语言补全，后序会支持更多的语言，若您真的需要使用其他语言，您可以在vimplus基础上扩展。
+    目前vimplus只支持C、C++、Shell、vimscript、Python等语言补全，后序会支持更多的语言，若您真的需要使用其他语言，您可以在vimplus基础上扩展。
 
 - **`以上没有我遇到的问题怎么办？`**
 
-您可以通过上网找解决方法，或提Issues，也可以通过发邮件方式`787280310@qq.com`一起讨论解决方法。
+    您可以通过上网找解决方法，或提Issues，也可以通过发邮件方式`787280310@qq.com`一起讨论解决方法。
 
 - **`vimplus用起来真的太棒了，怎么办？`**
 
-那就麻烦您打赏一颗星星吧，给予我继续维护的动力。
+    那就麻烦您打赏一颗星星吧，给予我继续维护的动力。
 
 特性展示
 ------------
 
 - YouCompleteMe 
 
-![][28]
+    ![][28]
 
 - ctrlp 
 
-![][29]
+    ![][29]
 
 - vim-airline
 
-![][30]
+    ![][30]
 
 - vim-surround
 
-![][31]
+    ![][31]
 
 - vim-commentary
 
-![][32]
+    ![][32]
 
 - auto-pairs
 
-![][33]
+    ![][33]
 
 - vim-easymotion
 
-![][34]
+    ![][34]
 
 - vim-devicons
 
-![][35]
+    ![][35]
 
 - vim-startify
 
-![][36]
+    ![][36]
 
 - markdown-preview
 
-![][37]
+    ![][37]
 
 
   [1]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/vimplus2.png
