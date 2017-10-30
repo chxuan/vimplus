@@ -177,8 +177,8 @@ Q & A
     ![][38]
 
 
-  [1]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/vimplus2.png
-  [2]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/main.png
+  [1]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/vimplus.png
+  [2]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/main2.png
   [3]: https://brew.sh/
   [4]: https://github.com/VundleVim/Vundle.vim
   [5]: https://github.com/Valloric/YouCompleteMe
