@@ -103,7 +103,7 @@ Q & A
 
 - **`安装vimplus后Airline等插件有乱码，怎么解决？`**
 
-    linux和mac系统需设置终端字体为Droid Sans Mono for Powerline Nerd Font Complete。
+    linux和mac系统需设置终端字体为DroidSansMonofor Powerline Nerd Font。
 
 - **`xshell连接远程主机使用NerdTree出现错位！！！`**
 
