@@ -173,7 +173,7 @@ function print_logo()
     printf "${normal}"
 }
 
-# 改变.vim文件属租和用户
+# 改变.vim文件属组和用户
 function chown_vim_dir()
 {
     who_is=$(who)
