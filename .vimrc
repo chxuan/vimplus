@@ -249,8 +249,10 @@ map <F9> :PreviousColorScheme<CR>
 imap <F9> <ESC> :PreviousColorScheme<CR>
 
 " nerdtree
-map <F3> :NERDTreeToggle<CR>
-imap <F3> <ESC> :NERDTreeToggle<CR>
+" map <Leader>L <Plug>(easymotion-bd-jk)
+" nmap <Leader>L <Plug>(easymotion-overwin-line)
+map <Leader>n :NERDTreeToggle<CR>
+imap <Leader>n <ESC> :NERDTreeToggle<CR>
 "autocmd vimenter * if !argc() | NERDTree | endif
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
@@ -299,7 +301,7 @@ let g:ycm_semantic_triggers =  {
 let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
 
 " a.vim: .h -> .cpp or .cpp -> .h
-nnoremap <silent> <F2> :A<CR>
+nnoremap <silent> <Leader>h :A<CR>
 
 " tagbar
 
@@ -307,8 +309,8 @@ nnoremap <silent> <F2> :A<CR>
 " let g:tagbar_ctags_bin = '/usr/bin/ctags' "linux
 " let g:tagbar_ctags_bin = '/usr/local/bin/ctags' "mac
 let g:tagbar_width = 30
-map <F4> :TagbarToggle<CR>
-imap <F4> <ESC> :TagbarToggle<CR>
+map <Leader>t :TagbarToggle<CR>
+imap <Leader>t <ESC> :TagbarToggle<CR>
 
 " colorscheme
 set background=dark

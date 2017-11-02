@@ -80,23 +80,24 @@ An automatic configuration program for vim
 快捷键
 ------------
 
- - 打开/关闭目录树 `<F3>`
- - 显示函数、变量、宏列表 `<F4>`
+ - Leader键为 `,`
+ - 打开/关闭目录树 `<Leader>n`
+ - 显示函数、变量、宏列表 `<Leader>t`
  - 分析语法错误 `<F5>`
- - .h .cpp 文件切换 `<F2>`
- - 转到函数实现 `<, + u>`
- - 转到函数声明 `<, + i>`
- - 打开include文件 `<, + o>`
- - 窗口切换 `<Ctrl + P/Ctrl + N>`
- - 光标位置切换 `<Ctrl + O/Ctrl + I>`
- - 模糊搜索文件 `<Ctrl + f>`
- - Surround `<ys{motion or text-object}{char}/cs{orig_char}{dest_char}/ds{char}>`
- - 注释 `<gcc/gcap/gc/,ca/,cA>`
+ - .h .cpp 文件切换 `<Leader>h`
+ - 转到函数实现 `<Leader>u`
+ - 转到函数声明 `<Leader>i`
+ - 打开include文件 `<Leader>o`
+ - 窗口切换 `Ctrl + P/Ctrl + N`
+ - 光标位置切换 `Ctrl + O/Ctrl + I`
+ - 模糊搜索文件 `Ctrl + f`
+ - Surround `ys{motion or text-object}{char}/cs{orig_char}{dest_char}/ds{char}`
+ - 注释 `gcc/gcap/gc/,ca/,cA`
  - 目录比较 `:DirDiff <dir1> <dir2>`
  - 重复上次操作 `.`
- - 改变主题颜色 `<F9/F10>`
- - 单词跳转 `<, + w>`
- - 启用/关闭markdown实时预览 `<F7/F8>`
+ - 改变主题颜色 `F9/F10`
+ - 单词跳转 `<Leader>w`
+ - 启用/关闭markdown实时预览 `F7/F8`
 
 Q & A
 ------------
