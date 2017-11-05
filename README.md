@@ -84,7 +84,7 @@ An automatic configuration program for vim
  - 打开/关闭目录树 `<Leader>n`
  - 显示函数、变量、宏列表 `<Leader>t`
  - 分析语法错误 `<F5>`
- - .h .cpp 文件切换 `<Leader>h`
+ - .h .cpp 文件切换 `<Leader>a`
  - 转到函数实现 `<Leader>u`
  - 转到函数声明 `<Leader>i`
  - 打开include文件 `<Leader>o`

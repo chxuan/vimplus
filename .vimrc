@@ -301,7 +301,7 @@ let g:ycm_semantic_triggers =  {
 let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
 
 " a.vim: .h -> .cpp or .cpp -> .h
-nnoremap <silent> <Leader>h :A<CR>
+nnoremap <silent> <Leader>a :A<CR>
 
 " tagbar
 
