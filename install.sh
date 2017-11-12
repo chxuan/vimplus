@@ -173,12 +173,16 @@ function print_logo()
     printf "${normal}"
 }
 
-# 改变.vim文件属组和用户
-function chown_vim_dir()
+# 改变一些文件、文件夹属组和用户关系
+function chown_dir()
 {
     who_is=$(who)
     current_user=${who_is%% *}
     sudo chown -R ${current_user}:${current_user} ~/.vim
+    sudo chown -R ${current_user}:${current_user} ~/.cache
+    sudo chown ${current_user}:${current_user} ~/.vimrc
+    sudo chown ${current_user}:${current_user} ~/.viminfo
+    sudo chown ${current_user}:${current_user} ~/.ycm_extra_conf.py
 }
 
 # 在mac平台安装vimplus
@@ -200,7 +204,7 @@ function begin_install_vimplus()
     clone_vundle
     install_vim_plugin
     compile_ycm_on_linux
-    chown_vim_dir
+    chown_dir
     print_logo
 }
 
