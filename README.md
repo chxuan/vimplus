@@ -75,6 +75,15 @@ An automatic configuration program for vim
  - [vim-startify][25] - 起始页插件，可以看你之前打开过的文档。
  - [markdown-preview][26] - markdown文件的编辑以及实时预览插件。
  - [change-colorscheme][27] - 随心所欲的切换主题。
+ - [L9][28] - Vim-script库。
+ - [indentLine][29] - 代码缩进对齐线。
+ - [FlyGrep][30] - 基于文本的模糊搜索插件。
+ - [sparkup][31] - HTML标签补全插件。
+ - [pydiction][32] - 基于字典的python语法补全插件。
+ - [MatchTagAlways][33] - 高亮配对符。
+ - [closetag][34] - HTML标签自动闭合工具。
+ - [a.vim][35] - .h .cpp文件快速切换。
+ - [vim-fugitive][36] - 集成Git插件。
 
 快捷键
 ------------
@@ -111,7 +120,7 @@ Q & A
 
 - **`安装vimplus会经常失败，安装了几次都不成功！！！`**
 
-    vimplus安装时需要访问外国网站，由于网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，这里有下载好的[YouCompleteMe.tar.gz][28]文件，下载后解压到~/.vim/bundle/目录，并进入YouCompleteMe目录执行sudo ./install.py --clang-completer即可安装。
+    vimplus安装时需要访问外国网站，由于网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，这里有下载好的[YouCompleteMe.tar.gz][37]文件，下载后解压到~/.vim/bundle/目录，并进入YouCompleteMe目录执行sudo ./install.py --clang-completer即可安装。
 
 - **`使用第三方库时怎么让ycm补全第三方库API？`**
 
@@ -119,7 +128,7 @@ Q & A
 
 - **`安装vimplus完成后ycm不能够工作！！！`**
 
-    这里的原因可能就有很多了，可能每个人遇到的问题不一样，但`vimplus`尽最大努力不让用户操心，需要注意的是ycm插件只支持`64`位的系统，更多信息请访问[ycm官网][29]。
+    这里的原因可能就有很多了，可能每个人遇到的问题不一样，但`vimplus`尽最大努力不让用户操心，需要注意的是ycm插件只支持`64`位的系统，更多信息请访问[ycm官网][38]。
 
 - **`使用vimplus为什么不能补全JS、Go、Java等语言？`**
 
@@ -127,7 +136,7 @@ Q & A
 
 - **`以上没有我遇到的问题怎么办？`**
 
-    您可以通过上网找解决方法，或提[Issues][30]，也可以通过发邮件方式`787280310@qq.com`一起讨论解决方法。
+    您可以通过上网找解决方法，或提[Issues][39]，也可以通过发邮件方式`787280310@qq.com`一起讨论解决方法。
 
 - **`vimplus用起来真的太棒了，怎么办？`**
 
@@ -138,43 +147,43 @@ Q & A
 
 - YouCompleteMe 
 
-    ![][31]
+    ![][40]
 
 - ctrlp 
 
-    ![][32]
+    ![][41]
 
 - vim-airline
 
-    ![][33]
+    ![][42]
 
 - vim-surround
 
-    ![][34]
+    ![][43]
 
 - vim-commentary
 
-    ![][35]
+    ![][44]
 
 - auto-pairs
 
-    ![][36]
+    ![][45]
 
 - vim-easymotion
 
-    ![][37]
+    ![][46]
 
 - vim-devicons
 
-    ![][38]
+    ![][47]
 
 - vim-startify
 
-    ![][39]
+    ![][48]
 
 - markdown-preview
 
-    ![][40]
+    ![][49]
 
 
   [1]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/vimplus.png
@@ -204,16 +213,25 @@ Q & A
   [25]: https://github.com/mhinz/vim-startify
   [26]: https://github.com/iamcco/markdown-preview.vim
   [27]: https://github.com/chxuan/change-colorscheme
-  [28]: https://pan.baidu.com/s/1kVdgsRl
-  [29]: https://github.com/Valloric/YouCompleteMe
-  [30]: https://github.com/chxuan/vimplus/issues
-  [31]: https://camo.githubusercontent.com/1f3f922431d5363224b20e99467ff28b04e810e2/687474703a2f2f692e696d6775722e636f6d2f304f50346f6f642e676966
-  [32]: https://camo.githubusercontent.com/e15ac916ab9a14dd07135cb2d985cc7333200a38/687474703a2f2f692e696d6775722e636f6d2f614f63774877742e706e67
-  [33]: https://camo.githubusercontent.com/ba79534309330accd776a8d2a0712f7c4037d7f9/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3330363530322f313037323632332f34346332393261302d313439352d313165332d396365362d6463616461336631633533362e676966
-  [34]: https://camo.githubusercontent.com/1f02cead8bdcf894f26b0006c44068a33a7dc8e5/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f737572726f756e645f656e2e676966
-  [35]: https://camo.githubusercontent.com/2f5cb5bc9a964b0d9e623b5b3aff0314294ac841/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f636f6d6d656e746172795f656e2e676966
-  [36]: https://camo.githubusercontent.com/372b34413e710cdbc95c5a5c1f901baf9e77791d/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f736d617274696e7075745f656e2e676966
-  [37]: https://camo.githubusercontent.com/d5f800b9602faaeccc2738c302776a8a11797a0e/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f333739373036322f323033393335392f61386539333864362d383939662d313165332d383738392d3630303235656138333635362e676966
-  [38]: https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.9.x/overall-screenshot.png
-  [39]: https://raw.githubusercontent.com/mhinz/vim-startify/master/images/startify-menu.png
-  [40]: https://cloud.githubusercontent.com/assets/5492542/15363504/839753be-1d4b-11e6-9ac8-def4d7122e8d.gif
+  [28]: https://github.com/vim-scripts/L9
+  [29]: https://github.com/Yggdroot/indentLine
+  [30]: https://github.com/wsdjeg/FlyGrep.vim
+  [31]: https://github.com/rstacruz/sparkup
+  [32]: https://github.com/rkulla/pydiction
+  [33]: https://github.com/Valloric/MatchTagAlways
+  [34]: https://github.com/docunext/closetag.vim
+  [35]: https://github.com/vim-scripts/a.vim
+  [36]: https://github.com/tpope/vim-fugitive
+  [37]: https://pan.baidu.com/s/1kVdgsRl
+  [38]: https://github.com/Valloric/YouCompleteMe
+  [39]: https://github.com/chxuan/vimplus/issues
+  [40]: https://camo.githubusercontent.com/1f3f922431d5363224b20e99467ff28b04e810e2/687474703a2f2f692e696d6775722e636f6d2f304f50346f6f642e676966
+  [41]: https://camo.githubusercontent.com/e15ac916ab9a14dd07135cb2d985cc7333200a38/687474703a2f2f692e696d6775722e636f6d2f614f63774877742e706e67
+  [42]: https://camo.githubusercontent.com/ba79534309330accd776a8d2a0712f7c4037d7f9/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3330363530322f313037323632332f34346332393261302d313439352d313165332d396365362d6463616461336631633533362e676966
+  [43]: https://camo.githubusercontent.com/1f02cead8bdcf894f26b0006c44068a33a7dc8e5/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f737572726f756e645f656e2e676966
+  [44]: https://camo.githubusercontent.com/2f5cb5bc9a964b0d9e623b5b3aff0314294ac841/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f636f6d6d656e746172795f656e2e676966
+  [45]: https://camo.githubusercontent.com/372b34413e710cdbc95c5a5c1f901baf9e77791d/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f736d617274696e7075745f656e2e676966
+  [46]: https://camo.githubusercontent.com/d5f800b9602faaeccc2738c302776a8a11797a0e/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f333739373036322f323033393335392f61386539333864362d383939662d313165332d383738392d3630303235656138333635362e676966
+  [47]: https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.9.x/overall-screenshot.png
+  [48]: https://raw.githubusercontent.com/mhinz/vim-startify/master/images/startify-menu.png
+  [49]: https://cloud.githubusercontent.com/assets/5492542/15363504/839753be-1d4b-11e6-9ac8-def4d7122e8d.gif
