@@ -1,4 +1,5 @@
 <p align="center"><img src="https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/vimplus-logo.png" /></p>
+
 <h3 style="text-align:center">An automatic configuration program for vim</h3>
 
 ![][2]
