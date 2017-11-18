@@ -1,6 +1,7 @@
-<p align="center"><img src="https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/vimplus-logo.png" /></p>
+![][1]
 
-<h3 style="text-align:center">An automatic configuration program for vim</h3>
+An automatic configuration program for vim
+===============================================
 
 ![][2]
 
