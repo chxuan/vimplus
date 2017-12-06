@@ -51,6 +51,11 @@ An automatic configuration program for vim
     sudo ./install.sh
     ```
 
+个性化
+------------
+
+修改 `~/.vimrc.local` 文件内容，以启用个性化定制，可覆盖 `~/.vimrc` 中的设置。
+
 插件列表
 ------------
  - [Vundle][4] - 基于Git仓库的插件管理软件。
