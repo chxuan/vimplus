@@ -389,3 +389,8 @@ nmap <Leader><Leader>il :IndentLinesToggle<CR>
 " pydiction
 let g:pydiction_location='~/.vim/bundle/pydiction/complete-dict'
 let g:pydiction_menu_height=10
+
+" 个性化
+if filereadable(expand($HOME . '/.vimrc.local'))
+    source $HOME/.vimrc.local
+endif
