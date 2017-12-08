@@ -235,6 +235,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'will133/vim-dirdiff'
 Plugin 'mhinz/vim-startify'
+Plugin 'junegunn/vim-slash'
 
 call vundle#end()            
 filetype plugin indent on    

@@ -89,6 +89,7 @@ An automatic configuration program for vim
  - [closetag][34] - HTML标签自动闭合工具。
  - [a.vim][35] - .h .cpp文件快速切换。
  - [vim-fugitive][36] - 集成Git插件。
+ - [vim-slash][50] - 优化搜索，移动光标后清除高亮。
 
 快捷键
 ------------
@@ -240,3 +241,4 @@ Q & A
   [47]: https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.9.x/overall-screenshot.png
   [48]: https://raw.githubusercontent.com/mhinz/vim-startify/master/images/startify-menu.png
   [49]: https://cloud.githubusercontent.com/assets/5492542/15363504/839753be-1d4b-11e6-9ac8-def4d7122e8d.gif
+  [50]: https://github.com/junegunn/vim-slash
