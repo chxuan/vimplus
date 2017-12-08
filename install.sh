@@ -88,24 +88,20 @@ function install_prepare_software_on_ubuntu()
 function copy_files()
 {
     rm -rf ~/.vimrc
-    # cp .vimrc ~
-    ln -s ${PWD}/.vimrc ~
+    cp .vimrc ~
 
     rm -rf ~/.vimrc.local
-    cp ${PWD}/.vimrc.local ~
+    cp .vimrc.local ~
 
     rm -rf ~/.ycm_extra_conf.py
-    # cp .ycm_extra_conf.py ~
-    ln -s ${PWD}/.ycm_extra_conf.py ~
+    cp .ycm_extra_conf.py ~
 
     mkdir ~/.vim
     rm -rf ~/.vim/plugin
-    # cp -R ./plugin ~/.vim
-    ln -s ${PWD}/./plugin ~/.vim
+    cp -R ./plugin ~/.vim
 
     rm -rf ~/.vim/colors
-    # cp -R ./colors ~/.vim
-    ln -s ${PWD}/./colors ~/.vim
+    cp -R ./colors ~/.vim
 }
 
 # 安装mac平台字体
@@ -188,6 +184,7 @@ function chown_dir()
     sudo chown -R ${current_user}:${current_user} ~/.vim
     sudo chown -R ${current_user}:${current_user} ~/.cache
     sudo chown ${current_user}:${current_user} ~/.vimrc
+    sudo chown ${current_user}:${current_user} ~/.vimrc.local
     sudo chown ${current_user}:${current_user} ~/.viminfo
     sudo chown ${current_user}:${current_user} ~/.ycm_extra_conf.py
 }
