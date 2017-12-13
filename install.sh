@@ -88,20 +88,24 @@ function install_prepare_software_on_ubuntu()
 function copy_files()
 {
     rm -rf ~/.vimrc
-    cp .vimrc ~
+    # cp .vimrc ~
+    ln -s ${PWD}/.vimrc ~
 
     rm -rf ~/.vimrc.local
-    cp .vimrc.local ~
+    cp ${PWD}/.vimrc.local ~
 
     rm -rf ~/.ycm_extra_conf.py
-    cp .ycm_extra_conf.py ~
+    # cp .ycm_extra_conf.py ~
+    ln -s ${PWD}/.ycm_extra_conf.py ~
 
     mkdir ~/.vim
     rm -rf ~/.vim/plugin
-    cp -R ./plugin ~/.vim
+    # cp -R ./plugin ~/.vim
+    ln -s ${PWD}/plugin ~/.vim
 
     rm -rf ~/.vim/colors
-    cp -R ./colors ~/.vim
+    # cp -R ./colors ~/.vim
+    ln -s ${PWD}/colors ~/.vim
 }
 
 # 安装mac平台字体
