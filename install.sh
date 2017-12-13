@@ -187,10 +187,10 @@ function chown_dir()
     current_user=${who_is%% *}
     sudo chown -R ${current_user}:${current_user} ~/.vim
     sudo chown -R ${current_user}:${current_user} ~/.cache
-    sudo chown ${current_user}:${current_user} ~/.vimrc
+    # sudo chown ${current_user}:${current_user} ~/.vimrc
     sudo chown ${current_user}:${current_user} ~/.vimrc.local
     sudo chown ${current_user}:${current_user} ~/.viminfo
-    sudo chown ${current_user}:${current_user} ~/.ycm_extra_conf.py
+    # sudo chown ${current_user}:${current_user} ~/.ycm_extra_conf.py
 }
 
 # 在mac平台安装vimplus
