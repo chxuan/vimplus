@@ -18,8 +18,8 @@ An automatic configuration program for vim
 - 安装vimplus
 
     ```bash
-    git clone https://github.com/chxuan/vimplus.git
-    cd ./vimplus
+    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
+    cd ~/.vimplus
     ./install.sh
     ```
 
@@ -32,9 +32,9 @@ An automatic configuration program for vim
 - 安装vimplus
 
     ```bash
-    git clone https://github.com/chxuan/vimplus.git
-    cd ./vimplus
-    sudo ./install.sh
+    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
+    cd ~/.vimplus
+    ./install.sh
     ```
 
 ### Centos
@@ -46,9 +46,9 @@ An automatic configuration program for vim
 - 安装vimplus
 
     ```bash
-    git clone https://github.com/chxuan/vimplus.git
-    cd ./vimplus
-    sudo ./install.sh
+    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
+    cd ~/.vimplus
+    ./install.sh
     ```
 
 个性化
