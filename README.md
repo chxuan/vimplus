@@ -51,6 +51,16 @@ An automatic configuration program for vim
     ./install.sh
     ```
 
+### ArchLinux
+
+- 安装vimplus
+
+    ```bash
+    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
+    cd ~/.vimplus
+    ./install.sh
+    ```
+
 个性化
 ------------
 
