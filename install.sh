@@ -13,6 +13,8 @@ function get_linux_platform_type()
         echo "ubuntu" # debian ubuntu系列
     elif which yum > /dev/null ; then
         echo "centos" # centos redhat系列
+    elif which pacman > /dev/null; then
+        echo "archlinux" # archlinux系列
     else
         echo "invaild"
     fi
@@ -82,6 +84,12 @@ function install_prepare_software_on_ubuntu()
         echo "not ubuntu 16.04 LTS"
         sudo apt-get install -y vim
     fi
+}
+
+# 安装archlinux发行版必要软件
+function install_prepare_software_on_archlinux()
+{
+    sudo pacman -S --noconfirm vim ctags automake gcc cmake python3 python2
 }
 
 # 拷贝文件
@@ -230,6 +238,13 @@ function install_vimplus_on_centos()
     begin_install_vimplus
 }
 
+# 在archlinux发行版安装vimplus
+function install_vimplus_on_archlinux()
+{
+    install_prepare_software_on_archlinux
+    begin_install_vimplus
+}
+
 # 在linux平台安装vimplus
 function install_vimplus_on_linux()
 {
@@ -240,6 +255,8 @@ function install_vimplus_on_linux()
         install_vimplus_on_ubuntu
     elif [ ${type} == "centos" ]; then
         install_vimplus_on_centos
+    elif [ ${type} == "archlinux" ]; then
+        install_vimplus_on_archlinux
     else
         echo "not support this linux platform type: "${type}
     fi
