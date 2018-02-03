@@ -28,7 +28,7 @@ set noeb
 " 告诉我们文件的哪一行被改变过
 set report=0
 " 可以在buffer的任何地方使用鼠标
-set mouse=a
+" set mouse=a
 set selection=exclusive
 set selectmode=mouse,key
 
