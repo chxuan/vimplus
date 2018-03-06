@@ -344,7 +344,7 @@ nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
 
 " ctrlp
-let g:ctrlp_map = '<c-f>'
+let g:ctrlp_map = '<c-c>'
 let g:ctrlp_cmd = ':CtrlP'
 let g:ctrlp_working_path_mode = '0'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux

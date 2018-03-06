@@ -114,7 +114,7 @@ An automatic configuration program for vim
  - 打开include文件 `<Leader>o`
  - 窗口切换 `Ctrl + P/Ctrl + N`
  - 光标位置切换 `Ctrl + O/Ctrl + I`
- - 模糊搜索文件 `Ctrl + f`
+ - 模糊搜索文件 `Ctrl + c`
  - Surround `ys{motion or text-object}{char}/cs{orig_char}{dest_char}/ds{char}`
  - 注释 `gcc/gcap/gc/,ca/,cA`
  - 目录比较 `:DirDiff <dir1> <dir2>`
