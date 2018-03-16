@@ -80,6 +80,8 @@ set scrolloff=3
 set iskeyword+=_,$,@,%,#,-
 " 允许backspace和光标键跨越行边界
 set whichwrap+=<,>,h,l
+" 允许光标出现在最后一个字符的后面
+set virtualedit=block,onemore   
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 代码缩进和排版
@@ -228,6 +230,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'vim-scripts/a.vim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'vim-scripts/txt.vim'
