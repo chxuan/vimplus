@@ -260,6 +260,8 @@ let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
 let g:NERDTreeHighlightFolders = 1         " enables folder icon highlighting using exact match
 let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
+let g:NERDTreeDirArrowExpandable='♥'
+let g:NERDTreeDirArrowCollapsible='♥'
 
 " Doxygen
 let g:DoxygenToolkit_authorName="chxuan, 787280310@qq.com"
