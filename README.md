@@ -115,7 +115,6 @@ An automatic configuration program for vim
  - 窗口切换 `Ctrl + P/Ctrl + N`
  - 光标位置切换 `Ctrl + O/Ctrl + I`
  - 模糊搜索文件 `Ctrl + c`
- - Surround `ys{motion or text-object}{char}/cs{orig_char}{dest_char}/ds{char}`
  - 注释 `gcc/gcap/gc/,ca/,cA`
  - 目录比较 `:DirDiff <dir1> <dir2>`
  - 重复上次操作 `.`
@@ -130,9 +129,9 @@ Q & A
 
     linux和mac系统需设置终端字体为DroidSansMonofor Powerline Nerd Font。
 
-- **`xshell连接远程主机使用NerdTree出现错位！！！`**
+- **`xshell连接远程主机使用vim-devicons`**
 
-    执行rm -rf ~/vim/bundle/vim-devicons命令，将vim-devicons删除即可，或移动到其他地方。
+    安装[DejaVu Sans Mono Nerd Font][51]字体即可。
 
 - **`安装vimplus会经常失败，安装了几次都不成功！！！`**
 
@@ -256,3 +255,4 @@ Q & A
   [48]: https://raw.githubusercontent.com/mhinz/vim-startify/master/images/startify-menu.png
   [49]: https://cloud.githubusercontent.com/assets/5492542/15363504/839753be-1d4b-11e6-9ac8-def4d7122e8d.gif
   [50]: https://github.com/junegunn/vim-slash
+  [51]: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/DejaVuSansMono
