@@ -68,59 +68,66 @@ An automatic configuration program for vim
 
 插件列表
 ------------
- - [Vundle][4] - 基于Git仓库的插件管理软件。
- - [YouCompleteMe][5] - 史上最强大的基于语义的自动补全插件，支持C/C++、C#、Python、PHP等语言。
- - [NerdTree][6] - 树型目录插件。
- - [nerdcommenter][7] - 快速注释代码插件。
- - [Airline][8] - 可以取代[powerline][9]的状态栏美化插件。
- - [auto-pairs][10] - 自动补全引号、圆括号、花括号等。
- - [DoxygenToolkit][11] - Doxygen风格的注释插件。
- - [ctrlp][12] - 支持文件的模糊搜索工具。
- - [tagbar][13] - [taglist][14]的替代品，对正在编辑的文件生成大纲, 包含类/方法/变量等。
- - [vim-devicons][15] - 显示文件类型图标。
- - [vim-surround][16] - 自动增加、替换配对符的插件。
- - [vim-commentary][17] - 快速注释代码插件。
- - [vim-repeat][18] - 重复上一次操作。
- - [vim-endwise][19] - if/end/endif/endfunction补全插件。
- - [tabular][20] - 代码、注释、表格对齐插件。
- - [vim-dirdiff][21] - 目录比较工具。
- - [vim-coloresque][22] - 根据文本颜色值显示对于的颜色。
- - [vim-easymotion][23] - 强大的光标快速移动工具，强大到颠覆你的插件观。
- - [incsearch.vim][24] - 模糊字符搜索插件。
- - [vim-startify][25] - 起始页插件，可以看你之前打开过的文档。
- - [markdown-preview][26] - markdown文件的编辑以及实时预览插件。
- - [change-colorscheme][27] - 随心所欲的切换主题。
- - [L9][28] - Vim-script库。
- - [indentLine][29] - 代码缩进对齐线。
- - [FlyGrep][30] - 基于文本的模糊搜索插件。
- - [sparkup][31] - HTML标签补全插件。
- - [pydiction][32] - 基于字典的python语法补全插件。
- - [MatchTagAlways][33] - 高亮配对符。
- - [closetag][34] - HTML标签自动闭合工具。
- - [a.vim][35] - .h .cpp文件快速切换。
- - [vim-fugitive][36] - 集成Git插件。
- - [vim-slash][50] - 优化搜索，移动光标后清除高亮。
+
+| 插件                                | 说明                                                                 |
+| -------                             | -----                                                                |
+| [Vundle][4]                         | 基于Git仓库的插件管理软件                                            |
+| [YouCompleteMe][5]                  | 史上最强大的基于语义的自动补全插件，支持C/C++、C#、Python、PHP等语言 |
+| [NerdTree][6]                       | 显示树型目录结构                                                     |
+| [nerdcommenter][7]                  | 快速注释代码插件                                                     |
+| [Airline][8]                        | 可以取代[powerline][9]的状态栏美化插件                               |
+| [auto-pairs][10]                    | 自动补全引号、圆括号、花括号等                                       |
+| [DoxygenToolkit][11]                | Doxygen风格的注释插件                                                |
+| [ctrlp][12]                         | 支持文件的模糊搜索工具                                               |
+| [tagbar][13]                        | [taglist][14]的替代品，显示类/方法/变量                              |
+| [vim-devicons][15]                  | 显示文件类型图标                                                     |
+| [vim-surround][16]                  | 自动增加、替换配对符的插件                                           |
+| [vim-commentary][17]                | 快速注释代码插件                                                     |
+| [vim-repeat][18]                    | 重复上一次操作                                                       |
+| [vim-endwise][19]                   | if/end/endif/endfunction补全                                         |
+| [tabular][20]                       | 代码、注释、表格对齐                                                 |
+| [vim-dirdiff][21]                   | 目录比较                                                             |
+| [vim-coloresque][22]                | 根据文本颜色值显示对于的颜色                                         |
+| [vim-easymotion][23]                | 强大的光标快速移动工具，强大到颠覆你的插件观                         |
+| [incsearch.vim][24]                 | 模糊字符搜索插件                                                     |
+| [vim-startify][25]                  | 启动页                                                               |
+| [markdown-preview][26]              | markdown实时预览                                                     |
+| [change-colorscheme][27]            | 随心所欲切换主题                                                     |
+| [L9][28]                            | Vim-script库                                                         |
+| [indentLine][29]                    | 代码缩进对齐线                                                       |
+| [FlyGrep][30]                       | 基于文本的模糊搜索插件                                               |
+| [sparkup][31]                       | HTML标签补全                                                         |
+| [pydiction][32]                     | 基于字典的python语法补全                                             |
+| [MatchTagAlways][33]                | 高亮配对符                                                           |
+| [closetag][34]                      | HTML标签自动闭合                                                     |
+| [a.vim][35]                         | .h .cpp文件快速切换                                                  |
+| [vim-fugitive][36]                  | 集成Git                                                              |
+| [vim-slash][50]                     | 优化搜索，移动光标后清除高亮                                         |
+| [vim-nerdtree-syntax-highlight][52] | NerdTree文件类型高亮                                                 |
+
 
 快捷键
 ------------
 
- - Leader键为 `,`
- - 打开/关闭目录树 `<Leader>n`
- - 显示函数、变量、宏列表 `<Leader>t`
- - 分析语法错误 `<F5>`
- - .h .cpp 文件切换 `<Leader>a`
- - 转到函数实现 `<Leader>u`
- - 转到函数声明 `<Leader>i`
- - 打开include文件 `<Leader>o`
- - 窗口切换 `Ctrl + P/Ctrl + N`
- - 光标位置切换 `Ctrl + O/Ctrl + I`
- - 模糊搜索文件 `Ctrl + c`
- - 注释 `gcc/gcap/gc/,ca/,cA`
- - 目录比较 `:DirDiff <dir1> <dir2>`
- - 重复上次操作 `.`
- - 改变主题颜色 `F9/F10`
- - 单词跳转 `<Leader>w`
- - 启用/关闭markdown实时预览 `F7/F8`
+| 快捷键                   | 说明                      |
+| -------                  | -----                     |
+| `,`                      | Leader Key                |
+| `<Leader>n`              | 打开/关闭目录树           |
+| `<Leader>t`              | 显示函数、变量、宏列表    |
+| `<Leader>a`              | .h .cpp 文件切换          |
+| `<Leader>u`              | 转到函数实现              |
+| `<Leader>i`              | 转到函数声明              |
+| `<Leader>o`              | 打开include文件           |
+| `<Leader>w`              | 单词跳转                  |
+| `<F5>`                   | 分析语法错误              |
+| `<F9>/<F10>`             | 改变主题颜色              |
+| `<F7>/<F8>`              | 启用/关闭markdown实时预览 |
+| `<Ctrl> p/<Ctrl> n`      | 窗口切换                  |
+| `<Ctrl> o/<Ctrl> i`      | 光标位置切换              |
+| `<Ctrl> c`               | 模糊搜索文件              |
+| `gcc`                    | 注释代码                  |
+| `:DirDiff <dir1> <dir2>` | 目录比较                  |
+| `.`                      | 重复上次操作              |
 
 Q & A
 ------------
@@ -256,3 +263,4 @@ Q & A
   [49]: https://cloud.githubusercontent.com/assets/5492542/15363504/839753be-1d4b-11e6-9ac8-def4d7122e8d.gif
   [50]: https://github.com/junegunn/vim-slash
   [51]: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/DejaVuSansMono
+  [52]: https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
