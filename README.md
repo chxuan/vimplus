@@ -74,7 +74,6 @@ An automatic configuration program for vim
 | [Vundle][4]                         | 基于Git仓库的插件管理软件                                            |
 | [YouCompleteMe][5]                  | 史上最强大的基于语义的自动补全插件，支持C/C++、C#、Python、PHP等语言 |
 | [NerdTree][6]                       | 显示树型目录结构                                                     |
-| [nerdcommenter][7]                  | 快速注释代码插件                                                     |
 | [Airline][8]                        | 可以取代[powerline][9]的状态栏美化插件                               |
 | [auto-pairs][10]                    | 自动补全引号、圆括号、花括号等                                       |
 | [DoxygenToolkit][11]                | Doxygen风格的注释插件                                                |
@@ -218,7 +217,6 @@ Q & A
   [4]: https://github.com/VundleVim/Vundle.vim
   [5]: https://github.com/Valloric/YouCompleteMe
   [6]: https://github.com/scrooloose/nerdtree
-  [7]: https://github.com/scrooloose/nerdcommenter
   [8]: https://github.com/vim-airline/vim-airline
   [9]: https://github.com/powerline/powerline
   [10]: https://github.com/jiangmiao/auto-pairs
