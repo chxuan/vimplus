@@ -136,7 +136,7 @@ Q & A
 
     linux和mac系统需设置终端字体为DroidSansMonofor Powerline Nerd Font。
 
-- **`xshell连接远程主机使用vim-devicons`**
+- **`xshell连接远程主机使用vim-devicons。`**
 
     安装[DejaVu Sans Mono Nerd Font][51]字体即可。
 
@@ -166,7 +166,7 @@ Q & A
 
 - **`vimplus用起来真的太棒了，怎么办？`**
 
-    那就麻烦您打赏一颗星星吧，给予我继续维护的动力。
+    那就麻烦您打赏一颗:star:吧，给予我继续维护的动力。
 
 特性展示
 ------------
