@@ -34,7 +34,7 @@ An automatic configuration program for vim
     ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     cd ~/.vimplus
-    ./install.sh
+    sudo ./install.sh
     ```
 
 ### Centos
@@ -48,7 +48,7 @@ An automatic configuration program for vim
     ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     cd ~/.vimplus
-    ./install.sh
+    sudo ./install.sh
     ```
 
 ### ArchLinux
@@ -58,7 +58,7 @@ An automatic configuration program for vim
     ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     cd ~/.vimplus
-    ./install.sh
+    sudo ./install.sh
     ```
 
 个性化
