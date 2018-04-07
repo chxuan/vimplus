@@ -261,6 +261,8 @@ let g:NERDTreeHighlightFolders = 1         " enables folder icon highlighting us
 let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
 let g:NERDTreeDirArrowExpandable='♥'
 let g:NERDTreeDirArrowCollapsible='♥'
+" 关闭窗口时自动关闭NerdTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Doxygen
 let g:DoxygenToolkit_authorName="chxuan, 787280310@qq.com"
@@ -398,3 +400,4 @@ let g:pydiction_menu_height=10
 if filereadable(expand($HOME . '/.vimrc.local'))
     source $HOME/.vimrc.local
 endif
+
