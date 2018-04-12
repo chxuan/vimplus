@@ -103,6 +103,7 @@ An automatic configuration program for vim
 | [vim-fugitive][36]                  | 集成Git                                                              |
 | [vim-slash][50]                     | 优化搜索，移动光标后清除高亮                                         |
 | [vim-nerdtree-syntax-highlight][52] | NerdTree文件类型高亮                                                 |
+| [nerdtree-git-plugin][53]           | NerdTree显示git状态                                                  |
 
 
 快捷键
@@ -262,3 +263,4 @@ Q & A
   [50]: https://github.com/junegunn/vim-slash
   [51]: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/DejaVuSansMono
   [52]: https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
+  [53]: https://github.com/Xuyuanp/nerdtree-git-plugin
