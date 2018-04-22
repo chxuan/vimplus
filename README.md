@@ -104,6 +104,7 @@ An automatic configuration program for vim
 | [vim-slash][50]                     | 优化搜索，移动光标后清除高亮                                         |
 | [vim-nerdtree-syntax-highlight][52] | NerdTree文件类型高亮                                                 |
 | [nerdtree-git-plugin][53]           | NerdTree显示git状态                                                  |
+| [onedark][55]                       | onedark主题                                                          |
 
 
 快捷键
@@ -265,3 +266,4 @@ Q & A
   [52]: https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
   [53]: https://github.com/Xuyuanp/nerdtree-git-plugin
   [54]: https://github.com/VundleVim/Vundle.vim
+  [55]: https://github.com/joshdick/onedark.vim
