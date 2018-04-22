@@ -105,9 +105,6 @@ function copy_files()
     ln -s ${PWD}/.ycm_extra_conf.py ~
 
     mkdir ~/.vim
-    rm -rf ~/.vim/plugin
-    ln -s ${PWD}/plugin ~/.vim
-
     rm -rf ~/.vim/colors
     ln -s ${PWD}/colors ~/.vim
 }
