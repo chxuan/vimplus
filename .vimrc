@@ -291,6 +291,7 @@ imap <Leader>t <ESC> :TagbarToggle<CR>
 " colorscheme
 set background=dark
 colorscheme onedark
+let g:onedark_termcolors=256
 " let g:solarized_termcolors=256
 " let g:sorlized_termtrans=1
 " colorscheme solarized
