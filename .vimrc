@@ -206,6 +206,7 @@ Plug 'gorodinskiy/vim-coloresque'
 Plug 'will133/vim-dirdiff'
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/vim-slash'
+Plug 'joshdick/onedark.vim'
 
 call plug#end()            
 
@@ -289,10 +290,10 @@ imap <Leader>t <ESC> :TagbarToggle<CR>
 
 " colorscheme
 set background=dark
-let g:solarized_termcolors=256
-let g:sorlized_termtrans=1
-colorscheme solarized
-" colorscheme monokai
+colorscheme onedark
+" let g:solarized_termcolors=256
+" let g:sorlized_termtrans=1
+" colorscheme solarized
 
 " cpp_class_scope_highlight
 let g:cpp_class_scope_highlight = 1
@@ -300,8 +301,8 @@ let g:cpp_experimental_template_highlight = 1
 let c_no_curly_error = 1
 
 " airline
-let g:airline_theme="luna"
-" let g:airline_theme="badwolf"
+let g:airline_theme="onedark"
+" let g:airline_theme="luna"
 let g:airline_powerline_fonts = 1
 "let g:airline_section_b = '%{strftime("%c")}'
 "let g:airline_section_y = 'BN: %{bufnr("%")}'
