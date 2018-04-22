@@ -61,19 +61,19 @@ function compile_vim()
 # 安装mac平台必要软件
 function install_prepare_software_on_mac()
 {
-    brew install vim gcc cmake ctags-exuberant
+    brew install vim gcc cmake ctags-exuberant curl
 }
 
 # 安装centos发行版必要软件
 function install_prepare_software_on_centos()
 {
-    sudo yum install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel
+    sudo yum install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl
 }
 
 # 安装ubuntu发行版必要软件
 function install_prepare_software_on_ubuntu()
 {
-    sudo apt-get install -y ctags build-essential cmake python-dev python3-dev fontconfig
+    sudo apt-get install -y ctags build-essential cmake python-dev python3-dev fontconfig curl
     ubuntu_1604=`is_ubuntu1604`
     echo ${ubuntu_1604}
 
@@ -89,30 +89,26 @@ function install_prepare_software_on_ubuntu()
 # 安装archlinux发行版必要软件
 function install_prepare_software_on_archlinux()
 {
-    sudo pacman -S --noconfirm vim ctags automake gcc cmake python3 python2
+    sudo pacman -S --noconfirm vim ctags automake gcc cmake python3 python2 curl
 }
 
 # 拷贝文件
 function copy_files()
 {
     rm -rf ~/.vimrc
-    # cp .vimrc ~
     ln -s ${PWD}/.vimrc ~
 
     rm -rf ~/.vimrc.local
     cp ${PWD}/.vimrc.local ~
 
     rm -rf ~/.ycm_extra_conf.py
-    # cp .ycm_extra_conf.py ~
     ln -s ${PWD}/.ycm_extra_conf.py ~
 
     mkdir ~/.vim
     rm -rf ~/.vim/plugin
-    # cp -R ./plugin ~/.vim
     ln -s ${PWD}/plugin ~/.vim
 
     rm -rf ~/.vim/colors
-    # cp -R ./colors ~/.vim
     ln -s ${PWD}/colors ~/.vim
 }
 
@@ -142,29 +138,29 @@ function install_fonts_on_linux()
     cp ./fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d
 }
 
-# 克隆插件管理软件Vundle
-function clone_vundle()
+# 下载插件管理软件vim-plug
+function download_vim_plug()
 {
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
 # 安装vim插件
 function install_vim_plugin()
 {
-    vim -c "PluginInstall" -c "q" -c "q"
+    vim -c "PlugInstall" -c "q" -c "q"
 }
 
 # 在mac平台编译ycm插件
 function compile_ycm_on_mac()
 {
-    cd ~/.vim/bundle/YouCompleteMe
+    cd ~/.vim/plugged/YouCompleteMe
     ./install.py --clang-completer
 }
 
 # 在linux平台编译ycm插件
 function compile_ycm_on_linux()
 {
-    cd ~/.vim/bundle/YouCompleteMe
+    cd ~/.vim/plugged/YouCompleteMe
     sudo ./install.py --clang-completer
 }
 
@@ -195,10 +191,8 @@ function chown_dir()
     current_user=${who_is%% *}
     sudo chown -R ${current_user}:${current_user} ~/.vim
     sudo chown -R ${current_user}:${current_user} ~/.cache
-    # sudo chown ${current_user}:${current_user} ~/.vimrc
     sudo chown ${current_user}:${current_user} ~/.vimrc.local
     sudo chown ${current_user}:${current_user} ~/.viminfo
-    # sudo chown ${current_user}:${current_user} ~/.ycm_extra_conf.py
 }
 
 # 在mac平台安装vimplus
@@ -207,7 +201,7 @@ function install_vimplus_on_mac()
     install_prepare_software_on_mac
     copy_files
     install_fonts_on_mac
-    clone_vundle
+    download_vim_plug
     install_vim_plugin
     compile_ycm_on_mac
     print_logo
@@ -217,7 +211,7 @@ function begin_install_vimplus()
 {
     copy_files
     install_fonts_on_linux
-    clone_vundle
+    download_vim_plug
     install_vim_plugin
     compile_ycm_on_linux
     chown_dir

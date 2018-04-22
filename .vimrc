@@ -27,8 +27,6 @@ set nocompatible
 set noeb
 " 告诉我们文件的哪一行被改变过
 set report=0
-" 可以在buffer的任何地方使用鼠标
-" set mouse=a
 set selection=exclusive
 set selectmode=mouse,key
 
@@ -168,80 +166,48 @@ set encoding=utf8
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 新建文件设置
+" 插件列表
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufNewFile *.cpp,*.cc,*.c,*.hpp,*.h,*.sh,*.py exec ":call SetTitle()" 
-func SetTitle() 
-	if expand("%:e") == 'sh'
-		call setline(1,"\#!/bin/bash") 
-		call append(line("."), "") 
-    elseif expand("%:e") == 'py'
-        call setline(1,"#!/usr/bin/env python")
-        call append(line("."),"# coding=utf-8")
-	    call append(line(".")+1, "") 
-    elseif expand("%:e") == 'cpp'
-		call setline(1,"#include <iostream>") 
-		call append(line("."), "") 
-    elseif expand("%:e") == 'cc'
-		call setline(1,"#include <iostream>") 
-		call append(line("."), "") 
-    elseif expand("%:e") == 'c'
-		call setline(1,"#include <stdio.h>") 
-		call append(line("."), "") 
-    elseif expand("%:e") == 'h'
-		call setline(1, "#pragma once")
-    elseif expand("%:e") == 'hpp'
-		call setline(1, "#pragma once")
-	endif
-endfunc 
-autocmd BufNewFile * normal G
+call plug#begin('~/.vim/plugged')
 
-" Vundle
-filetype off        
+Plug 'vim-scripts/L9'
+Plug 'chxuan/change-colorscheme'
+Plug 'Yggdroot/indentLine'
+Plug 'easymotion/vim-easymotion'
+Plug 'haya14busa/incsearch.vim'
+Plug 'wsdjeg/FlyGrep.vim'
+Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'iamcco/markdown-preview.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'rkulla/pydiction'
+Plug 'Valloric/MatchTagAlways'
+Plug 'Valloric/YouCompleteMe'
+Plug 'docunext/closetag.vim'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-endwise'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/a.vim'
+Plug 'vim-scripts/DoxygenToolkit.vim'
+Plug 'vim-scripts/txt.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'will133/vim-dirdiff'
+Plug 'mhinz/vim-startify'
+Plug 'junegunn/vim-slash'
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" vundle 管理的插件列表必须位于vundle#begin()和vundle#end()之间
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'L9'
-Plugin 'chxuan/change-colorscheme'
-Plugin 'Yggdroot/indentLine'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'haya14busa/incsearch.vim'
-Plugin 'wsdjeg/FlyGrep.vim'
-Plugin 'iamcco/mathjax-support-for-mkdp'
-Plugin 'iamcco/markdown-preview.vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'rkulla/pydiction'
-Plugin 'Valloric/MatchTagAlways'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'docunext/closetag.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-endwise'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-scripts/a.vim'
-Plugin 'vim-scripts/DoxygenToolkit.vim'
-Plugin 'vim-scripts/txt.vim'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'gorodinskiy/vim-coloresque'
-Plugin 'will133/vim-dirdiff'
-Plugin 'mhinz/vim-startify'
-Plugin 'junegunn/vim-slash'
-
-call vundle#end()            
-filetype plugin indent on    
+call plug#end()            
 
 " load vim default plugin
 runtime macros/matchit.vim
@@ -324,8 +290,9 @@ imap <Leader>t <ESC> :TagbarToggle<CR>
 " colorscheme
 set background=dark
 let g:solarized_termcolors=256
+let g:sorlized_termtrans=1
 colorscheme solarized
-"colorscheme monokai
+" colorscheme monokai
 
 " cpp_class_scope_highlight
 let g:cpp_class_scope_highlight = 1

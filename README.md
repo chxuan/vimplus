@@ -71,7 +71,7 @@ An automatic configuration program for vim
 
 | 插件                                | 说明                                                                 |
 | -------                             | -----                                                                |
-| [Vundle][4]                         | 基于Git仓库的插件管理软件                                            |
+| [vim-plug][4]                       | 比[Vundle][54]下载更快的插件管理软件                                 |
 | [YouCompleteMe][5]                  | 史上最强大的基于语义的自动补全插件，支持C/C++、C#、Python、PHP等语言 |
 | [NerdTree][6]                       | 显示树型目录结构                                                     |
 | [Airline][8]                        | 可以取代[powerline][9]的状态栏美化插件                               |
@@ -142,7 +142,7 @@ Q & A
 
 - **`安装vimplus会经常失败，安装了几次都不成功！！！`**
 
-    vimplus安装时需要访问外国网站，由于网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，这里有下载好的[YouCompleteMe.tar.gz][37]文件，下载后解压到~/.vim/bundle/目录，并进入YouCompleteMe目录linux用户执行`sudo ./install.py --clang-completer`, mac用户执行`./install.py --clang-completer`即可安装。
+    vimplus安装时需要访问外国网站，由于网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，这里有下载好的[YouCompleteMe.tar.gz][37]文件，下载后解压到~/.vim/plugged/目录，并进入YouCompleteMe目录linux用户执行`sudo ./install.py --clang-completer`, mac用户执行`./install.py --clang-completer`即可安装。
 
 - **`使用第三方库时怎么让ycm补全第三方库API？`**
 
@@ -215,7 +215,7 @@ Q & A
   [1]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/vimplus-logo.png
   [2]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/main.png
   [3]: https://brew.sh/
-  [4]: https://github.com/VundleVim/Vundle.vim
+  [4]: https://github.com/junegunn/vim-plug
   [5]: https://github.com/Valloric/YouCompleteMe
   [6]: https://github.com/scrooloose/nerdtree
   [8]: https://github.com/vim-airline/vim-airline
@@ -264,3 +264,4 @@ Q & A
   [51]: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/DejaVuSansMono
   [52]: https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
   [53]: https://github.com/Xuyuanp/nerdtree-git-plugin
+  [54]: https://github.com/VundleVim/Vundle.vim
