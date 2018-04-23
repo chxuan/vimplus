@@ -207,6 +207,11 @@ Plug 'will133/vim-dirdiff'
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/vim-slash'
 Plug 'joshdick/onedark.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-syntax'
+Plug 'kana/vim-textobj-function'
+Plug 'sgur/vim-textobj-parameter'
 
 call plug#end()            
 
@@ -384,4 +389,3 @@ let g:NERDTreeIndicatorMapCustom = {
 if filereadable(expand($HOME . '/.vimrc.local'))
     source $HOME/.vimrc.local
 endif
-
