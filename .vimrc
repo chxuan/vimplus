@@ -363,7 +363,7 @@ let g:indentLine_enabled=0
 nmap <Leader><Leader>il :IndentLinesToggle<CR>
 
 " pydiction
-let g:pydiction_location='~/.vim/bundle/pydiction/complete-dict'
+let g:pydiction_location='~/.vim/plugged/pydiction/complete-dict'
 let g:pydiction_menu_height=10
 
 " nerdtree-git-plugin
