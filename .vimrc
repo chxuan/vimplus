@@ -175,7 +175,6 @@ Plug 'chxuan/change-colorscheme'
 Plug 'Yggdroot/indentLine'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
-Plug 'wsdjeg/FlyGrep.vim'
 Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
 Plug 'jiangmiao/auto-pairs'
@@ -193,7 +192,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-airline/vim-airline'
@@ -212,6 +210,7 @@ Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-syntax'
 Plug 'kana/vim-textobj-function'
 Plug 'sgur/vim-textobj-parameter'
+Plug 'Yggdroot/LeaderF'
 
 call plug#end()            
 
@@ -324,12 +323,6 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
-
-" ctrlp
-let g:ctrlp_map = '<c-c>'
-let g:ctrlp_cmd = ':CtrlP'
-let g:ctrlp_working_path_mode = '0'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 " vim-devicons
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12

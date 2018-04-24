@@ -77,7 +77,7 @@ An automatic configuration program for vim
 | [Airline][8]                        | 可以取代[powerline][9]的状态栏美化插件                               |
 | [auto-pairs][10]                    | 自动补全引号、圆括号、花括号等                                       |
 | [DoxygenToolkit][11]                | Doxygen风格的注释插件                                                |
-| [ctrlp][12]                         | 支持文件的模糊搜索工具                                               |
+| [LeaderF][56]                       | 比[ctrlp][12]更强大的文件的模糊搜索工具                              |
 | [tagbar][13]                        | [taglist][14]的替代品，显示类/方法/变量                              |
 | [vim-devicons][15]                  | 显示文件类型图标                                                     |
 | [vim-surround][16]                  | 自动增加、替换配对符的插件                                           |
@@ -94,7 +94,6 @@ An automatic configuration program for vim
 | [change-colorscheme][27]            | 随心所欲切换主题                                                     |
 | [L9][28]                            | Vim-script库                                                         |
 | [indentLine][29]                    | 代码缩进对齐线                                                       |
-| [FlyGrep][30]                       | 基于文本的模糊搜索插件                                               |
 | [sparkup][31]                       | HTML标签补全                                                         |
 | [pydiction][32]                     | 基于字典的python语法补全                                             |
 | [MatchTagAlways][33]                | 高亮配对符                                                           |
@@ -120,12 +119,12 @@ An automatic configuration program for vim
 | `<Leader>i`              | 转到函数声明                                   |
 | `<Leader>o`              | 打开include文件                                |
 | `<Leader>w`              | 单词跳转                                       |
+| `<Leader>f`              | 模糊文件搜索                                   |
 | `<F5>`                   | 分析语法错误                                   |
 | `<F9>/<F10>`             | 改变主题颜色                                   |
 | `<F7>/<F8>`              | 启用/关闭markdown实时预览                      |
 | `<Ctrl> p/<Ctrl> n`      | 窗口切换                                       |
 | `<Ctrl> o/<Ctrl> i`      | 光标位置切换                                   |
-| `<Ctrl> c`               | 模糊搜索文件                                   |
 | `gcc`                    | 注释代码                                       |
 | `:DirDiff <dir1> <dir2>` | 目录比较                                       |
 | `.`                      | 重复上次操作                                   |
@@ -179,7 +178,7 @@ Q & A
 
     ![][40]
 
-- ctrlp 
+- LeaderF 
 
     ![][41]
 
@@ -244,7 +243,6 @@ Q & A
   [27]: https://github.com/chxuan/change-colorscheme
   [28]: https://github.com/vim-scripts/L9
   [29]: https://github.com/Yggdroot/indentLine
-  [30]: https://github.com/wsdjeg/FlyGrep.vim
   [31]: https://github.com/rstacruz/sparkup
   [32]: https://github.com/rkulla/pydiction
   [33]: https://github.com/Valloric/MatchTagAlways
@@ -255,7 +253,7 @@ Q & A
   [38]: https://github.com/Valloric/YouCompleteMe
   [39]: https://github.com/chxuan/vimplus/issues
   [40]: https://camo.githubusercontent.com/1f3f922431d5363224b20e99467ff28b04e810e2/687474703a2f2f692e696d6775722e636f6d2f304f50346f6f642e676966
-  [41]: https://camo.githubusercontent.com/e15ac916ab9a14dd07135cb2d985cc7333200a38/687474703a2f2f692e696d6775722e636f6d2f614f63774877742e706e67
+  [41]: https://github.com/Yggdroot/Images/blob/master/leaderf/leaderf_1.gif
   [42]: https://camo.githubusercontent.com/ba79534309330accd776a8d2a0712f7c4037d7f9/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3330363530322f313037323632332f34346332393261302d313439352d313165332d396365362d6463616461336631633533362e676966
   [43]: https://camo.githubusercontent.com/1f02cead8bdcf894f26b0006c44068a33a7dc8e5/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f737572726f756e645f656e2e676966
   [44]: https://camo.githubusercontent.com/2f5cb5bc9a964b0d9e623b5b3aff0314294ac841/687474703a2f2f6a6f65646963617374726f2e636f6d2f7374617469632f70696374757265732f636f6d6d656e746172795f656e2e676966
@@ -270,3 +268,4 @@ Q & A
   [53]: https://github.com/Xuyuanp/nerdtree-git-plugin
   [54]: https://github.com/VundleVim/Vundle.vim
   [55]: https://github.com/joshdick/onedark.vim
+  [56]: https://github.com/Yggdroot/LeaderF
