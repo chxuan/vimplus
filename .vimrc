@@ -173,6 +173,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/L9'
 Plug 'chxuan/change-colorscheme'
 Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/LeaderF'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
 Plug 'iamcco/mathjax-support-for-mkdp'
@@ -210,7 +211,6 @@ Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-syntax'
 Plug 'kana/vim-textobj-function'
 Plug 'sgur/vim-textobj-parameter'
-Plug 'Yggdroot/LeaderF'
 
 call plug#end()            
 
