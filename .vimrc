@@ -223,6 +223,9 @@ nmap <Leader>ev :e $MYVIMRC<CR>
 " 查看help文件
 nmap <Leader>h :e ~/.vimplus/help.md<CR>
 
+" 重新加载vimrc文件
+nmap <Leader>sr :source %<CR>
+
 " change-colorscheme
 map <F10> :NextColorScheme<CR>
 imap <F10> <ESC> :NextColorScheme<CR>

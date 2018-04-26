@@ -113,6 +113,7 @@ An automatic configuration program for vim
 | -------                  | -----                                          |
 | `,`                      | Leader Key                                     |
 | `<Leader>ev`             | 快速编辑vimrc文件                              |
+| `<Leader>sr`             | 重新加载vimrc文件                              |
 | `<Leader>h`              | 打开vimplus帮助文档                            |
 | `<Leader>n`              | 打开/关闭目录树                                |
 | `<Leader>t`              | 显示函数、变量、宏列表                         |
