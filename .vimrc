@@ -366,6 +366,9 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
+" LeaderF
+nmap <Leader><Leader>f :LeaderfFile ~<CR>
+
 " 个性化
 if filereadable(expand($HOME . '/.vimrc.local'))
     source $HOME/.vimrc.local
