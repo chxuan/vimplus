@@ -217,6 +217,9 @@ call plug#end()
 " load vim default plugin
 runtime macros/matchit.vim
 
+" 编辑vimrc文件
+nnoremap <Leader>ev :e $MYVIMRC<CR>
+
 " change-colorscheme
 map <F10> :NextColorScheme<CR>
 imap <F10> <ESC> :NextColorScheme<CR>
