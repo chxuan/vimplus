@@ -1,6 +1,8 @@
 | 快捷键                   | 说明                                           |
 | -------                  | -----                                          |
 | `,`                      | Leader Key                                     |
+| `<Leader>ev`             | 快速编辑vimrc文件                              |
+| `<Leader>h`              | 打开vimplus帮助文档                            |
 | `<Leader>n`              | 打开/关闭目录树                                |
 | `<Leader>t`              | 显示函数、变量、宏列表                         |
 | `<Leader>a`              | .h .cpp 文件切换                               |
@@ -9,7 +11,6 @@
 | `<Leader>o`              | 打开include文件                                |
 | `<Leader>w`              | 单词跳转                                       |
 | `<Leader>f`              | 模糊文件搜索                                   |
-| `<Leader>ev`             | 快速编辑vimrc文件                              |
 | `<F5>`                   | 分析语法错误                                   |
 | `<F9>/<F10>`             | 改变主题颜色                                   |
 | `<F7>/<F8>`              | 启用/关闭markdown实时预览                      |
