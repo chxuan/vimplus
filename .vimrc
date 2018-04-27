@@ -218,13 +218,13 @@ call plug#end()
 runtime macros/matchit.vim
 
 " 编辑vimrc文件
-nmap <Leader>ev :e $MYVIMRC<CR>
+noremap <Leader>ev :e $MYVIMRC<CR>
 
 " 查看help文件
-nmap <Leader>h :e ~/.vimplus/help.md<CR>
+noremap <Leader>h :e ~/.vimplus/help.md<CR>
 
 " 重新加载vimrc文件
-nmap <Leader>sr :source %<CR>
+norema <Leader>sr :source %<CR>
 
 " change-colorscheme
 map <F10> :NextColorScheme<CR>
