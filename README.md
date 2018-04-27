@@ -126,7 +126,8 @@ An automatic configuration program for vim
 | `<F5>`                   | 分析语法错误                                   |
 | `<F9>/<F10>`             | 改变主题颜色                                   |
 | `<F7>/<F8>`              | 启用/关闭markdown实时预览                      |
-| `<Ctrl> p/<Ctrl> n`      | 窗口切换                                       |
+| `<Ctrl> p/<Ctrl> n`      | buffer切换                                     |
+| `:bd`                    | 关闭buffer                                     |
 | `<Ctrl> o/<Ctrl> i`      | 光标位置切换                                   |
 | `gcc`                    | 注释代码                                       |
 | `:DirDiff <dir1> <dir2>` | 目录比较                                       |
@@ -134,6 +135,7 @@ An automatic configuration program for vim
 | `vi"/di"/ci"`            | 选中/删除/改写引号(可以是括号等配对符)内的内容 |
 | `di,/ci,`                | 删除/改写函数参数                              |
 | `vif/dif/cif`            | 选中/删除/改写函数内容                         |
+| `gg=G`                   | 缩进代码                                       |
 
 Q & A
 ------------
