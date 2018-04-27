@@ -123,6 +123,7 @@ An automatic configuration program for vim
 | `<Leader>o`              | 打开include文件                                |
 | `<Leader>w`              | 单词跳转                                       |
 | `<Leader>f`              | 模糊文件搜索                                   |
+| `<Leader><Leader>f`      | 搜索~目录下的文件                              |
 | `<F5>`                   | 分析语法错误                                   |
 | `<F9>/<F10>`             | 改变主题颜色                                   |
 | `<F7>/<F8>`              | 启用/关闭markdown实时预览                      |
