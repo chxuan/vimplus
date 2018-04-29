@@ -226,10 +226,10 @@ noremap <Leader>h :e ~/.vimplus/help.md<CR>
 norema <Leader>sr :source %<CR>
 
 " change-colorscheme
-map <F10> :NextColorScheme<CR>
-imap <F10> <ESC> :NextColorScheme<CR>
-map <F9> :PreviousColorScheme<CR>
-imap <F9> <ESC> :PreviousColorScheme<CR>
+map <silent> <F10> :NextColorScheme<CR>
+imap <silent>  <F10> <ESC> :NextColorScheme<CR>
+map <silent> <F9> :PreviousColorScheme<CR>
+imap <silent> <F9> <ESC> :PreviousColorScheme<CR>
 
 " nerdtree
 map <Leader>n :NERDTreeToggle<CR>
