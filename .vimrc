@@ -13,7 +13,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 通用设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 定义快捷键的前缀，即<Leader>
+" 定义快捷键的前缀，即<leader>
 let mapleader = ","
 " 开启文件类型侦测
 filetype on
@@ -217,23 +217,23 @@ call plug#end()
 runtime macros/matchit.vim
 
 " 编辑vimrc文件
-noremap <Leader>ev :e $MYVIMRC<CR>
+noremap <leader>ev :e $MYVIMRC<cr>
 
 " 查看help文件
-noremap <Leader>h :e ~/.vimplus/help.md<CR>
+noremap <leader>h :e ~/.vimplus/help.md<cr>
 
 " 重新加载vimrc文件
-noremap <Leader>sr :source %<CR>
+noremap <leader>sr :source %<cr>
 
 " change-colorscheme
-map <silent> <F10> :NextColorScheme<CR>
-imap <silent>  <F10> <ESC> :NextColorScheme<CR>
-map <silent> <F9> :PreviousColorScheme<CR>
-imap <silent> <F9> <ESC> :PreviousColorScheme<CR>
+map <silent> <F10> :NextColorScheme<cr>
+imap <silent> <F10> <esc> :NextColorScheme<cr>
+map <silent> <F9> :PreviousColorScheme<cr>
+imap <silent> <F9> <esc> :PreviousColorScheme<cr>
 
 " nerdtree
-map <Leader>n :NERDTreeToggle<CR>
-imap <Leader>n <ESC> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<cr>
+imap <leader>n <esc> :NERDTreeToggle<cr>
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
@@ -262,10 +262,10 @@ let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_complete_in_comments = 1 
 let g:ycm_complete_in_strings = 1 
 "let g:ycm_cache_omnifunc = 0 
-nnoremap <leader>u :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>i :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>o :YcmCompleter GoToInclude<CR>
-nmap <F5> :YcmDiags<CR>
+nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
+nnoremap <leader>i :YcmCompleter GoToDefinition<cr>
+nnoremap <leader>o :YcmCompleter GoToInclude<cr>
+nmap <F5> :YcmDiags<cr>
 
 " ctags
 set tags+=/usr/include/tags
@@ -289,7 +289,7 @@ let g:ycm_semantic_triggers =  {
 let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
 
 " a.vim: .h -> .cpp or .cpp -> .h
-nnoremap <silent> <Leader>a :A<CR>
+nnoremap <silent> <leader>a :A<cr>
 
 " tagbar
 
@@ -297,8 +297,8 @@ nnoremap <silent> <Leader>a :A<CR>
 " let g:tagbar_ctags_bin = '/usr/bin/ctags' "linux
 " let g:tagbar_ctags_bin = '/usr/local/bin/ctags' "mac
 let g:tagbar_width = 30
-map <Leader>t :TagbarToggle<CR>
-imap <Leader>t <ESC> :TagbarToggle<CR>
+map <leader>t :TagbarToggle<cr>
+imap <leader>t <esc> :TagbarToggle<cr>
 
 " colorscheme
 set background=dark
@@ -329,8 +329,8 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
-nnoremap <C-N> :bn<CR>
-nnoremap <C-P> :bp<CR>
+nnoremap <C-N> :bn<cr>
+nnoremap <C-P> :bp<cr>
 
 " vim-devicons
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
@@ -349,12 +349,12 @@ imap <silent> <F8> <Plug>StopMarkdownPreview
 
 " vim-easymotion
 let g:EasyMotion_smartcase = 1
-map <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
+map <leader>w <Plug>(easymotion-bd-w)
+nmap <leader>w <Plug>(easymotion-overwin-w)
 
 " indentLine
 let g:indentLine_enabled=0
-nmap <Leader><Leader>il :IndentLinesToggle<CR>
+nmap <leader><leader>il :IndentLinesToggle<cr>
 
 " pydiction
 let g:pydiction_location='~/.vim/plugged/pydiction/complete-dict'
@@ -375,7 +375,7 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 
 " LeaderF
-nmap <Leader><Leader>f :LeaderfFile ~<CR>
+nmap <leader><leader>f :LeaderfFile ~<cr>
 
 " 个性化
 if filereadable(expand($HOME . '/.vimrc.local'))
