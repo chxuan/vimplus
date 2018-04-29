@@ -223,7 +223,7 @@ noremap <leader>ev :e $MYVIMRC<cr>
 noremap <leader>h :e ~/.vimplus/help.md<cr>
 
 " 重新加载vimrc文件
-noremap <leader>sr :source %<cr>
+noremap <leader>sr :source $MYVIMRC<cr>
 
 " change-colorscheme
 map <silent> <F10> :NextColorScheme<cr>
