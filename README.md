@@ -103,6 +103,7 @@ An automatic configuration program for vim
 | [vim-slash][50]                     | 优化搜索，移动光标后清除高亮                                         |
 | [vim-nerdtree-syntax-highlight][52] | NerdTree文件类型高亮                                                 |
 | [nerdtree-git-plugin][53]           | NerdTree显示git状态                                                  |
+| [echodoc][57]                       | 补全函数时在命令栏显示函数签名                                       |
 
 
 快捷键
@@ -273,3 +274,4 @@ Q & A
   [53]: https://github.com/Xuyuanp/nerdtree-git-plugin
   [54]: https://github.com/VundleVim/Vundle.vim
   [56]: https://github.com/Yggdroot/LeaderF
+  [57]: https://github.com/Shougo/echodoc.vim

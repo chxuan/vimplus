@@ -210,6 +210,7 @@ Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-syntax'
 Plug 'kana/vim-textobj-function'
 Plug 'sgur/vim-textobj-parameter'
+Plug 'Shougo/echodoc.vim'
 
 call plug#end()            
 
@@ -376,6 +377,9 @@ let g:NERDTreeIndicatorMapCustom = {
 
 " LeaderF
 nmap <leader><leader>f :LeaderfFile ~<cr>
+
+" echodoc.vim
+let g:echodoc_enable_at_startup = 1
 
 " 个性化
 if filereadable(expand($HOME . '/.vimrc.local'))
