@@ -171,6 +171,7 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-scripts/L9'
+Plug 'chxuan/cppfun'
 Plug 'chxuan/change-colorscheme'
 Plug 'Yggdroot/indentLine'
 Plug 'Yggdroot/LeaderF'
@@ -226,11 +227,15 @@ noremap <leader>h :e ~/.vimplus/help.md<cr>
 " 重新加载vimrc文件
 noremap <leader>sr :source $MYVIMRC<cr>
 
+" cppfun
+noremap <leader>y :CopyFun<cr>
+noremap <leader>p :PasteFun<cr>
+
 " change-colorscheme
-map <silent> <F10> :NextColorScheme<cr>
-imap <silent> <F10> <esc> :NextColorScheme<cr>
-map <silent> <F9> :PreviousColorScheme<cr>
-imap <silent> <F9> <esc> :PreviousColorScheme<cr>
+noremap <silent> <F10> :NextColorScheme<cr>
+inoremap <silent> <F10> <esc> :NextColorScheme<cr>
+noremap <silent> <F9> :PreviousColorScheme<cr>
+inoremap <silent> <F9> <esc> :PreviousColorScheme<cr>
 
 " nerdtree
 map <leader>n :NERDTreeToggle<cr>
