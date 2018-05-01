@@ -73,6 +73,8 @@ An automatic configuration program for vim
 | -------                             | -----                                                                |
 | [vim-plug][4]                       | 比[Vundle][54]下载更快的插件管理软件                                 |
 | [YouCompleteMe][5]                  | 史上最强大的基于语义的自动补全插件，支持C/C++、C#、Python、PHP等语言 |
+| [change-colorscheme][27]            | 随心所欲切换主题                                                     |
+| [cppfun][58]                        | 生成函数定义                                                         |
 | [NerdTree][6]                       | 代码资源管理器                                                       |
 | [Airline][8]                        | 可以取代[powerline][9]的状态栏美化插件                               |
 | [auto-pairs][10]                    | 自动补全引号、圆括号、花括号等                                       |
@@ -91,7 +93,6 @@ An automatic configuration program for vim
 | [incsearch.vim][24]                 | 模糊字符搜索插件                                                     |
 | [vim-startify][25]                  | 启动页                                                               |
 | [markdown-preview][26]              | markdown实时预览                                                     |
-| [change-colorscheme][27]            | 随心所欲切换主题                                                     |
 | [L9][28]                            | Vim-script库                                                         |
 | [indentLine][29]                    | 代码缩进对齐线                                                       |
 | [sparkup][31]                       | HTML标签补全                                                         |
@@ -112,8 +113,8 @@ An automatic configuration program for vim
 | 快捷键                   | 说明                                           |
 | -------                  | -----                                          |
 | `,`                      | Leader Key                                     |
-| `<leader>ev`             | 快速编辑vimrc文件                              |
-| `<leader>sr`             | 重新加载vimrc文件                              |
+| `<leader>e`              | 快速编辑vimrc文件                              |
+| `<leader>s`              | 重新加载vimrc文件                              |
 | `<leader>h`              | 打开vimplus帮助文档                            |
 | `<leader>n`              | 打开/关闭目录树                                |
 | `<leader>t`              | 显示函数、变量、宏列表                         |
@@ -122,8 +123,8 @@ An automatic configuration program for vim
 | `<leader>i`              | 转到函数声明                                   |
 | `<leader>o`              | 打开include文件                                |
 | `<leader>w`              | 单词跳转                                       |
-| `<leader>f`              | 模糊文件搜索                                   |
-| `<leader><leader>f`      | 搜索~目录下的文件                              |
+| `<leader>f`              | 搜索~目录下的文件                              |
+| `<leader>y/<leader>p`    | 生成函数定义                                   |
 | `<F5>`                   | 分析语法错误                                   |
 | `<F9>/<F10>`             | 改变主题颜色                                   |
 | `<F7>/<F8>`              | 启用/关闭markdown实时预览                      |
@@ -275,3 +276,4 @@ Q & A
   [54]: https://github.com/VundleVim/Vundle.vim
   [56]: https://github.com/Yggdroot/LeaderF
   [57]: https://github.com/Shougo/echodoc.vim
+  [58]: https://github.com/chxuan/cppfun

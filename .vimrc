@@ -219,13 +219,13 @@ call plug#end()
 runtime macros/matchit.vim
 
 " 编辑vimrc文件
-noremap <leader>ev :e $MYVIMRC<cr>
+noremap <leader>e :edit $MYVIMRC<cr>
 
 " 查看help文件
-noremap <leader>h :e ~/.vimplus/help.md<cr>
+noremap <leader>h :edit ~/.vimplus/help.md<cr>
 
 " 重新加载vimrc文件
-noremap <leader>sr :source $MYVIMRC<cr>
+noremap <leader>s :source $MYVIMRC<cr>
 
 " cppfun
 noremap <leader>y :CopyFun<cr>
@@ -381,7 +381,7 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 
 " LeaderF
-nmap <leader><leader>f :LeaderfFile ~<cr>
+nmap <leader>f :LeaderfFile ~<cr>
 
 " echodoc.vim
 let g:echodoc_enable_at_startup = 1
