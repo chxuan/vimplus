@@ -73,8 +73,8 @@ An automatic configuration program for vim
 | -------                             | -----                                                                |
 | [vim-plug][4]                       | 比[Vundle][54]下载更快的插件管理软件                                 |
 | [YouCompleteMe][5]                  | 史上最强大的基于语义的自动补全插件，支持C/C++、C#、Python、PHP等语言 |
+| [cppfun][58]                        | 生成函数实现                                                         |
 | [change-colorscheme][27]            | 随心所欲切换主题                                                     |
-| [cppfun][58]                        | 生成函数定义                                                         |
 | [NerdTree][6]                       | 代码资源管理器                                                       |
 | [Airline][8]                        | 可以取代[powerline][9]的状态栏美化插件                               |
 | [auto-pairs][10]                    | 自动补全引号、圆括号、花括号等                                       |
