@@ -8,7 +8,9 @@
 "            
 "
 " Author: chxuan <787280310@qq.com>
-" Source: https://github.com/chxuan/vimplus
+" Repository: https://github.com/chxuan/vimplus
+" Create Date: 2016-05-01
+" License: MIT
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 通用设置
