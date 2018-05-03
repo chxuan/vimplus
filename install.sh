@@ -112,27 +112,18 @@ function copy_files()
 # 安装mac平台字体
 function install_fonts_on_mac()
 {
-    rm -rf ~/Library/Fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf
-    cp ./fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf ~/Library/Fonts
+    rm -rf ~/Library/Fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf
+    cp ./fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf ~/Library/Fonts 
 }
 
 # 安装linux平台字体
 function install_fonts_on_linux()
 {
     mkdir ~/.fonts
-
-    rm -rf ~/.fonts/PowerlineSymbols.otf
-    cp ./fonts/PowerlineSymbols.otf ~/.fonts
-
-    rm -rf ~/.fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf
-    cp ./fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf ~/.fonts
+    rm -rf ~/.fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf
+    cp ./fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf ~/.fonts
 
     fc-cache -vf ~/.fonts
-
-    mkdir -p ~/.config/fontconfig/conf.d
-
-    rm -rf ~/.config/fontconfig/conf.d/10-powerline-symbols.conf
-    cp ./fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d
 }
 
 # 下载插件管理软件vim-plug

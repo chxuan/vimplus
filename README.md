@@ -144,11 +144,11 @@ Q & A
 
 - **`安装vimplus后Airline等插件有乱码，怎么解决？`**
 
-    linux和mac系统需设置终端字体为DroidSansMonofor Powerline Nerd Font。
+    linux和mac系统需设置终端字体为Droid Sans Mono Nerd Font。
 
 - **`xshell连接远程主机使用vim-devicons。`**
 
-    安装[DejaVu Sans Mono Nerd Font][51]字体即可。
+    windows系统安装[Nerd Font][51]字体后并更改xshell字体即可。
 
 - **`安装vimplus会经常失败，安装了几次都不成功！！！`**
 
@@ -270,7 +270,7 @@ Q & A
   [48]: https://raw.githubusercontent.com/mhinz/vim-startify/master/images/startify-menu.png
   [49]: https://cloud.githubusercontent.com/assets/5492542/15363504/839753be-1d4b-11e6-9ac8-def4d7122e8d.gif
   [50]: https://github.com/junegunn/vim-slash
-  [51]: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/DejaVuSansMono
+  [51]: https://github.com/ryanoasis/nerd-fonts
   [52]: https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
   [53]: https://github.com/Xuyuanp/nerdtree-git-plugin
   [54]: https://github.com/VundleVim/Vundle.vim
