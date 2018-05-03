@@ -310,11 +310,8 @@ imap <leader>t <esc> :TagbarToggle<cr>
 
 " colorscheme
 set background=dark
-colorscheme onedark
 let g:onedark_termcolors=256
-" let g:solarized_termcolors=256
-" let g:sorlized_termtrans=1
-" colorscheme solarized
+colorscheme onedark
 
 " cpp_class_scope_highlight
 let g:cpp_class_scope_highlight = 1
