@@ -144,7 +144,7 @@ Q & A
 
 - **`安装vimplus后Airline等插件有乱码，怎么解决？`**
 
-    linux和mac系统需设置终端字体为Droid Sans Mono Nerd Font。
+    linux和mac系统需设置终端字体为`Droid Sans Mono Nerd Font`。
 
 - **`xshell连接远程主机使用vim-devicons。`**
 
@@ -152,7 +152,7 @@ Q & A
 
 - **`安装vimplus会经常失败，安装了几次都不成功！！！`**
 
-    vimplus安装时需要访问外国网站，由于网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，这里有下载好的[YouCompleteMe.tar.gz][37]文件，下载后解压到~/.vim/plugged/目录，并进入YouCompleteMe目录linux用户执行`sudo ./install.py --clang-completer`, mac用户执行`./install.py --clang-completer`即可安装。
+    vimplus安装时需要访问外国网站，由于网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，这里有下载好的[YouCompleteMe.tar.gz][37]文件，下载后解压到~/.vim/plugged/目录，并进入YouCompleteMe目录执行`./install.py --clang-completer`即可安装。
 
 - **`使用第三方库时怎么让ycm补全第三方库API？`**
 
@@ -165,10 +165,6 @@ Q & A
 - **`在Archlinux环境下不能使用ycm怎么办？(缺少libtinfo.so.5)`**
 
     在Archlinux下可以试着使用pkgfile命令搜索依赖的文件具体在什么包内，目前找到的包含libtinfo.so.5的包是ncurses5-compat-libs(AUR)或者32位的lib32-ncurses5-compat-libs(AUR)，安装后即可正常使用。
-
-- **`使用vimplus为什么不能补全JS、Go、Java等语言？`**
-
-    目前vimplus只支持C、C++、Shell、vimscript、Python等语言补全，后序会支持更多的语言，若您真的需要使用其他语言，您可以在vimplus基础上扩展。
 
 - **`以上没有我遇到的问题怎么办？`**
 
