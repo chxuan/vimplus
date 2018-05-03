@@ -340,9 +340,6 @@ let g:airline_right_alt_sep = ''
 nnoremap <C-N> :bn<cr>
 nnoremap <C-P> :bp<cr>
 
-" vim-devicons
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
-
 " incsearch.vim
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
