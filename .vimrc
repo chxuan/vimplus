@@ -146,6 +146,11 @@ noremap <leader>h :edit ~/.vimplus/help.md<cr>
 " 重新加载vimrc文件
 noremap <leader>s :source $MYVIMRC<cr>
 
+" buffer切换
+nnoremap <c-n> :bn<cr>
+nnoremap <c-p> :bp<cr>
+nnoremap <leader>d :bd<cr>
+
 " 主题
 set background=dark
 let g:onedark_termcolors=256
@@ -162,8 +167,6 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
-nnoremap <C-N> :bn<cr>
-nnoremap <C-P> :bp<cr>
 
 " cppfun
 noremap <leader>y :CopyFun<cr>
