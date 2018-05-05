@@ -110,6 +110,8 @@ An automatic configuration program for vim
 快捷键
 ------------
 
+    >>以下是部分快捷键，更详细的快捷键请查阅[vimplus帮助文档][59]。
+
 | 快捷键                   | 说明                                           |
 | -------                  | -----                                          |
 | `,`                      | Leader Key                                     |
@@ -273,3 +275,4 @@ Q & A
   [56]: https://github.com/Yggdroot/LeaderF
   [57]: https://github.com/Shougo/echodoc.vim
   [58]: https://github.com/chxuan/cppfun
+  [59]: https://github.com/chxuan/vimplus/blob/master/help.md
