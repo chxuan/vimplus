@@ -66,6 +66,7 @@ An automatic configuration program for vim
 
 修改 `~/.vimrc.local` 文件内容，以启用个性化定制，可覆盖 `~/.vimrc` 中的设置。
 
+
 插件列表
 ------------
 
@@ -112,34 +113,34 @@ An automatic configuration program for vim
 
 以下是部分快捷键，更详细的快捷键请查阅[vimplus帮助文档][59]。
 
-| 快捷键                   | 说明                                           |
-| -------                  | -----                                          |
-| `,`                      | Leader Key                                     |
-| `<leader>e`              | 快速编辑vimrc文件                              |
-| `<leader>s`              | 重新加载vimrc文件                              |
-| `<leader>h`              | 打开vimplus帮助文档                            |
-| `<leader>n`              | 打开/关闭目录树                                |
-| `<leader>t`              | 显示函数、变量、宏列表                         |
-| `<leader>a`              | .h .cpp 文件切换                               |
-| `<leader>u`              | 转到函数实现                                   |
-| `<leader>i`              | 转到函数声明                                   |
-| `<leader>o`              | 打开include文件                                |
-| `<leader>w`              | 单词跳转                                       |
-| `<leader>f`              | 搜索~目录下的文件                              |
-| `<leader>y/<leader>p`    | 生成函数定义                                   |
-| `<F5>`                   | 分析语法错误                                   |
-| `<F9>/<F10>`             | 改变主题颜色                                   |
-| `<F7>/<F8>`              | 启用/关闭markdown实时预览                      |
-| `<Ctrl> p/<Ctrl> n`      | buffer切换                                     |
-| `:bd`                    | 关闭buffer                                     |
-| `<Ctrl> o/<Ctrl> i`      | 光标位置切换                                   |
-| `gcc`                    | 注释代码                                       |
-| `:DirDiff <dir1> <dir2>` | 目录比较                                       |
-| `.`                      | 重复上次操作                                   |
-| `vi"/di"/ci"`            | 选中/删除/改写引号(可以是括号等配对符)内的内容 |
-| `di,/ci,`                | 删除/改写函数参数                              |
-| `vif/dif/cif`            | 选中/删除/改写函数内容                         |
-| `gg=G`                   | 缩进代码                                       |
+| 快捷键                   | 说明                              |
+| -------                  | -----                             |
+| `,`                      | Leader Key                        |
+| `<leader>n`              | 打开/关闭代码资源管理器           |
+| `<leader>t`              | 打开/关闭函数列表                 |
+| `<leader>a`              | .h .cpp 文件切换                  |
+| `<leader>i`              | 转到函数声明                      |
+| `<leader>u`              | 转到函数实现                      |
+| `<leader>o`              | 打开include文件                   |
+| `<leader>y`              | 拷贝函数声明                      |
+| `<leader>p`              | 生成函数定义                      |
+| `<leader>w`              | 单词跳转                          |
+| `<leader>f`              | 搜索~目录下的文件                 |
+| `<F5>`                   | 分析语法错误                      |
+| `<F7>`                   | 启用markdown实时预览              |
+| `<F8>`                   | 关闭markdown实时预览              |
+| `<F9>`                   | 显示上一主题                      |
+| `<F10>`                  | 显示下一主题                      |
+| `:Tab /=`                | 按等号对齐，也可以是竖线          |
+| `gcc`                    | 注释代码                          |
+| `:DirDiff <dir1> <dir2>` | 目录比较                          |
+| `vif`                    | 选中函数内容                      |
+| `dif`                    | 删除函数内容                      |
+| `cif`                    | 改写函数内容                      |
+| `vaf`                    | 选中函数内容（包括函数名 花括号） |
+| `daf`                    | 删除函数内容（包括函数名 花括号） |
+| `caf`                    | 改写函数内容（包括函数名 花括号） |
+
 
 Q & A
 ------------
@@ -175,6 +176,7 @@ Q & A
 - **`vimplus用起来真的太棒了，怎么办？`**
 
     那就麻烦您打赏一颗:star::star:吧，给予我继续维护的动力。
+
 
 特性展示
 ------------
