@@ -126,7 +126,8 @@ An automatic configuration program for vim
 | `<leader>p`              | 生成函数定义                      |
 | `<leader>w`              | 单词跳转                          |
 | `<leader>f`              | 搜索~目录下的文件                 |
-| `<F5>`                   | 分析语法错误                      |
+| `<leader><leader>f`      | 语法错误自动修复(FixIt)           |
+| `<F5>`                   | 显示语法错误提示窗口              |
 | `<F7>`                   | 启用markdown实时预览              |
 | `<F8>`                   | 关闭markdown实时预览              |
 | `<F9>`                   | 显示上一主题                      |
@@ -140,7 +141,6 @@ An automatic configuration program for vim
 | `vaf`                    | 选中函数内容（包括函数名 花括号） |
 | `daf`                    | 删除函数内容（包括函数名 花括号） |
 | `caf`                    | 改写函数内容（包括函数名 花括号） |
-
 
 Q & A
 ------------
