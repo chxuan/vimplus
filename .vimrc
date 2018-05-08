@@ -297,7 +297,7 @@ nmap <leader>f :LeaderfFile ~<cr>
 let g:echodoc_enable_at_startup = 1
 
 " Tagbar
-nnoremap <leader>\| :Tab /\|<cr>
+nnoremap <leader>l :Tab /\|<cr>
 nnoremap <leader>= :Tab /=<cr>
 
 
