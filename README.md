@@ -132,7 +132,8 @@ An automatic configuration program for vim
 | `<F8>`                   | 关闭markdown实时预览              |
 | `<F9>`                   | 显示上一主题                      |
 | `<F10>`                  | 显示下一主题                      |
-| `:Tab /=`                | 按等号对齐，也可以是竖线          |
+| `<leader>|`              | 按竖线对齐                        |
+| `<leader>=`              | 按等号对齐                        |
 | `gcc`                    | 注释代码                          |
 | `:DirDiff <dir1> <dir2>` | 目录比较                          |
 | `vif`                    | 选中函数内容                      |

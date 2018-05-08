@@ -296,6 +296,11 @@ nmap <leader>f :LeaderfFile ~<cr>
 " echodoc.vim
 let g:echodoc_enable_at_startup = 1
 
+" Tagbar
+nnoremap <leader>\| :Tab /\|<cr>
+nnoremap <leader>= :Tab /=<cr>
+
+
 " 个性化
 if filereadable(expand($HOME . '/.vimrc.local'))
     source $HOME/.vimrc.local
