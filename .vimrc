@@ -296,7 +296,7 @@ nmap <leader>f :LeaderfFile ~<cr>
 " echodoc.vim
 let g:echodoc_enable_at_startup = 1
 
-" Tagbar
+" tabular
 nnoremap <leader>l :Tab /\|<cr>
 nnoremap <leader>= :Tab /=<cr>
 
