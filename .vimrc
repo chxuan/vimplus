@@ -139,13 +139,13 @@ call plug#end()
 runtime macros/matchit.vim
 
 " 编辑vimrc文件
-noremap <leader>e :edit $MYVIMRC<cr>
+nnoremap <leader>e :edit $MYVIMRC<cr>
 
 " 查看help文件
-noremap <leader>h :edit ~/.vimplus/help.md<cr>
+nnoremap <leader>h :edit ~/.vimplus/help.md<cr>
 
 " 重新加载vimrc文件
-noremap <leader>s :source $MYVIMRC<cr>
+nnoremap <leader>s :source $MYVIMRC<cr>
 
 " buffer切换
 nnoremap <c-n> :bn<cr>
@@ -170,18 +170,18 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
 " cppfun
-noremap <leader>y :CopyFun<cr>
-noremap <leader>p :PasteFun<cr>
+nnoremap <leader>y :CopyFun<cr>
+nnoremap <leader>p :PasteFun<cr>
 
 " change-colorscheme
-noremap <silent> <F10> :NextColorScheme<cr>
+nnoremap <silent> <F10> :NextColorScheme<cr>
 inoremap <silent> <F10> <esc> :NextColorScheme<cr>
-noremap <silent> <F9> :PreviousColorScheme<cr>
+nnoremap <silent> <F9> :PreviousColorScheme<cr>
 inoremap <silent> <F9> <esc> :PreviousColorScheme<cr>
 
 " nerdtree
-map <leader>n :NERDTreeToggle<cr>
-imap <leader>n <esc> :NERDTreeToggle<cr>
+nnoremap <leader>n :NERDTreeToggle<cr>
+inoremap <leader>n <esc> :NERDTreeToggle<cr>
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
@@ -238,8 +238,8 @@ nnoremap <silent> <leader>a :A<cr>
 
 " tagbar
 let g:tagbar_width = 30
-map <leader>t :TagbarToggle<cr>
-imap <leader>t <esc> :TagbarToggle<cr>
+nnoremap <leader>t :TagbarToggle<cr>
+inoremap <leader>t <esc> :TagbarToggle<cr>
 
 " cpp_class_scope_highlight
 let g:cpp_class_scope_highlight = 1
@@ -270,7 +270,7 @@ nmap <leader>w <Plug>(easymotion-overwin-w)
 
 " indentLine
 let g:indentLine_enabled=0
-nmap <leader><leader>il :IndentLinesToggle<cr>
+nnoremap <leader><leader>il :IndentLinesToggle<cr>
 
 " pydiction
 let g:pydiction_location='~/.vim/plugged/pydiction/complete-dict'
@@ -291,7 +291,7 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 
 " LeaderF
-nmap <leader>f :LeaderfFile ~<cr>
+nnoremap <leader>f :LeaderfFile ~<cr>
 
 " echodoc.vim
 let g:echodoc_enable_at_startup = 1
@@ -299,7 +299,6 @@ let g:echodoc_enable_at_startup = 1
 " tabular
 nnoremap <leader>l :Tab /\|<cr>
 nnoremap <leader>= :Tab /=<cr>
-
 
 " 个性化
 if filereadable(expand($HOME . '/.vimrc.local'))
