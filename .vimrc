@@ -172,6 +172,8 @@ let g:airline_right_alt_sep = ''
 " cppfun
 nnoremap <leader>y :CopyFun<cr>
 nnoremap <leader>p :PasteFun<cr>
+nnoremap <leader><leader>fp :FormatFunParam<cr>
+nnoremap <leader><leader>if :FormatIf<cr>
 
 " change-colorscheme
 nnoremap <silent> <F10> :NextColorScheme<cr>
