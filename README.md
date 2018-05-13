@@ -150,7 +150,7 @@ Q & A
 
     linux和mac系统需设置终端字体为`Droid Sans Mono Nerd Font`。
 
-- **`xshell连接远程主机使用vim-devicons。`**
+- **`xshell连接远程主机不能使用vim-devicons或乱码。`**
 
     windows系统安装[Nerd Font][51]字体后并更改xshell字体即可。
 
