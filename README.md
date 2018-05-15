@@ -107,6 +107,7 @@ An automatic configuration program for vim
 | [nerdtree-git-plugin][53]           | NerdTree显示git状态                                                  |
 | [echodoc][57]                       | 补全函数时在命令栏显示函数签名                                       |
 | [vim-smooth-scroll][60]             | 让翻页更顺畅                                                         |
+| [vim-expand-region][61]             | 快速选择区域                                                         |
 
 
 快捷键
@@ -143,6 +144,8 @@ An automatic configuration program for vim
 | `vaf`                    | 选中函数内容（包括函数名 花括号） |
 | `daf`                    | 删除函数内容（包括函数名 花括号） |
 | `caf`                    | 改写函数内容（包括函数名 花括号） |
+| `+`                      | 逐渐增大选择区域                  |
+| `-`                      | 逐渐减小选择区域                  |
 
 Q & A
 ------------
@@ -281,3 +284,4 @@ Q & A
   [58]: https://github.com/chxuan/cppfun
   [59]: https://github.com/chxuan/vimplus/blob/master/help.md
   [60]: https://github.com/terryma/vim-smooth-scroll
+  [61]: https://github.com/terryma/vim-expand-region

@@ -133,6 +133,7 @@ Plug 'kana/vim-textobj-function'
 Plug 'sgur/vim-textobj-parameter'
 Plug 'Shougo/echodoc.vim'
 Plug 'terryma/vim-smooth-scroll'
+Plug 'terryma/vim-expand-region'
 
 call plug#end()            
 
