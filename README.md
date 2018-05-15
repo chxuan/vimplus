@@ -106,6 +106,7 @@ An automatic configuration program for vim
 | [vim-nerdtree-syntax-highlight][52] | NerdTree文件类型高亮                                                 |
 | [nerdtree-git-plugin][53]           | NerdTree显示git状态                                                  |
 | [echodoc][57]                       | 补全函数时在命令栏显示函数签名                                       |
+| [vim-smooth-scroll][60]             | 让翻页更顺畅                                                         |
 
 
 快捷键
@@ -279,3 +280,4 @@ Q & A
   [57]: https://github.com/Shougo/echodoc.vim
   [58]: https://github.com/chxuan/cppfun
   [59]: https://github.com/chxuan/vimplus/blob/master/help.md
+  [60]: https://github.com/terryma/vim-smooth-scroll
