@@ -61,7 +61,7 @@ function compile_vim()
 # 安装mac平台必要软件
 function install_prepare_software_on_mac()
 {
-    brew install vim gcc cmake ctags-exuberant curl
+    brew install vim gcc cmake ctags-exuberant curl ack the_silver_searcher
 }
 
 # 安装centos发行版必要软件

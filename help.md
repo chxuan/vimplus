@@ -14,6 +14,7 @@
 | `<leader>p`              | 生成函数定义                      |
 | `<leader>w`              | 单词跳转                          |
 | `<leader>f`              | 搜索~目录下的文件                 |
+| `<leader>k`              | 搜索当前目录下的文本              |
 | `<leader><leader>f`      | 语法错误自动修复(FixIt)           |
 | `<F5>`                   | 显示语法错误提示窗口              |
 | `<F7>`                   | 启用markdown实时预览              |

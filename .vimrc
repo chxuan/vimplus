@@ -95,6 +95,7 @@ Plug 'chxuan/cppfun'
 Plug 'chxuan/change-colorscheme'
 Plug 'Yggdroot/indentLine'
 Plug 'Yggdroot/LeaderF'
+Plug 'mileszs/ack.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
 Plug 'iamcco/mathjax-support-for-mkdp'
@@ -314,6 +315,12 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
+" ack
+nnoremap <Leader>k :Ack!<space>
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
 
 " 个性化
 if filereadable(expand($HOME . '/.vimrc.local'))

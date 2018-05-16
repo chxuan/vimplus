@@ -81,6 +81,7 @@ An automatic configuration program for vim
 | [auto-pairs][10]                    | 自动补全引号、圆括号、花括号等                                       |
 | [DoxygenToolkit][11]                | Doxygen风格的注释插件                                                |
 | [LeaderF][56]                       | 比[ctrlp][12]更强大的文件的模糊搜索工具                              |
+| [ack][62]                           | 强大的文本搜索工具                                                   |
 | [tagbar][13]                        | [taglist][14]的替代品，显示类/方法/变量                              |
 | [vim-devicons][15]                  | 显示文件类型图标                                                     |
 | [vim-surround][16]                  | 自动增加、替换配对符的插件                                           |
@@ -128,6 +129,7 @@ An automatic configuration program for vim
 | `<leader>p`              | 生成函数定义                      |
 | `<leader>w`              | 单词跳转                          |
 | `<leader>f`              | 搜索~目录下的文件                 |
+| `<leader>k`              | 搜索当前目录下的文本              |
 | `<leader><leader>f`      | 语法错误自动修复(FixIt)           |
 | `<F5>`                   | 显示语法错误提示窗口              |
 | `<F7>`                   | 启用markdown实时预览              |
@@ -285,3 +287,4 @@ Q & A
   [59]: https://github.com/chxuan/vimplus/blob/master/help.md
   [60]: https://github.com/terryma/vim-smooth-scroll
   [61]: https://github.com/terryma/vim-expand-region
+  [62]: https://github.com/mileszs/ack.vim
