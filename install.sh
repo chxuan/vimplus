@@ -61,19 +61,19 @@ function compile_vim()
 # 安装mac平台必要软件
 function install_prepare_software_on_mac()
 {
-    brew install vim gcc cmake ctags-exuberant curl ack the_silver_searcher
+    brew install vim gcc cmake ctags-exuberant curl ack
 }
 
 # 安装centos发行版必要软件
 function install_prepare_software_on_centos()
 {
-    sudo yum install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl
+    sudo yum install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl ack
 }
 
 # 安装ubuntu发行版必要软件
 function install_prepare_software_on_ubuntu()
 {
-    sudo apt-get install -y ctags build-essential cmake python-dev python3-dev fontconfig curl
+    sudo apt-get install -y ctags build-essential cmake python-dev python3-dev fontconfig curl ack-grep
     ubuntu_1604=`is_ubuntu1604`
     echo ${ubuntu_1604}
 

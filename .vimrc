@@ -318,9 +318,6 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 " ack
 nnoremap <Leader>k :Ack!<space>
-if executable('ag')
-    let g:ackprg = 'ag --vimgrep'
-endif
 
 " 个性化
 if filereadable(expand($HOME . '/.vimrc.local'))
