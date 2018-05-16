@@ -89,7 +89,7 @@ function install_prepare_software_on_ubuntu()
 # 安装archlinux发行版必要软件
 function install_prepare_software_on_archlinux()
 {
-    sudo pacman -S --noconfirm vim ctags automake gcc cmake python3 python2 curl
+    sudo pacman -S --noconfirm vim ctags automake gcc cmake python3 python2 curl ack
 }
 
 # 拷贝文件
