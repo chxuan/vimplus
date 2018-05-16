@@ -296,6 +296,11 @@ let g:NERDTreeIndicatorMapCustom = {
 
 " LeaderF
 nnoremap <leader>f :LeaderfFile ~<cr>
+let g:Lf_WildIgnore = {
+            \ 'dir': ['.svn','.git','.hg'],
+            \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
+            \}
+let g:Lf_UseCache = 0
 
 " echodoc.vim
 let g:echodoc_enable_at_startup = 1
