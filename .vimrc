@@ -133,6 +133,7 @@ Plug 'kana/vim-textobj-syntax'
 Plug 'kana/vim-textobj-function'
 Plug 'sgur/vim-textobj-parameter'
 Plug 'Shougo/echodoc.vim'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'terryma/vim-expand-region'
 
@@ -318,6 +319,17 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 " ack
 nnoremap <Leader>k :Ack!<space>
+
+" vim-multiple-cursors
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_start_word_key      = '<C-j>'
+let g:multi_cursor_select_all_word_key = '<A-j>'
+let g:multi_cursor_start_key           = 'g<C-j>'
+let g:multi_cursor_select_all_key      = 'g<A-j>'
+let g:multi_cursor_next_key            = '<C-j>'
+let g:multi_cursor_prev_key            = '<C-k>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
 
 " 个性化
 if filereadable(expand($HOME . '/.vimrc.local'))

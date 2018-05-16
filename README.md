@@ -107,6 +107,7 @@ An automatic configuration program for vim
 | [vim-nerdtree-syntax-highlight][52] | NerdTree文件类型高亮                                                 |
 | [nerdtree-git-plugin][53]           | NerdTree显示git状态                                                  |
 | [echodoc][57]                       | 补全函数时在命令栏显示函数签名                                       |
+| [vim-multiple-cursors][63]          | 多光标编辑                                                           |
 | [vim-smooth-scroll][60]             | 让翻页更顺畅                                                         |
 | [vim-expand-region][61]             | 快速选择区域                                                         |
 
@@ -288,3 +289,4 @@ Q & A
   [60]: https://github.com/terryma/vim-smooth-scroll
   [61]: https://github.com/terryma/vim-expand-region
   [62]: https://github.com/mileszs/ack.vim
+  [63]: https://github.com/terryma/vim-multiple-cursors
