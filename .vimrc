@@ -90,10 +90,9 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-scripts/L9'
 Plug 'chxuan/cppfun'
 Plug 'chxuan/change-colorscheme'
-Plug 'Yggdroot/indentLine'
+Plug 'vim-scripts/L9'
 Plug 'Yggdroot/LeaderF'
 Plug 'mileszs/ack.vim'
 Plug 'easymotion/vim-easymotion'
@@ -104,11 +103,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plug 'rkulla/pydiction'
 Plug 'Valloric/MatchTagAlways'
 Plug 'Valloric/YouCompleteMe'
-Plug 'docunext/closetag.vim'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -120,11 +117,8 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/a.vim'
-Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'vim-scripts/txt.vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'gorodinskiy/vim-coloresque'
-Plug 'will133/vim-dirdiff'
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/vim-slash'
 Plug 'junegunn/gv.vim'
@@ -201,16 +195,6 @@ let g:NERDTreeHighlightFoldersFullName = 1
 let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
 
-" Doxygen
-let g:DoxygenToolkit_authorName="chxuan, 787280310@qq.com"
-let s:licenseTag = "Copyright(C)\<enter>"
-let s:licenseTag = s:licenseTag . "For free\<enter>"
-let s:licenseTag = s:licenseTag . "All right reserved\<enter>"
-let g:DoxygenToolkit_licenseTag = s:licenseTag
-let g:DoxygenToolkit_briefTag_funcName="yes"
-let g:doxygen_enhanced_color=1
-let g:DoxygenToolkit_commentType="Qt"
-
 " YCM
 let g:ycm_confirm_extra_conf = 0 
 let g:ycm_error_symbol = '>>'
@@ -278,10 +262,6 @@ imap <silent> <F8> <Plug>StopMarkdownPreview
 let g:EasyMotion_smartcase = 1
 map <leader>w <Plug>(easymotion-bd-w)
 nmap <leader>w <Plug>(easymotion-overwin-w)
-
-" indentLine
-let g:indentLine_enabled=0
-nnoremap <leader><leader>il :IndentLinesToggle<cr>
 
 " pydiction
 let g:pydiction_location='~/.vim/plugged/pydiction/complete-dict'

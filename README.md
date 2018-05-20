@@ -72,41 +72,35 @@ An automatic configuration program for vim
 
 | 插件                                | 说明                                                                 |
 | -------                             | -----                                                                |
-| [vim-plug][4]                       | 比[Vundle][54]下载更快的插件管理软件                                 |
-| [YouCompleteMe][5]                  | 史上最强大的基于语义的自动补全插件，支持C/C++、C#、Python、PHP等语言 |
 | [cppfun][58]                        | 生成函数实现                                                         |
 | [change-colorscheme][27]            | 随心所欲切换主题                                                     |
+| [vim-plug][4]                       | 比[Vundle][54]下载更快的插件管理软件                                 |
+| [YouCompleteMe][5]                  | 史上最强大的基于语义的自动补全插件，支持C/C++、C#、Python、PHP等语言 |
 | [NerdTree][6]                       | 代码资源管理器                                                       |
+| [vim-nerdtree-syntax-highlight][52] | NerdTree文件类型高亮                                                 |
+| [nerdtree-git-plugin][53]           | NerdTree显示git状态                                                  |
+| [vim-devicons][15]                  | 显示文件类型图标                                                     |
 | [Airline][8]                        | 可以取代[powerline][9]的状态栏美化插件                               |
 | [auto-pairs][10]                    | 自动补全引号、圆括号、花括号等                                       |
-| [DoxygenToolkit][11]                | Doxygen风格的注释插件                                                |
 | [LeaderF][56]                       | 比[ctrlp][12]更强大的文件的模糊搜索工具                              |
 | [ack][62]                           | 强大的文本搜索工具                                                   |
 | [tagbar][13]                        | [taglist][14]的替代品，显示类/方法/变量                              |
-| [vim-devicons][15]                  | 显示文件类型图标                                                     |
 | [vim-surround][16]                  | 自动增加、替换配对符的插件                                           |
 | [vim-commentary][17]                | 快速注释代码插件                                                     |
 | [vim-repeat][18]                    | 重复上一次操作                                                       |
 | [vim-endwise][19]                   | if/end/endif/endfunction补全                                         |
 | [tabular][20]                       | 代码、注释、表格对齐                                                 |
-| [vim-dirdiff][21]                   | 目录比较                                                             |
-| [vim-coloresque][22]                | 根据文本颜色值显示对于的颜色                                         |
 | [vim-easymotion][23]                | 强大的光标快速移动工具，强大到颠覆你的插件观                         |
 | [incsearch.vim][24]                 | 模糊字符搜索插件                                                     |
 | [vim-startify][25]                  | 启动页                                                               |
 | [markdown-preview][26]              | markdown实时预览                                                     |
-| [L9][28]                            | Vim-script库                                                         |
-| [indentLine][29]                    | 代码缩进对齐线                                                       |
-| [sparkup][31]                       | HTML标签补全                                                         |
+| [L9][28]                            | Vim-script函数库                                                     |
 | [pydiction][32]                     | 基于字典的python语法补全                                             |
 | [MatchTagAlways][33]                | 高亮配对符                                                           |
-| [closetag][34]                      | HTML标签自动闭合                                                     |
 | [a.vim][35]                         | .h .cpp文件快速切换                                                  |
 | [vim-fugitive][36]                  | 集成Git                                                              |
 | [gv][64]                            | git提交浏览器                                                        |
 | [vim-slash][50]                     | 优化搜索，移动光标后清除高亮                                         |
-| [vim-nerdtree-syntax-highlight][52] | NerdTree文件类型高亮                                                 |
-| [nerdtree-git-plugin][53]           | NerdTree显示git状态                                                  |
 | [echodoc][57]                       | 补全函数时在命令栏显示函数签名                                       |
 | [vim-multiple-cursors][63]          | 多光标编辑                                                           |
 | [vim-smooth-scroll][60]             | 让翻页更顺畅                                                         |
@@ -144,7 +138,6 @@ An automatic configuration program for vim
 | `<leader>l`              | 按竖线对齐                           |
 | `<leader>=`              | 按等号对齐                           |
 | `gcc`                    | 注释代码                             |
-| `:DirDiff <dir1> <dir2>` | 目录比较                             |
 | `vif`                    | 选中函数内容                         |
 | `dif`                    | 删除函数内容                         |
 | `cif`                    | 改写函数内容                         |
@@ -201,6 +194,10 @@ Q & A
 
     ![][41]
 
+- vim-multiple-cursors
+
+    ![][65]
+
 - vim-airline
 
     ![][42]
@@ -243,7 +240,6 @@ Q & A
   [8]: https://github.com/vim-airline/vim-airline
   [9]: https://github.com/powerline/powerline
   [10]: https://github.com/jiangmiao/auto-pairs
-  [11]: https://github.com/vim-scripts/DoxygenToolkit.vim
   [12]: https://github.com/ctrlpvim/ctrlp.vim
   [13]: https://github.com/majutsushi/tagbar
   [14]: https://github.com/vim-scripts/taglist.vim
@@ -253,19 +249,14 @@ Q & A
   [18]: https://github.com/tpope/vim-repeat
   [19]: https://github.com/tpope/vim-endwise
   [20]: https://github.com/godlygeek/tabular
-  [21]: https://github.com/will133/vim-dirdiff
-  [22]: https://github.com/gko/vim-coloresque
   [23]: https://github.com/easymotion/vim-easymotion
   [24]: https://github.com/haya14busa/incsearch.vim
   [25]: https://github.com/mhinz/vim-startify
   [26]: https://github.com/iamcco/markdown-preview.vim
   [27]: https://github.com/chxuan/change-colorscheme
   [28]: https://github.com/vim-scripts/L9
-  [29]: https://github.com/Yggdroot/indentLine
-  [31]: https://github.com/rstacruz/sparkup
   [32]: https://github.com/rkulla/pydiction
   [33]: https://github.com/Valloric/MatchTagAlways
-  [34]: https://github.com/docunext/closetag.vim
   [35]: https://github.com/vim-scripts/a.vim
   [36]: https://github.com/tpope/vim-fugitive
   [37]: https://pan.baidu.com/s/1i481Eeh
@@ -295,3 +286,4 @@ Q & A
   [62]: https://github.com/mileszs/ack.vim
   [63]: https://github.com/terryma/vim-multiple-cursors
   [64]: https://github.com/junegunn/gv.vim
+  [65]: https://raw.githubusercontent.com/terryma/vim-multiple-cursors/master/assets/example1.gif
