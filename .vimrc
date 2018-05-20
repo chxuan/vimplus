@@ -221,7 +221,7 @@ let g:ycm_complete_in_strings = 1
 nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
 nnoremap <leader>i :YcmCompleter GoToDefinition<cr>
 nnoremap <leader>o :YcmCompleter GoToInclude<cr>
-nnoremap <leader><leader>f :YcmCompleter FixIt<cr>
+nnoremap <leader>ff :YcmCompleter FixIt<cr>
 nmap <F5> :YcmDiags<cr>
 
 " ctags
