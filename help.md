@@ -15,6 +15,9 @@
 | `<leader>w`              | 单词跳转                                                                        |
 | `<leader>f`              | 搜索~目录下的文件                                                               |
 | `<leader>k`              | 搜索当前目录下的文本                                                            |
+| `<leader>g`              | 显示git仓库提交记录                                                             |
+| `<leader>G`              | 显示当前文件提交记录                                                            |
+| `<leader>gg`             | 显示当前文件在某个commit下的完整内容                                            |
 | `<leader><leader>f`      | 语法错误自动修复(FixIt)                                                         |
 | `<F5>`                   | 显示语法错误提示窗口                                                            |
 | `<F7>`                   | 启用markdown实时预览                                                            |

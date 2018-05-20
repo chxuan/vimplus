@@ -127,6 +127,7 @@ Plug 'gorodinskiy/vim-coloresque'
 Plug 'will133/vim-dirdiff'
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/vim-slash'
+Plug 'junegunn/gv.vim'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-syntax'
@@ -334,6 +335,11 @@ let g:multi_cursor_next_key            = '<C-j>'
 let g:multi_cursor_prev_key            = '<C-k>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
+
+" gv
+nnoremap <leader>g :GV<cr>
+nnoremap <leader>G :GV!<cr>
+nnoremap <leader>gg :GV?<cr>
 
 " 个性化
 if filereadable(expand($HOME . '/.vimrc.local'))
