@@ -43,6 +43,7 @@ function compile_vim()
     sudo rm -rf ~/vim
     sudo rm -rf /usr/share/vim/vim74
     sudo rm -rf /usr/share/vim/vim80
+    sudo rm -rf /usr/share/vim/vim81
     git clone https://github.com/vim/vim.git ~/vim
     cd ~/vim
     ./configure --with-features=huge \
@@ -53,7 +54,7 @@ function compile_vim()
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 --enable-cscope --prefix=/usr
-    make VIMRUNTIMEDIR=/usr/share/vim/vim80
+    make VIMRUNTIMEDIR=/usr/share/vim/vim81
     sudo make install
     cd -
 }
