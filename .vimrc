@@ -9,7 +9,7 @@
 "
 " Author: chxuan <787280310@qq.com>
 " Repository: https://github.com/chxuan/vimplus
-" Create Date: 2016-05-01
+" Create Date: 2016-04-10
 " License: MIT
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
