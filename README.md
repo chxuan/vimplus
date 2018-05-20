@@ -137,6 +137,7 @@ An automatic configuration program for vim
 | `<leader>l`  | 按竖线对齐                           |
 | `<leader>=`  | 按等号对齐                           |
 | `gcc`        | 注释代码                             |
+| `gcap`       | 注释段落                             |
 | `vif`        | 选中函数内容                         |
 | `dif`        | 删除函数内容                         |
 | `cif`        | 改写函数内容                         |
