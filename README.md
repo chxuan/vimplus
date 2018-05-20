@@ -96,7 +96,6 @@ An automatic configuration program for vim
 | [markdown-preview][26]              | markdown实时预览                                                     |
 | [L9][28]                            | Vim-script函数库                                                     |
 | [pydiction][32]                     | 基于字典的python语法补全                                             |
-| [MatchTagAlways][33]                | 高亮配对符                                                           |
 | [a.vim][35]                         | .h .cpp文件快速切换                                                  |
 | [vim-fugitive][36]                  | 集成Git                                                              |
 | [gv][64]                            | git提交浏览器                                                        |
@@ -256,7 +255,6 @@ Q & A
   [27]: https://github.com/chxuan/change-colorscheme
   [28]: https://github.com/vim-scripts/L9
   [32]: https://github.com/rkulla/pydiction
-  [33]: https://github.com/Valloric/MatchTagAlways
   [35]: https://github.com/vim-scripts/a.vim
   [36]: https://github.com/tpope/vim-fugitive
   [37]: https://pan.baidu.com/s/1i481Eeh
