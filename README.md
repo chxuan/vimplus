@@ -124,7 +124,7 @@ An automatic configuration program for vim
 | `<leader>p`  | 生成函数定义                         |
 | `<leader>w`  | 单词跳转                             |
 | `<leader>f`  | 搜索~目录下的文件                    |
-| `<leader>k`  | 搜索当前目录下的文本                 |
+| `<leader>F`  | 搜索当前目录下的文本                 |
 | `<leader>g`  | 显示git仓库提交记录                  |
 | `<leader>G`  | 显示当前文件提交记录                 |
 | `<leader>gg` | 显示当前文件在某个commit下的完整内容 |

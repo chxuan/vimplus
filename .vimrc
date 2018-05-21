@@ -288,6 +288,9 @@ let g:Lf_WildIgnore = {
             \}
 let g:Lf_UseCache = 0
 
+" ack
+nnoremap <Leader>F :Ack!<space>
+
 " echodoc.vim
 let g:echodoc_enable_at_startup = 1
 
@@ -300,9 +303,6 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
-
-" ack
-nnoremap <Leader>k :Ack!<space>
 
 " vim-multiple-cursors
 let g:multi_cursor_use_default_mapping=0
