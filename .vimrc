@@ -305,7 +305,7 @@ noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 " vim-multiple-cursors
-let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_use_default_mapping = 0
 let g:multi_cursor_start_word_key      = '<C-j>'
 let g:multi_cursor_select_all_word_key = '<A-j>'
 let g:multi_cursor_start_key           = 'g<C-j>'
