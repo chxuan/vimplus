@@ -139,8 +139,11 @@ runtime macros/matchit.vim
 " 编辑vimrc文件
 nnoremap <leader>e :edit $MYVIMRC<cr>
 
-" 查看help文件
+" 查看vimplus的help文件
 nnoremap <leader>h :edit ~/.vimplus/help.md<cr>
+
+" 在vim帮助文档里搜索当前光标所在关键字
+nnoremap <leader>H :execute ":h " . expand("<cword>")<cr>
 
 " 重新加载vimrc文件
 nnoremap <leader>s :source $MYVIMRC<cr>
