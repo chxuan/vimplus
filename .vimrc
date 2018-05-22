@@ -143,7 +143,7 @@ nnoremap <leader>e :edit $MYVIMRC<cr>
 nnoremap <leader>h :edit ~/.vimplus/help.md<cr>
 
 " 在vim帮助文档里搜索当前光标所在关键字
-nnoremap <leader>H :execute ":h " . expand("<cword>")<cr>
+nnoremap <leader>H :execute ":help " . expand("<cword>")<cr>
 
 " 重新加载vimrc文件
 nnoremap <leader>s :source $MYVIMRC<cr>
