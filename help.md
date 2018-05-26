@@ -292,10 +292,13 @@
 其他
 ------------
 
-| 快捷键           | 说明                              |
-| -------          | -----                             |
-| `vim -u NONE -N` | 开启vim时不加载vimrc文件          |
-| `<leader>e`      | 快速编辑vimrc文件                 |
-| `<leader>s`      | 重新加载vimrc文件                 |
-| `<leader>h`      | 打开vimplus帮助文档               |
-| `<leader>H`      | 打开当前光标所在单词的vim帮助文档 |
+| 快捷键              | 说明                              |
+| -------             | -----                             |
+| `vim -u NONE -N`    | 开启vim时不加载vimrc文件          |
+| `<leader>e`         | 快速编辑vimrc文件                 |
+| `<leader>s`         | 重新加载vimrc文件                 |
+| `<leader>h`         | 打开vimplus帮助文档               |
+| `<leader>H`         | 打开当前光标所在单词的vim帮助文档 |
+| `<leader><leader>i` | 安装插件                          |
+| `<leader><leader>u` | 更新插件                          |
+| `<leader><leader>c` | 删除插件                          |

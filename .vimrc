@@ -148,6 +148,11 @@ nnoremap <leader>H :execute ":help " . expand("<cword>")<cr>
 " 重新加载vimrc文件
 nnoremap <leader>s :source $MYVIMRC<cr>
 
+" 安装、更新、删除插件
+nnoremap <leader><leader>i :PlugInstall<cr>
+nnoremap <leader><leader>u :PlugUpdate<cr>
+nnoremap <leader><leader>c :PlugClean<cr>
+
 " buffer切换
 nnoremap <c-n> :bn<cr>
 nnoremap <c-p> :bp<cr>
