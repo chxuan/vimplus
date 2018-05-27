@@ -74,6 +74,7 @@ An automatic configuration program for vim
 | -------                             | -----                                                                |
 | [cppfun][58]                        | 生成函数实现(I'm author:smile:)                                      |
 | [change-colorscheme][27]            | 随心所欲切换主题(I'm author:smile:)                                  |
+| [vimplus-startify][25]              | vimplus开始页面(修改自[mhinz/vim-startify][25])                      |
 | [vim-plug][4]                       | 比[Vundle][54]下载更快的插件管理软件                                 |
 | [YouCompleteMe][5]                  | 史上最强大的基于语义的自动补全插件，支持C/C++、C#、Python、PHP等语言 |
 | [NerdTree][6]                       | 代码资源管理器                                                       |
@@ -92,7 +93,6 @@ An automatic configuration program for vim
 | [tabular][20]                       | 代码、注释、表格对齐                                                 |
 | [vim-easymotion][23]                | 强大的光标快速移动工具，强大到颠覆你的插件观                         |
 | [incsearch.vim][24]                 | 模糊字符搜索插件                                                     |
-| [vim-startify][25]                  | 启动页                                                               |
 | [markdown-preview][26]              | markdown实时预览                                                     |
 | [L9][28]                            | Vim-script函数库                                                     |
 | [pydiction][32]                     | 基于字典的python语法补全                                             |
@@ -129,6 +129,7 @@ An automatic configuration program for vim
 | `<leader>G`  | 显示当前文件提交记录                 |
 | `<leader>gg` | 显示当前文件在某个commit下的完整内容 |
 | `<leader>ff` | 语法错误自动修复(FixIt)              |
+| `vi`         | 运行vi编辑器时,默认启动开始页面      |
 | `<F5>`       | 显示语法错误提示窗口                 |
 | `<F7>`       | 启用markdown实时预览                 |
 | `<F8>`       | 关闭markdown实时预览                 |
@@ -286,3 +287,4 @@ Q & A
   [63]: https://github.com/terryma/vim-multiple-cursors
   [64]: https://github.com/junegunn/gv.vim
   [65]: https://raw.githubusercontent.com/terryma/vim-multiple-cursors/master/assets/example1.gif
+  [66]: https://github.com/chxuan/vimplus-startify
