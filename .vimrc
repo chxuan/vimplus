@@ -192,8 +192,8 @@ nnoremap <silent> <F12> :ShowColorScheme<cr>
 inoremap <silent> <F12> <esc> :ShowColorScheme<cr>
 
 " nerdtree
-nnoremap <leader>n :NERDTreeToggle<cr>
-inoremap <leader>n <esc> :NERDTreeToggle<cr>
+nnoremap <silent> <leader>n :NERDTreeToggle<cr>
+inoremap <silent> <leader>n <esc> :NERDTreeToggle<cr>
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
@@ -240,8 +240,8 @@ nnoremap <silent> <leader>a :A<cr>
 
 " tagbar
 let g:tagbar_width = 30
-nnoremap <leader>t :TagbarToggle<cr>
-inoremap <leader>t <esc> :TagbarToggle<cr>
+nnoremap <silent> <leader>t :TagbarToggle<cr>
+inoremap <silent> <leader>t <esc> :TagbarToggle<cr>
 
 " cpp_class_scope_highlight
 let g:cpp_class_scope_highlight = 1
