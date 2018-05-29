@@ -74,6 +74,7 @@ An automatic configuration program for vim
 | -------                             | -----                                                                |
 | [cppfun][58]                        | 生成函数实现(I'm author:smile:)                                      |
 | [change-colorscheme][27]            | 随心所欲切换主题(I'm author:smile:)                                  |
+| [prepare-code][67]                  | 新建文件时，生成预定义代码片段(I'm author:smile:)                    |
 | [vimplus-startify][66]              | vimplus开始页面(修改自[mhinz/vim-startify][25])                      |
 | [vim-plug][4]                       | 比[Vundle][54]下载更快的插件管理软件                                 |
 | [YouCompleteMe][5]                  | 史上最强大的基于语义的自动补全插件，支持C/C++、C#、Python、PHP等语言 |
@@ -288,3 +289,4 @@ Q & A
   [64]: https://github.com/junegunn/gv.vim
   [65]: https://raw.githubusercontent.com/terryma/vim-multiple-cursors/master/assets/example1.gif
   [66]: https://github.com/chxuan/vimplus-startify
+  [67]: https://github.com/chxuan/prepare-code

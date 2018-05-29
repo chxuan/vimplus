@@ -92,6 +92,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'chxuan/cppfun'
 Plug 'chxuan/change-colorscheme'
+Plug 'chxuan/prepare-code'
 Plug 'chxuan/vimplus-startify'
 Plug 'Yggdroot/LeaderF'
 Plug 'mileszs/ack.vim'
