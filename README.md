@@ -72,7 +72,7 @@ An automatic configuration program for vim
 
 | 插件                                | 说明                                                                 |
 | -------                             | -----                                                                |
-| [cppfun][58]                        | 生成函数实现(I'm author:smile:)                                      |
+| [cppfun][58]                        | 提供生成函数实现、函数声明/实现跳转等功能(I'm author:smile:)         |
 | [change-colorscheme][27]            | 随心所欲切换主题(I'm author:smile:)                                  |
 | [prepare-code][67]                  | 新建文件时，生成预定义代码片段(I'm author:smile:)                    |
 | [vimplus-startify][66]              | vimplus开始页面(修改自[mhinz/vim-startify][25])                      |
@@ -118,11 +118,11 @@ An automatic configuration program for vim
 | `<leader>n`  | 打开/关闭代码资源管理器              |
 | `<leader>t`  | 打开/关闭函数列表                    |
 | `<leader>a`  | .h .cpp 文件切换                     |
-| `<leader>i`  | 转到函数声明                         |
-| `<leader>u`  | 转到函数实现                         |
+| `<leader>u`  | 转到函数声明                         |
+| `<leader>U`  | 转到函数实现                         |
 | `<leader>o`  | 打开include文件                      |
 | `<leader>y`  | 拷贝函数声明                         |
-| `<leader>p`  | 生成函数定义                         |
+| `<leader>p`  | 生成函数实现                         |
 | `<leader>w`  | 单词跳转                             |
 | `<leader>f`  | 搜索~目录下的文件                    |
 | `<leader>F`  | 搜索当前目录下的文本                 |
