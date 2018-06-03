@@ -104,6 +104,7 @@ An automatic configuration program for vim
 | [vim-multiple-cursors][63]          | 多光标编辑                                                           |
 | [vim-smooth-scroll][60]             | 让翻页更顺畅                                                         |
 | [vim-expand-region][61]             | 快速选择区域                                                         |
+| [clever-f.vim][68]                  | 增强f键                                                              |
 
 
 快捷键
@@ -288,3 +289,4 @@ Q & A
   [65]: https://raw.githubusercontent.com/terryma/vim-multiple-cursors/master/assets/example1.gif
   [66]: https://github.com/chxuan/vimplus-startify
   [67]: https://github.com/chxuan/prepare-code
+  [68]: https://github.com/rhysd/clever-f.vim

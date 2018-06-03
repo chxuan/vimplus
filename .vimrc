@@ -130,6 +130,7 @@ Plug 'Shougo/echodoc.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'terryma/vim-expand-region'
+Plug 'rhysd/clever-f.vim'
 
 call plug#end()            
 
