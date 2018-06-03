@@ -105,6 +105,7 @@ An automatic configuration program for vim
 | [vim-smooth-scroll][60]             | 让翻页更顺畅                                                         |
 | [vim-expand-region][61]             | 快速选择区域                                                         |
 | [clever-f.vim][68]                  | 增强f键                                                              |
+| [github-complete.vim][68]           | Emoji:dog:补全                                                       |
 
 
 快捷键
@@ -148,6 +149,8 @@ An automatic configuration program for vim
 | `caf`        | 改写函数内容（包括函数名 花括号）    |
 | `+`          | 逐渐增大选择区域                     |
 | `-`          | 逐渐减小选择区域                     |
+| `fa`         | 查找a字母，然后再按f键查找下一个     |
+| `<c-x><c-o>` | Emoji:dog:补全                       |
 
 Q & A
 ------------
@@ -290,3 +293,4 @@ Q & A
   [66]: https://github.com/chxuan/vimplus-startify
   [67]: https://github.com/chxuan/prepare-code
   [68]: https://github.com/rhysd/clever-f.vim
+  [69]: https://github.com/rhysd/github-complete.vim

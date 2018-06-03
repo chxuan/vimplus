@@ -131,6 +131,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'terryma/vim-expand-region'
 Plug 'rhysd/clever-f.vim'
+Plug 'rhysd/github-complete.vim'
 
 call plug#end()            
 
