@@ -105,7 +105,7 @@ An automatic configuration program for vim
 | [vim-smooth-scroll][60]             | 让翻页更顺畅                                                         |
 | [vim-expand-region][61]             | 快速选择区域                                                         |
 | [clever-f.vim][68]                  | 增强f键                                                              |
-| [github-complete.vim][68]           | Emoji:dog:补全                                                       |
+| [github-complete.vim][69]           | Emoji:dog:补全                                                       |
 
 
 快捷键
