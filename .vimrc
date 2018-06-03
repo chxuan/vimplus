@@ -90,6 +90,11 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
+if expand("%:e") == "vim"
+    Plug 'ajh17/VimCompletesMe'
+else
+    Plug 'Valloric/YouCompleteMe'
+endif
 Plug 'chxuan/cppfun'
 Plug 'chxuan/change-colorscheme'
 Plug 'chxuan/prepare-code'
@@ -105,7 +110,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'rkulla/pydiction'
-Plug 'Valloric/YouCompleteMe'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
