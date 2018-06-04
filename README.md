@@ -131,6 +131,8 @@ An automatic configuration program for vim
 | `<leader>G`  | 显示当前文件提交记录                 |
 | `<leader>gg` | 显示当前文件在某个commit下的完整内容 |
 | `<leader>ff` | 语法错误自动修复(FixIt)              |
+| `<leader>d`  | 删除当前buffer                       |
+| `<leader>D`  | 删除当前buffer外的所有buffer         |
 | `vi`         | 运行vi编辑器时,默认启动开始页面      |
 | `<F5>`       | 显示语法错误提示窗口                 |
 | `<F7>`       | 启用markdown实时预览                 |
