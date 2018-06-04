@@ -90,11 +90,7 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
-if expand("%:e") == "vim"
-    Plug 'ajh17/VimCompletesMe'
-else
-    Plug 'Valloric/YouCompleteMe'
-endif
+Plug 'Valloric/YouCompleteMe'
 Plug 'chxuan/cppfun'
 Plug 'chxuan/change-colorscheme'
 Plug 'chxuan/prepare-code'
