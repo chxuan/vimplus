@@ -75,6 +75,7 @@ An automatic configuration program for vim
 | [cppfun][58]                        | 提供生成函数实现、函数声明/实现跳转等功能(I'm author:smile:)         |
 | [change-colorscheme][27]            | 随心所欲切换主题(I'm author:smile:)                                  |
 | [prepare-code][67]                  | 新建文件时，生成预定义代码片段(I'm author:smile:)                    |
+| [vim-buffer][70]                    | vim缓存操作(I'm author:smile:)                                       |
 | [vimplus-startify][66]              | vimplus开始页面(修改自[mhinz/vim-startify][25])                      |
 | [vim-plug][4]                       | 比[Vundle][54]下载更快的插件管理软件                                 |
 | [YouCompleteMe][5]                  | 史上最强大的基于语义的自动补全插件，支持C/C++、C#、Python、PHP等语言 |
@@ -131,6 +132,8 @@ An automatic configuration program for vim
 | `<leader>G`  | 显示当前文件提交记录                 |
 | `<leader>gg` | 显示当前文件在某个commit下的完整内容 |
 | `<leader>ff` | 语法错误自动修复(FixIt)              |
+| `<c-p>`      | 切换到上一个buffer                   |
+| `<c-n>`      | 切换到下一个buffer                   |
 | `<leader>d`  | 删除当前buffer                       |
 | `<leader>D`  | 删除当前buffer外的所有buffer         |
 | `vi`         | 运行vi编辑器时,默认启动开始页面      |
@@ -296,3 +299,4 @@ Q & A
   [67]: https://github.com/chxuan/prepare-code
   [68]: https://github.com/rhysd/clever-f.vim
   [69]: https://github.com/rhysd/github-complete.vim
+  [70]: https://github.com/chxuan/vim-buffer

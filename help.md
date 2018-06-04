@@ -19,6 +19,8 @@
 | `<leader>G`  | 显示当前文件提交记录                                                            |
 | `<leader>gg` | 显示当前文件在某个commit下的完整内容                                            |
 | `<leader>ff` | 语法错误自动修复(FixIt)                                                         |
+| `<c-p>`      | 切换到上一个buffer                                                              |
+| `<c-n>`      | 切换到下一个buffer                                                              |
 | `<leader>d`  | 删除当前buffer                                                                  |
 | `<leader>D`  | 删除当前buffer外的所有buffer                                                    |
 | `vi`         | 运行vi编辑器时,默认启动开始页面                                                 |
@@ -65,9 +67,9 @@
 | 快捷键          | 说明               |
 | -------         | -----              |
 | `:e <filename>` | 新建buffer打开文件 |
-| `<c-p>`         | 切换到上一个buffer |
-| `<c-n>`         | 切换到下一个buffer |
-| `<leader>d`     | 删除当前buffer     |
+| `:bp`           | 切换到上一个buffer |
+| `:bn`           | 切换到下一个buffer |
+| `:bd`           | 删除当前buffer     |
 
 
 窗口操作

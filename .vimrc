@@ -94,6 +94,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'chxuan/cppfun'
 Plug 'chxuan/change-colorscheme'
 Plug 'chxuan/prepare-code'
+Plug 'chxuan/vim-buffer'
 Plug 'chxuan/vimplus-startify'
 Plug 'Yggdroot/LeaderF'
 Plug 'mileszs/ack.vim'
@@ -118,7 +119,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/a.vim'
 Plug 'vim-scripts/txt.vim'
-Plug 'vim-scripts/BufOnly.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/vim-slash'
 Plug 'junegunn/gv.vim'
@@ -156,12 +156,6 @@ nnoremap <leader><leader>i :PlugInstall<cr>
 nnoremap <leader><leader>u :PlugUpdate<cr>
 nnoremap <leader><leader>c :PlugClean<cr>
 
-" buffer切换
-nnoremap <c-n> :bn<cr>
-nnoremap <c-p> :bp<cr>
-nnoremap <leader>d :bd<cr>
-nnoremap <leader>D :BufOnly<cr>
-
 " 主题
 set background=dark
 let g:onedark_termcolors=256
@@ -198,6 +192,12 @@ inoremap <silent> <F12> <esc> :ShowColorScheme<cr>
 
 " prepare-code
 let g:prepare_code_plugin_path = expand($HOME . "/.vim/plugged/prepare-code")
+
+" vim-buffer
+nnoremap <c-p> :PreviousBuffer<cr>
+nnoremap <c-n> :NextBuffer<cr>
+nnoremap <leader>d :CloseCurrentBuffer<cr>
+nnoremap <leader>D :BufOnly<cr>
 
 " nerdtree
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>
