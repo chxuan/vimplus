@@ -95,6 +95,7 @@ Plug 'chxuan/cppfun'
 Plug 'chxuan/change-colorscheme'
 Plug 'chxuan/prepare-code'
 Plug 'chxuan/vim-buffer'
+Plug 'chxuan/vim-replace'
 Plug 'chxuan/vimplus-startify'
 Plug 'Yggdroot/LeaderF'
 Plug 'mileszs/ack.vim'
@@ -198,6 +199,9 @@ nnoremap <c-p> :PreviousBuffer<cr>
 nnoremap <c-n> :NextBuffer<cr>
 nnoremap <leader>d :CloseCurrentBuffer<cr>
 nnoremap <leader>D :BufOnly<cr>
+
+" vim-replace
+nnoremap <leader>r :ReplaceText<cr>
 
 " nerdtree
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>
