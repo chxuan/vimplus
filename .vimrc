@@ -30,6 +30,7 @@ set laststatus=2         " 总是显示状态栏
 set number               " 开启行号显示
 set cursorline           " 高亮显示当前行
 set whichwrap+=<,>,h,l   " 设置光标键跨行
+set ttimeoutlen=0        " 设置<ESC>键响应时间
 set virtualedit=block,onemore   " 允许光标出现在最后一个字符的后面
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -152,10 +153,26 @@ nnoremap <leader>H :execute ":help " . expand("<cword>")<cr>
 " 重新加载vimrc文件
 nnoremap <leader>s :source $MYVIMRC<cr>
 
+" 复制当前到行末
+nnoremap Y y$
+
 " 安装、更新、删除插件
 nnoremap <leader><leader>i :PlugInstall<cr>
 nnoremap <leader><leader>u :PlugUpdate<cr>
 nnoremap <leader><leader>c :PlugClean<cr>
+
+" visual mode下用I, A命令时, 自动转为block visual mode
+vnoremap <expr> I <sid>to_block_visual_mode('I')
+vnoremap <expr> A <sid>to_block_visual_mode('A')
+function s:to_block_visual_mode(key)
+    if mode () == 'v'
+        return "\<C-v>". a:key
+    elseif mode () == 'V'
+        return "\<C-v>0o$". a:key
+    else 
+        return a:key 
+    endif
+endfunction
 
 " 主题
 set background=dark
