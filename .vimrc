@@ -161,19 +161,6 @@ nnoremap <leader><leader>i :PlugInstall<cr>
 nnoremap <leader><leader>u :PlugUpdate<cr>
 nnoremap <leader><leader>c :PlugClean<cr>
 
-" visual mode下用I, A命令时, 自动转为block visual mode
-vnoremap <expr> I <sid>to_block_visual_mode('I')
-vnoremap <expr> A <sid>to_block_visual_mode('A')
-function s:to_block_visual_mode(key)
-    if mode () == 'v'
-        return "\<C-v>". a:key
-    elseif mode () == 'V'
-        return "\<C-v>0o$". a:key
-    else 
-        return a:key 
-    endif
-endfunction
-
 " 主题
 set background=dark
 let g:onedark_termcolors=256
