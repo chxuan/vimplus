@@ -86,12 +86,20 @@ set termencoding=utf-8
 set encoding=utf8
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 
+" 打开vim文件时，使用vcm补全插件代替ycm插件
+if expand("%:e") == "vim"
+    let g:loaded_youcompleteme = 0
+else
+    let g:loaded_VimCompletesMe = 0
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 插件列表
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
 Plug 'Valloric/YouCompleteMe'
+Plug 'ajh17/VimCompletesMe'
 Plug 'chxuan/cppfun'
 Plug 'chxuan/change-colorscheme'
 Plug 'chxuan/prepare-code'
