@@ -107,6 +107,7 @@ An automatic configuration program for vim
 | [vim-expand-region][61]             | 快速选择区域                                                         |
 | [clever-f.vim][68]                  | 强化f和F键                                                           |
 | [github-complete.vim][69]           | Emoji:dog:补全                                                       |
+| [vimcdoc][73]                       | vim中文文档                                                          |
 
 
 快捷键
@@ -301,3 +302,4 @@ Q & A
   [70]: https://github.com/chxuan/vim-buffer
   [71]: https://raw.githubusercontent.com/chxuan/cppfun/master/screenshots/cppfun.gif
   [72]: https://github.com/chxuan/vim-replace
+  [73]: https://github.com/yianwillis/vimcdoc
