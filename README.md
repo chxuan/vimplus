@@ -102,7 +102,6 @@ An automatic configuration program for vim
 | [gv][64]                            | git提交浏览器                                                        |
 | [vim-slash][50]                     | 优化搜索，移动光标后清除高亮                                         |
 | [echodoc][57]                       | 补全函数时在命令栏显示函数签名                                       |
-| [vim-multiple-cursors][63]          | 多光标编辑                                                           |
 | [vim-smooth-scroll][60]             | 让翻页更顺畅                                                         |
 | [vim-expand-region][61]             | 快速选择区域                                                         |
 | [clever-f.vim][68]                  | 强化f和F键                                                           |
@@ -200,13 +199,13 @@ Q & A
 
     ![][40]
 
+- cppfun
+
+    ![][58]
+
 - LeaderF 
 
     ![][41]
-
-- vim-multiple-cursors
-
-    ![][65]
 
 - vim-airline
 
@@ -292,7 +291,6 @@ Q & A
   [60]: https://github.com/terryma/vim-smooth-scroll
   [61]: https://github.com/terryma/vim-expand-region
   [62]: https://github.com/mileszs/ack.vim
-  [63]: https://github.com/terryma/vim-multiple-cursors
   [64]: https://github.com/junegunn/gv.vim
   [65]: https://raw.githubusercontent.com/terryma/vim-multiple-cursors/master/assets/example1.gif
   [66]: https://github.com/chxuan/vimplus-startify
