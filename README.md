@@ -201,7 +201,7 @@ Q & A
 
 - cppfun
 
-    ![][58]
+    ![][71]
 
 - LeaderF 
 
@@ -298,3 +298,4 @@ Q & A
   [68]: https://github.com/rhysd/clever-f.vim
   [69]: https://github.com/rhysd/github-complete.vim
   [70]: https://github.com/chxuan/vim-buffer
+  [71]: https://raw.githubusercontent.com/chxuan/cppfun/master/screenshots/cppfun.gif
