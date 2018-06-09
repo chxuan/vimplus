@@ -80,6 +80,7 @@ An automatic configuration program for vim
 | [vimplus-startify][66]              | vimplus开始页面(修改自[mhinz/vim-startify][25])                      |
 | [vim-plug][4]                       | 比[Vundle][54]下载更快的插件管理软件                                 |
 | [YouCompleteMe][5]                  | 史上最强大的基于语义的自动补全插件，支持C/C++、C#、Python、PHP等语言 |
+| [VimCompletesMe][74]                | 基于Tab的轻量级的补全插件                                            |
 | [NerdTree][6]                       | 代码资源管理器                                                       |
 | [vim-nerdtree-syntax-highlight][52] | NerdTree文件类型高亮                                                 |
 | [nerdtree-git-plugin][53]           | NerdTree显示git状态                                                  |
@@ -303,3 +304,4 @@ Q & A
   [71]: https://raw.githubusercontent.com/chxuan/cppfun/master/screenshots/cppfun.gif
   [72]: https://github.com/chxuan/vim-replace
   [73]: https://github.com/yianwillis/vimcdoc
+  [74]: https://github.com/ajh17/vimcompletesme
