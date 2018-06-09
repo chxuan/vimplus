@@ -209,9 +209,6 @@ nnoremap <c-n> :NextBuffer<cr>
 nnoremap <leader>d :CloseCurrentBuffer<cr>
 nnoremap <leader>D :BufOnly<cr>
 
-" vim-replace
-nnoremap <leader>r :ReplaceText<cr>
-
 " nerdtree
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>
 inoremap <silent> <leader>n <esc> :NERDTreeToggle<cr>

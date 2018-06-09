@@ -31,6 +31,7 @@
 | `<F10>`      | 显示下一主题                         |
 | `<leader>l`  | 按竖线对齐                           |
 | `<leader>=`  | 按等号对齐                           |
+| `rr`         | 替换文本                             |
 | `gcc`        | 注释代码                             |
 | `gcap`       | 注释段落                             |
 | `vif`        | 选中函数内容                         |
@@ -282,18 +283,20 @@
 帮助
 ------------
 
-| 快捷键            | 说明                         |
-| -------           | -----                        |
-| `h tutor`         | 入门文档                     |
-| `h quickref`      | 快速帮助                     |
-| `h index`         | 查询Vim所有键盘命令定义      |
-| `h summary`       | 帮助你更好的使用内置帮助系统 |
-| `h pattern.txt`   | 正则表达式帮助               |
-| `h eval`          | 脚本编写帮助                 |
-| `h function-list` | 查看VimScript的函数列表      |
-| `h windows.txt`   | 窗口使用帮助                 |
-| `h tabpage.txt`   | 标签页使用帮助               |
-| `h tips`          | 查看Vim内置的常用技巧文档    |
+| 快捷键                 | 说明                         |
+| -------                | -----                        |
+| `h tutor`              | 入门文档                     |
+| `h quickref`           | 快速帮助                     |
+| `h index`              | 查询Vim所有键盘命令定义      |
+| `h summary`            | 帮助你更好的使用内置帮助系统 |
+| `h pattern.txt`        | 正则表达式帮助               |
+| `h eval`               | 脚本编写帮助                 |
+| `h function-list`      | 查看VimScript的函数列表      |
+| `h windows.txt`        | 窗口使用帮助                 |
+| `h tabpage.txt`        | 标签页使用帮助               |
+| `h tips`               | 查看Vim内置的常用技巧文档    |
+| `h quote`              | 寄存器                       |
+| `h autocommand-events` | 所有可能事件                 |
 
 
 其他
