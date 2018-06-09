@@ -48,6 +48,7 @@ set softtabstop=4        " 设置4个空格为制表符
 set smarttab             " 在行和段开始处使用制表符
 set nowrap               " 禁止折行
 set backspace=2          " 使用回车键正常处理indent,eol,start等
+set sidescroll=10        " 设置向右滚动字符数
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 代码补全
