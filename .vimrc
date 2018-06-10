@@ -214,10 +214,10 @@ inoremap <silent> <F12> <esc> :ShowColorScheme<cr>
 let g:prepare_code_plugin_path = expand($HOME . "/.vim/plugged/prepare-code")
 
 " vim-buffer
-nnoremap <c-p> :PreviousBuffer<cr>
-nnoremap <c-n> :NextBuffer<cr>
-nnoremap <leader>d :CloseCurrentBuffer<cr>
-nnoremap <leader>D :BufOnly<cr>
+nnoremap <silent> <c-p> :PreviousBuffer<cr>
+nnoremap <silent> <c-n> :NextBuffer<cr>
+nnoremap <silent> <leader>d :CloseBuffer<cr>
+nnoremap <silent> <leader>D :BufOnly<cr>
 
 " nerdtree
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>

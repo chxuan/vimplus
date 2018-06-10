@@ -85,6 +85,7 @@
 | `<c-w>l`          | 跳到右边的窗口         |
 | `<c-w>c`          | 关闭当前窗口           |
 | `<c-w>o`          | 关闭其他窗口           |
+| `:only`           | 关闭其他窗口           |
 
 
 光标移动
@@ -305,13 +306,14 @@
 其他
 ------------
 
-| 快捷键              | 说明                              |
-| -------             | -----                             |
-| `vim -u NONE -N`    | 开启vim时不加载vimrc文件          |
-| `<leader>e`         | 快速编辑vimrc文件                 |
-| `<leader>s`         | 重新加载vimrc文件                 |
-| `<leader>h`         | 打开vimplus帮助文档               |
-| `<leader>H`         | 打开当前光标所在单词的vim帮助文档 |
-| `<leader><leader>i` | 安装插件                          |
-| `<leader><leader>u` | 更新插件                          |
-| `<leader><leader>c` | 删除插件                          |
+| 快捷键                | 说明                              |
+| -------               | -----                             |
+| `vim -u NONE -N`      | 开启vim时不加载vimrc文件          |
+| `vimdiff file1 file2` | 显示文件差异                      |
+| `<leader>e`           | 快速编辑vimrc文件                 |
+| `<leader>s`           | 重新加载vimrc文件                 |
+| `<leader>h`           | 打开vimplus帮助文档               |
+| `<leader>H`           | 打开当前光标所在单词的vim帮助文档 |
+| `<leader><leader>i`   | 安装插件                          |
+| `<leader><leader>u`   | 更新插件                          |
+| `<leader><leader>c`   | 删除插件                          |
