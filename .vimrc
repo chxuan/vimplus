@@ -213,6 +213,9 @@ inoremap <silent> <F12> <esc> :ShowColorScheme<cr>
 " prepare-code
 let g:prepare_code_plugin_path = expand($HOME . "/.vim/plugged/prepare-code")
 
+" vim-replace
+nnoremap <leader>r :ReplaceTo<space>
+
 " vim-buffer
 nnoremap <silent> <c-p> :PreviousBuffer<cr>
 nnoremap <silent> <c-n> :NextBuffer<cr>
@@ -326,7 +329,7 @@ let g:Lf_WildIgnore = {
 let g:Lf_UseCache = 0
 
 " ack
-nnoremap <Leader>F :Ack!<space>
+nnoremap <leader>F :Ack!<space>
 
 " echodoc.vim
 let g:echodoc_enable_at_startup = 1
