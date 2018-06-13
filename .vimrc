@@ -128,7 +128,6 @@ Plug 'majutsushi/tagbar'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-scripts/a.vim'
 Plug 'vim-scripts/txt.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/vim-slash'
@@ -199,6 +198,7 @@ nnoremap <leader>p :PasteFun<cr>
 nnoremap <leader>U :GoToDefinition<cr>
 nnoremap <leader><leader>fp :FormatFunParam<cr>
 nnoremap <leader><leader>if :FormatIf<cr>
+nnoremap <silent> <leader>a :Switch<cr>
 
 " change-colorscheme
 nnoremap <silent> <F9> :PreviousColorScheme<cr>
@@ -266,9 +266,6 @@ let g:ycm_semantic_triggers =  {
   \   'erlang' : [':'],
   \ }
 let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
-
-" a.vim: .h -> .cpp or .cpp -> .h
-nnoremap <silent> <leader>a :A<cr>
 
 " tagbar
 let g:tagbar_width = 30
