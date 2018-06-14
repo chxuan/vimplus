@@ -87,11 +87,12 @@ set termencoding=utf-8
 set encoding=utf8
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 
-" 打开vim文件时，使用vcm补全插件代替ycm插件
-if expand("%:e") == "vim"
-    let g:loaded_youcompleteme = 0
-else
+" 打开C/C++文件时，启用ycm补全插件，否则启用vcm
+let suffix = expand("%:e") 
+if suffix == "h" || suffix == "cpp" || suffix == "c"
     let g:loaded_VimCompletesMe = 0
+else
+    let g:loaded_youcompleteme = 0
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
