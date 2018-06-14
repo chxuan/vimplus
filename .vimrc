@@ -101,7 +101,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Valloric/YouCompleteMe'
 Plug 'ajh17/VimCompletesMe'
-Plug 'chxuan/cppfun'
+Plug 'chxuan/cpp-mode'
 Plug 'chxuan/change-colorscheme'
 Plug 'chxuan/prepare-code'
 Plug 'chxuan/vim-buffer'
@@ -192,13 +192,13 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
-" cppfun
+" cpp-mode
 nnoremap <leader>y :CopyFun<cr>
 nnoremap <leader>p :PasteFun<cr>
 nnoremap <leader>U :GoToDefinition<cr>
+nnoremap <silent> <leader>a :Switch<cr>
 nnoremap <leader><leader>fp :FormatFunParam<cr>
 nnoremap <leader><leader>if :FormatIf<cr>
-nnoremap <silent> <leader>a :Switch<cr>
 
 " change-colorscheme
 nnoremap <silent> <F9> :PreviousColorScheme<cr>
@@ -241,7 +241,7 @@ let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_complete_in_comments = 1 
 let g:ycm_complete_in_strings = 1 
 nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
-" 已经使用cppfun插件提供的转到函数实现的功能
+" 已经使用cpp-mode插件提供的转到函数实现的功能
 " nnoremap <leader>i :YcmCompleter GoToDefinition<cr> 
 nnoremap <leader>o :YcmCompleter GoToInclude<cr>
 nnoremap <leader>ff :YcmCompleter FixIt<cr>

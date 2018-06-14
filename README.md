@@ -72,7 +72,7 @@ An automatic configuration program for vim
 
 | 插件                                | 说明                                                                      |
 | -------                             | -----                                                                     |
-| [cppfun][58]                        | 提供生成函数实现、函数声明/实现跳转、.h .cpp切换等功能(I'm author:smile:) |
+| [cpp-mode][58]                      | 提供生成函数实现、函数声明/实现跳转、.h .cpp切换等功能(I'm author:smile:) |
 | [change-colorscheme][27]            | 随心所欲切换主题(I'm author:smile:)                                       |
 | [prepare-code][67]                  | 新建文件时，生成预定义代码片段(I'm author:smile:)                         |
 | [vim-buffer][70]                    | vim缓存操作(I'm author:smile:)                                            |
@@ -201,7 +201,7 @@ Q & A
 
     ![][40]
 
-- cppfun
+- cpp-mode
 
     ![][71]
 
@@ -287,7 +287,7 @@ Q & A
   [54]: https://github.com/VundleVim/Vundle.vim
   [56]: https://github.com/Yggdroot/LeaderF
   [57]: https://github.com/Shougo/echodoc.vim
-  [58]: https://github.com/chxuan/cppfun
+  [58]: https://github.com/chxuan/cpp-mode
   [59]: https://github.com/chxuan/vimplus/blob/master/help.md
   [60]: https://github.com/terryma/vim-smooth-scroll
   [61]: https://github.com/terryma/vim-expand-region
@@ -299,7 +299,7 @@ Q & A
   [68]: https://github.com/rhysd/clever-f.vim
   [69]: https://github.com/rhysd/github-complete.vim
   [70]: https://github.com/chxuan/vim-buffer
-  [71]: https://raw.githubusercontent.com/chxuan/cppfun/master/screenshots/cppfun.gif
+  [71]: https://raw.githubusercontent.com/chxuan/cpp-mode/master/screenshots/cpp-mode.gif
   [72]: https://github.com/chxuan/vim-replace
   [73]: https://github.com/yianwillis/vimcdoc
   [74]: https://github.com/ajh17/vimcompletesme
