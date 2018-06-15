@@ -194,8 +194,8 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
 " cpp-mode
-nnoremap <leader>y :CopyFun<cr>
-nnoremap <leader>p :PasteFun<cr>
+nnoremap <leader>y :CopyCode<cr>
+nnoremap <leader>p :PasteCode<cr>
 nnoremap <leader>U :GoToDefinition<cr>
 nnoremap <silent> <leader>a :Switch<cr>
 nnoremap <leader><leader>fp :FormatFunParam<cr>
