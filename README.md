@@ -100,7 +100,7 @@ An automatic configuration program for vim
 | [markdown-preview][26]              | markdown实时预览                                                          |
 | [pydiction][32]                     | 基于字典的python语法补全                                                  |
 | [vim-fugitive][36]                  | 集成Git                                                                   |
-| [gv][64]                            | git提交浏览器                                                             |
+| [gv][64]                            | 显示git commit历史                                                        |
 | [vim-slash][50]                     | 优化搜索，移动光标后清除高亮                                              |
 | [echodoc][57]                       | 补全函数时在命令栏显示函数签名                                            |
 | [vim-smooth-scroll][60]             | 让翻页更顺畅                                                              |
