@@ -74,7 +74,7 @@ function install_prepare_software_on_centos()
 # 安装ubuntu发行版必要软件
 function install_prepare_software_on_ubuntu()
 {
-    sudo apt-get install -y ctags build-essential cmake python-dev python3-dev fontconfig curl ack-grep
+    sudo apt-get install -y ctags build-essential cmake python-dev python3-dev fontconfig curl libfile-next-perl ack-grep
     ubuntu_1604=`is_ubuntu1604`
     echo ${ubuntu_1604}
 
