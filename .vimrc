@@ -22,10 +22,11 @@
 " Using $DISPLAY instead of 'term' should be more reliable. It avoids
 " the problem of starting vim without first starting screen and allows
 " screen to be used locally without losing vim's X features.
-"if cygwin锛歴et clipboard = autoselect锛宔xclude锛歝ons \\\ | linux \\\ | screen \\\ | rxvt \\\ | cygwin
+" if cygwin: set clipboard=autoselect,exclude:cons\\\|linux\\\|screen\\\|rxvt\\\|cygwin
 if $DISPLAY =~ '\(\(cos\|scs\)\d\+nai\d\+\)\|\(spkpc\d\+\)\|\(localhost\)'
     set clipboard=autoselect,exclude:.*
 endif
+" (Do notice that you'll need to tweak the if $DISPLAY line to match your own $DISPLAY variable).
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 通用设置
