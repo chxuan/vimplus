@@ -12,6 +12,21 @@
 " Create Date: 2016-04-10
 " License: MIT
 
+" solve vim startup slow
+" Prevent vim from trying to connect to the X server when connecting
+" from home, which causes a startup delay of about 14 seconds. I
+" usually connect from home via screen.
+"
+"set clipboard=autoselect,exclude:cons\\\|linux\\\|screen
+"
+" Using $DISPLAY instead of 'term' should be more reliable. It avoids
+" the problem of starting vim without first starting screen and allows
+" screen to be used locally without losing vim's X features.
+"if cygwin锛歴et clipboard = autoselect锛宔xclude锛歝ons \\\ | linux \\\ | screen \\\ | rxvt \\\ | cygwin
+if $DISPLAY =~ '\(\(cos\|scs\)\d\+nai\d\+\)\|\(spkpc\d\+\)\|\(localhost\)'
+    set clipboard=autoselect,exclude:.*
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 通用设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -66,8 +81,8 @@ set ignorecase          " 搜索时大小写不敏感
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 代码折叠
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set foldmethod=syntax   " 设置基于语法进行代码折叠
-set nofoldenable        " 关闭折叠代码
+"set foldmethod=syntax   " 设置基于语法进行代码折叠
+"set nofoldenable        " 关闭折叠代码
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 缓存设置
@@ -135,6 +150,7 @@ Plug 'terryma/vim-expand-region'
 Plug 'rhysd/clever-f.vim'
 Plug 'rhysd/github-complete.vim'
 Plug 'yianwillis/vimcdoc'
+Plug 'wsdjeg/FlyGrep.vim'
 
 call plug#end()            
 
@@ -170,10 +186,11 @@ nnoremap <c-l> <c-w>l
 " 主题
 set background=dark
 let g:onedark_termcolors=256
-colorscheme onedark
+colorscheme jellybeans
 
 " airline
-let g:airline_theme="onedark"
+"let g:airline_theme="onedark"
+let g:airline_theme="papercolor"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 if !exists('g:airline_symbols')
@@ -263,6 +280,25 @@ let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
 let g:tagbar_width = 30
 nnoremap <silent> <leader>t :TagbarToggle<cr>
 inoremap <silent> <leader>t <esc> :TagbarToggle<cr>
+" 在某些情况下自动打开tagbar
+autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
+
+""默认打开Taglist 
+"let Tlist_Auto_Open=0 
+""""""""""""""""""""""""""""""" 
+"" Tag list (ctags) 
+""""""""""""""""""""""""""""""""" 
+"let Tlist_Ctags_Cmd = '/usr/local/bin/ctags' 
+"let Tlist_Show_One_File = 1 "不同时显示多个文件的tag，只显示当前文件的 
+"let Tlist_File_Fold_Auto_Close = 1
+"let Tlist_Exit_OnlyWindow = 1 "如果taglist窗口是最后一个窗口，则退出vim 
+"let Tlist_Use_Right_Window = 1 "在右侧窗口中显示taglist窗口
+"" minibufexpl插件的一般设置
+"let g:miniBufExplMapWindowNavVim = 1
+"let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplModSelTarget = 1  
+"nmap tl :Tlist<cr>
 
 " cpp_class_scope_highlight
 let g:cpp_class_scope_highlight = 1
@@ -332,6 +368,9 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
+" Fly Grep
+nnoremap <Space>s/ :FlyGrep<cr>
 
 " gv
 nnoremap <leader>g :GV<cr>
