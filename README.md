@@ -5,8 +5,8 @@ An automatic configuration program for vim
 
 ![][2]
 
-安装
-------------
+## 安装
+
 ### Mac OS X
 
 - 安装[HomeBrew][3]
@@ -61,14 +61,12 @@ An automatic configuration program for vim
     sudo ./install.sh
     ```
 
-个性化
-------------
+## 个性化
 
 修改 `~/.vimrc.local` 文件内容，以启用个性化定制，可覆盖 `~/.vimrc` 中的设置。
 
 
-插件列表
-------------
+## 插件列表
 
 | 插件                                | 说明                                                                      |
 | -------                             | -----                                                                     |
@@ -109,8 +107,7 @@ An automatic configuration program for vim
 | [vimcdoc][73]                       | vim中文文档                                                               |
 
 
-快捷键
-------------
+## 快捷键
 
 以下是部分快捷键，更详细的快捷键请查阅[vimplus帮助文档][59]。
 
@@ -157,8 +154,7 @@ An automatic configuration program for vim
 | `fa`         | 查找a字母，然后再按f键查找下一个     |
 | `<c-x><c-o>` | Emoji:dog:补全                       |
 
-Q & A
-------------
+## Q & A
 
 - **`安装vimplus后Airline等插件有乱码，怎么解决？`**
 
@@ -193,8 +189,7 @@ Q & A
     那就麻烦您打赏一颗:star::star:吧，给予我继续维护的动力。
 
 
-特性展示
-------------
+## 特性展示
 
 - YouCompleteMe 
 
