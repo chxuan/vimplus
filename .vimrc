@@ -176,6 +176,9 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" vim关闭最后一个文件编辑buffer窗口时自动退出其余所有NERDTree、tagbar、Quickfix窗口
+autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
+
 " 主题
 set background=dark
 let g:onedark_termcolors=256
