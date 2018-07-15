@@ -91,6 +91,7 @@ Plug 'chxuan/change-colorscheme'
 Plug 'chxuan/prepare-code'
 Plug 'chxuan/vim-buffer'
 Plug 'chxuan/vim-replace'
+Plug 'chxuan/vim-edit'
 Plug 'chxuan/vimplus-startify'
 Plug 'chxuan/tagbar'
 Plug 'Valloric/YouCompleteMe'
@@ -210,6 +211,9 @@ nnoremap <silent> <c-p> :PreviousBuffer<cr>
 nnoremap <silent> <c-n> :NextBuffer<cr>
 nnoremap <silent> <leader>d :CloseBuffer<cr>
 nnoremap <silent> <leader>D :BufOnly<cr>
+
+" vim-edit
+nnoremap <leader>Y :CopyText<space>
 
 " nerdtree
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>
