@@ -148,9 +148,6 @@ nnoremap <leader>H :execute ":help " . expand("<cword>")<cr>
 " 重新加载vimrc文件
 nnoremap <leader>s :source $MYVIMRC<cr>
 
-" 复制当前到行末
-nnoremap Y y$
-
 " 安装、更新、删除插件
 nnoremap <leader><leader>i :PlugInstall<cr>
 nnoremap <leader><leader>u :PlugUpdate<cr>
@@ -213,7 +210,7 @@ nnoremap <silent> <leader>d :CloseBuffer<cr>
 nnoremap <silent> <leader>D :BufOnly<cr>
 
 " vim-edit
-nnoremap <leader>Y :CopyText<space>
+nnoremap Y :CopyText<cr>
 
 " nerdtree
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>
