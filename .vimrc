@@ -91,7 +91,6 @@ Plug 'chxuan/cpp-mode'
 Plug 'chxuan/change-colorscheme'
 Plug 'chxuan/prepare-code'
 Plug 'chxuan/vim-buffer'
-Plug 'chxuan/vim-replace'
 Plug 'chxuan/vim-edit'
 Plug 'chxuan/vimplus-startify'
 Plug 'chxuan/tagbar'
@@ -201,9 +200,6 @@ inoremap <silent> <F12> <esc> :ShowColorScheme<cr>
 " prepare-code
 let g:prepare_code_plugin_path = expand($HOME . "/.vim/plugged/prepare-code")
 
-" vim-replace
-nnoremap <leader>r :ReplaceTo<space>
-
 " vim-buffer
 nnoremap <silent> <c-p> :PreviousBuffer<cr>
 nnoremap <silent> <c-n> :NextBuffer<cr>
@@ -214,6 +210,7 @@ nnoremap <silent> <leader>D :BufOnly<cr>
 nnoremap Y :CopyText<cr>
 nnoremap D :DeleteText<cr>
 nnoremap C :ChangeText<cr>
+nnoremap <leader>r :ReplaceTo<space>
 
 " nerdtree
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>
