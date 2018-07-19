@@ -71,10 +71,10 @@ An automatic configuration program for vim
 | 插件                                | 说明                                                                           |
 | -------                             | -----                                                                          |
 | [cpp-mode][58]                      | 提供生成函数实现、函数声明/实现跳转、.h .cpp切换等功能(I'm author:smile:)      |
+| [vim-edit][72]                      | 方便的文本编辑插件(I'm author:smile:)                                          |
 | [change-colorscheme][27]            | 随心所欲切换主题(I'm author:smile:)                                            |
 | [prepare-code][67]                  | 新建文件时，生成预定义代码片段(I'm author:smile:)                              |
 | [vim-buffer][70]                    | vim缓存操作(I'm author:smile:)                                                 |
-| [vim-edit][72]                      | 方便的文本编辑插件(I'm author:smile:)                                          |
 | [vimplus-startify][66]              | vimplus开始页面(修改自[mhinz/vim-startify][25])                                |
 | [tagbar][74]                        | 使用[majutsushi/tagbar][13]的v2.3版本，[taglist][14]的替代品，显示类/方法/变量 |
 | [vim-plug][4]                       | 比[Vundle][54]下载更快的插件管理软件                                           |
