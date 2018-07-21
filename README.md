@@ -141,6 +141,11 @@ An automatic configuration program for vim
 | `<F10>`      | 显示下一主题                         |
 | `<leader>l`  | 按竖线对齐                           |
 | `<leader>=`  | 按等号对齐                           |
+| `Ya`         | 复制行文本到字母a                    |
+| `Da`         | 剪切行文本到字母a                    |
+| `Ca`         | 改写行文本到字母a                    |
+| `rr`         | 替换文本                             |
+| `<leader>r`  | 全局替换，目前只支持单个文件         |
 | `gcc`        | 注释代码                             |
 | `gcap`       | 注释段落                             |
 | `vif`        | 选中函数内容                         |
@@ -151,8 +156,9 @@ An automatic configuration program for vim
 | `caf`        | 改写函数内容（包括函数名 花括号）    |
 | `+`          | 逐渐增大选择区域                     |
 | `-`          | 逐渐减小选择区域                     |
-| `fa`         | 查找a字母，然后再按f键查找下一个     |
+| `fa`         | 查找字母a，然后再按f键查找下一个     |
 | `<c-x><c-o>` | Emoji:dog:补全                       |
+
 
 ## Q & A
 
