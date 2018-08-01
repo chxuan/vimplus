@@ -95,7 +95,6 @@ An automatic configuration program for vim
 | [vim-easymotion][23]                | 强大的光标快速移动工具，强大到颠覆你的插件观                                   |
 | [incsearch.vim][24]                 | 模糊字符搜索插件                                                               |
 | [markdown-preview][26]              | markdown实时预览                                                               |
-| [pydiction][32]                     | 基于字典的python语法补全                                                       |
 | [vim-fugitive][36]                  | 集成Git                                                                        |
 | [gv][64]                            | 显示git提交记录                                                                |
 | [vim-slash][50]                     | 优化搜索，移动光标后清除高亮                                                   |
@@ -265,7 +264,6 @@ An automatic configuration program for vim
   [25]: https://github.com/mhinz/vim-startify
   [26]: https://github.com/iamcco/markdown-preview.vim
   [27]: https://github.com/chxuan/change-colorscheme
-  [32]: https://github.com/rkulla/pydiction
   [36]: https://github.com/tpope/vim-fugitive
   [37]: https://pan.baidu.com/s/1i481Eeh
   [38]: https://github.com/Valloric/YouCompleteMe
