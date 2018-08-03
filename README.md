@@ -100,7 +100,6 @@ An automatic configuration program for vim
 | [vim-slash][50]                     | 优化搜索，移动光标后清除高亮                                                   |
 | [echodoc][57]                       | 补全函数时在命令栏显示函数签名                                                 |
 | [vim-smooth-scroll][60]             | 让翻页更顺畅                                                                   |
-| [vim-expand-region][61]             | 快速选择区域                                                                   |
 | [clever-f.vim][68]                  | 强化f和F键                                                                     |
 | [github-complete.vim][69]           | Emoji:dog:补全                                                                 |
 | [vimcdoc][73]                       | vim中文文档                                                                    |
@@ -153,8 +152,6 @@ An automatic configuration program for vim
 | `vaf`        | 选中函数内容（包括函数名 花括号）    |
 | `daf`        | 删除函数内容（包括函数名 花括号）    |
 | `caf`        | 改写函数内容（包括函数名 花括号）    |
-| `+`          | 逐渐增大选择区域                     |
-| `-`          | 逐渐减小选择区域                     |
 | `fa`         | 查找字母a，然后再按f键查找下一个     |
 | `<c-x><c-o>` | Emoji:dog:补全                       |
 
@@ -288,7 +285,6 @@ An automatic configuration program for vim
   [58]: https://github.com/chxuan/cpp-mode
   [59]: https://github.com/chxuan/vimplus/blob/master/help.md
   [60]: https://github.com/terryma/vim-smooth-scroll
-  [61]: https://github.com/terryma/vim-expand-region
   [62]: https://github.com/mileszs/ack.vim
   [64]: https://github.com/junegunn/gv.vim
   [65]: https://raw.githubusercontent.com/terryma/vim-multiple-cursors/master/assets/example1.gif
