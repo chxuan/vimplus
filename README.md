@@ -239,7 +239,7 @@ An automatic configuration program for vim
 
 
   [1]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/vimplus-logo.png
-  [2]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/main2.gif
+  [2]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/main.png
   [3]: https://brew.sh/
   [4]: https://github.com/junegunn/vim-plug
   [5]: https://github.com/Valloric/YouCompleteMe
