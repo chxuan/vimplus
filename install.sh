@@ -108,6 +108,9 @@ function copy_files()
     mkdir ~/.vim
     rm -rf ~/.vim/colors
     ln -s ${PWD}/colors ~/.vim
+
+    rm -rf ~/.vim/ftplugin
+    ln -s ${PWD}/ftplugin ~/.vim
 }
 
 # 安装mac平台字体
