@@ -31,19 +31,18 @@ function is_ubuntu1604()
     fi
 }
 
-# 源代码安装vim
-function compile_vim()
+# 在ubuntu上源代码安装vim
+function compile_vim_on_ubuntu()
 {
+    sudo apt-get remove -y vim vim-runtime gvim
+    sudo apt-get remove -y vim-tiny vim-common vim-gui-common vim-nox
+    sudo rm -rf ~/vim
+    sudo rm -rf /usr/share/vim/vim*
+
     sudo apt-get install -y libncurses5-dev libgnome2-dev libgnomeui-dev \
         libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
         libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
-    sudo apt-get remove -y vim vim-runtime gvim
-    sudo apt-get remove -y vim-tiny vim-common vim-gui-common vim-nox
 
-    sudo rm -rf ~/vim
-    sudo rm -rf /usr/share/vim/vim74
-    sudo rm -rf /usr/share/vim/vim80
-    sudo rm -rf /usr/share/vim/vim81
     git clone https://github.com/vim/vim.git ~/vim
     cd ~/vim
     ./configure --with-features=huge \
@@ -54,7 +53,39 @@ function compile_vim()
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 --enable-cscope --prefix=/usr
-    make VIMRUNTIMEDIR=/usr/share/vim/vim81
+    make
+    sudo make install
+    cd -
+}
+
+# 在centos上源代码安装vim
+function compile_vim_on_centos()
+{
+    sudo yum -y remove vim*
+    sudo rm -rf ~/vim
+    sudo rm -rf /usr/share/vim/vim*
+    sudo rm -rf /usr/local/share/vim/vim*
+
+    sudo yum install -y ruby ruby-devel lua lua-devel luajit \
+    luajit-devel ctags git python python-devel \
+    python34 python34-devel tcl-devel \
+    perl perl-devel perl-ExtUtils-ParseXS \
+    perl-ExtUtils-XSpp perl-ExtUtils-CBuilder \
+    perl-ExtUtils-Embed libX11-devel ncurses-devel
+    
+    git clone https://github.com/vim/vim.git ~/vim
+    cd ~/vim
+    ./configure --with-features=huge \
+        --enable-multibyte \
+        --with-tlib=tinfo \
+        --enable-rubyinterp=yes \
+        --enable-pythoninterp=yes \
+        --with-python-config-dir=/usr/local/python-2.7.14/lib/python2.7/config \
+        --enable-perlinterp=yes \
+        --enable-luainterp=yes \
+        --enable-gui=gtk2 \
+        --enable-cscope
+    make
     sudo make install
     cd -
 }
@@ -68,7 +99,8 @@ function install_prepare_software_on_mac()
 # 安装centos发行版必要软件
 function install_prepare_software_on_centos()
 {
-    sudo yum install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl ack
+    sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl ack
+    compile_vim_on_centos
 }
 
 # 安装ubuntu发行版必要软件
@@ -80,7 +112,7 @@ function install_prepare_software_on_ubuntu()
 
     if [ ${ubuntu_1604} == 1 ]; then
         echo "ubuntu 16.04 LTS"
-        compile_vim
+        compile_vim_on_ubuntu
     else
         echo "not ubuntu 16.04 LTS"
         sudo apt-get install -y vim
