@@ -56,7 +56,8 @@ function compile_vim_on_ubuntu()
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
-        --enable-cscope
+        --enable-cscope \
+        --prefix=/usr
     make
     sudo make install
     cd -
