@@ -182,15 +182,8 @@ function install_vim_plugin()
     vim -c "PlugInstall" -c "q" -c "q"
 }
 
-# 在mac平台编译ycm插件
-function compile_ycm_on_mac()
-{
-    cd ~/.vim/plugged/YouCompleteMe
-    ./install.py --clang-completer
-}
-
-# 在linux平台编译ycm插件
-function compile_ycm_on_linux()
+# 编译ycm插件
+function compile_ycm()
 {
     cd ~/.vim/plugged/YouCompleteMe
     ./install.py --clang-completer
@@ -224,7 +217,7 @@ function install_vimplus_on_mac()
     install_fonts_on_mac
     download_vim_plug
     install_vim_plugin
-    compile_ycm_on_mac
+    compile_ycm
     print_logo
 }
 
@@ -234,7 +227,7 @@ function begin_install_vimplus()
     install_fonts_on_linux
     download_vim_plug
     install_vim_plugin
-    compile_ycm_on_linux
+    compile_ycm
     print_logo
 }
 
