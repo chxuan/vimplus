@@ -37,10 +37,10 @@ function compile_vim_on_ubuntu()
     sudo apt-get remove -y vim vim-runtime gvim
     sudo apt-get remove -y vim-tiny vim-common vim-gui-common vim-nox
     sudo rm -rf ~/vim
-    sudo rm -rf /usr/share/vim/vim*
-    sudo rm -rf /usr/local/share/vim/vim*
     sudo rm -rf /usr/bin/vim*
     sudo rm -rf /usr/local/bin/vim*
+    sudo rm -rf /usr/share/vim/vim*
+    sudo rm -rf /usr/local/share/vim/vim*
 
     sudo apt-get install -y libncurses5-dev libgnome2-dev libgnomeui-dev \
         libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
@@ -65,12 +65,13 @@ function compile_vim_on_ubuntu()
 # 在centos上源代码安装vim
 function compile_vim_on_centos()
 {
-    sudo yum -y remove vim*
     sudo rm -rf ~/vim
-    sudo rm -rf /usr/share/vim/vim*
-    sudo rm -rf /usr/local/share/vim/vim*
+    sudo yum -y remove vim*
+    sudo rm -rf /usr/bin/vi
     sudo rm -rf /usr/bin/vim*
     sudo rm -rf /usr/local/bin/vim*
+    sudo rm -rf /usr/share/vim/vim*
+    sudo rm -rf /usr/local/share/vim/vim*
 
     sudo yum install -y ruby ruby-devel lua lua-devel luajit \
     luajit-devel ctags git python python-devel \
@@ -90,7 +91,8 @@ function compile_vim_on_centos()
         --enable-perlinterp=yes \
         --enable-luainterp=yes \
         --enable-gui=gtk2 \
-        --enable-cscope
+        --enable-cscope \
+        --prefix=/usr
     make
     sudo make install
     cd -
