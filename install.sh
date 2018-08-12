@@ -36,11 +36,11 @@ function compile_vim_on_ubuntu()
 {
     sudo apt-get remove -y vim vim-runtime gvim
     sudo apt-get remove -y vim-tiny vim-common vim-gui-common vim-nox
-    sudo rm -rf ~/vim
     sudo rm -rf /usr/bin/vim*
     sudo rm -rf /usr/local/bin/vim*
     sudo rm -rf /usr/share/vim/vim*
     sudo rm -rf /usr/local/share/vim/vim*
+    rm -rf ~/vim
 
     sudo apt-get install -y libncurses5-dev libgnome2-dev libgnomeui-dev \
         libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
@@ -66,12 +66,12 @@ function compile_vim_on_ubuntu()
 # 在centos上源代码安装vim
 function compile_vim_on_centos()
 {
-    sudo rm -rf ~/vim
     sudo rm -rf /usr/bin/vi
     sudo rm -rf /usr/bin/vim*
     sudo rm -rf /usr/local/bin/vim*
     sudo rm -rf /usr/share/vim/vim*
     sudo rm -rf /usr/local/share/vim/vim*
+    rm -rf ~/vim
 
     sudo yum install -y ruby ruby-devel lua lua-devel luajit \
         luajit-devel ctags git python python-devel \
@@ -193,7 +193,7 @@ function compile_ycm_on_mac()
 function compile_ycm_on_linux()
 {
     cd ~/.vim/plugged/YouCompleteMe
-    sudo ./install.py --clang-completer
+    ./install.py --clang-completer
 }
 
 # 打印logo
@@ -216,18 +216,6 @@ function print_logo()
     printf "${normal}"
 }
 
-# 改变一些文件、文件夹属组和用户关系
-function chown_dir()
-{
-    who_is=$(who)
-    current_user=${who_is%% *}
-    sudo chown -R ${current_user}:${current_user} ~/.vim
-    sudo chown -R ${current_user}:${current_user} ~/.fonts
-    sudo chown -R ${current_user}:${current_user} ~/.cache
-    sudo chown ${current_user}:${current_user} ~/.vimrc.local
-    sudo chown ${current_user}:${current_user} ~/.viminfo
-}
-
 # 在mac平台安装vimplus
 function install_vimplus_on_mac()
 {
@@ -247,7 +235,6 @@ function begin_install_vimplus()
     download_vim_plug
     install_vim_plugin
     compile_ycm_on_linux
-    chown_dir
     print_logo
 }
 
