@@ -43,7 +43,7 @@ An automatic configuration program for vim
 
     `centos7`及其以上`64`位系统。
 
-- 安装vimplus
+- 安装vimplus(建议在普通用户下安装)
 
     ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
@@ -177,6 +177,10 @@ An automatic configuration program for vim
 - **`安装vimplus完成后ycm不能够工作！！！`**
 
     这里的原因可能就有很多了，可能每个人遇到的问题不一样，但`vimplus`尽最大努力不让用户操心，需要注意的是ycm插件只支持`64`位的系统，更多信息请访问[ycm官网][38]。
+
+- **`在aaa用户下安装了vimplus，在bbb用户下不能使用？`**
+
+    目前vimplus是基于用户的，如果你想在其他用户下也能使用vimplus，也需要单独安装。
 
 - **`在Archlinux环境下不能使用ycm怎么办？(缺少libtinfo.so.5)`**
 
