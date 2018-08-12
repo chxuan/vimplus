@@ -66,7 +66,6 @@ function compile_vim_on_ubuntu()
 function compile_vim_on_centos()
 {
     sudo rm -rf ~/vim
-    sudo yum -y remove vim*
     sudo rm -rf /usr/bin/vi
     sudo rm -rf /usr/bin/vim*
     sudo rm -rf /usr/local/bin/vim*
@@ -74,11 +73,11 @@ function compile_vim_on_centos()
     sudo rm -rf /usr/local/share/vim/vim*
 
     sudo yum install -y ruby ruby-devel lua lua-devel luajit \
-    luajit-devel ctags git python python-devel \
-    python34 python34-devel tcl-devel \
-    perl perl-devel perl-ExtUtils-ParseXS \
-    perl-ExtUtils-XSpp perl-ExtUtils-CBuilder \
-    perl-ExtUtils-Embed libX11-devel ncurses-devel
+        luajit-devel ctags git python python-devel \
+        python34 python34-devel tcl-devel \
+        perl perl-devel perl-ExtUtils-ParseXS \
+        perl-ExtUtils-XSpp perl-ExtUtils-CBuilder \
+        perl-ExtUtils-Embed libX11-devel ncurses-devel
     
     git clone https://github.com/vim/vim.git ~/vim
     cd ~/vim
