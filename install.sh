@@ -38,6 +38,9 @@ function compile_vim_on_ubuntu()
     sudo apt-get remove -y vim-tiny vim-common vim-gui-common vim-nox
     sudo rm -rf ~/vim
     sudo rm -rf /usr/share/vim/vim*
+    sudo rm -rf /usr/local/share/vim/vim*
+    sudo rm -rf /usr/bin/vim*
+    sudo rm -rf /usr/local/bin/vim*
 
     sudo apt-get install -y libncurses5-dev libgnome2-dev libgnomeui-dev \
         libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
@@ -52,7 +55,8 @@ function compile_vim_on_ubuntu()
         --with-python-config-dir=/usr/lib/python2.7/config \
         --enable-perlinterp \
         --enable-luainterp \
-        --enable-gui=gtk2 --enable-cscope --prefix=/usr
+        --enable-gui=gtk2 \
+        --enable-cscope
     make
     sudo make install
     cd -
@@ -65,6 +69,8 @@ function compile_vim_on_centos()
     sudo rm -rf ~/vim
     sudo rm -rf /usr/share/vim/vim*
     sudo rm -rf /usr/local/share/vim/vim*
+    sudo rm -rf /usr/bin/vim*
+    sudo rm -rf /usr/local/bin/vim*
 
     sudo yum install -y ruby ruby-devel lua lua-devel luajit \
     luajit-devel ctags git python python-devel \
