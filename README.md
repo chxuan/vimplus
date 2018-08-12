@@ -29,7 +29,7 @@ An automatic configuration program for vim
 
     `ubuntu14.04`及其以上`64`位系统。
 
-- 安装vimplus
+- 安装vimplus(建议在普通用户下安装)
 
     ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
