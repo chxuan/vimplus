@@ -181,6 +181,10 @@ nnoremap <c-l> <c-w>l
 " 打开文件自动定位到最后编辑的位置
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
+
+" vim关闭最后一个文件编辑buffer窗口时自动退出其余所有NERDTree、tagbar、Quickfix窗口
+autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
+
 " 主题
 set background=dark
 let g:onedark_termcolors=256
