@@ -207,6 +207,11 @@ An automatic configuration program for vim
 </table>
 
 
+## vimplus star趋势图
+
+[![Sparkline](https://stars.medv.io/chxuan/vimplus.svg)](https://stars.medv.io/chxuan/vimplus)
+
+
 ## License
 
 This software is licensed under the [MIT license][75]. © 2016 chxuan
