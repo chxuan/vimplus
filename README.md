@@ -241,7 +241,7 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [26]: https://github.com/iamcco/markdown-preview.vim
   [27]: https://github.com/chxuan/change-colorscheme
   [36]: https://github.com/tpope/vim-fugitive
-  [37]: https://pan.baidu.com/s/1i481Eeh
+  [37]: https://pan.baidu.com/s/1D28VE7weduuX1dpurwj8aw
   [38]: https://github.com/Valloric/YouCompleteMe
   [39]: https://github.com/chxuan/vimplus/issues
   [50]: https://github.com/junegunn/vim-slash
