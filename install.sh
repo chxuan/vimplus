@@ -219,7 +219,7 @@ function begin_install_vimplus()
     install_fonts_on_linux
     clone_vundle
     install_vim_plugin
-    compile_ycm_on_linux
+    #compile_ycm_on_linux
     chown_dir
     print_logo
 }
@@ -227,7 +227,7 @@ function begin_install_vimplus()
 # 在ubuntu发行版安装vimplus
 function install_vimplus_on_ubuntu()
 {
-    install_prepare_software_on_ubuntu
+    #install_prepare_software_on_ubuntu
     begin_install_vimplus
 }
 
