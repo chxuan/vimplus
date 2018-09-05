@@ -102,9 +102,9 @@ function copy_files()
     rm -rf ~/.vimrc.local
     cp ${PWD}/.vimrc.local ~
 
-    rm -rf ~/.ycm_extra_conf.py
+    #rm -rf ~/.ycm_extra_conf.py
     # cp .ycm_extra_conf.py ~
-    ln -s ${PWD}/.ycm_extra_conf.py ~
+    #ln -s ${PWD}/.ycm_extra_conf.py ~
 
     mkdir ~/.vim
     rm -rf ~/.vim/plugin
