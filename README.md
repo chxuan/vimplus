@@ -27,7 +27,7 @@ An automatic configuration program for vim
 
 - 版本要求
 
-    `ubuntu14.04`及其以上`64`位系统。
+    `ubuntu16.04`及其以上系统。
 
 - 安装vimplus(建议在普通用户下安装)
 
@@ -41,7 +41,7 @@ An automatic configuration program for vim
 
 - 版本要求
 
-    `centos7`及其以上`64`位系统。
+    `centos7`及其以上系统。
 
 - 安装vimplus(建议在普通用户下安装)
 
