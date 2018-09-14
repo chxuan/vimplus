@@ -28,9 +28,11 @@ set noeb
 " 告诉我们文件的哪一行被改变过
 set report=0
 " 可以在buffer的任何地方使用鼠标
-set mouse=a
+set mouse-=a "关闭鼠标
 set selection=exclusive
 set selectmode=mouse,key
+" 关闭回车后新一行注释
+set fo-=r
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 显示设置
@@ -208,7 +210,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'wsdjeg/FlyGrep.vim'
 Plugin 'iamcco/mathjax-support-for-mkdp'
-Plugin 'iamcco/markdown-preview.vim'
+"Plugin 'iamcco/markdown-preview.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -236,7 +238,9 @@ Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'will133/vim-dirdiff'
 Plugin 'mhinz/vim-startify'
 Plugin 'junegunn/vim-slash'
-
+Plugin 'aceofall/gtags.vim'
+Plugin 'vim-scripts/AutoComplPop'
+Plugin 'vim-scripts/OmniCppComplete'
 call vundle#end()            
 filetype plugin indent on    
 
@@ -281,25 +285,31 @@ let g:DoxygenToolkit_commentType="Qt"
 "nmap <F5> :YcmDiags<CR>
 
 " ctags
-set tags+=/usr/include/tags
-set tags+=~/.vim/systags
-set tags+=~/.vim/x86_64-linux-gnu-systags
-let g:ycm_collect_identifiers_from_tags_files = 1
+"set tags+=/usr/include/tags
+"set tags+=~/.vim/systags
+"set tags+=~/.vim/x86_64-linux-gnu-systags
+"let g:ycm_collect_identifiers_from_tags_files = 1
 " let g:ycm_semantic_triggers = {} 
-let g:ycm_semantic_triggers =  {
-  \   'c' : ['->', '.','re![_a-zA-z0-9]'],
-  \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
-  \             're!\[.*\]\s'],
-  \   'ocaml' : ['.', '#'],
-  \   'cpp,objcpp' : ['->', '.', '::','re![_a-zA-Z0-9]'],
-  \   'perl' : ['->'],
-  \   'php' : ['->', '::'],
-  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-  \   'ruby' : ['.', '::'],
-  \   'lua' : ['.', ':'],
-  \   'erlang' : [':'],
-  \ }
-let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
+"let g:ycm_semantic_triggers =  {
+"  \   'c' : ['->', '.','re![_a-zA-z0-9]'],
+"  \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+"  \             're!\[.*\]\s'],
+"  \   'ocaml' : ['.', '#'],
+"  \   'cpp,objcpp' : ['->', '.', '::','re![_a-zA-Z0-9]'],
+"  \   'perl' : ['->'],
+"  \   'php' : ['->', '::'],
+"  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+"  \   'ruby' : ['.', '::'],
+"  \   'lua' : ['.', ':'],
+"  \   'erlang' : [':'],
+"  \ }
+"let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
+
+"gtags
+"definition
+nmap <silent><leader>] :Gtags <c-r><c-w><cr>
+"reference
+nmap <silent><leader>[ :Gtags -r <c-r><c-w><cr> ]"
 
 " a.vim: .h -> .cpp or .cpp -> .h
 nnoremap <silent> <Leader>a :A<CR>
@@ -316,8 +326,8 @@ imap <Leader>t <ESC> :TagbarToggle<CR>
 " colorscheme
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
-"colorscheme monokai
+"colorscheme solarized
+colorscheme onedark
 
 " cpp_class_scope_highlight
 let g:cpp_class_scope_highlight = 1
@@ -358,11 +368,11 @@ map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
 " markdown
-let g:mkdp_path_to_chrome = "firefox"
-nmap <silent> <F7> <Plug>MarkdownPreview
-imap <silent> <F7> <Plug>MarkdownPreview
-nmap <silent> <F8> <Plug>StopMarkdownPreview
-imap <silent> <F8> <Plug>StopMarkdownPreview
+"let g:mkdp_path_to_chrome = "firefox"
+"nmap <silent> <F7> <Plug>MarkdownPreview
+"imap <silent> <F7> <Plug>MarkdownPreview
+"nmap <silent> <F8> <Plug>StopMarkdownPreview
+"imap <silent> <F8> <Plug>StopMarkdownPreview
 
 " vim-easymotion
 let g:EasyMotion_smartcase = 1
@@ -390,6 +400,16 @@ nmap <Leader><Leader>il :IndentLinesToggle<CR>
 " pydiction
 let g:pydiction_location='~/.vim/bundle/pydiction/complete-dict'
 let g:pydiction_menu_height=10
+
+"omnicppcomplete
+set completeopt=menu,menuone
+let OmniCpp_MayCompleteDot=1
+let OmniCpp_MayCompleteArrow=1
+let OmniCpp_MayCompleteScope=1
+let OmniCpp_NamespaceSearch=1
+let OmniCpp_GlobalScopeSearch=1                                                           
+let OmniCpp_ShowPrototypeInAbbr=1
+let OmniCpp_SelectFirstItem = 2
 
 " 个性化
 if filereadable(expand($HOME . '/.vimrc.local'))
