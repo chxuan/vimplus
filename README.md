@@ -167,7 +167,7 @@ An automatic configuration program for vim
 
 - **`安装vimplus会经常失败，安装了几次都不成功！！！`**
 
-    vimplus安装时需要访问外国网站，由于网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，这里有下载好的[YouCompleteMe.tar.gz][37]文件，下载后解压到~/.vim/plugged/目录，并进入YouCompleteMe目录执行`./install.py --clang-completer`即可安装。
+    vimplus安装时需要访问外国网站，由于网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，这里有下载好的[YouCompleteMe.tar.gz][37]文件，下载后解压到~/.vim/plugged/目录，并进入YouCompleteMe目录，linux用户执行`./install.py --clang-completer`，mac用户执行`./install.py --clang-completer --system-libclang`即可安装。
 
 - **`使用第三方库时怎么让ycm补全第三方库API？`**
 
