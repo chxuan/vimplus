@@ -167,8 +167,7 @@ Plug 'vim-scripts/DrawIt'
 Plug 'vim-scripts/taglist.vim'
 Plug 'scrooloose/vim-slumlord'
 Plug 'aklt/plantuml-syntax'
-Plug 'vim-scripts/Conque-GDB'
-
+Plug 'dhruvasagar/vim-table-mode'
 
 " 加载自定义插件
 if filereadable(expand($HOME . '/.vimrc.custom.plugins'))
