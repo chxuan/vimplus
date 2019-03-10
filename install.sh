@@ -189,11 +189,31 @@ function compile_ycm_on_linux()
     ./install.py --clang-completer
 }
 
-# mac编译ycm插件
-function compile_ycm_on_mac()
+# macos编译ycm, 原始方法
+function compile_ycm_on_mac_legacy()
 {
     cd ~/.vim/plugged/YouCompleteMe
     ./install.py --clang-completer --system-libclang
+}
+
+# macos编译ycm, Mojave上的方法
+function compile_ycm_on_mac_mojave()
+{
+    echo "Installing macOS_10.14 sdk headers..."
+    xcode-select --install
+    open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
+    cd ~/.vim/plugged/YouCompleteMe
+    ./install.py --clang-completer
+}
+
+# 在MacOS上编译ycm
+function compile_ycm_on_mac()
+{
+    mac_version=$(sw_vers | grep ProductVersion | cut -d '.' -f 2 -f 3)
+    fix_macos_version_list=(14.1 14.2 14.3)
+    echo "${fix_macos_version_list[@]}" | grep -wq "$mac_version" && \
+        compile_ycm_on_mac_mojave || \
+        compile_ycm_on_mac_legacy
 }
 
 # 打印logo
