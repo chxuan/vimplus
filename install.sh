@@ -119,10 +119,10 @@ function install_prepare_software_on_ubuntu()
     echo ${ubuntu_1604}
 
     if [ ${ubuntu_1604} == 1 ]; then
-        echo "ubuntu 16.04 LTS"
+        echo "Ubuntu 16.04 LTS"
         compile_vim_on_ubuntu
     else
-        echo "not ubuntu 16.04 LTS"
+        echo "Not ubuntu 16.04 LTS"
         sudo apt-get install -y vim
     fi
 }
@@ -283,7 +283,7 @@ function install_vimplus_on_archlinux()
 function install_vimplus_on_linux()
 {
     type=`get_linux_platform_type`
-    echo "linux platform type: "${type}
+    echo "Linux platform type: "${type}
 
     if [ ${type} == "ubuntu" ]; then
         install_vimplus_on_ubuntu
@@ -292,7 +292,7 @@ function install_vimplus_on_linux()
     elif [ ${type} == "archlinux" ]; then
         install_vimplus_on_archlinux
     else
-        echo "not support this linux platform type: "${type}
+        echo "Not support this linux platform type: "${type}
     fi
 }
 
@@ -300,14 +300,14 @@ function install_vimplus_on_linux()
 function main()
 {
     type=`get_platform_type`
-    echo "platform type: "${type}
+    echo "Platform type: "${type}
 
     if [ ${type} == "Darwin" ]; then 
         install_vimplus_on_mac
     elif [ ${type} == "Linux" ]; then
         install_vimplus_on_linux
     else
-        echo "not support platform type: "${type}
+        echo "Not support platform type: "${type}
     fi
 }
 
