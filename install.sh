@@ -210,7 +210,7 @@ function compile_ycm_on_mac_mojave()
 function compile_ycm_on_mac()
 {
     mac_version=$(sw_vers | grep ProductVersion | cut -d '.' -f 2 -f 3)
-    fix_macos_version_list=(14.1 14.2 14.3)
+    fix_macos_version_list=(14.1 14.2 14.3 14.4)
     echo "${fix_macos_version_list[@]}" | grep -wq "$mac_version" && \
         compile_ycm_on_mac_mojave || \
         compile_ycm_on_mac_legacy
