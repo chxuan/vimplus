@@ -31,6 +31,18 @@ function is_ubuntu1604()
     fi
 }
 
+
+# 判断是否是Debian版本
+function is_debian()
+{
+    version=$(lsb_release -is)
+    if [ "${version}" == "Debian" ]; then
+        echo 1
+    else
+        echo 0
+    fi
+}
+
 # 在ubuntu上源代码安装vim
 function compile_vim_on_ubuntu()
 {
@@ -114,12 +126,17 @@ function install_prepare_software_on_centos()
 # 安装ubuntu发行版必要软件
 function install_prepare_software_on_ubuntu()
 {
-    sudo apt-get install -y ctags build-essential cmake python-dev python3-dev fontconfig curl libfile-next-perl ack-grep
+    sudo apt-get update
+    sudo apt-get install -y ctags build-essential cmake python python-dev python3-dev fontconfig curl libfile-next-perl ack-grep
     ubuntu_1604=`is_ubuntu1604`
+    debian=`is_debian`
     echo ${ubuntu_1604}
 
     if [ ${ubuntu_1604} == 1 ]; then
         echo "Ubuntu 16.04 LTS"
+        compile_vim_on_ubuntu
+    elif [ ${debian} == 1 ]; then
+        echo "Debian"
         compile_vim_on_ubuntu
     else
         echo "Not ubuntu 16.04 LTS"
