@@ -244,7 +244,7 @@ let g:NERDTreeDirArrowCollapsible='▼'
 " YCM
 let g:ycm_confirm_extra_conf = 0 
 let g:ycm_error_symbol = '✗'
-let g:ycm_warning_symbol = '✗'
+let g:ycm_warning_symbol = '✹'
 let g:ycm_seed_identifiers_with_syntax = 1 
 let g:ycm_complete_in_comments = 1 
 let g:ycm_complete_in_strings = 1 
