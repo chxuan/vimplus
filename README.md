@@ -41,7 +41,7 @@ An automatic configuration program for vim
 
 - 安装gvim
 
-    在深度商店安装gvim,目的是让vim支持python3。
+    在深度应用商店安装gvim,目的是让vim支持python3。
 
 - 安装vimplus(请在普通用户下安装)
 
