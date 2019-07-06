@@ -29,7 +29,21 @@ An automatic configuration program for vim
 
     `ubuntu16.04`及其以上系统。
 
-- 安装vimplus(建议在普通用户下安装)
+- 安装vimplus(请在普通用户下安装)
+
+    ```bash
+    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
+    cd ~/.vimplus
+    ./install.sh
+    ```
+
+### Deepin
+
+- 安装gvim
+
+    在深度商店安装gvim,目的是让vim支持python3。
+
+- 安装vimplus(请在普通用户下安装)
 
     ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
@@ -43,7 +57,7 @@ An automatic configuration program for vim
 
     `centos7`及其以上系统。
 
-- 安装vimplus(建议在普通用户下安装)
+- 安装vimplus(请在普通用户下安装)
 
     ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
