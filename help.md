@@ -8,6 +8,7 @@
 | `<leader>a`  | .h .cpp 文件切换                     |
 | `<leader>u`  | 转到函数声明                         |
 | `<leader>U`  | 转到函数实现                         |
+| `<leader>u`  | 转到变量声明                         |
 | `<leader>o`  | 打开include文件                      |
 | `<leader>y`  | 拷贝函数声明                         |
 | `<leader>p`  | 生成函数实现                         |
