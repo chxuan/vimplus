@@ -182,7 +182,7 @@ An automatic configuration program for vim
 
 - **`ubuntu18.04安装了nerd font但通过终端属性并没有看到该字体。`**
 
-    可以试试dconf-editor软件来设置。
+    可以试试dconf-editor软件来设置，可以参考[这里][76]。
 
 - **`安装vimplus会经常失败，安装了几次都不成功！！！`**
 
@@ -203,6 +203,14 @@ An automatic configuration program for vim
 - **`在Archlinux环境下不能使用ycm怎么办？(缺少libtinfo.so.5)`**
 
     在Archlinux下可以试着使用pkgfile命令搜索依赖的文件具体在什么包内，目前找到的包含libtinfo.so.5的包是ncurses5-compat-libs(AUR)或者32位的lib32-ncurses5-compat-libs(AUR)，安装后即可正常使用。
+
+- **`怎么自定义文件头，比如说添加作者、创建时间？`**
+
+    你可以修改[chxuan/prepare-code][67]插件来达到目的，可以参考[这里][77]。
+
+- **`安装vimplus在“[ 95%] Building CXX object ycm/CMakeFiles/ycm_core.dir/ycm_core.cpp.o”等进度时出现编译报错`**
+
+    编译ycm需要消耗较大内存，建议内存大于1G，实在不行也可以开启linux swap分区。
 
 - **`以上没有我遇到的问题怎么办？`**
 
@@ -288,3 +296,5 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [72]: https://github.com/chxuan/vim-edit
   [74]: https://github.com/chxuan/tagbar
   [75]: https://github.com/chxuan/vimplus/blob/master/LICENSE
+  [76]: https://blog.csdn.net/wang73ying/article/details/82491993
+  [77]: https://blog.csdn.net/liuyangbo121/article/details/82971736
