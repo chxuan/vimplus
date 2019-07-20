@@ -226,11 +226,14 @@ function compile_ycm_on_mac_mojave()
 # 在MacOS上编译ycm
 function compile_ycm_on_mac()
 {
-    mac_version=$(sw_vers | grep ProductVersion | cut -d '.' -f 2 -f 3)
-    fix_macos_version_list=(14.1 14.2 14.3 14.4 14.5)
-    echo "${fix_macos_version_list[@]}" | grep -wq "$mac_version" && \
-        compile_ycm_on_mac_mojave || \
+    product_version=$(sw_vers | grep ProductVersion)
+    version=${product_version#*:}
+    main_version=${version%.*}
+    if [ ${main_version} == "10.14" ]; then
+        compile_ycm_on_mac_mojave
+    else
         compile_ycm_on_mac_legacy
+    fi
 }
 
 # 打印logo
@@ -330,5 +333,3 @@ function main()
 
 # 调用main函数
 main
-
-
