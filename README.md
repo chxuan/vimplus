@@ -34,7 +34,7 @@ An automatic configuration program for vim
     ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     cd ~/.vimplus
-    ./install.sh
+    ./install.sh(不加sudo)
     ```
 
 ### Deepin
@@ -48,7 +48,7 @@ An automatic configuration program for vim
     ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     cd ~/.vimplus
-    ./install.sh
+    ./install.sh(不加sudo)
     ```
 
 ### Centos
@@ -62,17 +62,17 @@ An automatic configuration program for vim
     ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     cd ~/.vimplus
-    ./install.sh
+    ./install.sh(不加sudo)
     ```
 
 ### ArchLinux
 
-- 安装vimplus
+- 安装vimplus(请在普通用户下安装)
 
     ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     cd ~/.vimplus
-    ./install.sh
+    ./install.sh(不加sudo)
     ```
 
 ## 个性化
