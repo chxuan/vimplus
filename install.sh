@@ -155,7 +155,7 @@ function install_prepare_software_on_archlinux()
 # 安装opensuse发行版必要软件
 function install_prepare_software_on_opensuse()
 {
-    sudo zypper install -y vim ctags gcc cmake python curl ack fontconfig
+    sudo zypper install -y vim ctags gcc gcc-c++ cmake python curl ack fontconfig
 }
 
 # 拷贝文件
