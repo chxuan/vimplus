@@ -9,81 +9,51 @@ An automatic configuration program for vim
 
 ### Mac OS X
 
-- 安装[HomeBrew][3]
+##### 安装[HomeBrew][3]
  
     ```bash
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     ```
 
-- 安装vimplus
+##### 安装vimplus
 
     ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     cd ~/.vimplus
     ./install.sh
     ```
+    
+##### 设置Nerd Font
 
-### Ubuntu
+为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`
 
-- 版本要求
+### Linux
 
-    `ubuntu16.04`及其以上系统。
+##### 支持以下发行版
 
-- 安装vimplus(请在普通用户下安装)
+ - `Ubuntu16.04`及其以上系统
+ - `Centos7`及其以上系统
+ - Deepin
+ - Linux Mint
+ - Debian
+ - ArchLinux
+ - openSUSE
 
-    ```bash
-    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
-    cd ~/.vimplus
-    ./install.sh(不加sudo)
-    ```
-
-### Deepin
-
-- 安装gvim
-
-    在深度应用商店安装gvim,目的是让vim支持python3。
-
-- 安装vimplus(请在普通用户下安装)
+##### 安装vimplus(请在普通用户下安装)
 
     ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     cd ~/.vimplus
     ./install.sh(不加sudo)
     ```
+    
+##### 设置Nerd Font
 
-### Centos
+为防止vimplus显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`
 
-- 版本要求
+##### 注意事项
 
-    `centos7`及其以上系统。
-
-- 安装vimplus(请在普通用户下安装)
-
-    ```bash
-    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
-    cd ~/.vimplus
-    ./install.sh(不加sudo)
-    ```
-
-### ArchLinux
-
-- 安装vimplus(请在普通用户下安装)
-
-    ```bash
-    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
-    cd ~/.vimplus
-    ./install.sh(不加sudo)
-    ```
-
-### openSUSE
-
-- 安装vimplus(请在普通用户下安装)
-
-    ```bash
-    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
-    cd ~/.vimplus
-    ./install.sh(不加sudo)
-    ```
+ - 在Deepin下安装vimplus时，需要在深度应用商店安装gvim，目的是让vim支持python模块
 
 ## 个性化
 
@@ -308,3 +278,4 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [75]: https://github.com/chxuan/vimplus/blob/master/LICENSE
   [76]: https://blog.csdn.net/wang73ying/article/details/82491993
   [77]: https://blog.csdn.net/liuyangbo121/article/details/82971736
+
