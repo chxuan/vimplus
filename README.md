@@ -9,13 +9,13 @@ An automatic configuration program for vim
 
 ### Mac OS X
 
-##### 安装[HomeBrew][3]
+#### 安装[HomeBrew][3]
  
     ```bash
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     ```
 
-##### 安装vimplus
+#### 安装vimplus
 
     ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
@@ -23,13 +23,13 @@ An automatic configuration program for vim
     ./install.sh
     ```
     
-##### 设置Nerd Font
+#### 设置Nerd Font
 
 为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`
 
 ### Linux
 
-##### 支持以下发行版
+#### 支持以下发行版
 
  - `Ubuntu16.04`及其以上系统
  - `Centos7`及其以上系统
@@ -39,7 +39,7 @@ An automatic configuration program for vim
  - ArchLinux
  - openSUSE
 
-##### 安装vimplus(请在普通用户下安装)
+#### 安装vimplus(请在普通用户下安装)
 
     ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
@@ -47,11 +47,11 @@ An automatic configuration program for vim
     ./install.sh(不加sudo)
     ```
     
-##### 设置Nerd Font
+#### 设置Nerd Font
 
 为防止vimplus显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`
 
-##### 注意事项
+#### 注意事项
 
  - 在Deepin下安装vimplus时，需要在深度应用商店安装gvim，目的是让vim支持python模块
 
