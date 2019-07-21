@@ -156,6 +156,7 @@ function install_prepare_software_on_archlinux()
 function install_prepare_software_on_opensuse()
 {
     sudo zypper install -y vim ctags gcc gcc-c++ cmake python-devel python3-devel curl ack fontconfig
+    sudo ln -s /lib64/libtinfo.so.6.1 /lib64/libtinfo.so.5
 }
 
 # 拷贝文件
