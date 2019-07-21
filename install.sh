@@ -9,7 +9,9 @@ function get_platform_type()
 # 获取linux平台类型，ubuntu还是centos
 function get_linux_platform_type()
 {
-    if which apt-get > /dev/null ; then
+    if which zypper > /dev/null ; then
+        echo "opensuse"
+    elif which apt-get > /dev/null ; then
         echo "ubuntu" # debian ubuntu系列
     elif which yum > /dev/null ; then
         echo "centos" # centos redhat系列
@@ -148,6 +150,12 @@ function install_prepare_software_on_ubuntu()
 function install_prepare_software_on_archlinux()
 {
     sudo pacman -S --noconfirm vim ctags automake gcc cmake python3 python2 curl ack
+}
+
+# 安装opensuse发行版必要软件
+function install_prepare_software_on_opensuse()
+{
+    sudo zypper -y vim ctags gcc cmake python curl ack fontconfig
 }
 
 # 拷贝文件
@@ -299,6 +307,13 @@ function install_vimplus_on_archlinux()
     begin_install_vimplus
 }
 
+# 在opensuse发行版安装vimplus
+function install_vimplus_on_opensuse()
+{
+    install_prepare_software_on_opensuse
+    begin_install_vimplus
+}
+
 # 在linux平台安装vimplus
 function install_vimplus_on_linux()
 {
@@ -311,6 +326,8 @@ function install_vimplus_on_linux()
         install_vimplus_on_centos
     elif [ ${type} == "archlinux" ]; then
         install_vimplus_on_archlinux
+    elif [ ${type} == "opensuse" ]; then
+        install_vimplus_on_opensuse
     else
         echo "Not support this linux platform type: "${type}
     fi
