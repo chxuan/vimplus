@@ -11,17 +11,13 @@ An automatic configuration program for vim
 
 #### 安装[HomeBrew][3]
  
-    ```bash
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    ```
 
 #### 安装vimplus
 
-    ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     cd ~/.vimplus
     ./install.sh
-    ```
     
 #### 设置Nerd Font
 
@@ -41,11 +37,9 @@ An automatic configuration program for vim
 
 #### 安装vimplus(请在普通用户下安装)
 
-    ```bash
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     cd ~/.vimplus
     ./install.sh(不加sudo)
-    ```
     
 #### 设置Nerd Font
 
