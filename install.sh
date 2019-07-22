@@ -54,19 +54,21 @@ function compile_vim_on_ubuntu()
     sudo rm -rf /usr/local/bin/vim*
     sudo rm -rf /usr/share/vim/vim*
     sudo rm -rf /usr/local/share/vim/vim*
-    rm -rf ~/vim
+    rm -rf ~/vim.tar.bz2
+    rm -rf ~/vim81
 
     sudo apt-get install -y libncurses5-dev libgnome2-dev libgnomeui-dev \
         libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
         libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
 
-    git clone https://github.com/vim/vim.git ~/vim
-    cd ~/vim
+    curl https://ftp.nluug.nl/pub/vim/unix/vim-8.1.tar.bz2 -o vim.tar.bz2
+    tar -xvf vim.tar.bz2
+    cd ~/vim81
     ./configure --with-features=huge \
         --enable-multibyte \
         --enable-rubyinterp \
         --enable-pythoninterp \
-        --with-python-config-dir=/usr/lib/python2.7/config \
+        --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
@@ -85,7 +87,8 @@ function compile_vim_on_centos()
     sudo rm -rf /usr/local/bin/vim*
     sudo rm -rf /usr/share/vim/vim*
     sudo rm -rf /usr/local/share/vim/vim*
-    rm -rf ~/vim
+    rm -rf ~/vim.tar.bz2
+    rm -rf ~/vim81
 
     sudo yum install -y ruby ruby-devel lua lua-devel luajit \
         luajit-devel ctags git python python-devel \
@@ -94,14 +97,15 @@ function compile_vim_on_centos()
         perl-ExtUtils-XSpp perl-ExtUtils-CBuilder \
         perl-ExtUtils-Embed libX11-devel ncurses-devel
     
-    git clone https://github.com/vim/vim.git ~/vim
-    cd ~/vim
+    curl https://ftp.nluug.nl/pub/vim/unix/vim-8.1.tar.bz2 -o vim.tar.bz2
+    tar -xvf vim.tar.bz2
+    cd ~/vim81
     ./configure --with-features=huge \
         --enable-multibyte \
         --with-tlib=tinfo \
         --enable-rubyinterp=yes \
         --enable-pythoninterp=yes \
-        --with-python-config-dir=/usr/local/python-2.7.14/lib/python2.7/config \
+        --with-python-config-dir=/lib64/python2.7/config \
         --enable-perlinterp=yes \
         --enable-luainterp=yes \
         --enable-gui=gtk2 \
@@ -121,7 +125,7 @@ function install_prepare_software_on_mac()
 # 安装centos发行版必要软件
 function install_prepare_software_on_centos()
 {
-    sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack
+    sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack bzip2
     compile_vim_on_centos
 }
 
