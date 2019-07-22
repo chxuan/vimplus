@@ -61,6 +61,7 @@ function compile_vim_on_ubuntu()
         libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
         libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
 
+    cd ~
     curl https://ftp.nluug.nl/pub/vim/unix/vim-8.1.tar.bz2 -o vim.tar.bz2
     tar -xvf vim.tar.bz2
     cd ~/vim81
@@ -97,6 +98,7 @@ function compile_vim_on_centos()
         perl-ExtUtils-XSpp perl-ExtUtils-CBuilder \
         perl-ExtUtils-Embed libX11-devel ncurses-devel
     
+    cd ~
     curl https://ftp.nluug.nl/pub/vim/unix/vim-8.1.tar.bz2 -o vim.tar.bz2
     tar -xvf vim.tar.bz2
     cd ~/vim81
