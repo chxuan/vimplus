@@ -6,19 +6,30 @@ function get_platform_type()
     echo $(uname)
 }
 
-# 获取linux平台类型，ubuntu还是centos
+# 获取linux平台类型
 function get_linux_platform_type()
 {
     if which zypper > /dev/null ; then
         echo "opensuse"
     elif which apt-get > /dev/null ; then
-        echo "ubuntu" # debian ubuntu系列
+        echo "ubuntu" # debian,ubuntu,deepin,linuxmint
     elif which yum > /dev/null ; then
-        echo "centos" # centos redhat系列
+        echo "centos" # centos,redhat
     elif which pacman > /dev/null; then
-        echo "archlinux" # archlinux系列
+        echo "archlinux"
     else
         echo "invaild"
+    fi
+}
+
+# 判断是否是ubuntu14.04LTS版本
+function is_ubuntu1404()
+{
+    version=$(cat /etc/lsb-release | grep "DISTRIB_RELEASE")
+    if [ ${version} == "DISTRIB_RELEASE=14.04" ]; then
+        echo 1
+    else
+        echo 0
     fi
 }
 
@@ -32,7 +43,6 @@ function is_ubuntu1604()
         echo 0
     fi
 }
-
 
 # 判断是否是Debian版本
 function is_debian()
@@ -125,7 +135,7 @@ function install_prepare_software_on_mac()
 # 安装centos发行版必要软件
 function install_prepare_software_on_centos()
 {
-    sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack bzip2
+    sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack bzip2 git
     compile_vim_on_centos
 }
 
@@ -133,19 +143,21 @@ function install_prepare_software_on_centos()
 function install_prepare_software_on_ubuntu()
 {
     sudo apt-get update
-    sudo apt-get install -y ctags build-essential cmake python python-dev python3-dev fontconfig curl libfile-next-perl ack-grep
-    ubuntu_1604=`is_ubuntu1604`
-    debian=`is_debian`
-    echo ${ubuntu_1604}
 
-    if [ ${ubuntu_1604} == 1 ]; then
-        echo "Ubuntu 16.04 LTS"
-        compile_vim_on_ubuntu
-    elif [ ${debian} == 1 ]; then
-        echo "Debian"
+    ubuntu1404=`is_ubuntu1404`
+    if [ ${ubuntu1404} == 1 ]; then
+        sudo apt-get install -y cmake3
+    else
+        sudo apt-get install -y cmake
+    fi
+
+    sudo apt-get install -y ctags build-essential python python-dev python3-dev fontconfig curl libfile-next-perl ack-grep git
+    ubuntu1604=`is_ubuntu1604`
+    debian=`is_debian`
+
+    if [ ${ubuntu1404} == 1 ] || [ ${ubuntu1604} == 1 ] || [ ${debian} == 1 ]; then
         compile_vim_on_ubuntu
     else
-        echo "Not ubuntu 16.04 LTS"
         sudo apt-get install -y vim
     fi
 }
@@ -153,14 +165,13 @@ function install_prepare_software_on_ubuntu()
 # 安装archlinux发行版必要软件
 function install_prepare_software_on_archlinux()
 {
-    sudo pacman -S --noconfirm vim ctags automake gcc cmake python3 python2 curl ack
+    sudo pacman -S --noconfirm vim ctags automake gcc cmake python3 python2 curl ack git
 }
 
 # 安装opensuse发行版必要软件
 function install_prepare_software_on_opensuse()
 {
-    sudo zypper install -y vim ctags gcc gcc-c++ cmake python-devel python3-devel curl ack fontconfig
-    sudo ln -s /lib64/libtinfo.so.6.1 /lib64/libtinfo.so.5
+    sudo zypper install -y vim ctags gcc gcc-c++ cmake python-devel python3-devel curl ack fontconfig git ncurses5-devel
 }
 
 # 拷贝文件
@@ -281,6 +292,7 @@ function install_vimplus_on_mac()
     print_logo
 }
 
+# 开始安装vimplus
 function begin_install_vimplus()
 {
     copy_files

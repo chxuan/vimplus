@@ -23,15 +23,15 @@ An automatic configuration program for vim
 
 为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`
 
-### Linux
+### Linux 64-bit
 
 #### 支持以下发行版
 
- - `Ubuntu16.04`及其以上系统
+ - `Ubuntu14.04`及其以上系统
  - `Centos7`及其以上系统
+ - Debian
  - Deepin
  - Linux Mint
- - Debian
  - ArchLinux
  - openSUSE
 
