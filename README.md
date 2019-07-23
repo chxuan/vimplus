@@ -45,10 +45,6 @@ An automatic configuration program for vim
 
 为防止vimplus显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`
 
-#### 注意事项
-
- - 在Deepin下安装vimplus时，需要在深度应用商店安装gvim，目的是让vim支持python模块
-
 ## 个性化
 
 修改 `~/.vimrc.local` 文件内容，以启用个性化定制，可覆盖 `~/.vimrc` 中的设置。

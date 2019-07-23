@@ -33,28 +33,6 @@ function is_ubuntu1404()
     fi
 }
 
-# 判断是否是ubuntu16.04LTS版本
-function is_ubuntu1604()
-{
-    version=$(cat /etc/lsb-release | grep "DISTRIB_RELEASE")
-    if [ ${version} == "DISTRIB_RELEASE=16.04" ]; then
-        echo 1
-    else
-        echo 0
-    fi
-}
-
-# 判断是否是Debian版本
-function is_debian()
-{
-    version=$(lsb_release -is)
-    if [ "${version}" == "Debian" ]; then
-        echo 1
-    else
-        echo 0
-    fi
-}
-
 # 在ubuntu上源代码安装vim
 function compile_vim_on_ubuntu()
 {
@@ -152,14 +130,7 @@ function install_prepare_software_on_ubuntu()
     fi
 
     sudo apt-get install -y ctags build-essential python python-dev python3-dev fontconfig curl libfile-next-perl ack-grep git
-    ubuntu1604=`is_ubuntu1604`
-    debian=`is_debian`
-
-    if [ ${ubuntu1404} == 1 ] || [ ${ubuntu1604} == 1 ] || [ ${debian} == 1 ]; then
-        compile_vim_on_ubuntu
-    else
-        sudo apt-get install -y vim
-    fi
+    compile_vim_on_ubuntu
 }
 
 # 安装archlinux发行版必要软件
