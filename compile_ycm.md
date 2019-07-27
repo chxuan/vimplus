@@ -22,7 +22,7 @@
 
 #### 下载ycm
 
-下载[YouCompleteMe.tar.gz][1]并解压到~/.vim/plugged/
+下载[YouCompleteMe.tar.gz][1]并解压到`~/.vim/plugged/`
 
 #### 编译ycm
 
@@ -66,7 +66,7 @@
 
 #### 下载ycm
 
-下载[YouCompleteMe_linux_with_clang.tar.gz][2]并解压到~/.vim/plugged/
+下载[YouCompleteMe_linux_with_clang.tar.gz][2]并解压到`~/.vim/plugged/`
 
 #### 编译ycm
 
