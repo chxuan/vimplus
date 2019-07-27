@@ -21,7 +21,11 @@ An automatic configuration program for vim
     
 #### 设置Nerd Font
 
-为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`
+为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`。
+
+#### 注意
+
+至此，你可以尽情享受vim带给你的乐趣，但ycm插件也有可能会安装失败，所以强烈建议你通过[手动编译ycm的方式来安装vimplus][78]。
 
 ### Linux 64-bit
 
@@ -43,7 +47,12 @@ An automatic configuration program for vim
     
 #### 设置Nerd Font
 
-为防止vimplus显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`
+为防止vimplus显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`。
+
+#### 注意
+
+至此，你可以尽情享受vim带给你的乐趣，但ycm插件也有可能会安装失败，所以强烈建议你通过[手动编译ycm的方式来安装vimplus][78]。
+
 
 ## 个性化
 
@@ -144,7 +153,7 @@ An automatic configuration program for vim
 
 - **`安装vimplus会经常失败，安装了几次都不成功！！！`**
 
-    vimplus安装时需要访问外国网站，由于网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，强烈推荐[手动编译安装ycm][78]。
+    vimplus安装时需要访问外国网站，由于网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，强烈建议你通过[手动编译ycm的方式来安装vimplus][78]。
 
 - **`安装vimplus后Airline等插件有乱码，怎么解决？`**
 

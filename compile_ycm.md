@@ -10,11 +10,11 @@
 
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     
-#### 注释掉ycm插件
+#### 禁用ycm插件
 
     cd ~/.vimplus
     vim .vimrc
-    " Plug 'Valloric/YouCompleteMe' //注释掉ycm插件
+    " Plug 'Valloric/YouCompleteMe' //注释掉ycm插件，不进行自动安装
     
 #### 安装vimplus
 
@@ -36,7 +36,7 @@
 
 #### 设置Nerd Font
 
-为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`
+为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`。
 
 ### Linux 64-bit
 
@@ -54,11 +54,11 @@
 
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     
-#### 注释掉ycm插件
+#### 禁用ycm插件
 
     cd ~/.vimplus
     vim .vimrc
-    " Plug 'Valloric/YouCompleteMe' //注释掉ycm插件
+    " Plug 'Valloric/YouCompleteMe' //注释掉ycm插件，不进行自动安装
     
 #### 安装vimplus(请在普通用户下安装)
 
@@ -79,7 +79,7 @@
 
 #### 设置Nerd Font
 
-为防止vimplus显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`
+为防止vimplus显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`。
 
 
   [1]: https://pan.baidu.com/s/1-Z_U-eKbkMQqmI03qTzmFw
