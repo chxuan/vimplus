@@ -21,7 +21,7 @@ An automatic configuration program for vim
     
 #### 设置Nerd Font
 
-    为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`
+为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`
 
 ### Linux 64-bit
 
@@ -43,11 +43,11 @@ An automatic configuration program for vim
     
 #### 设置Nerd Font
 
-    为防止vimplus显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`
+为防止vimplus显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`
 
 ## 个性化
 
-    修改 `~/.vimrc.local` 文件内容，以启用个性化定制，可覆盖 `~/.vimrc` 中的设置。
+修改 `~/.vimrc.local` 文件内容，以启用个性化定制，可覆盖 `~/.vimrc` 中的设置。
 
 
 ## 插件列表
