@@ -378,7 +378,7 @@ function install_vimplus_on_linux()
     elif [ ${distro} == "ArchLinux" ]; then
         install_vimplus_on_archlinux
     else
-        echo "Not support this linux platform distro: "${distro}
+        echo "Not support linux distro: "${distro}
     fi
 }
 
