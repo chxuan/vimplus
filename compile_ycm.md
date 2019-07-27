@@ -22,7 +22,7 @@
 
 #### 下载ycm
 
-下载[YouCompleteMe.tar.gz][1]并解压到~/.vim/plugged/
+    下载[YouCompleteMe.tar.gz][1]并解压到~/.vim/plugged/
 
 #### 编译ycm
 
@@ -36,7 +36,7 @@
 
 #### 设置Nerd Font
 
-为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`
+    为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`
 
 ### Linux 64-bit
 
@@ -66,7 +66,7 @@
 
 #### 下载ycm
 
-下载[YouCompleteMe_linux_with_clang.tar.gz][2]并解压到~/.vim/plugged/
+    下载[YouCompleteMe_linux_with_clang.tar.gz][2]并解压到~/.vim/plugged/
 
 #### 编译ycm
 
@@ -79,7 +79,7 @@
 
 #### 设置Nerd Font
 
-为防止vimplus显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`
+    为防止vimplus显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`
 
 
   [1]: https://pan.baidu.com/s/1-Z_U-eKbkMQqmI03qTzmFw
