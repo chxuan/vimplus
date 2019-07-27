@@ -25,7 +25,7 @@ An automatic configuration program for vim
 
 #### 注意
 
-至此，你可以尽情享受vim带给你的乐趣，但ycm插件也有可能会安装失败，所以强烈建议你通过[手动编译ycm的方式来安装vimplus][78]。
+至此，你可以尽情享受vim带来的乐趣，但ycm插件也有可能会安装失败，所以强烈建议你通过[手动编译ycm的方式来安装vimplus][78]。
 
 ### Linux 64-bit
 
@@ -51,7 +51,7 @@ An automatic configuration program for vim
 
 #### 注意
 
-至此，你可以尽情享受vim带给你的乐趣，但ycm插件也有可能会安装失败，所以强烈建议你通过[手动编译ycm的方式来安装vimplus][78]。
+至此，你可以尽情享受vim带来的乐趣，但ycm插件也有可能会安装失败，所以强烈建议你通过[手动编译ycm的方式来安装vimplus][78]。
 
 
 ## 个性化
