@@ -175,10 +175,6 @@ An automatic configuration program for vim
 
     vimplus安装完毕之后，`~`目录下将会生成两个隐藏文件分别是.vimrc和.ycm_extra_conf.py，其中.vimrc是vim的配置文件，.ycm_extra_conf.py是ycm插件的配置文件，当你需要创建一个project时，需要将.ycm_extra_conf.py拷贝到project的顶层目录，通过修改该配置文件里面的`flags`变量来添加你的第三方库路径。
 
-- **`安装vimplus完成后ycm不能够工作！！！`**
-
-    这里的原因可能就有很多了，可能每个人遇到的问题不一样，但`vimplus`尽最大努力不让用户操心，需要注意的是ycm插件只支持`64`位的系统，更多信息请访问[ycm官网][38]。
-
 - **`在aaa用户下安装了vimplus，在bbb用户下不能使用？`**
 
     目前vimplus是基于用户的，如果你想在其他用户下也能使用vimplus，也需要单独安装。
