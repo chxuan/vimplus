@@ -21,7 +21,7 @@ function get_linux_distro()
         echo "CentOS"
     elif grep -Eq "openSUSE" /etc/*-release; then
         echo "openSUSE"
-    elif grep -Eq "ArchLinux" /etc/*-release; then
+    elif grep -Eq "Arch Linux" /etc/*-release; then
         echo "ArchLinux"
     else
         echo "Unknow"
