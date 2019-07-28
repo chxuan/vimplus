@@ -170,7 +170,7 @@ function install_prepare_software_on_ubuntu()
 function install_prepare_software_on_debian()
 {
     sudo apt-get update
-    sudo apt-get install -y cmake ctags build-essential python python-dev python3-dev fontconfig curl libfile-next-perl ack-grep git
+    sudo apt-get install -y cmake exuberant-ctags build-essential python python-dev python3-dev fontconfig curl libfile-next-perl ack git
     compile_vim_on_debian
 }
 
