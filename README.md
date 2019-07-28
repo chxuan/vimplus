@@ -155,6 +155,10 @@ An automatic configuration program for vim
 
     vimplus安装时需要访问外国网站，由于网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，强烈建议你通过[手动编译ycm的方式来安装vimplus][78]。
 
+- **`The ycmd server SHUT DOWN (restart with ':YcmRestartServer'). YCM core library compiled for Python 3 but loaded in Python 2. Set the 'g:ycm_server_python_interpreter' option to a Python 3 interpreter path`**
+
+    编译ycm和运行ycmd server的python版本不一致导致的，比如说，编译ycm时使用系统默认版本python3，后来又将系统默认版本改为python2，解决该问题有三种方法，第一：编辑.vimrc，将g:ycm_server_python_interpreter指向编译ycm时的python版本，第二：使用当前python版本重新编译ycm，第三：恢复系统默认的python版本。
+
 - **`安装vimplus后Airline等插件有乱码，怎么解决？`**
 
     linux和mac系统需设置终端字体为`Droid Sans Mono Nerd Font`。
