@@ -185,6 +185,7 @@ function install_prepare_software_on_centos()
 function install_prepare_software_on_archlinux()
 {
     sudo pacman -S --noconfirm vim ctags automake gcc cmake python3 python2 curl ack git fontconfig
+    sudo ln -s /usr/lib/libtinfo.so.6 /usr/lib/libtinfo.so.5
 }
 
 # 安装opensuse必要软件
