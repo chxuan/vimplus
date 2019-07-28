@@ -179,10 +179,6 @@ An automatic configuration program for vim
 
     目前vimplus是基于用户的，如果你想在其他用户下也能使用vimplus，也需要单独安装。
 
-- **`在Archlinux环境下不能使用ycm怎么办？(缺少libtinfo.so.5)`**
-
-    在Archlinux下可以试着使用pkgfile命令搜索依赖的文件具体在什么包内，目前找到的包含libtinfo.so.5的包是ncurses5-compat-libs(AUR)或者32位的lib32-ncurses5-compat-libs(AUR)，安装后即可正常使用。
-
 - **`怎么自定义文件头，比如说添加作者、创建时间？`**
 
     你可以修改[chxuan/prepare-code][67]插件来达到目的，可以参考[这里][77]。
