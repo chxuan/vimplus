@@ -184,7 +184,7 @@ function install_prepare_software_on_centos()
 # 安装archlinux必要软件
 function install_prepare_software_on_archlinux()
 {
-    sudo pacman -S --noconfirm vim ctags automake gcc cmake python3 python2 curl ack git
+    sudo pacman -S --noconfirm vim ctags automake gcc cmake python3 python2 curl ack git fontconfig
 }
 
 # 安装opensuse必要软件
