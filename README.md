@@ -159,6 +159,10 @@ An automatic configuration program for vim
 
     编译ycm和运行ycmd server的python版本不一致导致的，比如说，编译ycm时使用系统默认版本python3，后来又将系统默认版本改为python2，解决该问题有三种方法，第一：编辑.vimrc，将g:ycm_server_python_interpreter指向编译ycm时的python版本，第二：使用当前python版本重新编译ycm，第三：恢复系统默认的python版本。
 
+- **`vimplus不支持目前用户正在使用的系统怎么办？`**
+
+    可以给作者提[Issues][39]，或者自己fork vimplus来修改，并提交pr，贡献自己的一份力量。
+
 - **`安装vimplus后Airline等插件有乱码，怎么解决？`**
 
     linux和mac系统需设置终端字体为`Droid Sans Mono Nerd Font`。
