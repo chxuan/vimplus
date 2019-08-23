@@ -47,7 +47,7 @@
  - Debian
  - Deepin
  - Linux Mint
- - elementary
+ - elementaryOS
  - ArchLinux
  - openSUSE
 

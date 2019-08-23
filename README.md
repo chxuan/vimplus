@@ -36,7 +36,7 @@ An automatic configuration program for vim
  - Debian
  - Deepin
  - Linux Mint
- - elementary
+ - elementaryOS
  - ArchLinux
  - openSUSE
 
