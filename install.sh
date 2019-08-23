@@ -16,7 +16,7 @@ function get_linux_distro()
     elif grep -Eq "LinuxMint" /etc/*-release; then
         echo "LinuxMint"
     elif grep -Eq "elementary" /etc/*-release; then
-        echo "elementary"
+        echo "elementaryOS"
     elif grep -Eq "Debian" /etc/*-release; then
         echo "Debian"
     elif grep -Eq "CentOS" /etc/*-release; then
@@ -372,7 +372,7 @@ function install_vimplus_on_linux()
         install_vimplus_on_ubuntu
     elif [ ${distro} == "LinuxMint" ]; then
         install_vimplus_on_ubuntu
-    elif [ ${distro} == "elementary" ]; then
+    elif [ ${distro} == "elementaryOS" ]; then
         install_vimplus_on_ubuntu
     elif [ ${distro} == "Debian" ]; then
         install_vimplus_on_debian
