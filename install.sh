@@ -15,6 +15,8 @@ function get_linux_distro()
         echo "Deepin"
     elif grep -Eq "LinuxMint" /etc/*-release; then
         echo "LinuxMint"
+    elif grep -Eq "elementary" /etc/*-release; then
+        echo "elementary"
     elif grep -Eq "Debian" /etc/*-release; then
         echo "Debian"
     elif grep -Eq "CentOS" /etc/*-release; then
@@ -162,7 +164,7 @@ function install_prepare_software_on_ubuntu()
         sudo apt-get install -y cmake
     fi
 
-    sudo apt-get install -y ctags build-essential python python-dev python3-dev fontconfig curl libfile-next-perl ack-grep git
+    sudo apt-get install -y exuberant-ctags build-essential python python-dev python3-dev fontconfig curl libfile-next-perl ack-grep git
     compile_vim_on_ubuntu
 }
 
@@ -369,6 +371,8 @@ function install_vimplus_on_linux()
     elif [ ${distro} == "Deepin" ]; then
         install_vimplus_on_ubuntu
     elif [ ${distro} == "LinuxMint" ]; then
+        install_vimplus_on_ubuntu
+    elif [ ${distro} == "elementary" ]; then
         install_vimplus_on_ubuntu
     elif [ ${distro} == "Debian" ]; then
         install_vimplus_on_debian
