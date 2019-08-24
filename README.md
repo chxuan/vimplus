@@ -145,9 +145,13 @@ An automatic configuration program for vim
 
 ## Q & A
 
+- **`vimplus安装脚本会在自己电脑上安装哪些软件？`**
+
+    网络良好情况下，只需30分钟左右即可将vim cpp环境配置好，vimplus真正的做到了一键配置，不让用户操心。vimplus会安装一些必备软件，比如说python、cmake、gcc、fontconfig等，vimplus也考虑到了有些系统的vim不支持python，它会自动去下载vim源码将python支持编译进去，vimplus也会安装nerd-font不让vim显示出现乱码，最最重要的是vimplus实现了ycm自动编译安装，给折腾了几天ycm都没有安装好的用户带来了新的希望，而且vimplus也支持macos和linux众多发行版，让linux发烧友频繁切换发行版而不用操心vim环境配置。最后说了这么多，不如看[vimplus安装脚本][78]来的直接:smile:。
+
 - **`插件安装界面显示YouCompleteMe安装失败`**
 
-    在执行install.sh安装脚本时，ycm比其他插件早安装，当用户看到插件安装界面显示ycm安装失败时，其实ycm已经提前安装好了。
+    在执行install.sh安装脚本时，ycm比其他插件早安装，当用户看到插件安装界面显示ycm安装失败时，其实ycm已经提前安装好了，忽略掉该错误即可。
 
 - **`插件安装界面不更新进度，一直显示进度Installing plugins (24/40)`**
 
@@ -275,4 +279,5 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [75]: https://github.com/chxuan/vimplus/blob/master/LICENSE
   [76]: https://blog.csdn.net/wang73ying/article/details/82491993
   [77]: https://blog.csdn.net/liuyangbo121/article/details/82971736
+  [78]: https://github.com/chxuan/vimplus/blob/master/install.sh
 
