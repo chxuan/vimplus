@@ -57,8 +57,7 @@ function compile_vim_on_ubuntu()
         libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
         libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
 
-    curl https://ftp.nluug.nl/pub/vim/unix/vim-8.1.tar.bz2 -o ~/vim.tar.bz2
-    tar -xvf ~/vim.tar.bz2 -C ~
+    git clone https://gitee.com/chxuan/vim81.git ~/vim81
     cd ~/vim81
     ./configure --with-features=huge \
         --enable-multibyte \
@@ -91,8 +90,7 @@ function compile_vim_on_debian()
 
     sudo ln -s /lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/libtinfo.so.5
 
-    curl https://ftp.nluug.nl/pub/vim/unix/vim-8.1.tar.bz2 -o ~/vim.tar.bz2
-    tar -xvf ~/vim.tar.bz2 -C ~
+    git clone https://gitee.com/chxuan/vim81.git ~/vim81
     cd ~/vim81
     ./configure --with-features=huge \
         --enable-multibyte \
@@ -127,8 +125,7 @@ function compile_vim_on_centos()
         perl-ExtUtils-XSpp perl-ExtUtils-CBuilder \
         perl-ExtUtils-Embed libX11-devel ncurses-devel
     
-    curl https://ftp.nluug.nl/pub/vim/unix/vim-8.1.tar.bz2 -o ~/vim.tar.bz2
-    tar -xvf ~/vim.tar.bz2 -C ~
+    git clone https://gitee.com/chxuan/vim81.git ~/vim81
     cd ~/vim81
     ./configure --with-features=huge \
         --enable-multibyte \
@@ -179,7 +176,7 @@ function install_prepare_software_on_debian()
 # 安装centos必要软件
 function install_prepare_software_on_centos()
 {
-    sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack bzip2 git
+    sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack git
     compile_vim_on_centos
 }
 
