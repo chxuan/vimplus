@@ -25,6 +25,8 @@ function get_linux_distro()
         echo "openSUSE"
     elif grep -Eq "Arch Linux" /etc/*-release; then
         echo "ArchLinux"
+    elif grep -Eq "ManjaroLinux" /etc/*-release; then
+        echo "ManjaroLinux"
     else
         echo "Unknow"
     fi
@@ -382,6 +384,8 @@ function install_vimplus_on_linux()
     elif [ ${distro} == "openSUSE" ]; then
         install_vimplus_on_opensuse
     elif [ ${distro} == "ArchLinux" ]; then
+        install_vimplus_on_archlinux
+    elif [ ${distro} == "ManjaroLinux" ]; then
         install_vimplus_on_archlinux
     else
         echo "Not support linux distro: "${distro}
