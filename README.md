@@ -34,6 +34,7 @@ An automatic configuration program for vim
  - Linux Mint
  - elementaryOS
  - ArchLinux
+ - Manjaro
  - openSUSE
 
 #### 安装vimplus(请在普通用户下安装)
