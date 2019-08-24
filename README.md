@@ -23,10 +23,6 @@ An automatic configuration program for vim
 
 为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`。
 
-#### 注意
-
-至此，你可以尽情享受vim带来的乐趣，但ycm插件也有可能会安装失败，所以强烈建议你通过[手动编译ycm的方式来安装vimplus][78]。
-
 ### Linux 64-bit
 
 #### 支持以下发行版
@@ -49,10 +45,6 @@ An automatic configuration program for vim
 #### 设置Nerd Font
 
 为防止vimplus显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`。
-
-#### 注意
-
-至此，你可以尽情享受vim带来的乐趣，但ycm插件也有可能会安装失败，所以强烈建议你通过[手动编译ycm的方式来安装vimplus][78]。
 
 
 ## 个性化
@@ -152,13 +144,13 @@ An automatic configuration program for vim
 
 ## Q & A
 
-- **`安装vimplus会经常失败，安装了几次都不成功！！！`**
+- **`插件安装界面显示YouCompleteMe安装失败`**
 
-    vimplus安装时需要访问外国网站，由于网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，强烈建议你通过[手动编译ycm的方式来安装vimplus][78]。
+    在执行install.sh安装脚本时，ycm比其他插件早安装，当用户看到插件安装界面显示ycm安装失败时，其实ycm已经提前安装好了。
 
-- **`ycmd server SHUT DOWN. Unexpected exit code -11`**
+- **`插件安装界面不更新进度，一直显示进度Installing plugins (24/40)`**
 
-    这是由于ycm插件克隆失败导致的，强烈建议你通过[手动编译ycm的方式来安装vimplus][78]。
+    vimplus使用vim-plug作为插件管理器，vim-plug可能由于界面没有刷新（其实在安装），所以进度一直停留在`Installing plugins (24/40)`，用户只需要耐心等待所有插件安装完成即可，或者直接`Ctrl+C`终止安装，通过vim打开`~/.vimrc`并执行`:PlugInstall`命令安装剩余插件。
 
 - **`The ycmd server SHUT DOWN (restart with ':YcmRestartServer'). YCM core library compiled for Python 3 but loaded in Python 2. Set the 'g:ycm_server_python_interpreter' option to a Python 3 interpreter path`**
 
@@ -282,5 +274,4 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [75]: https://github.com/chxuan/vimplus/blob/master/LICENSE
   [76]: https://blog.csdn.net/wang73ying/article/details/82491993
   [77]: https://blog.csdn.net/liuyangbo121/article/details/82971736
-  [78]: https://github.com/chxuan/vimplus/blob/master/compile_ycm.md
 
