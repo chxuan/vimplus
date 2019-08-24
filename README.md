@@ -147,7 +147,7 @@ An automatic configuration program for vim
 
 - **`vimplus安装脚本会在自己电脑上安装哪些软件？`**
 
-    网络良好情况下，只需30分钟左右即可将vim cpp环境配置好，vimplus真正的做到了一键配置，不让用户操心。vimplus会安装一些必备软件，比如说python、cmake、gcc、fontconfig等，vimplus也考虑到了有些系统的vim不支持python，它会自动去下载vim源码将python支持编译进去，vimplus也会安装nerd-font不让vim显示出现乱码，最最重要的是vimplus实现了ycm自动编译安装，给折腾了几天ycm都没有安装好的用户带来了新的希望，而且vimplus也支持macos和linux众多发行版，让linux发烧友频繁切换发行版而不用操心vim环境配置。最后说了这么多，不如看[vimplus安装脚本][78]来的直接:smile:。
+    网络良好情况下，vimplus只需30分钟左右即可将vim cpp环境配置好，vimplus真正的做到了一键配置，不让用户操心。vimplus会安装一些必备软件，比如说python、cmake、gcc、fontconfig等，vimplus也考虑到了有些系统的vim不支持python，它会自动去下载vim源码将python支持编译进去，vimplus也会安装nerd-font不让vim显示出现乱码，最最重要的是vimplus实现了ycm自动编译安装，给折腾了几天ycm都没有安装好的用户带来了新的希望，而且vimplus也支持macos和linux众多发行版，让linux发烧友频繁切换发行版而不用操心vim环境配置。最后说了这么多，不如看[vimplus安装脚本][78]来的直接:smile:。
 
 - **`插件安装界面显示YouCompleteMe安装失败`**
 
@@ -253,7 +253,6 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [26]: https://github.com/iamcco/markdown-preview.vim
   [27]: https://github.com/chxuan/change-colorscheme
   [36]: https://github.com/tpope/vim-fugitive
-  [37]: https://pan.baidu.com/s/1-Z_U-eKbkMQqmI03qTzmFw
   [38]: https://github.com/Valloric/YouCompleteMe
   [39]: https://github.com/chxuan/vimplus/issues
   [50]: https://github.com/junegunn/vim-slash
@@ -268,7 +267,6 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [60]: https://github.com/terryma/vim-smooth-scroll
   [62]: https://github.com/mileszs/ack.vim
   [64]: https://github.com/junegunn/gv.vim
-  [65]: https://raw.githubusercontent.com/terryma/vim-multiple-cursors/master/assets/example1.gif
   [66]: https://github.com/chxuan/vimplus-startify
   [67]: https://github.com/chxuan/prepare-code
   [68]: https://github.com/rhysd/clever-f.vim
