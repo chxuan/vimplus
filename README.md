@@ -228,7 +228,7 @@ An automatic configuration program for vim
 </table>
 
 
-## vimplus star趋势图
+## vimplus:star:趋势图
 
 [![Sparkline](https://stars.medv.io/chxuan/vimplus.svg)](https://stars.medv.io/chxuan/vimplus)
 
