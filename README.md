@@ -4,8 +4,6 @@ An automatic configuration program for vim
 ===============================================
 
 <p align="center">
-    <a href="https://github.com/chxuan/vimplus/graphs/contributors" alt="contributors">
-        <img src="https://img.shields.io/github/contributors/chxuan/vimplus" /></a>
     <a href="#build" alt="build">
         <img src="https://img.shields.io/badge/build-passing-brightgreen.svg" /></a>
     <a href="#安装" alt="platform">
