@@ -222,20 +222,7 @@ An automatic configuration program for vim
 
 ## 贡献者
 
-<table>
-<tr>
-<td width="20%"><a href="https://github.com/chxuan"><img src="https://avatars2.githubusercontent.com/u/6542180?s=400&v=4"/></a><p align="center">chxuan</p></td>
-<td width="20%"><a href="https://github.com/dofy"><img src="https://avatars1.githubusercontent.com/u/344197?s=400&v=4"/></a><p align="center">dofy</p></td>
-<td width="20%"><a href="https://github.com/urain39"><img src="https://avatars2.githubusercontent.com/u/16981964?s=400&v=4"/></a><p align="center">urain39</p></td>
-<td width="20%"><a href="https://github.com/freedomDR"><img src="https://avatars3.githubusercontent.com/u/11146756?s=400&v=4"/></a><p align="center">freedomDR</p></td>
-<td width="20%"><a href="https://github.com/starifly"><img src="https://avatars2.githubusercontent.com/u/2003879?s=400&v=4"/></a><p align="center">starifly</p></td>
-</tr>
-<tr>
-<td width="20%"><a href="https://github.com/Shaloc"><img src="https://avatars2.githubusercontent.com/u/24523674?s=400&v=4"/></a><p align="center">Shaloc</p></td>
-<td width="20%"><a href="https://github.com/jokerkeny"><img src="https://avatars2.githubusercontent.com/u/10593391?s=400&v=4"/></a><p align="center">jokerkeny</p></td>
-</tr>
-</table>
-
+<a href="https://github.com/chxuan/vimplus/graphs/contributors"><img src="https://opencollective.com/vimplus/contributors.svg?width=890" /></a>
 
 ## vimplus:star:趋势图
 
