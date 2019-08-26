@@ -3,7 +3,7 @@
 An automatic configuration program for vim
 ===============================================
 
-![contributors][https://img.shields.io/github/contributors/chxuan/vimplus] ![build](https://img.shields.io/badge/build-passing-brightgreen.svg) ![platform](https://img.shields.io/badge/platform-MacOSX%20%7C%20Ubuntu%20%7C%20Centos%20%7C%20Debian%20%7C%20Deepin%20%7C%20LinuxMint%20%7C%20elementaryOS%20%7C%20ArchLinux%20%7C%20Manjaro%20%7C%20openSUSE-brightgreen.svg) ![lincense](https://img.shields.io/badge/license-MIT-blue.svg)
+![contributors](https://img.shields.io/github/contributors/chxuan/vimplus) ![build](https://img.shields.io/badge/build-passing-brightgreen.svg) ![platform](https://img.shields.io/badge/platform-MacOSX%20%7C%20Ubuntu%20%7C%20Centos%20%7C%20Debian%20%7C%20Deepin%20%7C%20LinuxMint%20%7C%20elementaryOS%20%7C%20ArchLinux%20%7C%20Manjaro%20%7C%20openSUSE-brightgreen.svg) ![lincense](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ![main][2]
 
