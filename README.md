@@ -1,9 +1,11 @@
-![][1]
+![vimplus-logo][1]
 
 An automatic configuration program for vim
 ===============================================
 
-![][2]
+![build](https://img.shields.io/badge/build-passing-brightgreen.svg) ![platform](https://img.shields.io/badge/platform-Mac OS X | Ubuntu | Centos | Debian | Deepin | LinuxMint | elementaryOS | ArchLinux | Manjaro | openSUSE-brightgreen.svg) ![lincense](https://img.shields.io/badge/license-MIT-blue.svg)
+
+![main][2]
 
 ## 安装
 
