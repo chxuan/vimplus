@@ -202,14 +202,11 @@ An automatic configuration program for vim
     那就麻烦您打赏一颗:star::star:吧，给予我继续维护的动力。
 
 
-## 感谢作者
+## 支持开源
 
-<table>
-<tr>
-<td width="20%"><a href=""><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/wechat.png"/></a><p align="center">wechat</p></td>
-<td width="20%"><a href=""><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/alipay.png"/></a><p align="center">alipay</p></td>
-</tr>
-</table>
+| wechat                                                                                                     | alipay                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| <a href='#support-vimplus'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/wechat.png" height="150" width="150" /></a> | <a href='#support-vimplus'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/alipay.png" height="150" width="150" /></a> |
 
 
 ## 贡献者
