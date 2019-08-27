@@ -54,7 +54,7 @@ function compile_vim_on_ubuntu()
     sudo rm -rf /usr/local/share/vim/vim*
     rm -rf ~/vim81
 
-    sudo apt-get install -y libncurses5-dev libgnome2-dev libgnomeui-dev \
+    sudo apt-get install -y libncurses5-dev libncurses5 libgnome2-dev libgnomeui-dev \
         libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
         libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
 
@@ -86,9 +86,7 @@ function compile_vim_on_debian()
     sudo rm -rf /usr/local/share/vim/vim*
     rm -rf ~/vim81
 
-    sudo apt-get install -y libncurses5-dev libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
-
-    sudo ln -s /lib/x86_64-linux-gnu/libtinfo.so.6 /lib/x86_64-linux-gnu/libtinfo.so.5
+    sudo apt-get install -y libncurses5-dev libncurses5 libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
 
     git clone https://gitee.com/chxuan/vim81.git ~/vim81
     cd ~/vim81
