@@ -52,7 +52,6 @@ function compile_vim_on_ubuntu()
     sudo rm -rf /usr/local/bin/vim*
     sudo rm -rf /usr/share/vim/vim*
     sudo rm -rf /usr/local/share/vim/vim*
-    rm -rf ~/vim.tar.bz2
     rm -rf ~/vim81
 
     sudo apt-get install -y libncurses5-dev libgnome2-dev libgnomeui-dev \
@@ -85,7 +84,6 @@ function compile_vim_on_debian()
     sudo rm -rf /usr/local/bin/vim*
     sudo rm -rf /usr/share/vim/vim*
     sudo rm -rf /usr/local/share/vim/vim*
-    rm -rf ~/vim.tar.bz2
     rm -rf ~/vim81
 
     sudo apt-get install -y libncurses5-dev libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
@@ -117,7 +115,6 @@ function compile_vim_on_centos()
     sudo rm -rf /usr/local/bin/vim*
     sudo rm -rf /usr/share/vim/vim*
     sudo rm -rf /usr/local/share/vim/vim*
-    rm -rf ~/vim.tar.bz2
     rm -rf ~/vim81
 
     sudo yum install -y ruby ruby-devel lua lua-devel luajit \
