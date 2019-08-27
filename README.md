@@ -36,15 +36,20 @@ An automatic configuration program for vim
 
 #### 支持以下发行版
 
- - `Ubuntu14.04`及其以上系统
- - `Centos7`及其以上系统
- - Debian
- - Deepin
- - Linux Mint
- - elementaryOS
- - ArchLinux
- - Manjaro
- - openSUSE
+<table>
+<tr>
+<td><a href=""><img src="https://distrowatch.com/images/yvzhuwbpy/ubuntu.png"/></a><p align="center"></p></td>
+<td><a href=""><img src="https://distrowatch.com/images/yvzhuwbpy/centos.png"/></a><p align="center"></p></td>
+<td><a href=""><img src="https://distrowatch.com/images/yvzhuwbpy/debian.png"/></a><p align="center"></p></td>
+<td><a href=""><img src="https://distrowatch.com/images/yvzhuwbpy/deepin.png"/></a><p align="center"></p></td>
+<td><a href=""><img src="https://distrowatch.com/images/yvzhuwbpy/mint.png"/></a><p align="center"></p></td>
+<td><a href=""><img src="https://distrowatch.com/images/yvzhuwbpy/elementary.png"/></a><p align="center"></p></td>
+<td><a href=""><img src="https://distrowatch.com/images/yvzhuwbpy/arch.png"/></a><p align="center"></p></td>
+<td><a href=""><img src="https://distrowatch.com/images/yvzhuwbpy/manjaro.png"/></a><p align="center"></p></td>
+<td><a href=""><img src="https://distrowatch.com/images/yvzhuwbpy/opensuse.png"/></a><p align="center"></p></td>
+</tr>
+</table>
+
 
 #### 安装vimplus(请在普通用户下安装)
 
