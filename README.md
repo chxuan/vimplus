@@ -170,10 +170,6 @@ An automatic configuration program for vim
 
     vimplus使用vim-plug作为插件管理器，vim-plug可能由于界面没有刷新（其实在安装），所以进度一直停留在`Installing plugins (24/40)`，用户只需要耐心等待所有插件安装完成即可，或者直接`Ctrl+C`终止安装，通过vim打开`~/.vimrc`并执行`:PlugInstall`命令安装剩余插件。
 
-- **`The ycmd server SHUT DOWN (restart with ':YcmRestartServer'). YCM core library compiled for Python 3 but loaded in Python 2. Set the 'g:ycm_server_python_interpreter' option to a Python 3 interpreter path`**
-
-    编译ycm和运行ycmd server的python版本不一致导致的，比如说，编译ycm时使用系统默认版本python3，后来又将系统默认版本改为python2，解决该问题有三种方法，第一：编辑.vimrc，将g:ycm_server_python_interpreter指向编译ycm时的python版本，第二：使用当前python版本重新编译ycm，第三：恢复系统默认的python版本。
-
 - **`vimplus不支持目前用户正在使用的系统怎么办？`**
 
     可以给作者提[Issues][39]，或者自己fork vimplus来修改，并提交pr，贡献自己的一份力量。
