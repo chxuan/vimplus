@@ -106,7 +106,7 @@ An automatic configuration program for vim
 
 ## 快捷键
 
-以下是部分快捷键，更详细的快捷键请查阅[vimplus帮助文档][59]。
+以下是部分快捷键，可通过vimplus的`,h`命令查看[vimplus帮助文档][59]。
 
 | 快捷键       | 说明                                 |
 | -------      | -----                                |
