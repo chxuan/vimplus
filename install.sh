@@ -262,7 +262,7 @@ function compile_ycm_on_mac_mojave()
     xcode-select --install
     open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
     cd ~/.vim/plugged/YouCompleteMe
-    python2.7 ./install.py --clang-completer
+    python2.7 ./install.py --clang-completer --system-libclang
 }
 
 # 在MacOS上安装ycm插件
