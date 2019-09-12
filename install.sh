@@ -21,6 +21,8 @@ function get_linux_distro()
         echo "Debian"
     elif grep -Eq "CentOS" /etc/*-release; then
         echo "CentOS"
+    elif grep -Eq "fedora" /etc/*-release; then
+        echo "fedora"
     elif grep -Eq "openSUSE" /etc/*-release; then
         echo "openSUSE"
     elif grep -Eq "Arch Linux" /etc/*-release; then
@@ -175,6 +177,12 @@ function install_prepare_software_on_centos()
 {
     sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack git
     compile_vim_on_centos
+}
+
+# 安装fedora必要软件
+function install_prepare_software_on_fedora()
+{
+    sudo dnf install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack git
 }
 
 # 安装archlinux必要软件
@@ -344,6 +352,13 @@ function install_vimplus_on_centos()
     begin_install_vimplus
 }
 
+# 在fedora上安装vimplus
+function install_vimplus_on_fedora()
+{
+    install_prepare_software_on_fedora
+    begin_install_vimplus
+}
+
 # 在archlinux上安装vimplus
 function install_vimplus_on_archlinux()
 {
@@ -376,6 +391,8 @@ function install_vimplus_on_linux()
         install_vimplus_on_debian
     elif [ ${distro} == "CentOS" ]; then
         install_vimplus_on_centos
+    elif [ ${distro} == "fedora" ]; then
+        install_vimplus_on_fedora
     elif [ ${distro} == "openSUSE" ]; then
         install_vimplus_on_opensuse
     elif [ ${distro} == "ArchLinux" ]; then
