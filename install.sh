@@ -182,7 +182,7 @@ function install_prepare_software_on_centos()
 # 安装fedora必要软件
 function install_prepare_software_on_fedora()
 {
-    sudo dnf install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack git
+    sudo dnf install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack git
 }
 
 # 安装archlinux必要软件
