@@ -105,7 +105,6 @@ An automatic configuration program for vim
 | [echodoc][57]                       | 补全函数时在命令栏显示函数签名                                                 |
 | [vim-smooth-scroll][60]             | 让翻页更顺畅                                                                   |
 | [clever-f.vim][68]                  | 强化f和F键                                                                     |
-| [github-complete.vim][69]           | Emoji:dog:补全                                                                 |
 
 
 ## 快捷键
@@ -291,7 +290,6 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [66]: https://github.com/chxuan/vimplus-startify
   [67]: https://github.com/chxuan/prepare-code
   [68]: https://github.com/rhysd/clever-f.vim
-  [69]: https://github.com/rhysd/github-complete.vim
   [70]: https://github.com/chxuan/vim-buffer
   [72]: https://github.com/chxuan/vim-edit
   [74]: https://github.com/chxuan/tagbar

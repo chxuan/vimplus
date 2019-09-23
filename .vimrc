@@ -146,7 +146,6 @@ Plug 'sgur/vim-textobj-parameter'
 Plug 'Shougo/echodoc.vim'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'rhysd/clever-f.vim'
-Plug 'rhysd/github-complete.vim'
 Plug 'vim-scripts/indentpython.vim'
 
 call plug#end()            
