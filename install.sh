@@ -19,6 +19,8 @@ function get_linux_distro()
         echo "elementaryOS"
     elif grep -Eq "Debian" /etc/*-release; then
         echo "Debian"
+    elif grep -Eq "Kali" /etc/*-release; then
+        echo "Kali"
     elif grep -Eq "CentOS" /etc/*-release; then
         echo "CentOS"
     elif grep -Eq "fedora" /etc/*-release; then
@@ -388,6 +390,8 @@ function install_vimplus_on_linux()
     elif [ ${distro} == "elementaryOS" ]; then
         install_vimplus_on_ubuntu
     elif [ ${distro} == "Debian" ]; then
+        install_vimplus_on_debian
+    elif [ ${distro} == "Kali" ]; then
         install_vimplus_on_debian
     elif [ ${distro} == "CentOS" ]; then
         install_vimplus_on_centos
