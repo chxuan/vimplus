@@ -65,6 +65,13 @@ An automatic configuration program for vim
 为防止vimplus显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`。
 
 
+#### 多用户支持
+
+将vimplus在某个用户下安装好后，若需要在其他用户也能够使用vimplus，则执行
+
+    sudo ./install_to_user.sh username1 username2
+    
+
 ## 个性化
 
 修改 `~/.vimrc.local` 文件内容，以启用个性化定制，可覆盖 `~/.vimrc` 中的设置。
@@ -192,10 +199,6 @@ An automatic configuration program for vim
 - **`使用第三方库时怎么让ycm补全第三方库API？`**
 
     vimplus安装完毕之后，`~`目录下将会生成两个隐藏文件分别是.vimrc和.ycm_extra_conf.py，其中.vimrc是vim的配置文件，.ycm_extra_conf.py是ycm插件的配置文件，当你需要创建一个project时，需要将.ycm_extra_conf.py拷贝到project的顶层目录，通过修改该配置文件里面的`flags`变量来添加你的第三方库路径。
-
-- **`在A用户下安装了vimplus，在B用户下不能使用？`**
-
-    目前vimplus是基于用户的，如果你想在其他用户下也能使用vimplus，也需要单独安装。
 
 - **`怎么自定义文件头，比如说添加作者、创建时间？`**
 
