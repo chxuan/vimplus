@@ -69,7 +69,7 @@ An automatic configuration program for vim
 
 将vimplus在某个用户下安装好后，若需要在其他用户也能够使用vimplus，则执行
 
-    sudo ./install_to_user.sh username1 username2
+    sudo ./install_to_user.sh username1 username2 //替换为真实用户名
     
 
 ## 个性化
