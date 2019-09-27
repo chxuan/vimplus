@@ -5,7 +5,7 @@ An automatic configuration program for vim
 
 <p align="center">
     <a href="#build" alt="build"><img src="https://img.shields.io/badge/build-passing-brightgreen.svg" /></a>
-    <a href="#安装" alt="platform"><img src="https://img.shields.io/badge/platform-MacOSX%20%7C%20Linux%2064bit-brightgreen.svg" /></a>
+    <a href="#安装" alt="platform"><img src="https://img.shields.io/badge/platform-MacOSX%20%7C%20Linux%2064bit%20%7C%20Docker-brightgreen.svg" /></a>
     <a href="https://github.com/chxuan/vimplus/stargazers" alt="stars"><img src="https://img.shields.io/github/stars/chxuan/vimplus.svg?style=popout&label=stars" /></a>
     <a href="https://github.com/chxuan/vimplus/forks" alt="forks"><img src="https://img.shields.io/github/forks/chxuan/vimplus.svg?style=popout&label=forks" /></a>
     <a href="https://github.com/chxuan/vimplus/graphs/contributors" alt="contributors"><img src="https://img.shields.io/github/contributors/chxuan/vimplus" /></a>
@@ -72,6 +72,13 @@ An automatic configuration program for vim
 将vimplus在某个用户下安装好后，若需要在其他用户也能够使用vimplus，则执行
 
     sudo ./install_to_user.sh username1 username2 //替换为真实用户名
+    
+
+### Docker
+
+[ubuntu-vimplus][79]是vimplus基于ubuntu18.04的docker镜像，无需安装vimplus，即可快速体验vimplus带来的快乐
+
+    docker run -it chxuan/ubuntu-vimplus
     
 
 ## 个性化
@@ -302,4 +309,5 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [76]: https://blog.csdn.net/wang73ying/article/details/82491993
   [77]: https://blog.csdn.net/liuyangbo121/article/details/82971736
   [78]: https://github.com/chxuan/vimplus/blob/master/install.sh
+  [79]: https://cloud.docker.com/u/chxuan/repository/docker/chxuan/ubuntu-vimplus
 
