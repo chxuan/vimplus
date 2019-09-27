@@ -309,5 +309,5 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [76]: https://blog.csdn.net/wang73ying/article/details/82491993
   [77]: https://blog.csdn.net/liuyangbo121/article/details/82971736
   [78]: https://github.com/chxuan/vimplus/blob/master/install.sh
-  [79]: https://cloud.docker.com/u/chxuan/repository/docker/chxuan/ubuntu-vimplus
+  [79]: https://hub.docker.com/r/chxuan/ubuntu-vimplus
 
