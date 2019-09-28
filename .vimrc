@@ -248,6 +248,19 @@ let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_complete_in_comments = 1 
 let g:ycm_complete_in_strings = 1 
 let g:ycm_server_python_interpreter = '/usr/bin/python2.7'
+let g:ycm_language_server =
+  \ [
+  \   {
+  \     'name': 'gopls',
+  \     'cmdline': [ '~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/go/src/golang.org/x/tools/cmd/gopls/gopls' , "-rpc.trace" ],
+  \     'filetypes': [ 'go' ],
+  \     "project_root_files": [ "go.mod" ]
+  \   }
+  \ ]
+
+let g:go_def_mode='~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/go/src/golang.org/x/tools/cmd/gopls/gopls'
+let g:go_info_mode='~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/go/src/golang.org/x/tools/cmd/gopls/gopls'
+
 nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
 " 已经使用cpp-mode插件提供的转到函数实现的功能
 " nnoremap <leader>i :YcmCompleter GoToDefinition<cr> 
