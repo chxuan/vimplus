@@ -172,10 +172,9 @@ An automatic configuration program for vim
 | `daf`        | 删除函数内容（包括函数名 花括号）    |
 | `caf`        | 改写函数内容（包括函数名 花括号）    |
 | `fa`         | 查找字母a，然后再按f键查找下一个     |
-| `<c-x><c-o>` | Emoji:dog:补全                       |
 
 
-## Q & A
+## FAQ
 
 - **`vimplus安装脚本会在自己电脑上安装哪些软件？`**
 
@@ -226,14 +225,7 @@ An automatic configuration program for vim
     那就麻烦您打赏一颗:star::star:吧，给予我继续维护的动力。
 
 
-## 支持开源:heart:
-
-| wechat                                                                                                     | alipay                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| <a href='#支持开源'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/wechat.png" height="150" width="150" /></a> | <a href='#支持开源'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/alipay.png" height="150" width="150" /></a> |
-
-
-## 贡献者
+## 代码贡献者
 
 <table>
 <tr>
@@ -249,6 +241,17 @@ An automatic configuration program for vim
 <td width="20%"><a href="https://github.com/xuthus5"><img src="https://avatars0.githubusercontent.com/u/22839236?s=400&v=4"/></a><p align="center">xuthus5</p></td>
 </tr>
 </table>
+
+
+## 支持开源:heart:
+
+| wechat                                                                                                     | alipay                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| <a href='#支持开源'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/wechat.png" height="150" width="150" /></a> | <a href='#支持开源'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/alipay.png" height="150" width="150" /></a> |
+
+| 支持者             | RMB   | 时间       |
+| -------            | ----- | -----      |
+| [zhoumengkang][80] | ¥50   | 2019-09-28 |
 
 
 ## vimplus:star:趋势图
@@ -310,4 +313,5 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [77]: https://blog.csdn.net/liuyangbo121/article/details/82971736
   [78]: https://github.com/chxuan/vimplus/blob/master/install.sh
   [79]: https://hub.docker.com/r/chxuan/ubuntu-vimplus
+  [80]: https://github.com/zhoumengkang
 
