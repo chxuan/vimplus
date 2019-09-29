@@ -252,6 +252,7 @@ An automatic configuration program for vim
 | 序号  | 支持者             | RMB   | 时间       |
 | ----- | -------            | ----- | -----      |
 | 1     | [zhoumengkang][80] | ¥50   | 2019-09-28 |
+| 2     | [zhoumengkang][80] | ¥50   | 2019-09-29 |
 
 
 ## vimplus:star:趋势图
