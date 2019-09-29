@@ -36,6 +36,39 @@ function get_linux_distro()
     fi
 }
 
+# 获取日期
+function get_datetime()
+{
+    time=$(date "+%Y%m%d%H%M%S")
+    echo $time
+}
+
+# 判断文件是否存在
+function is_exist_file()
+{
+    filename=$1
+    if [ -f $filename ]; then
+        echo 1
+    else
+        echo 0
+    fi
+}
+
+#备份原有的.vimrc文件
+function backup_vimrc()
+{
+    old_vimrc=$HOME"/.vimrc"
+    is_exist=$(is_exist_file $old_vimrc)
+    if [ $is_exist == 1 ]; then
+        time=$(get_datetime)
+        backup_vimrc=$old_vimrc"_bak_"$time
+        read -p "Find "$old_vimrc" already exists,do you wang to backup "$old_vimrc" to "$backup_vimrc"[Y/N]:" ch
+        if [ $ch == "Y" ] || [ $ch == "y" ]; then
+            cp $old_vimrc $backup_vimrc
+        fi
+    fi
+}
+
 # 判断是否是ubuntu14.04LTS版本
 function is_ubuntu1404()
 {
@@ -313,6 +346,7 @@ function print_logo()
 # 在mac平台安装vimplus
 function install_vimplus_on_mac()
 {
+    backup_vimrc
     install_prepare_software_on_mac
     copy_files
     install_fonts_on_mac
@@ -336,6 +370,7 @@ function begin_install_vimplus()
 # 在ubuntu上安装vimplus
 function install_vimplus_on_ubuntu()
 {
+    backup_vimrc
     install_prepare_software_on_ubuntu
     begin_install_vimplus
 }
@@ -343,6 +378,7 @@ function install_vimplus_on_ubuntu()
 # 在debian上安装vimplus
 function install_vimplus_on_debian()
 {
+    backup_vimrc
     install_prepare_software_on_debian
     begin_install_vimplus
 }
@@ -350,6 +386,7 @@ function install_vimplus_on_debian()
 # 在centos上安装vimplus
 function install_vimplus_on_centos()
 {
+    backup_vimrc
     install_prepare_software_on_centos
     begin_install_vimplus
 }
@@ -357,6 +394,7 @@ function install_vimplus_on_centos()
 # 在fedora上安装vimplus
 function install_vimplus_on_fedora()
 {
+    backup_vimrc
     install_prepare_software_on_fedora
     begin_install_vimplus
 }
@@ -364,6 +402,7 @@ function install_vimplus_on_fedora()
 # 在archlinux上安装vimplus
 function install_vimplus_on_archlinux()
 {
+    backup_vimrc
     install_prepare_software_on_archlinux
     begin_install_vimplus
 }
@@ -371,6 +410,7 @@ function install_vimplus_on_archlinux()
 # 在opensuse上安装vimplus
 function install_vimplus_on_opensuse()
 {
+    backup_vimrc
     install_prepare_software_on_opensuse
     begin_install_vimplus
 }
