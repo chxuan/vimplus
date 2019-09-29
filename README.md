@@ -249,9 +249,9 @@ An automatic configuration program for vim
 | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | <a href='#支持开源'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/wechat.png" height="150" width="150" /></a> | <a href='#支持开源'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/alipay.png" height="150" width="150" /></a> |
 
-| 支持者             | RMB   | 时间       |
-| -------            | ----- | -----      |
-| [zhoumengkang][80] | ¥50   | 2019-09-28 |
+| 序号  | 支持者             | RMB   | 时间       |
+| ----- | -------            | ----- | -----      |
+| 1     | [zhoumengkang][80] | ¥50   | 2019-09-28 |
 
 
 ## vimplus:star:趋势图
