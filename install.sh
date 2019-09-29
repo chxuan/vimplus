@@ -318,7 +318,7 @@ function install_vim_plugin()
 # 在linux上安装ycm插件
 function install_ycm_on_linux()
 {
-    git clone https://gitee.com/chxuan/YouCompleteMe_linux_with_clang.git ~/.vim/plugged/YouCompleteMe
+    git clone https://gitee.com/chxuan/YouCompleteMe-clang.git ~/.vim/plugged/YouCompleteMe
 
     cd ~/.vim/plugged/YouCompleteMe
     python2.7 ./install.py --clang-completer
@@ -344,7 +344,7 @@ function compile_ycm_on_mac_mojave()
 # 在MacOS上安装ycm插件
 function install_ycm_on_mac()
 {
-    git clone https://gitee.com/chxuan/YouCompleteMe.git ~/.vim/plugged/YouCompleteMe
+    git clone https://gitee.com/chxuan/YouCompleteMe-clang.git ~/.vim/plugged/YouCompleteMe
 
     product_version=$(sw_vers | grep ProductVersion)
     version=${product_version#*:}
