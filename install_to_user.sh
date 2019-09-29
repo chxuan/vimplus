@@ -42,6 +42,78 @@ function is_valid_user_on_linux()
     echo $is_found
 }
 
+# 获取日期
+function get_datetime()
+{
+    time=$(date "+%Y%m%d%H%M%S")
+    echo $time
+}
+
+# 判断文件是否存在
+function is_exist_file()
+{
+    filename=$1
+    if [ -f $filename ]; then
+        echo 1
+    else
+        echo 0
+    fi
+}
+
+# 判断目录是否存在
+function is_exist_dir()
+{
+    dir=$1
+    if [ -d $dir ]; then
+        echo 1
+    else
+        echo 0
+    fi
+}
+
+#备份原有的.vimrc文件
+function backup_vimrc_file()
+{
+    user=$1
+    home_path=$2
+    old_vimrc=$home_path".vimrc"
+    is_exist=$(is_exist_file $old_vimrc)
+    if [ $is_exist == 1 ]; then
+        time=$(get_datetime)
+        backup_vimrc=$old_vimrc"_bak_"$time
+        read -p "Find "$old_vimrc" already exists,backup "$old_vimrc" to "$backup_vimrc"[Y/N]:" ch
+        if [ $ch == "Y" ] || [ $ch == "y" ]; then
+            cp $old_vimrc $backup_vimrc
+            chown $user":"$user $backup_vimrc
+        fi
+    fi
+}
+
+#备份原有的.vim目录
+function backup_vim_dir()
+{
+    user=$1
+    home_path=$2
+    old_vim=$home_path".vim"
+    is_exist=$(is_exist_dir $old_vim)
+    if [ $is_exist == 1 ]; then
+        time=$(get_datetime)
+        backup_vim=$old_vim"_bak_"$time
+        read -p "Find "$old_vim" already exists,backup "$old_vim" to "$backup_vim"[Y/N]:" ch
+        if [ $ch == "Y" ] || [ $ch == "y" ]; then
+            cp -R $old_vim $backup_vim
+            chown -R $user":"$user $backup_vim
+        fi
+    fi
+}
+
+# 备份原有的.vimrc和.vim
+function backup_vimrc_and_vim()
+{
+    backup_vimrc_file $1 $2
+    backup_vim_dir $1 $2
+}
+
 # 打印logo
 function print_logo()
 {
@@ -97,6 +169,8 @@ function install_to_user_on_linux()
 
     echo "Current home path:"$src_home_path
     echo "Installing vimplus to "$desc_home_path
+
+    backup_vimrc_and_vim $desc_username $desc_home_path
 
     # 拷贝.vim目录
     src_vim_path=$src_home_path".vim/"
