@@ -191,7 +191,7 @@ function compile_vim_on_centos()
         perl perl-devel perl-ExtUtils-ParseXS \
         perl-ExtUtils-XSpp perl-ExtUtils-CBuilder \
         perl-ExtUtils-Embed libX11-devel ncurses-devel
-    
+
     git clone https://gitee.com/chxuan/vim81.git ~/vim81
     cd ~/vim81
     ./configure --with-features=huge \
@@ -244,6 +244,7 @@ function install_prepare_software_on_debian()
 function install_prepare_software_on_centos()
 {
     sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack git
+    create_tags
     compile_vim_on_centos
 }
 
@@ -488,6 +489,16 @@ function get_now_timestamp()
     echo ${cur_sec_and_ns%-*}
 }
 
+# 生成系统标签
+function create_tags()
+{
+    systags=$HOME"/.vim/systags"
+    is_exist=$(is_exist_file $systags)
+    if [ $is_exist == 0 ]; then
+        ctags -I __THROW --file-scope=yes --langmap=c:+.h --languages=c,c++ --links=yes --c-kinds=+p --fields=+S  -R -f ~/.vim/systags /usr/include /usr/local/include
+    fi
+}
+
 # main函数
 function main()
 {
@@ -496,7 +507,7 @@ function main()
     type=`get_platform_type`
     echo "Platform type: "${type}
 
-    if [ ${type} == "Darwin" ]; then 
+    if [ ${type} == "Darwin" ]; then
         install_vimplus_on_mac
     elif [ ${type} == "Linux" ]; then
         install_vimplus_on_linux
