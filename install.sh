@@ -328,7 +328,7 @@ function install_ycm_on_linux()
 function compile_ycm_on_mac_legacy()
 {
     cd ~/.vim/plugged/YouCompleteMe
-    python2.7 ./install.py --clang-completer --system-libclang
+    python2.7 ./install.py --clang-completer
 }
 
 # macos编译ycm, Mojave上的方法
@@ -338,7 +338,7 @@ function compile_ycm_on_mac_mojave()
     xcode-select --install
     open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
     cd ~/.vim/plugged/YouCompleteMe
-    python2.7 ./install.py --clang-completer --system-libclang
+    python2.7 ./install.py --clang-completer
 }
 
 # 在MacOS上安装ycm插件
