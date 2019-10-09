@@ -491,7 +491,7 @@ function main()
     type=`get_platform_type`
     echo "Platform type: "${type}
 
-    if [ ${type} == "Darwin" ]; then 
+    if [ ${type} == "Darwin" ]; then
         install_vimplus_on_mac
     elif [ ${type} == "Linux" ]; then
         install_vimplus_on_linux
