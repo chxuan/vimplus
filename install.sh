@@ -113,6 +113,17 @@ function is_ubuntu1404()
     fi
 }
 
+# 判断是否是macos10.14版本
+function is_macos1014()
+{
+    product_version=$(sw_vers | grep ProductVersion)
+    if [[ $product_version =~ "10.14" ]]; then
+        echo 1
+    else
+        echo 0
+    fi
+}
+
 # 在ubuntu上源代码安装vim
 function compile_vim_on_ubuntu()
 {
@@ -213,7 +224,14 @@ function compile_vim_on_centos()
 # 安装mac平台必要软件
 function install_prepare_software_on_mac()
 {
+    xcode-select --install
+
     brew install vim gcc cmake ctags-exuberant curl ack
+
+    macos1014=$(is_macos1014)
+    if [ $macos1014 == 1 ]; then
+        open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
+    fi
 }
 
 # 安装ubuntu必要软件
@@ -324,36 +342,13 @@ function install_ycm_on_linux()
     python2.7 ./install.py --clang-completer
 }
 
-# macos编译ycm, 原始方法
-function compile_ycm_on_mac_legacy()
-{
-    cd ~/.vim/plugged/YouCompleteMe
-    python2.7 ./install.py --clang-completer
-}
-
-# macos编译ycm, Mojave上的方法
-function compile_ycm_on_mac_mojave()
-{
-    echo "Installing macOS_10.14 sdk headers..."
-    xcode-select --install
-    open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
-    cd ~/.vim/plugged/YouCompleteMe
-    python2.7 ./install.py --clang-completer
-}
-
 # 在MacOS上安装ycm插件
 function install_ycm_on_mac()
 {
     git clone https://gitee.com/chxuan/YouCompleteMe-clang.git ~/.vim/plugged/YouCompleteMe
 
-    product_version=$(sw_vers | grep ProductVersion)
-    version=${product_version#*:}
-    main_version=${version%.*}
-    if [ ${main_version} == "10.14" ]; then
-        compile_ycm_on_mac_mojave
-    else
-        compile_ycm_on_mac_legacy
-    fi
+    cd ~/.vim/plugged/YouCompleteMe
+    python2.7 ./install.py --clang-completer
 }
 
 # 打印logo
