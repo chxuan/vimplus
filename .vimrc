@@ -92,8 +92,13 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gvim/macvim设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let uname = system('uname -s')
 if has("gui_running")
-    set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ Complete:h18 " 设置字体
+    if uname == "Darwin\n"
+        set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ Complete:h18 " 设置字体
+    else
+        set guifont=DroidSansMono\ Nerd\ Font\ Regular\ 18      " 设置字体
+    endif
     set guioptions-=m           " 隐藏菜单栏
     set guioptions-=T           " 隐藏工具栏
     set guioptions-=L           " 隐藏左侧滚动条
@@ -254,18 +259,18 @@ let g:ycm_complete_in_strings = 1
 let g:ycm_server_python_interpreter = '/usr/bin/python2.7'
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_semantic_triggers =  {
-  \   'c' : ['->', '.','re![_a-zA-z0-9]'],
-  \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
-  \             're!\[.*\]\s'],
-  \   'ocaml' : ['.', '#'],
-  \   'cpp,objcpp' : ['->', '.', '::','re![_a-zA-Z0-9]'],
-  \   'perl' : ['->'],
-  \   'php' : ['->', '::'],
-  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-  \   'ruby' : ['.', '::'],
-  \   'lua' : ['.', ':'],
-  \   'erlang' : [':'],
-  \ }
+            \   'c' : ['->', '.','re![_a-zA-z0-9]'],
+            \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+            \             're!\[.*\]\s'],
+            \   'ocaml' : ['.', '#'],
+            \   'cpp,objcpp' : ['->', '.', '::','re![_a-zA-Z0-9]'],
+            \   'perl' : ['->'],
+            \   'php' : ['->', '::'],
+            \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+            \   'ruby' : ['.', '::'],
+            \   'lua' : ['.', ':'],
+            \   'erlang' : [':'],
+            \ }
 nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
 " 已经使用cpp-mode插件提供的转到函数实现的功能
 " nnoremap <leader>i :YcmCompleter GoToDefinition<cr> 
@@ -284,7 +289,6 @@ map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
 " markdown
-let uname = system('uname -s')
 if uname == "Darwin\n"
     let g:mkdp_path_to_chrome = "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome"
 else
@@ -302,17 +306,17 @@ nmap <leader>w <Plug>(easymotion-overwin-w)
 
 " nerdtree-git-plugin
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
-    \ "Unknown"   : "?"
-    \ }
+            \ "Modified"  : "✹",
+            \ "Staged"    : "✚",
+            \ "Untracked" : "✭",
+            \ "Renamed"   : "➜",
+            \ "Unmerged"  : "═",
+            \ "Deleted"   : "✖",
+            \ "Dirty"     : "✗",
+            \ "Clean"     : "✔︎",
+            \ 'Ignored'   : '☒',
+            \ "Unknown"   : "?"
+            \ }
 
 " LeaderF
 nnoremap <leader>f :LeaderfFile ~<cr>
