@@ -268,7 +268,10 @@ function install_prepare_software_on_centos()
 # 安装fedora必要软件
 function install_prepare_software_on_fedora()
 {
-    sudo dnf install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack git
+    if [ ${distro} == "CentOS" ];then
+        sudo dnf install -y epel-release
+    fi
+    sudo dnf install -y vim ctags gcc gcc-c++ kernel-devel make automake cmake python3 python3-devel curl fontconfig ack git
 }
 
 # 安装archlinux必要软件
@@ -340,6 +343,11 @@ function install_ycm_on_linux()
 
     cd ~/.vim/plugged/YouCompleteMe
     python2.7 ./install.py --clang-completer
+    # 没有安装py2 使用py3
+    if [ "$?" -ne 0 ]; then
+        echo "未安装python2.x,使用python3.x安装ycm"
+        python3 ./install.py --clang-completer
+    fi
 }
 
 # 在MacOS上安装ycm插件
@@ -425,6 +433,8 @@ function install_vimplus_on_fedora()
     backup_vimrc_and_vim
     install_prepare_software_on_fedora
     begin_install_vimplus
+    # 安装完毕后 将ycm的ycm_server_python_interpreter默认的py2解释器换成py3
+    sed -i 's/\/usr\/bin\/python2.7/\/usr\/bin\/python3/g' ~/.vimrc
 }
 
 # 在archlinux上安装vimplus
@@ -462,7 +472,13 @@ function install_vimplus_on_linux()
     elif [ ${distro} == "Kali" ]; then
         install_vimplus_on_debian
     elif [ ${distro} == "CentOS" ]; then
-        install_vimplus_on_centos
+        version=`sudo cat /etc/redhat-release | awk '{print $4}' | awk -F . '{printf "%s",$1}'`
+        if [ "$version" -gt 7 ];then
+            echo "CentOS Version > 7"
+            install_vimplus_on_fedora
+        else
+            install_vimplus_on_centos
+        fi
     elif [ ${distro} == "fedora" ]; then
         install_vimplus_on_fedora
     elif [ ${distro} == "openSUSE" ]; then
