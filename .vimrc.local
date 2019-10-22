@@ -1,2 +1,5 @@
-"set relativenumber  " 开启相对行号
+" 开启相对行号
+" set relativenumber  
 
+" 启动代码对齐线
+" let g:indentLine_enabled = 1
