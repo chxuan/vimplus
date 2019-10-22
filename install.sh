@@ -113,6 +113,13 @@ function is_ubuntu1404()
     fi
 }
 
+# 获取centos版本
+function get_centos_version()
+{
+    version=`cat /etc/redhat-release | awk '{print $4}' | awk -F . '{printf "%s",$1}'`
+    echo $version
+}
+
 # 判断是否是macos10.14版本
 function is_macos1014()
 {
@@ -261,17 +268,20 @@ function install_prepare_software_on_debian()
 # 安装centos必要软件
 function install_prepare_software_on_centos()
 {
-    sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack git
-    compile_vim_on_centos
+    version=$(get_centos_version)
+    if [ "$version" -gt 7 ];then
+        sudo yum install -y epel-release
+        sudo yum install -y ctags automake gcc gcc-c++ kernel-devel make cmake python2 python2-devel python3-devel curl fontconfig ack git
+    else
+        sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack git
+        compile_vim_on_centos
+    fi
 }
 
 # 安装fedora必要软件
 function install_prepare_software_on_fedora()
 {
-    if [ ${distro} == "CentOS" ];then
-        sudo dnf install -y epel-release
-    fi
-    sudo dnf install -y vim ctags gcc gcc-c++ kernel-devel make automake cmake python3 python3-devel curl fontconfig ack git
+    sudo dnf install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack git
 }
 
 # 安装archlinux必要软件
@@ -343,11 +353,6 @@ function install_ycm_on_linux()
 
     cd ~/.vim/plugged/YouCompleteMe
     python2.7 ./install.py --clang-completer
-    # 没有安装py2 使用py3
-    if [ "$?" -ne 0 ]; then
-        echo "未安装python2.x,使用python3.x安装ycm"
-        python3 ./install.py --clang-completer
-    fi
 }
 
 # 在MacOS上安装ycm插件
@@ -433,8 +438,6 @@ function install_vimplus_on_fedora()
     backup_vimrc_and_vim
     install_prepare_software_on_fedora
     begin_install_vimplus
-    # 安装完毕后 将ycm的ycm_server_python_interpreter默认的py2解释器换成py3
-    sed -i 's/\/usr\/bin\/python2.7/\/usr\/bin\/python3/g' ~/.vimrc
 }
 
 # 在archlinux上安装vimplus
@@ -472,13 +475,7 @@ function install_vimplus_on_linux()
     elif [ ${distro} == "Kali" ]; then
         install_vimplus_on_debian
     elif [ ${distro} == "CentOS" ]; then
-        version=`sudo cat /etc/redhat-release | awk '{print $4}' | awk -F . '{printf "%s",$1}'`
-        if [ "$version" -gt 7 ];then
-            echo "CentOS Version > 7"
-            install_vimplus_on_fedora
-        else
-            install_vimplus_on_centos
-        fi
+        install_vimplus_on_centos
     elif [ ${distro} == "fedora" ]; then
         install_vimplus_on_fedora
     elif [ ${distro} == "openSUSE" ]; then
