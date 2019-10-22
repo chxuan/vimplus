@@ -117,6 +117,7 @@ Plug 'chxuan/vimplus-startify'
 Plug 'chxuan/tagbar'
 Plug 'Valloric/YouCompleteMe'
 Plug 'Yggdroot/LeaderF'
+Plug 'Yggdroot/indentLine'
 Plug 'mileszs/ack.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
@@ -341,6 +342,9 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 nnoremap <leader>g :GV<cr>
 nnoremap <leader>G :GV!<cr>
 nnoremap <leader>gg :GV?<cr>
+
+" indentLine 默认不启用
+let g:indentLine_enabled = 0
 
 " 个性化
 if filereadable(expand($HOME . '/.vimrc.local'))
