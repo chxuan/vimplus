@@ -270,8 +270,8 @@ function install_prepare_software_on_centos()
 {
     version=$(get_centos_version)
     if [ "$version" -gt 7 ];then
-        sudo yum install -y epel-release
-        sudo yum install -y ctags automake gcc gcc-c++ kernel-devel make cmake python2 python2-devel python3-devel curl fontconfig ack git
+        sudo dnf install -y epel-release
+        sudo dnf install -y ctags automake gcc gcc-c++ kernel-devel make cmake python2 python2-devel python3-devel curl fontconfig ack git
     else
         sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack git
         compile_vim_on_centos
