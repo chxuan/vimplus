@@ -327,11 +327,11 @@ function install_fonts_on_mac()
 # 安装linux平台字体
 function install_fonts_on_linux()
 {
-    mkdir ~/.fonts
-    rm -rf ~/.fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf
-    cp ./fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf ~/.fonts
+    mkdir -p ~/.local/share/fonts
+    rm -rf ~/.local/share/fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf
+    cp ./fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf ~/.local/share/fonts
 
-    fc-cache -vf ~/.fonts
+    fc-cache -vf ~/.local/share/fonts
 }
 
 # 下载插件管理软件vim-plug
