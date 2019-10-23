@@ -346,22 +346,21 @@ function install_vim_plugin()
     vim -c "PlugInstall" -c "q" -c "q"
 }
 
-# 在linux上安装ycm插件
-function install_ycm_on_linux()
+# 安装ycm插件
+function install_ycm()
 {
     git clone https://gitee.com/chxuan/YouCompleteMe-clang.git ~/.vim/plugged/YouCompleteMe
 
     cd ~/.vim/plugged/YouCompleteMe
-    python2.7 ./install.py --clang-completer
-}
 
-# 在MacOS上安装ycm插件
-function install_ycm_on_mac()
-{
-    git clone https://gitee.com/chxuan/YouCompleteMe-clang.git ~/.vim/plugged/YouCompleteMe
-
-    cd ~/.vim/plugged/YouCompleteMe
-    python2.7 ./install.py --clang-completer
+    read -p "Please choose to compile ycm with python2 or python3, if there is a problem with the current selection, please choose another one[2/3]:" version
+    if [ $version == "2" ]; then
+        echo "Compile ycm with python2."
+        python2.7 ./install.py --clang-completer
+    else
+        echo "Compile ycm with python3."
+        python3 ./install.py --clang-completer
+    fi
 }
 
 # 打印logo
@@ -391,7 +390,7 @@ function install_vimplus_on_mac()
     install_prepare_software_on_mac
     copy_files
     install_fonts_on_mac
-    install_ycm_on_mac
+    install_ycm
     download_vim_plug
     install_vim_plugin
     print_logo
@@ -402,7 +401,7 @@ function begin_install_vimplus()
 {
     copy_files
     install_fonts_on_linux
-    install_ycm_on_linux
+    install_ycm
     download_vim_plug
     install_vim_plugin
     print_logo
