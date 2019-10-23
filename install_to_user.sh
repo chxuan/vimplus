@@ -215,7 +215,7 @@ function install_to_user_on_linux()
     mkdir -p $desc_home_path".local/share/fonts/"
     rm -rf $desc_home_path".local/share/fonts/Droid Sans Mono Nerd Font Complete.otf"
     cp $desc_vimplus_path"fonts/Droid Sans Mono Nerd Font Complete.otf" $desc_home_path".local/share/fonts/"
-    chown -R $desc_username":"$desc_username $desc_home_path".local/share/fonts/"
+    chown -R $desc_username":"$desc_username $desc_home_path".local/"
     fc-cache -vf $desc_home_path".local/share/fonts/"
 }
 
