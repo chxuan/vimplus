@@ -182,8 +182,11 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-"复制当前选中到系统剪切板
+" 复制当前选中到系统剪切板
 vmap <leader><leader>y "+y
+
+" 将系统剪切板内容粘贴到vim
+nnoremap <leader><leader>p "+p
 
 " 打开文件自动定位到最后编辑的位置
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
