@@ -154,7 +154,7 @@ Plug 'terryma/vim-smooth-scroll'
 Plug 'rhysd/clever-f.vim'
 Plug 'vim-scripts/indentpython.vim'
 
-call plug#end()            
+          
 
 " load vim default plugin
 runtime macros/matchit.vim
@@ -355,3 +355,4 @@ let g:indentLine_enabled = 0
 if filereadable(expand($HOME . '/.vimrc.local'))
     source $HOME/.vimrc.local
 endif
+call plug#end()  
