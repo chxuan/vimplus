@@ -154,7 +154,6 @@ Plug 'terryma/vim-smooth-scroll'
 Plug 'rhysd/clever-f.vim'
 Plug 'vim-scripts/indentpython.vim'
 
-          
 
 " load vim default plugin
 runtime macros/matchit.vim
