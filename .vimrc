@@ -163,7 +163,7 @@ runtime macros/matchit.vim
 nnoremap <leader>e :edit $MYVIMRC<cr>
 
 " 查看vimplus的help文件
-nnoremap <leader>h :edit ~/.vimplus/help.md<cr>
+nnoremap <leader>h :view +let\ &l:modifiable=0 ~/.vimplus/help.md<cr>
 
 " 打开当前光标所在单词的vim帮助文档
 nnoremap <leader>H :execute ":help " . expand("<cword>")<cr>
