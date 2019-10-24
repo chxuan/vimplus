@@ -242,6 +242,8 @@ An automatic configuration program for vim
 <td><a href="https://github.com/urain39"><img src="https://avatars2.githubusercontent.com/u/16981964?s=400&v=4"/></a><p align="center">urain39</p></td>
 <td><a href="https://github.com/freedomDR"><img src="https://avatars3.githubusercontent.com/u/11146756?s=400&v=4"/></a><p align="center">freedomDR</p></td>
 <td><a href="https://github.com/starifly"><img src="https://avatars2.githubusercontent.com/u/2003879?s=400&v=4"/></a><p align="center">starifly</p></td>
+</tr>
+<tr>
 <td><a href="https://github.com/Shaloc"><img src="https://avatars2.githubusercontent.com/u/24523674?s=400&v=4"/></a><p align="center">Shaloc</p></td>
 <td><a href="https://github.com/jokerkeny"><img src="https://avatars2.githubusercontent.com/u/10593391?s=400&v=4"/></a><p align="center">jokerkeny</p></td>
 <td><a href="https://github.com/xuthus5"><img src="https://avatars0.githubusercontent.com/u/22839236?s=400&v=4"/></a><p align="center">xuthus5</p></td>
