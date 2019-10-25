@@ -5,7 +5,7 @@ An automatic configuration program for vim
 
 <p align="center">
     <a href="#build" alt="build"><img src="https://img.shields.io/badge/build-passing-brightgreen.svg" /></a>
-    <a href="#安装" alt="platform"><img src="https://img.shields.io/badge/platform-MacOSX%20%7C%20Linux%2064bit%20%7C%20Docker-brightgreen.svg" /></a>
+    <a href="#安装" alt="platform"><img src="https://img.shields.io/badge/platform-MacOSX%20%7C%20Linux%2064bit%20%7C%20Docker%20%7C%20WSL-brightgreen.svg" /></a>
     <a href="https://github.com/chxuan/vimplus/stargazers" alt="stars"><img src="https://img.shields.io/github/stars/chxuan/vimplus.svg?style=popout&label=stars" /></a>
     <a href="https://github.com/chxuan/vimplus/forks" alt="forks"><img src="https://img.shields.io/github/forks/chxuan/vimplus.svg?style=popout&label=forks" /></a>
     <a href="https://github.com/chxuan/vimplus/graphs/contributors" alt="contributors"><img src="https://img.shields.io/github/contributors/chxuan/vimplus" /></a>
@@ -248,6 +248,7 @@ An automatic configuration program for vim
 <td width="20%"><a href="https://github.com/jokerkeny"><img src="https://avatars2.githubusercontent.com/u/10593391?s=400&v=4"/></a><p align="center">jokerkeny</p></td>
 <td width="20%"><a href="https://github.com/xuthus5"><img src="https://avatars0.githubusercontent.com/u/22839236?s=400&v=4"/></a><p align="center">xuthus5</p></td>
 <td width="20%"><a href="https://github.com/zhoumengkang"><img src="https://avatars2.githubusercontent.com/u/3904765?s=400&v=4"/></a><p align="center">zhoumengkang</p></td>
+<td width="20%"><a href="https://github.com/Titubery"><img src="https://avatars1.githubusercontent.com/u/17917040?s=400&v=4"/></a><p align="center">Titubery</p></td>
 </tr>
 </table>
 
