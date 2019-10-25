@@ -334,3 +334,4 @@
 | -------               | -----                             |
 | `vim -u NONE -N`      | 开启vim时不加载vimrc文件          |
 | `vimdiff file1 file2` | 显示文件差异                      |
+| `vim -R filename`     | 以只读方式打开（阅读模式）          |
