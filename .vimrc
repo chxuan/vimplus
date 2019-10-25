@@ -154,6 +154,12 @@ Plug 'terryma/vim-smooth-scroll'
 Plug 'rhysd/clever-f.vim'
 Plug 'vim-scripts/indentpython.vim'
 
+" 自定义插件
+if filereadable(expand($HOME . '/.vimrc.plugs'))
+    source $HOME/.vimrc.plugs
+endif
+
+call plug#end()  
 
 " load vim default plugin
 runtime macros/matchit.vim
@@ -353,8 +359,7 @@ nnoremap <leader>gg :GV?<cr>
 " indentLine 默认不启用
 let g:indentLine_enabled = 0
 
-" 个性化
+" 自定义设置
 if filereadable(expand($HOME . '/.vimrc.local'))
     source $HOME/.vimrc.local
 endif
-call plug#end()  
