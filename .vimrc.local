@@ -3,3 +3,9 @@
 
 " 启动代码对齐线
 " let g:indentLine_enabled = 1
+
+" for test
+" let g:rainbow_active = 1
+
+" vim read mode
+" autocmd BufRead * let &l:modifiable = !&readonly
