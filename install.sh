@@ -303,8 +303,11 @@ function copy_files()
     rm -rf ~/.vimrc
     ln -s ${PWD}/.vimrc ~
 
-    rm -rf ~/.vimrc.local
-    cp ${PWD}/.vimrc.local ~
+    rm -rf ~/.vimrc.plugins
+    cp ${PWD}/.vimrc.plugins ~
+
+    rm -rf ~/.vimrc.config
+    cp ${PWD}/.vimrc.config ~
 
     rm -rf ~/.ycm_extra_conf.py
     ln -s ${PWD}/.ycm_extra_conf.py ~

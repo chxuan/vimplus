@@ -81,9 +81,9 @@ An automatic configuration program for vim
     docker run -it chxuan/ubuntu-vimplus
     
 
-## 个性化
+## 自定义
 
-修改 `~/.vimrc.local` 文件内容，以启用个性化定制，可覆盖 `~/.vimrc` 中的设置。
+`~/.vimrc`为vimplus的默认配置，一般不做修改，若要增加插件，请修改 `~/.vimrc.plugins`，其他配置请放入`~/.vimrc.config`。
 
 
 ## 插件列表

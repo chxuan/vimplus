@@ -122,7 +122,6 @@ Plug 'chxuan/vimplus-startify'
 Plug 'chxuan/tagbar'
 Plug 'Valloric/YouCompleteMe'
 Plug 'Yggdroot/LeaderF'
-Plug 'Yggdroot/indentLine'
 Plug 'mileszs/ack.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
@@ -155,8 +154,8 @@ Plug 'rhysd/clever-f.vim'
 Plug 'vim-scripts/indentpython.vim'
 
 " 自定义插件
-if filereadable(expand($HOME . '/.vimrc.plugs'))
-    source $HOME/.vimrc.plugs
+if filereadable(expand($HOME . '/.vimrc.plugins'))
+    source $HOME/.vimrc.plugins
 endif
 
 call plug#end()  
@@ -356,10 +355,7 @@ nnoremap <leader>g :GV<cr>
 nnoremap <leader>G :GV!<cr>
 nnoremap <leader>gg :GV?<cr>
 
-" indentLine 默认不启用
-let g:indentLine_enabled = 0
-
 " 自定义设置
-if filereadable(expand($HOME . '/.vimrc.local'))
-    source $HOME/.vimrc.local
+if filereadable(expand($HOME . '/.vimrc.config'))
+    source $HOME/.vimrc.config
 endif

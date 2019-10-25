@@ -192,9 +192,13 @@ function install_to_user_on_linux()
     cp -R $src_vimplus_path $desc_home_path
     chown -R $desc_username":"$desc_username $desc_vimplus_path
 
-    rm -rf $desc_home_path".vimrc.local"
-    cp $desc_vimplus_path".vimrc.local" $desc_home_path
-    chown $desc_username":"$desc_username $desc_home_path".vimrc.local"
+    rm -rf $desc_home_path".vimrc.plugins"
+    cp $desc_vimplus_path".vimrc.plugins" $desc_home_path
+    chown $desc_username":"$desc_username $desc_home_path".vimrc.plugins"
+
+    rm -rf $desc_home_path".vimrc.config"
+    cp $desc_vimplus_path".vimrc.config" $desc_home_path
+    chown $desc_username":"$desc_username $desc_home_path".vimrc.config"
 
     # 创建软链接
     rm -rf $desc_home_path".vimrc"
