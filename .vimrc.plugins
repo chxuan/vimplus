@@ -4,4 +4,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Plug 'Yggdroot/indentLine'
+" Plug 'gorodinskiy/vim-coloresque'
+" Plug 'vim-scripts/DoxygenToolkit.vim'
 
