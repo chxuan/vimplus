@@ -102,15 +102,14 @@ function backup_vimrc_and_vim()
     backup_vim_dir
 }
 
-# 判断是否是ubuntu14.04LTS版本
-function is_ubuntu1404()
+# 获取ubuntu版本
+function get_ubuntu_version()
 {
-    version=$(cat /etc/lsb-release | grep "DISTRIB_RELEASE")
-    if [ ${version} == "DISTRIB_RELEASE=14.04" ]; then
-        echo 1
-    else
-        echo 0
-    fi
+    line=$(cat /etc/lsb-release | grep "DISTRIB_RELEASE")
+    arr=(${line//=/ })
+    version=(${arr[1]//./ })
+
+    echo $version
 }
 
 # 获取centos版本
@@ -246,15 +245,20 @@ function install_prepare_software_on_ubuntu()
 {
     sudo apt-get update
 
-    ubuntu1404=`is_ubuntu1404`
-    if [ ${ubuntu1404} == 1 ]; then
+    version=$(get_ubuntu_version)
+    if [ $version -eq 14 ];then
         sudo apt-get install -y cmake3
     else
         sudo apt-get install -y cmake
     fi
 
     sudo apt-get install -y exuberant-ctags build-essential python python-dev python3-dev fontconfig curl libfile-next-perl ack-grep git
-    compile_vim_on_ubuntu
+
+    if [ $version -ge 18 ];then
+        sudo apt-get install -y vim
+    else
+        compile_vim_on_ubuntu
+    fi
 }
 
 # 安装debian必要软件
@@ -269,9 +273,9 @@ function install_prepare_software_on_debian()
 function install_prepare_software_on_centos()
 {
     version=$(get_centos_version)
-    if [ "$version" -gt 7 ];then
+    if [ $version -ge 8 ];then
         sudo dnf install -y epel-release
-        sudo dnf install -y ctags automake gcc gcc-c++ kernel-devel make cmake python2 python2-devel python3-devel curl fontconfig ack git
+        sudo dnf install -y vim ctags automake gcc gcc-c++ kernel-devel make cmake python2 python2-devel python3-devel curl fontconfig ack git
     else
         sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack git
         compile_vim_on_centos
