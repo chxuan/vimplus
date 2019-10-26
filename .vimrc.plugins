@@ -3,6 +3,8 @@
 " 自定义插件列表（该文件只放插件，若要增加其他配置，请放入~/.vimrc.config）
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Plug 'iamcco/mathjax-support-for-mkdp'
+" Plug 'iamcco/markdown-preview.vim'
 " Plug 'Yggdroot/indentLine'
 " Plug 'gorodinskiy/vim-coloresque'
 " Plug 'vim-scripts/DoxygenToolkit.vim'

@@ -92,9 +92,9 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gvim/macvim设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let uname = system('uname -s')
 if has("gui_running")
-    if uname == "Darwin\n"
+    let system = system('uname -s')
+    if system == "Darwin\n"
         set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ Complete:h18 " 设置字体
     else
         set guifont=DroidSansMono\ Nerd\ Font\ Regular\ 18      " 设置字体
@@ -125,8 +125,6 @@ Plug 'Yggdroot/LeaderF'
 Plug 'mileszs/ack.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
-Plug 'iamcco/mathjax-support-for-mkdp'
-Plug 'iamcco/markdown-preview.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -296,17 +294,6 @@ inoremap <silent> <leader>t <esc> :TagbarToggle<cr>
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
-
-" markdown
-if uname == "Darwin\n"
-    let g:mkdp_path_to_chrome = "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome"
-else
-    let g:mkdp_path_to_chrome = '/usr/bin/google-chrome-stable %U'
-endif
-nmap <silent> <F7> <Plug>MarkdownPreview
-imap <silent> <F7> <Plug>MarkdownPreview
-nmap <silent> <F8> <Plug>StopMarkdownPreview
-imap <silent> <F8> <Plug>StopMarkdownPreview
 
 " vim-easymotion
 let g:EasyMotion_smartcase = 1
