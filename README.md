@@ -34,6 +34,8 @@ An automatic configuration program for vim
 
 #### 更新vimplus
 
+紧跟vimplus的步伐，尝鲜新特性
+
     ./update.sh
     
 
@@ -78,6 +80,8 @@ An automatic configuration program for vim
     sudo ./install_to_user.sh username1 username2 //替换为真实用户名
     
 #### 更新vimplus
+
+紧跟vimplus的步伐，尝鲜新特性
 
     ./update.sh
 
