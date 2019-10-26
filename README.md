@@ -34,7 +34,6 @@ An automatic configuration program for vim
 
 #### 更新vimplus
 
-    cd ~/.vimplus
     ./update.sh
     
 
@@ -80,7 +79,6 @@ An automatic configuration program for vim
     
 #### 更新vimplus
 
-    cd ~/.vimplus
     ./update.sh
 
 
