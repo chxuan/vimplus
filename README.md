@@ -72,19 +72,17 @@ An automatic configuration program for vim
 
 为防止vimplus显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`。
 
-
-#### 更新vimplus
-
-    cd ~/.vimplus
-    ./update.sh
-
-
 #### 多用户支持
 
 将vimplus在某个用户下安装好后，若需要在其他用户也能够使用vimplus，则执行
 
     sudo ./install_to_user.sh username1 username2 //替换为真实用户名
     
+#### 更新vimplus
+
+    cd ~/.vimplus
+    ./update.sh
+
 
 ### Docker
 
