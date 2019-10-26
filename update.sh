@@ -67,9 +67,18 @@ function update_vimplus_on_linux()
     print_logo
 }
 
+# 获取当前时间戳
+function get_now_timestamp()
+{
+    cur_sec_and_ns=`date '+%s-%N'`
+    echo ${cur_sec_and_ns%-*}
+}
+
 # main函数
 function main()
 {
+    begin=`get_now_timestamp`
+
     type=`get_platform_type`
     echo "Platform type: "${type}
 
@@ -80,6 +89,11 @@ function main()
     else
         echo "Not support platform type: "${type}
     fi
+
+    end=`get_now_timestamp`
+    second=`expr ${end} - ${begin}`
+    min=`expr ${second} / 60`
+    echo "It takes "${min}" minutes."
 }
 
 # 调用main函数
