@@ -73,7 +73,7 @@ function backup_vimrc_file()
     if [ $is_exist == 1 ]; then
         time=$(get_datetime)
         backup_vimrc=$old_vimrc"_bak_"$time
-        read -p "Find "$old_vimrc" already exists,backup "$old_vimrc" to "$backup_vimrc"[Y/N]:" ch
+        read -p "Find "$old_vimrc" already exists,backup "$old_vimrc" to "$backup_vimrc"? [Y/N] " ch
         if [ $ch == "Y" ] || [ $ch == "y" ]; then
             cp $old_vimrc $backup_vimrc
         fi
@@ -88,7 +88,7 @@ function backup_vim_dir()
     if [ $is_exist == 1 ]; then
         time=$(get_datetime)
         backup_vim=$old_vim"_bak_"$time
-        read -p "Find "$old_vim" already exists,backup "$old_vim" to "$backup_vim"[Y/N]:" ch
+        read -p "Find "$old_vim" already exists,backup "$old_vim" to "$backup_vim"? [Y/N] " ch
         if [ $ch == "Y" ] || [ $ch == "y" ]; then
             cp -R $old_vim $backup_vim
         fi
@@ -360,7 +360,7 @@ function install_ycm()
 
     cd ~/.vim/plugged/YouCompleteMe
 
-    read -p "Please choose to compile ycm with python2 or python3, if there is a problem with the current selection, please choose another one[2/3]:" version
+    read -p "Please choose to compile ycm with python2 or python3, if there is a problem with the current selection, please choose another one. [2/3] " version
     if [ $version == "2" ]; then
         echo "Compile ycm with python2."
         python2.7 ./install.py --clang-completer

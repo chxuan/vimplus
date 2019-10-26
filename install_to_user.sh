@@ -81,7 +81,7 @@ function backup_vimrc_file()
     if [ $is_exist == 1 ]; then
         time=$(get_datetime)
         backup_vimrc=$old_vimrc"_bak_"$time
-        read -p "Find "$old_vimrc" already exists,backup "$old_vimrc" to "$backup_vimrc"[Y/N]:" ch
+        read -p "Find "$old_vimrc" already exists,backup "$old_vimrc" to "$backup_vimrc"? [Y/N] " ch
         if [ $ch == "Y" ] || [ $ch == "y" ]; then
             cp $old_vimrc $backup_vimrc
             chown $user":"$user $backup_vimrc
@@ -99,7 +99,7 @@ function backup_vim_dir()
     if [ $is_exist == 1 ]; then
         time=$(get_datetime)
         backup_vim=$old_vim"_bak_"$time
-        read -p "Find "$old_vim" already exists,backup "$old_vim" to "$backup_vim"[Y/N]:" ch
+        read -p "Find "$old_vim" already exists,backup "$old_vim" to "$backup_vim"? [Y/N] " ch
         if [ $ch == "Y" ] || [ $ch == "y" ]; then
             cp -R $old_vim $backup_vim
             chown -R $user":"$user $backup_vim
