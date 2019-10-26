@@ -80,6 +80,36 @@ function backup_vimrc_file()
     fi
 }
 
+#备份原有的.vimrc.plugins文件
+function backup_vimrc_plugins_file()
+{
+    old_vimrc_plugins=$HOME"/.vimrc.plugins"
+    is_exist=$(is_exist_file $old_vimrc_plugins)
+    if [ $is_exist == 1 ]; then
+        time=$(get_datetime)
+        backup_vimrc_plugins=$old_vimrc_plugins"_bak_"$time
+        read -p "Find "$old_vimrc_plugins" already exists,backup "$old_vimrc_plugins" to "$backup_vimrc_plugins"? [Y/N] " ch
+        if [ $ch == "Y" ] || [ $ch == "y" ]; then
+            cp $old_vimrc_plugins $backup_vimrc_plugins
+        fi
+    fi
+}
+
+#备份原有的.vimrc.config文件
+function backup_vimrc_config_file()
+{
+    old_vimrc_config=$HOME"/.vimrc.config"
+    is_exist=$(is_exist_file $old_vimrc_config)
+    if [ $is_exist == 1 ]; then
+        time=$(get_datetime)
+        backup_vimrc_config=$old_vimrc_config"_bak_"$time
+        read -p "Find "$old_vimrc_config" already exists,backup "$old_vimrc_config" to "$backup_vimrc_config"? [Y/N] " ch
+        if [ $ch == "Y" ] || [ $ch == "y" ]; then
+            cp $old_vimrc_config $backup_vimrc_config
+        fi
+    fi
+}
+
 #备份原有的.vim目录
 function backup_vim_dir()
 {
@@ -99,6 +129,8 @@ function backup_vim_dir()
 function backup_vimrc_and_vim()
 {
     backup_vimrc_file
+    backup_vimrc_plugins_file
+    backup_vimrc_config_file
     backup_vim_dir
 }
 
