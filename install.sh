@@ -259,7 +259,7 @@ function compile_vim_on_centos()
     cd -
 }
 
-# 安装mac平台必要软件
+# 安装mac平台必备软件
 function install_prepare_software_on_mac()
 {
     xcode-select --install
@@ -272,7 +272,7 @@ function install_prepare_software_on_mac()
     fi
 }
 
-# 安装ubuntu必要软件
+# 安装ubuntu必备软件
 function install_prepare_software_on_ubuntu()
 {
     sudo apt-get update
@@ -293,7 +293,15 @@ function install_prepare_software_on_ubuntu()
     fi
 }
 
-# 安装debian必要软件
+# 安装ubuntu系必备软件
+function install_prepare_software_on_ubuntu_like()
+{
+    sudo apt-get update
+    sudo apt-get install -y cmake exuberant-ctags build-essential python python-dev python3-dev fontconfig curl libfile-next-perl ack-grep git
+    compile_vim_on_ubuntu
+}
+
+# 安装debian必备软件
 function install_prepare_software_on_debian()
 {
     sudo apt-get update
@@ -301,7 +309,7 @@ function install_prepare_software_on_debian()
     compile_vim_on_debian
 }
 
-# 安装centos必要软件
+# 安装centos必备软件
 function install_prepare_software_on_centos()
 {
     version=$(get_centos_version)
@@ -314,20 +322,20 @@ function install_prepare_software_on_centos()
     fi
 }
 
-# 安装fedora必要软件
+# 安装fedora必备软件
 function install_prepare_software_on_fedora()
 {
     sudo dnf install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack git
 }
 
-# 安装archlinux必要软件
+# 安装archlinux必备软件
 function install_prepare_software_on_archlinux()
 {
     sudo pacman -S --noconfirm vim ctags automake gcc cmake python3 python2 curl ack git fontconfig
     sudo ln -s /usr/lib/libtinfo.so.6 /usr/lib/libtinfo.so.5
 }
 
-# 安装opensuse必要软件
+# 安装opensuse必备软件
 function install_prepare_software_on_opensuse()
 {
     sudo zypper install -y vim ctags gcc gcc-c++ cmake python-devel python3-devel curl ack fontconfig git ncurses5-devel
@@ -454,6 +462,14 @@ function install_vimplus_on_ubuntu()
     begin_install_vimplus
 }
 
+# 在ubuntu系上安装vimplus
+function install_vimplus_on_ubuntu_like()
+{
+    backup_vimrc_and_vim
+    install_prepare_software_on_ubuntu_like
+    begin_install_vimplus
+}
+
 # 在debian上安装vimplus
 function install_vimplus_on_debian()
 {
@@ -503,11 +519,11 @@ function install_vimplus_on_linux()
     if [ ${distro} == "Ubuntu" ]; then
         install_vimplus_on_ubuntu
     elif [ ${distro} == "Deepin" ]; then
-        install_vimplus_on_ubuntu
+        install_vimplus_on_ubuntu_like
     elif [ ${distro} == "LinuxMint" ]; then
-        install_vimplus_on_ubuntu
+        install_vimplus_on_ubuntu_like
     elif [ ${distro} == "elementaryOS" ]; then
-        install_vimplus_on_ubuntu
+        install_vimplus_on_ubuntu_like
     elif [ ${distro} == "Debian" ]; then
         install_vimplus_on_debian
     elif [ ${distro} == "Kali" ]; then
