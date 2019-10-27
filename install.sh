@@ -141,7 +141,7 @@ function get_ubuntu_version()
     arr=(${line//=/ })
     version=(${arr[1]//./ })
 
-    echo $version
+    echo ${version[0]}
 }
 
 # 获取centos版本
