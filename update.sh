@@ -6,6 +6,17 @@ function get_platform_type()
     echo $(uname)
 }
 
+# 判断文件是否存在
+function is_exist_file()
+{
+    filename=$1
+    if [ -f $filename ]; then
+        echo 1
+    else
+        echo 0
+    fi
+}
+
 # 更新mac平台字体
 function update_fonts_on_mac()
 {
@@ -27,6 +38,22 @@ function update_fonts_on_linux()
 function update_vim_plugin()
 {
     vim -c "PlugUpdate" -c "q" -c "q"
+}
+
+# 拷贝文件
+function copy_files()
+{
+    vimrc_plugins=$HOME"/.vimrc.plugins"
+    is_exist=$(is_exist_file $vimrc_plugins)
+    if [ $is_exist != 1 ]; then
+        cp ${PWD}/.vimrc.plugins ~
+    fi
+
+    vimrc_config=$HOME"/.vimrc.config"
+    is_exist=$(is_exist_file $vimrc_config)
+    if [ $is_exist != 1 ]; then
+        cp ${PWD}/.vimrc.config ~
+    fi
 }
 
 # 打印logo
@@ -53,6 +80,7 @@ function print_logo()
 function update_vimplus_on_mac()
 {
     git pull origin master
+    copy_files
     update_fonts_on_mac
     update_vim_plugin
     print_logo
@@ -62,6 +90,7 @@ function update_vimplus_on_mac()
 function update_vimplus_on_linux()
 {
     git pull origin master
+    copy_files
     update_fonts_on_linux
     update_vim_plugin
     print_logo
