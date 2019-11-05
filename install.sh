@@ -398,7 +398,7 @@ function install_ycm()
     cd ~/.vim/plugged/YouCompleteMe
 
     read -p "Please choose to compile ycm with python2 or python3, if there is a problem with the current selection, please choose another one. [2/3] " version
-    if [ $version == "2" ]; then
+    if [[ $version == "2" ]]; then
         echo "Compile ycm with python2."
         python2.7 ./install.py --clang-completer
     else
