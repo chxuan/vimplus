@@ -264,7 +264,7 @@ function install_prepare_software_on_mac()
 {
     xcode-select --install
 
-    brew install vim gcc cmake ctags-exuberant curl ack
+    brew install vim gcc cmake ctags-exuberant ack
 
     macos1014=$(is_macos1014)
     if [ $macos1014 == 1 ]; then
@@ -284,7 +284,7 @@ function install_prepare_software_on_ubuntu()
         sudo apt-get install -y cmake
     fi
 
-    sudo apt-get install -y exuberant-ctags build-essential python python-dev python3-dev fontconfig curl libfile-next-perl ack-grep git
+    sudo apt-get install -y exuberant-ctags build-essential python python-dev python3-dev fontconfig libfile-next-perl ack-grep git
 
     if [ $version -ge 18 ];then
         sudo apt-get install -y vim
@@ -297,7 +297,7 @@ function install_prepare_software_on_ubuntu()
 function install_prepare_software_on_ubuntu_like()
 {
     sudo apt-get update
-    sudo apt-get install -y cmake exuberant-ctags build-essential python python-dev python3-dev fontconfig curl libfile-next-perl ack-grep git
+    sudo apt-get install -y cmake exuberant-ctags build-essential python python-dev python3-dev fontconfig libfile-next-perl ack-grep git
     compile_vim_on_ubuntu
 }
 
@@ -305,7 +305,7 @@ function install_prepare_software_on_ubuntu_like()
 function install_prepare_software_on_debian()
 {
     sudo apt-get update
-    sudo apt-get install -y cmake exuberant-ctags build-essential python python-dev python3-dev fontconfig curl libfile-next-perl ack git
+    sudo apt-get install -y cmake exuberant-ctags build-essential python python-dev python3-dev fontconfig libfile-next-perl ack git
     compile_vim_on_debian
 }
 
@@ -315,9 +315,9 @@ function install_prepare_software_on_centos()
     version=$(get_centos_version)
     if [ $version -ge 8 ];then
         sudo dnf install -y epel-release
-        sudo dnf install -y vim ctags automake gcc gcc-c++ kernel-devel make cmake python2 python2-devel python3-devel curl fontconfig ack git
+        sudo dnf install -y vim ctags automake gcc gcc-c++ kernel-devel make cmake python2 python2-devel python3-devel fontconfig ack git
     else
-        sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack git
+        sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel fontconfig ack git
         compile_vim_on_centos
     fi
 }
@@ -325,20 +325,20 @@ function install_prepare_software_on_centos()
 # 安装fedora必备软件
 function install_prepare_software_on_fedora()
 {
-    sudo dnf install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel curl fontconfig ack git
+    sudo dnf install -y vim ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel fontconfig ack git
 }
 
 # 安装archlinux必备软件
 function install_prepare_software_on_archlinux()
 {
-    sudo pacman -S --noconfirm vim ctags automake gcc cmake python3 python2 curl ack git fontconfig
+    sudo pacman -S --noconfirm vim ctags automake gcc cmake python3 python2 ack git fontconfig
     sudo ln -s /usr/lib/libtinfo.so.6 /usr/lib/libtinfo.so.5
 }
 
 # 安装opensuse必备软件
 function install_prepare_software_on_opensuse()
 {
-    sudo zypper install -y vim ctags gcc gcc-c++ cmake python-devel python3-devel curl ack fontconfig git ncurses5-devel
+    sudo zypper install -y vim ctags gcc gcc-c++ cmake python-devel python3-devel ack fontconfig git ncurses5-devel
 }
 
 # 拷贝文件
@@ -362,6 +362,9 @@ function copy_files()
 
     rm -rf ~/.vim/ftplugin
     ln -s ${PWD}/ftplugin ~/.vim
+
+    rm -rf ~/.vim/autoload
+    ln -s ${PWD}/autoload ~/.vim
 }
 
 # 安装mac平台字体
@@ -379,12 +382,6 @@ function install_fonts_on_linux()
     cp ./fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf ~/.local/share/fonts
 
     fc-cache -vf ~/.local/share/fonts
-}
-
-# 下载插件管理软件vim-plug
-function download_vim_plug()
-{
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
 # 安装vim插件
@@ -438,7 +435,6 @@ function install_vimplus_on_mac()
     copy_files
     install_fonts_on_mac
     install_ycm
-    download_vim_plug
     install_vim_plugin
     print_logo
 }
@@ -449,7 +445,6 @@ function begin_install_vimplus()
     copy_files
     install_fonts_on_linux
     install_ycm
-    download_vim_plug
     install_vim_plugin
     print_logo
 }

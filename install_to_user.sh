@@ -253,6 +253,9 @@ function install_to_user_on_linux()
     ln -s $desc_vimplus_path"ftplugin" $desc_vim_path
     chown -R $desc_username":"$desc_username $desc_vim_path"ftplugin"
 
+    ln -s $desc_vimplus_path"autoload" $desc_vim_path
+    chown -R $desc_username":"$desc_username $desc_vim_path"autoload"
+
     # 安装字体
     mkdir -p $desc_home_path".local/share/fonts/"
     rm -rf $desc_home_path".local/share/fonts/Droid Sans Mono Nerd Font Complete.otf"
