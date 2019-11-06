@@ -274,6 +274,9 @@ An automatic configuration program for vim
 <a href="https://github.com/Titubery" target="_blank" title="Titubery">
 <img src="https://github.com/Titubery.png?size=64" width="64" height="64" alt="Titubery">
 </a>
+<a href="https://github.com/wyg1997" target="_blank" title="wyg1997">
+<img src="https://github.com/wyg1997.png?size=64" width="64" height="64" alt="wyg1997">
+</a>
 
 
 ## 支持开源:heart:
