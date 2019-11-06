@@ -205,6 +205,10 @@ An automatic configuration program for vim
 
     vimplus使用vim-plug作为插件管理器，vim-plug可能由于界面没有刷新（其实在安装），所以进度一直停留在`Installing plugins (24/40)`，用户只需要耐心等待所有插件安装完成即可，或者直接`Ctrl+C`终止安装，通过vim打开`~/.vimrc`并执行`:PlugInstall`命令安装剩余插件。
 
+- **`启动vim报错：RequestsDependencyWarning: Old version of cryptography ([1, 2, 3]) may cause slowdown.`**
+
+    可以尝试将cryptography删掉，具体见[issues #208][81]。
+
 - **`vimplus不支持目前用户正在使用的系统怎么办？`**
 
     可以给作者提[Issues][39]，或者自己fork vimplus来修改，并提交pr，贡献自己的一份力量。
@@ -350,4 +354,5 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [78]: https://github.com/chxuan/vimplus/blob/master/install.sh
   [79]: https://hub.docker.com/r/chxuan/ubuntu-vimplus
   [80]: https://github.com/zhoumengkang
+  [81]: https://github.com/chxuan/vimplus/issues/208
 
