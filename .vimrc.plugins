@@ -9,3 +9,4 @@
 " Plug 'gorodinskiy/vim-coloresque'
 " Plug 'vim-scripts/DoxygenToolkit.vim'
 
+" Unplug 'vim-scripts/DoxygenToolkit.vim'
