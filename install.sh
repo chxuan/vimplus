@@ -358,7 +358,11 @@ function copy_files()
 
     mkdir ~/.vim
     rm -rf ~/.vim/colors
-    ln -s ${PWD}/colors ~/.vim
+    mkdir -p ~/.vim/colors
+    cp  ${PWD}/colors/* ~/.vim/colors/
+    curl -sLf https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim > ~/.vim/colors/gruvbox.vim
+    curl -sLf https://raw.githubusercontent.com/sjl/badwolf/master/colors/badwolf.vim > ~/.vim/colors/badwolf.vim
+    curl -sLf https://raw.githubusercontent.com/junegunn/seoul256.vim/master/colors/seoul256.vim > ~/.vim/colors/seoul256.vim
 
     rm -rf ~/.vim/ftplugin
     ln -s ${PWD}/ftplugin ~/.vim
