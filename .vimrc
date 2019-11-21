@@ -172,7 +172,7 @@ call plug#end()
 " load vim default plugin
 runtime macros/matchit.vim
 
-" 编辑vimrc文件
+" 编辑vimrc相关配置文件
 nnoremap <leader>e :edit $MYVIMRC<cr>
 nnoremap <leader>vc :edit ~/.vimrc.custom.config<cr>
 nnoremap <leader>vp :edit ~/.vimrc.custom.plugins<cr>
