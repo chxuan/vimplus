@@ -43,16 +43,16 @@ function update_vim_plugin()
 # 拷贝文件
 function copy_files()
 {
-    vimrc_plugins=$HOME"/.vimrc.plugins"
+    vimrc_plugins=$HOME"/.vimrc.custom.plugins"
     is_exist=$(is_exist_file $vimrc_plugins)
     if [ $is_exist != 1 ]; then
-        cp ${PWD}/.vimrc.plugins ~
+        cp ${PWD}/.vimrc.custom.plugins ~
     fi
 
-    vimrc_config=$HOME"/.vimrc.config"
+    vimrc_config=$HOME"/.vimrc.custom.config"
     is_exist=$(is_exist_file $vimrc_config)
     if [ $is_exist != 1 ]; then
-        cp ${PWD}/.vimrc.config ~
+        cp ${PWD}/.vimrc.custom.config ~
     fi
 }
 

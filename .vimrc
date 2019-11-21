@@ -163,8 +163,8 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'docunext/closetag.vim'
 
 " 自定义插件
-if filereadable(expand($HOME . '/.vimrc.plugins'))
-    source $HOME/.vimrc.plugins
+if filereadable(expand($HOME . '/.vimrc.custom.plugins'))
+    source $HOME/.vimrc.custom.plugins
 endif
 
 call plug#end()  
@@ -352,6 +352,6 @@ nnoremap <leader>G :GV!<cr>
 nnoremap <leader>gg :GV?<cr>
 
 " 自定义设置
-if filereadable(expand($HOME . '/.vimrc.config'))
-    source $HOME/.vimrc.config
+if filereadable(expand($HOME . '/.vimrc.custom.config'))
+    source $HOME/.vimrc.custom.config
 endif
