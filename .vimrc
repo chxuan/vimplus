@@ -174,6 +174,8 @@ runtime macros/matchit.vim
 
 " 编辑vimrc文件
 nnoremap <leader>e :edit $MYVIMRC<cr>
+nnoremap <leader>vc :edit ~/.vimrc.custom.config<cr>
+nnoremap <leader>vp :edit ~/.vimrc.custom.plugins<cr>
 
 " 查看vimplus的help文件
 nnoremap <leader>h :view +let\ &l:modifiable=0 ~/.vimplus/help.md<cr>
