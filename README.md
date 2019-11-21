@@ -95,7 +95,9 @@ An automatic configuration program for vim
 
 ## 自定义
 
-`~/.vimrc`为vimplus的默认配置，一般不做修改，若要增加、卸载插件，请修改 `~/.vimrc.custom.plugins`，其他配置请放入`~/.vimrc.custom.config`。
+> * `~/.vimrc`为vimplus的默认配置，一般不做修改
+> * `~/.vimrc.custom.plugins`为用户自定义插件列表，用户增加、卸载插件请修改该文件
+> * `~/.vimrc.custom.config`为用户自定义配置文件，一般性配置请放入该文件，可覆盖`~/.vimrc`里的配置
 
 
 ## 插件列表
