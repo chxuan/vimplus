@@ -95,9 +95,9 @@ An automatic configuration program for vim
 
 ## 自定义
 
-> * `~/.vimrc`为vimplus的默认配置，一般不做修改
-> * `~/.vimrc.custom.plugins`为用户自定义插件列表，用户增加、卸载插件请修改该文件
-> * `~/.vimrc.custom.config`为用户自定义配置文件，一般性配置请放入该文件，可覆盖`~/.vimrc`里的配置
+> * [~/.vimrc][82]为vimplus的默认配置，一般不做修改
+> * [~/.vimrc.custom.plugins][83]为用户自定义插件列表，用户增加、卸载插件请修改该文件
+> * [~/.vimrc.custom.config][84]为用户自定义配置文件，一般性配置请放入该文件，可覆盖[~/.vimrc][82]里的配置
 
 
 ## 插件列表
@@ -357,4 +357,7 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [79]: https://hub.docker.com/r/chxuan/ubuntu-vimplus
   [80]: https://github.com/zhoumengkang
   [81]: https://github.com/chxuan/vimplus/issues/208
+  [82]: https://github.com/chxuan/vimplus/blob/master/.vimrc
+  [83]: https://github.com/chxuan/vimplus/blob/master/.vimrc.custom.plugins
+  [84]: https://github.com/chxuan/vimplus/blob/master/.vimrc.custom.config
 
