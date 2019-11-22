@@ -95,7 +95,9 @@ An automatic configuration program for vim
 
 ## 自定义
 
-`~/.vimrc`为vimplus的默认配置，一般不做修改，若要增加插件，请修改 `~/.vimrc.plugins`，其他配置请放入`~/.vimrc.config`。
+> * [~/.vimrc][82]为vimplus的默认配置，一般不做修改
+> * [~/.vimrc.custom.plugins][83]为用户自定义插件列表，用户增加、卸载插件请修改该文件
+> * [~/.vimrc.custom.config][84]为用户自定义配置文件，一般性配置请放入该文件，可覆盖[~/.vimrc][82]里的配置
 
 
 ## 插件列表
@@ -181,8 +183,10 @@ An automatic configuration program for vim
 | `daf`               | 删除函数内容（包括函数名 花括号）    |
 | `caf`               | 改写函数内容（包括函数名 花括号）    |
 | `fa`                | 查找字母a，然后再按f键查找下一个     |
-| `<leader>e`         | 快速编辑vimrc文件                    |
-| `<leader>s`         | 重新加载vimrc文件                    |
+| `<leader>e`         | 快速编辑~/.vimrc文件                 |
+| `<leader>s`         | 重新加载~/.vimrc文件                 |
+| `<leader>vp`        | 快速编辑~/.vimrc.custom.plugins文件  |
+| `<leader>vc`        | 快速编辑~/.vimrc.custom.config文件   |
 | `<leader>h`         | 打开vimplus帮助文档                  |
 | `<leader>H`         | 打开当前光标所在单词的vim帮助文档    |
 | `<leader><leader>y` | 复制当前选中到系统剪切板             |
@@ -355,4 +359,7 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [79]: https://hub.docker.com/r/chxuan/ubuntu-vimplus
   [80]: https://github.com/zhoumengkang
   [81]: https://github.com/chxuan/vimplus/issues/208
+  [82]: https://github.com/chxuan/vimplus/blob/master/.vimrc
+  [83]: https://github.com/chxuan/vimplus/blob/master/.vimrc.custom.plugins
+  [84]: https://github.com/chxuan/vimplus/blob/master/.vimrc.custom.config
 

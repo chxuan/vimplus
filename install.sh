@@ -80,10 +80,10 @@ function backup_vimrc_file()
     fi
 }
 
-#备份原有的.vimrc.plugins文件
-function backup_vimrc_plugins_file()
+#备份原有的.vimrc.custom.plugins文件
+function backup_vimrc_custom_plugins_file()
 {
-    old_vimrc_plugins=$HOME"/.vimrc.plugins"
+    old_vimrc_plugins=$HOME"/.vimrc.custom.plugins"
     is_exist=$(is_exist_file $old_vimrc_plugins)
     if [ $is_exist == 1 ]; then
         time=$(get_datetime)
@@ -95,10 +95,10 @@ function backup_vimrc_plugins_file()
     fi
 }
 
-#备份原有的.vimrc.config文件
-function backup_vimrc_config_file()
+#备份原有的.vimrc.custom.config文件
+function backup_vimrc_custom_config_file()
 {
-    old_vimrc_config=$HOME"/.vimrc.config"
+    old_vimrc_config=$HOME"/.vimrc.custom.config"
     is_exist=$(is_exist_file $old_vimrc_config)
     if [ $is_exist == 1 ]; then
         time=$(get_datetime)
@@ -129,8 +129,8 @@ function backup_vim_dir()
 function backup_vimrc_and_vim()
 {
     backup_vimrc_file
-    backup_vimrc_plugins_file
-    backup_vimrc_config_file
+    backup_vimrc_custom_plugins_file
+    backup_vimrc_custom_config_file
     backup_vim_dir
 }
 
@@ -347,22 +347,18 @@ function copy_files()
     rm -rf ~/.vimrc
     ln -s ${PWD}/.vimrc ~
 
-    rm -rf ~/.vimrc.plugins
-    cp ${PWD}/.vimrc.plugins ~
+    rm -rf ~/.vimrc.custom.plugins
+    cp ${PWD}/.vimrc.custom.plugins ~
 
-    rm -rf ~/.vimrc.config
-    cp ${PWD}/.vimrc.config ~
+    rm -rf ~/.vimrc.custom.config
+    cp ${PWD}/.vimrc.custom.config ~
 
     rm -rf ~/.ycm_extra_conf.py
     ln -s ${PWD}/.ycm_extra_conf.py ~
 
     mkdir ~/.vim
     rm -rf ~/.vim/colors
-    mkdir -p ~/.vim/colors
-    cp  ${PWD}/colors/* ~/.vim/colors/
-    curl -sLf https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim > ~/.vim/colors/gruvbox.vim
-    curl -sLf https://raw.githubusercontent.com/sjl/badwolf/master/colors/badwolf.vim > ~/.vim/colors/badwolf.vim
-    curl -sLf https://raw.githubusercontent.com/junegunn/seoul256.vim/master/colors/seoul256.vim > ~/.vim/colors/seoul256.vim
+    ln -s ${PWD}/colors ~/.vim
 
     rm -rf ~/.vim/ftplugin
     ln -s ${PWD}/ftplugin ~/.vim

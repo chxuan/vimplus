@@ -109,14 +109,14 @@ if has("gui_running")
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 卸载默认插件Unplug
+" 卸载默认插件UnPlug
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! s:deregister(repo)
   let repo = substitute(a:repo, '[\/]\+$', '', '')
   let name = fnamemodify(repo, ':t:s?\.git$??')
   call remove(g:plugs, name)
 endfunction
-command! -nargs=1 -bar Unplug call s:deregister(<args>)
+command! -nargs=1 -bar UnPlug call s:deregister(<args>)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 插件列表
@@ -163,8 +163,8 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'docunext/closetag.vim'
 
 " 自定义插件
-if filereadable(expand($HOME . '/.vimrc.plugins'))
-    source $HOME/.vimrc.plugins
+if filereadable(expand($HOME . '/.vimrc.custom.plugins'))
+    source $HOME/.vimrc.custom.plugins
 endif
 
 call plug#end()  
@@ -172,8 +172,10 @@ call plug#end()
 " load vim default plugin
 runtime macros/matchit.vim
 
-" 编辑vimrc文件
+" 编辑vimrc相关配置文件
 nnoremap <leader>e :edit $MYVIMRC<cr>
+nnoremap <leader>vc :edit ~/.vimrc.custom.config<cr>
+nnoremap <leader>vp :edit ~/.vimrc.custom.plugins<cr>
 
 " 查看vimplus的help文件
 nnoremap <leader>h :view +let\ &l:modifiable=0 ~/.vimplus/help.md<cr>
@@ -256,7 +258,6 @@ nnoremap <leader>r :ReplaceTo<space>
 
 " nerdtree
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>
-inoremap <silent> <leader>n <esc> :NERDTreeToggle<cr>
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
@@ -298,7 +299,6 @@ nmap <F5> :YcmDiags<cr>
 " tagbar
 let g:tagbar_width = 30
 nnoremap <silent> <leader>t :TagbarToggle<cr>
-inoremap <silent> <leader>t <esc> :TagbarToggle<cr>
 
 " incsearch.vim
 map /  <Plug>(incsearch-forward)
@@ -354,6 +354,6 @@ nnoremap <leader>G :GV!<cr>
 nnoremap <leader>gg :GV?<cr>
 
 " 自定义设置
-if filereadable(expand($HOME . '/.vimrc.config'))
-    source $HOME/.vimrc.config
+if filereadable(expand($HOME . '/.vimrc.custom.config'))
+    source $HOME/.vimrc.custom.config
 endif
