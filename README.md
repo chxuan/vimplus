@@ -279,8 +279,8 @@ An automatic configuration program for vim
 <a href="https://github.com/zhoumengkang" target="_blank" title="zhoumengkang">
 <img src="https://github.com/zhoumengkang.png?size=64" width="64" height="64" alt="zhoumengkang">
 </a>
-<a href="https://github.com/Titubery" target="_blank" title="Titubery">
-<img src="https://github.com/Titubery.png?size=64" width="64" height="64" alt="Titubery">
+<a href="https://github.com/tuberry" target="_blank" title="tuberry">
+<img src="https://github.com/tuberry.png?size=64" width="64" height="64" alt="tuberry">
 </a>
 <a href="https://github.com/wyg1997" target="_blank" title="wyg1997">
 <img src="https://github.com/wyg1997.png?size=64" width="64" height="64" alt="wyg1997">
