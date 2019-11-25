@@ -289,6 +289,8 @@ An automatic configuration program for vim
 
 ## 支持开源:heart:
 
+> 有意愿献爱心的小伙伴，务必将github账号写入捐款备注哦，谢谢大家
+
 | wechat                                                                                                     | alipay                                                                                                       |
 | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | <a href='#支持开源'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/wechat.png" height="150" width="150" /></a> | <a href='#支持开源'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/alipay.png" height="150" width="150" /></a> |
@@ -297,6 +299,7 @@ An automatic configuration program for vim
 | ----- | -------            | ----- | -----      |
 | 1     | [zhoumengkang][80] | ¥50   | 2019-09-28 |
 | 2     | [zhoumengkang][80] | ¥50   | 2019-09-29 |
+| 3     | [zibraque][85]     | ¥50   | 2019-11-25 |
 
 
 ## vimplus:star:趋势图
@@ -362,4 +365,5 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [82]: https://github.com/chxuan/vimplus/blob/master/.vimrc
   [83]: https://github.com/chxuan/vimplus/blob/master/.vimrc.custom.plugins
   [84]: https://github.com/chxuan/vimplus/blob/master/.vimrc.custom.config
+  [85]: https://github.com/zibraque
 
