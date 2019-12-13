@@ -201,14 +201,6 @@ An automatic configuration program for vim
 
     网络良好情况下，vimplus只需30分钟左右即可将vim cpp环境配置好，vimplus真正的做到了一键配置，不让用户操心。vimplus会安装一些必备软件，比如说python、cmake、gcc、fontconfig等，vimplus也考虑到了有些系统的vim不支持python，它会自动去下载vim源码将python支持编译进去，vimplus也会安装nerd-font不让vim显示出现乱码，最最重要的是vimplus实现了ycm自动编译安装，给折腾了几天ycm都没有安装好的用户带来了新的希望，而且vimplus也支持macos和linux众多发行版，让linux发烧友频繁切换发行版而不用操心vim环境配置。最后说了这么多，不如看[vimplus安装脚本][78]来的直接:smile:。
 
-- **`插件安装界面显示YouCompleteMe安装失败，Invalid URL: https://gitee.com/chxuan/YouCompleteMe.git,Expected: https://github.com/Valloric/YouCompleteMe.git,PlugClean: required`**
-
-    在执行install.sh安装脚本时，ycm比其他插件早安装，当用户看到插件安装界面显示ycm安装失败时，其实ycm已经提前安装好了，忽略掉该错误即可。
-
-- **`插件安装界面不更新进度，一直显示进度Installing plugins (24/40)`**
-
-    vimplus使用vim-plug作为插件管理器，vim-plug可能由于界面没有刷新（其实在安装），所以进度一直停留在`Installing plugins (24/40)`，用户只需要耐心等待所有插件安装完成即可，或者直接`Ctrl+C`终止安装，通过vim打开`~/.vimrc`并执行`:PlugInstall`命令安装剩余插件。
-
 - **`启动vim报错：RequestsDependencyWarning: Old version of cryptography ([1, 2, 3]) may cause slowdown.`**
 
     可以尝试将cryptography删掉，具体见[issues #208][81]。

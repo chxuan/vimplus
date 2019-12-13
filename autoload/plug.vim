@@ -2077,9 +2077,10 @@ function! s:git_validate(spec, check_branch)
     if v:shell_error
       let err = join([remote, 'PlugClean required.'], "\n")
     elseif !s:compare_git_uri(remote, a:spec.uri)
-      let err = join(['Invalid URI: '.remote,
-                    \ 'Expected:    '.a:spec.uri,
-                    \ 'PlugClean required.'], "\n")
+      " 不提示url不匹配错误
+      " let err = join(['Invalid URI: '.remote,
+                    " \ 'Expected:    '.a:spec.uri,
+                    " \ 'PlugClean required.'], "\n")
     elseif a:check_branch && has_key(a:spec, 'commit')
       let result = s:lines(s:system('git rev-parse HEAD 2>&1', a:spec.dir))
       let sha = result[-1]
