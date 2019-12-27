@@ -292,6 +292,7 @@ An automatic configuration program for vim
 | 1     | [zhoumengkang][80] | ¥50   | 2019-09-28 |
 | 2     | [zhoumengkang][80] | ¥50   | 2019-09-29 |
 | 3     | [zibraque][85]     | ¥50   | 2019-11-25 |
+| 4     | [gfreewind][86]    | ¥20   | 2019-12-27 |
 
 
 ## vimplus:star:趋势图
@@ -358,4 +359,5 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [83]: https://github.com/chxuan/vimplus/blob/master/.vimrc.custom.plugins
   [84]: https://github.com/chxuan/vimplus/blob/master/.vimrc.custom.config
   [85]: https://github.com/zibraque
+  [86]: https://github.com/gfreewind
 
