@@ -43,6 +43,9 @@ function update_vim_plugin()
 # 拷贝文件
 function copy_files()
 {
+    rm -rf ~/.vimrc
+    ln -s ${PWD}/.vimrc ~
+
     vimrc_plugins=$HOME"/.vimrc.custom.plugins"
     is_exist=$(is_exist_file $vimrc_plugins)
     if [ $is_exist != 1 ]; then
@@ -54,6 +57,18 @@ function copy_files()
     if [ $is_exist != 1 ]; then
         cp ${PWD}/.vimrc.custom.config ~
     fi
+
+    rm -rf ~/.ycm_extra_conf.py
+    ln -s ${PWD}/.ycm_extra_conf.py ~
+
+    rm -rf ~/.vim/colors
+    ln -s ${PWD}/colors ~/.vim
+
+    rm -rf ~/.vim/ftplugin
+    ln -s ${PWD}/ftplugin ~/.vim
+
+    rm -rf ~/.vim/autoload
+    ln -s ${PWD}/autoload ~/.vim
 }
 
 # 打印logo
