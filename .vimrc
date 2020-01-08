@@ -160,7 +160,6 @@ Plug 'Shougo/echodoc.vim'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'rhysd/clever-f.vim'
 Plug 'vim-scripts/indentpython.vim'
-Plug 'docunext/closetag.vim'
 
 " 加载自定义插件
 if filereadable(expand($HOME . '/.vimrc.custom.plugins'))
