@@ -225,6 +225,10 @@ An automatic configuration program for vim
 
     vimplus安装完毕之后，`~`目录下将会生成两个隐藏文件分别是.vimrc和.ycm_extra_conf.py，其中.vimrc是vim的配置文件，.ycm_extra_conf.py是ycm插件的配置文件，当你需要创建一个project时，需要将.ycm_extra_conf.py拷贝到project的顶层目录，通过修改该配置文件里面的`flags`变量来添加你的第三方库路径。
 
+- **`使用vi命令报错：E492: Not an editor command:`**
+
+    vimplus安装完成后，linux下可能会同时存在vi和vim命令，执行vi会报上述错误，解决方法是给vi取一个别名`alias vi=vim`
+
 - **`怎么自定义文件头，比如说添加作者、创建时间？`**
 
     你可以修改[chxuan/prepare-code][67]插件来达到目的，可以参考[这里][77]。
@@ -242,7 +246,9 @@ An automatic configuration program for vim
     那就麻烦您打赏一颗:star::star:吧，给予我继续维护的动力。
 
 
-## 代码贡献者
+## 贡献者
+
+> 有代码贡献或有好的建议，帮助vimplus发展的小伙伴
 
 <a href="https://github.com/chxuan" target="_blank" title="chxuan">
 <img src="https://github.com/chxuan.png?size=64" width="64" height="64" alt="chxuan">
@@ -276,6 +282,9 @@ An automatic configuration program for vim
 </a>
 <a href="https://github.com/wyg1997" target="_blank" title="wyg1997">
 <img src="https://github.com/wyg1997.png?size=64" width="64" height="64" alt="wyg1997">
+</a>
+<a href="https://github.com/happinesslijian" target="_blank" title="happinesslijian">
+<img src="https://github.com/happinesslijian.png?size=64" width="64" height="64" alt="happinesslijian">
 </a>
 
 
