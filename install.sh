@@ -227,11 +227,6 @@ function compile_vim_on_debian()
 # 在centos上源代码安装vim
 function compile_vim_on_centos()
 {
-    sudo rm -rf /usr/bin/vi
-    sudo rm -rf /usr/bin/vim*
-    sudo rm -rf /usr/local/bin/vim*
-    sudo rm -rf /usr/share/vim/vim*
-    sudo rm -rf /usr/local/share/vim/vim*
     rm -rf ~/vim81
 
     sudo yum install -y ruby ruby-devel lua lua-devel luajit \
@@ -319,7 +314,6 @@ function install_prepare_software_on_centos()
     else
         sudo yum install -y ctags automake gcc gcc-c++ kernel-devel cmake python-devel python3-devel fontconfig ack git
         compile_vim_on_centos
-        sudo ln -s /usr/bin/vim /usr/bin/vi
     fi
 }
 
