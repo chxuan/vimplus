@@ -250,7 +250,7 @@ function install_prepare_software_on_mac()
 function install_prepare_software_on_android()
 {
     pkg update
-    pkg install -y git vim-python cmake python2 python ctags ack-grep fontconfig
+    pkg install -y git vim-python cmake python2 python ctags ack-grep fontconfig-utils
 }
 
 # 安装ubuntu必备软件
