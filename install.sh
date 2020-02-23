@@ -355,6 +355,18 @@ function install_fonts_on_mac()
     cp ./fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf ~/Library/Fonts
 }
 
+# 安装android平台字体
+function install_fonts_on_android()
+{
+    rm -rf ~/.termux/font.ttf
+    mkdir ~/.termux
+    cp ./fonts/DejaVu.ttf ~/.termux/font.ttf
+
+    # 刷新style
+    REL="am broadcast --user 0 -a com.termux.app.reload_style com.termux"
+    $REL > /dev/null
+}
+
 # 安装linux平台字体
 function install_fonts_on_linux()
 {
@@ -443,6 +455,7 @@ function install_vimplus_on_android()
     backup_vimrc_and_vim
     install_prepare_software_on_android
     copy_files
+    install_fonts_on_android
     install_ycm_on_android
     install_vim_plugin
     print_logo

@@ -18,6 +18,18 @@ function update_fonts_on_mac()
     cp ./fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf ~/Library/Fonts
 }
 
+# 更新android平台字体
+function update_fonts_on_android()
+{
+    rm -rf ~/.termux/font.ttf
+    mkdir ~/.termux
+    cp ./fonts/DejaVu.ttf ~/.termux/font.ttf
+
+    # 刷新style
+    REL="am broadcast --user 0 -a com.termux.app.reload_style com.termux"
+    $REL > /dev/null
+}
+
 # 更新linux平台字体
 function update_fonts_on_linux()
 {
@@ -110,6 +122,7 @@ function update_vimplus_on_android()
 {
     git pull origin master
     copy_files
+    update_fonts_on_android
     update_vim_plugin
     print_logo
 }
