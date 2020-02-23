@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# 获取平台类型，mac还是linux平台
-function get_platform_type()
-{
-    echo $(uname)
-}
-
 # 判断文件是否存在
 function is_exist_file()
 {
@@ -111,6 +105,16 @@ function update_vimplus_on_linux()
     print_logo
 }
 
+# 在android更新vimplus
+function update_vimplus_on_android()
+{
+    git pull origin master
+    copy_files
+    update_fonts_on_linux
+    update_vim_plugin
+    print_logo
+}
+
 # 获取当前时间戳
 function get_now_timestamp()
 {
@@ -123,13 +127,19 @@ function main()
 {
     begin=`get_now_timestamp`
 
-    type=`get_platform_type`
+    type=$(uname)
     echo "Platform type: "${type}
 
     if [ ${type} == "Darwin" ]; then
         update_vimplus_on_mac
     elif [ ${type} == "Linux" ]; then
-        update_vimplus_on_linux
+        tp=$(uname -a)
+        if [[ $tp =~ "Android" ]]; then
+            echo "Android"
+            update_vimplus_on_android
+        else
+            update_vimplus_on_linux
+        fi
     else
         echo "Not support platform type: "${type}
     fi
