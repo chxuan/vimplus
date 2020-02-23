@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# 获取平台类型，mac还是linux平台
-function get_platform_type()
-{
-    echo $(uname)
-}
-
 # 获取linux发行版名称
 function get_linux_distro()
 {
@@ -252,6 +246,13 @@ function install_prepare_software_on_mac()
     fi
 }
 
+# 安装android平台必备软件
+function install_prepare_software_on_android()
+{
+    pkg update
+    pkg install -y git vim-python cmake python2 python ctags ack-grep fontconfig
+}
+
 # 安装ubuntu必备软件
 function install_prepare_software_on_ubuntu()
 {
@@ -419,6 +420,14 @@ function install_vimplus_on_mac()
     print_logo
 }
 
+# 在android平台安装vimplus
+function install_vimplus_on_android()
+{
+    backup_vimrc_and_vim
+    install_prepare_software_on_android
+    begin_install_vimplus
+}
+
 # 开始安装vimplus
 function begin_install_vimplus()
 {
@@ -530,13 +539,19 @@ function main()
 {
     begin=`get_now_timestamp`
 
-    type=`get_platform_type`
+    type=$(uname)
     echo "Platform type: "${type}
 
     if [ ${type} == "Darwin" ]; then
         install_vimplus_on_mac
     elif [ ${type} == "Linux" ]; then
-        install_vimplus_on_linux
+        tp=$(uname -a)
+        if [[ $tp =~ "Android" ]]; then
+            echo "Android"
+            install_vimplus_on_android
+        else
+            install_vimplus_on_linux
+        fi
     else
         echo "Not support platform type: "${type}
     fi
