@@ -250,7 +250,7 @@ function install_prepare_software_on_mac()
 function install_prepare_software_on_android()
 {
     pkg update
-    pkg install -y git vim-python cmake python2 python ctags ack-grep fontconfig-utils
+    pkg install -y git vim-python cmake python2 python ctags ack-grep
 }
 
 # 安装ubuntu必备软件
@@ -443,7 +443,6 @@ function install_vimplus_on_android()
     backup_vimrc_and_vim
     install_prepare_software_on_android
     copy_files
-    install_fonts_on_linux
     install_ycm_on_android
     install_vim_plugin
     print_logo

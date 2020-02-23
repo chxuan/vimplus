@@ -110,7 +110,6 @@ function update_vimplus_on_android()
 {
     git pull origin master
     copy_files
-    update_fonts_on_linux
     update_vim_plugin
     print_logo
 }
