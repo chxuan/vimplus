@@ -86,7 +86,7 @@ An automatic configuration program for vim
     ./update.sh
 
 
-### Android 64-bit(Termux.app)
+### Android 64-bit([Termux][87])
 
 #### 安装vimplus
 
@@ -384,4 +384,5 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [84]: https://github.com/chxuan/vimplus/blob/master/.vimrc.custom.config
   [85]: https://github.com/zibraque
   [86]: https://github.com/gfreewind
+  [87]: https://termux.com/
 
