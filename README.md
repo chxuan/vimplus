@@ -242,7 +242,7 @@ An automatic configuration program for vim
 
 - **`使用vi命令报错：E492: Not an editor command:`**
 
-    vimplus安装完成后，linux下可能会同时存在vi和vim命令，执行vi会报上述错误，解决方法是给vi取一个别名`alias vi=vim`
+    vimplus安装完成后，linux下可能会同时存在vi和vim命令，执行vi时，vi加载~/.vimrc文件可能会报错，但不影响使用，如果要消除错误可以设置软链接`ln -s /usr/bin/vim /usr/bin/vi`
 
 - **`怎么自定义文件头，比如说添加作者、创建时间？`**
 
