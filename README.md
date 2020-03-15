@@ -212,9 +212,13 @@ An automatic configuration program for vim
 
 ## FAQ
 
-- **`vimplus怎么安装插件？`**
+- **`vimplus怎么安装新插件？`**
 
     编辑[~/.vimrc.custom.plugins][83]，添加自定义插件。
+
+- **`vimplus怎么添加自定义配置？`**
+
+    编辑[~/.vimrc.custom.config][84]，添加自定义配置。
 
 - **`vimplus安装脚本会在自己电脑上安装哪些软件？`**
 
