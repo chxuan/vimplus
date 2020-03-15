@@ -212,6 +212,10 @@ An automatic configuration program for vim
 
 ## FAQ
 
+- **`vimplus怎么安装插件？`**
+
+    编辑[~/.vimrc.custom.plugins][83]，添加自定义插件。
+
 - **`vimplus安装脚本会在自己电脑上安装哪些软件？`**
 
     网络良好情况下，vimplus只需30分钟左右即可将vim cpp环境配置好，vimplus真正的做到了一键配置，不让用户操心。vimplus会安装一些必备软件，比如说python、cmake、gcc、fontconfig等，vimplus也考虑到了有些系统的vim不支持python，它会自动去下载vim源码将python支持编译进去，vimplus也会安装nerd-font不让vim显示出现乱码，最最重要的是vimplus实现了ycm自动编译安装，给折腾了几天ycm都没有安装好的用户带来了新的希望，而且vimplus也支持macos和linux众多发行版，让linux发烧友频繁切换发行版而不用操心vim环境配置。最后说了这么多，不如看[vimplus安装脚本][78]来的直接:smile:。
