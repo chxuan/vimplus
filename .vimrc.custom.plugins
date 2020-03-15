@@ -4,6 +4,10 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " 增加~/.vimrc里没有的插件
+" 增加插件后需要进行插件安装，安装步骤如下：
+" 1.执行:w保存修改
+" 2.执行,,s重新加载vim配置
+" 3.执行,,i进行插件安装
 " Plug 'iamcco/mathjax-support-for-mkdp'
 " Plug 'iamcco/markdown-preview.vim'
 " Plug 'Yggdroot/indentLine'
