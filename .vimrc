@@ -229,6 +229,7 @@ nnoremap <leader>U :GoToFunImpl<cr>
 nnoremap <silent> <leader>a :Switch<cr>
 nnoremap <leader><leader>fp :FormatFunParam<cr>
 nnoremap <leader><leader>if :FormatIf<cr>
+nnoremap <leader><leader>t :GenTryCatch<cr>
 
 " change-colorscheme
 nnoremap <silent> <F9> :PreviousColorScheme<cr>
