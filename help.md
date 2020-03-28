@@ -49,6 +49,7 @@
 | `<leader>vc`        | 快速编辑~/.vimrc.custom.config文件   |
 | `<leader>h`         | 打开vimplus帮助文档                  |
 | `<leader>H`         | 打开当前光标所在单词的vim帮助文档    |
+| `<leader><leader>t` | 生成try-catch代码块                  |
 | `<leader><leader>y` | 复制当前选中到系统剪切板             |
 | `<leader><leader>i` | 安装插件                             |
 | `<leader><leader>u` | 更新插件                             |
