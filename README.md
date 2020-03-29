@@ -189,6 +189,7 @@ An automatic configuration program for vim
 | `Ca`                | 改写行文本到字母a                    |
 | `rr`                | 替换文本                             |
 | `<leader>r`         | 全局替换，目前只支持单个文件         |
+| `rev`               | 翻转当前光标下的单词                 |
 | `gcc`               | 注释代码                             |
 | `gcap`              | 注释段落                             |
 | `vif`               | 选中函数内容                         |
