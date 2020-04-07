@@ -358,3 +358,5 @@ nnoremap <leader>gg :GV?<cr>
 if filereadable(expand($HOME . '/.vimrc.custom.config'))
     source $HOME/.vimrc.custom.config
 endif
+
+
