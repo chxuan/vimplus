@@ -7,6 +7,8 @@ function get_linux_distro()
         echo "Ubuntu"
     elif grep -Eq "Deepin" /etc/*-release; then
         echo "Deepin"
+    elif grep -Eq "uos" /etc/*-release; then
+        echo "UOS"
     elif grep -Eq "LinuxMint" /etc/*-release; then
         echo "LinuxMint"
     elif grep -Eq "elementary" /etc/*-release; then
@@ -542,6 +544,8 @@ function install_vimplus_on_linux()
     elif [ ${distro} == "elementaryOS" ]; then
         install_vimplus_on_ubuntu_like
     elif [ ${distro} == "Debian" ]; then
+        install_vimplus_on_debian
+    elif [ ${distro} == "UOS" ]; then
         install_vimplus_on_debian
     elif [ ${distro} == "Kali" ]; then
         install_vimplus_on_debian
