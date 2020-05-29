@@ -311,6 +311,10 @@ An automatic configuration program for vim
 <a href="https://github.com/happinesslijian" target="_blank" title="happinesslijian">
 <img src="https://github.com/happinesslijian.png?size=64" width="64" height="64" alt="happinesslijian">
 </a>
+</a>
+<a href="https://github.com/wangling12" target="_blank" title="wangling12">
+<img src="https://github.com/wangling12.png?size=64" width="64" height="64" alt="wangling12">
+</a>
 
 
 ## 支持开源:heart:
