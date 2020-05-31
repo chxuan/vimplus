@@ -27,6 +27,8 @@ function get_linux_distro()
         echo "ArchLinux"
     elif grep -Eq "ManjaroLinux" /etc/*-release; then
         echo "ManjaroLinux"
+    elif grep -Eq "Gentoo" /etc/*-release; then
+        echo "Gentoo"
     else
         echo "Unknow"
     fi
@@ -318,6 +320,28 @@ function install_prepare_software_on_archlinux()
     sudo ln -s /usr/lib/libtinfo.so.6 /usr/lib/libtinfo.so.5
 }
 
+# 安装gentoo必备软件
+function install_prepare_software_on_gentoo()
+{
+    test_install_gentoo app-editors/vim dev-util/ctags sys-devel/automake sys-devel/gcc dev-util/cmake sys-apps/ack dev-vcs/git media-libs/fontconfig
+    su - -c "ln -s /usr/lib/libtinfo.so.6 /usr/lib/libtinfo.so.5" -s /bin/bash
+    # ssh -l root localhost "ln -s /usr/lib/libtinfo.so.6 /usr/lib/libtinfo.so.5"
+}
+
+function test_install_gentoo()
+{
+    pkgs=$*
+    for pkg in ${pkgs}
+    do
+        if qlist -I | grep -Eq $pkg; then
+            echo "$pkg is already installed."
+        else
+            su - -c "emerge -v ${pkg}" -s /bin/bash
+            # ssh -l root localhost "emerge -v ${pkg}"
+        fi
+    done
+}
+
 # 安装opensuse必备软件
 function install_prepare_software_on_opensuse()
 {
@@ -521,6 +545,14 @@ function install_vimplus_on_archlinux()
     begin_install_vimplus
 }
 
+# 在Gentoo上安装vimplus
+function install_vimplus_on_gentoo()
+{
+    backup_vimrc_and_vim
+    install_prepare_software_on_gentoo
+    begin_install_vimplus
+}
+
 # 在opensuse上安装vimplus
 function install_vimplus_on_opensuse()
 {
@@ -559,6 +591,8 @@ function install_vimplus_on_linux()
         install_vimplus_on_archlinux
     elif [ ${distro} == "ManjaroLinux" ]; then
         install_vimplus_on_archlinux
+    elif [ ${distro} == "Gentoo" ]; then
+        install_vimplus_on_gentoo
     else
         echo "Not support linux distro: "${distro}
     fi
