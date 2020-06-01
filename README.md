@@ -59,6 +59,7 @@ An automatic configuration program for vim
 <tr>
 <td><a href="https://distrowatch.com/table.php?distribution=manjaro"><img src="https://distrowatch.com/images/yvzhuwbpy/manjaro.png"/></a><p align="center"></p></td>
 <td><a href="https://distrowatch.com/table.php?distribution=opensuse"><img src="https://distrowatch.com/images/yvzhuwbpy/opensuse.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=gentoo"><img src="https://distrowatch.com/images/yvzhuwbpy/gentoo.png"/></a><p align="center"></p></td>
 </tr>
 </table>
 
@@ -311,9 +312,11 @@ An automatic configuration program for vim
 <a href="https://github.com/happinesslijian" target="_blank" title="happinesslijian">
 <img src="https://github.com/happinesslijian.png?size=64" width="64" height="64" alt="happinesslijian">
 </a>
-</a>
 <a href="https://github.com/wangling12" target="_blank" title="wangling12">
 <img src="https://github.com/wangling12.png?size=64" width="64" height="64" alt="wangling12">
+</a>
+<a href="https://github.com/ardinzh" target="_blank" title="ardinzh">
+<img src="https://github.com/ardinzh.png?size=64" width="64" height="64" alt="ardinzh">
 </a>
 
 
