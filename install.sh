@@ -323,11 +323,11 @@ function install_prepare_software_on_archlinux()
 # 安装gentoo必备软件
 function install_prepare_software_on_gentoo()
 {
-    test_install_gentoo app-editors/vim dev-util/ctags sys-devel/automake sys-devel/gcc dev-util/cmake sys-apps/ack dev-vcs/git media-libs/fontconfig
+    install_software_on_gentoo app-editors/vim dev-util/ctags sys-devel/automake sys-devel/gcc dev-util/cmake sys-apps/ack dev-vcs/git media-libs/fontconfig
     su - -c "ln -s /usr/lib/libtinfo.so.6 /usr/lib/libtinfo.so.5" -s /bin/bash
 }
 
-function test_install_gentoo()
+function install_software_on_gentoo()
 {
     pkgs=$*
     pkg_need_install=""
@@ -336,17 +336,16 @@ function test_install_gentoo()
         if qlist -I | grep -Eq $pkg; then
             echo "$pkg is already installed."
         else
-	    pkg_need_install="$pkg_need_install $pkg"
+            pkg_need_install="$pkg_need_install $pkg"
         fi
     done
 
     if sudo -l | grep -Eq "emerge"; then
         sudo emerge -v $pkg_need_install 
     else
-    	echo "Need Root password:"
+        echo "Need Root password:"
         su - -c "emerge -v $pkg_need_install" -s /bin/bash
     fi
-
 }
 
 # 安装opensuse必备软件
