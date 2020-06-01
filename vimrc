@@ -162,8 +162,8 @@ Plug 'rhysd/clever-f.vim'
 Plug 'vim-scripts/indentpython.vim'
 
 " 加载自定义插件
-if filereadable(expand($HOME . '/.vimrc.custom.plugins'))
-    source $HOME/.vimrc.custom.plugins
+if filereadable(expand($HOME . '/.vim/custom.plugins'))
+    source $HOME/.vim/custom.plugins
 endif
 
 call plug#end()  
@@ -173,8 +173,8 @@ runtime macros/matchit.vim
 
 " 编辑vimrc相关配置文件
 nnoremap <leader>e :edit $MYVIMRC<cr>
-nnoremap <leader>vc :edit ~/.vimrc.custom.config<cr>
-nnoremap <leader>vp :edit ~/.vimrc.custom.plugins<cr>
+nnoremap <leader>vc :edit ~/.vim/custom.config<cr>
+nnoremap <leader>vp :edit ~/.vim/custom.plugins<cr>
 
 " 查看vimplus的help文件
 nnoremap <leader>h :view +let\ &l:modifiable=0 ~/.vimplus/help.md<cr>
@@ -355,8 +355,6 @@ nnoremap <leader>G :GV!<cr>
 nnoremap <leader>gg :GV?<cr>
 
 " 加载自定义配置
-if filereadable(expand($HOME . '/.vimrc.custom.config'))
-    source $HOME/.vimrc.custom.config
+if filereadable(expand($HOME . '/.vim/custom.config'))
+    source $HOME/.vim/custom.config
 endif
-
-
