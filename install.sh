@@ -325,21 +325,28 @@ function install_prepare_software_on_gentoo()
 {
     test_install_gentoo app-editors/vim dev-util/ctags sys-devel/automake sys-devel/gcc dev-util/cmake sys-apps/ack dev-vcs/git media-libs/fontconfig
     su - -c "ln -s /usr/lib/libtinfo.so.6 /usr/lib/libtinfo.so.5" -s /bin/bash
-    # ssh -l root localhost "ln -s /usr/lib/libtinfo.so.6 /usr/lib/libtinfo.so.5"
 }
 
 function test_install_gentoo()
 {
     pkgs=$*
+    pkg_need_install=""
     for pkg in ${pkgs}
     do
         if qlist -I | grep -Eq $pkg; then
             echo "$pkg is already installed."
         else
-            su - -c "emerge -v ${pkg}" -s /bin/bash
-            # ssh -l root localhost "emerge -v ${pkg}"
+	    pkg_need_install="$pkg_need_install $pkg"
         fi
     done
+
+    if sudo -l | grep -Eq "emerge"; then
+        sudo emerge -v $pkg_need_install 
+    else
+    	echo "Need Root password:"
+        su - -c "emerge -v $pkg_need_install" -s /bin/bash
+    fi
+
 }
 
 # 安装opensuse必备软件
