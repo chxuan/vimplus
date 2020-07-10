@@ -339,7 +339,7 @@ An automatic configuration program for vim
 
 ## vimplus:star:趋势图
 
-[![Sparkline](https://stars.medv.io/chxuan/vimplus.svg)](https://stars.medv.io/chxuan/vimplus)
+![Stargazers over time](https://starchart.cc/chxuan/vimplus.svg)
 
 
 ## License
