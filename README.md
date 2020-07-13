@@ -335,6 +335,7 @@ An automatic configuration program for vim
 | 3     | [zibraque][85]     | ¥50   | 2019-11-25 |
 | 4     | [gfreewind][86]    | ¥20   | 2019-12-27 |
 | 5     | [wh656325437][88]  | ¥20   | 2020-07-02 |
+| 6     | [luguifang][89]    | ¥20   | 2020-07-12 |
 
 
 ## vimplus:star:趋势图
@@ -404,4 +405,5 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [86]: https://github.com/gfreewind
   [87]: https://termux.com/
   [88]: https://github.com/wh656325437
+  [89]: https://github.com/luguifang
 
