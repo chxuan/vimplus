@@ -337,6 +337,7 @@ An automatic configuration program for vim
 | 5     | [wh656325437][88]  | ¥20   | 2020-07-02 |
 | 6     | [luguifang][89]    | ¥20   | 2020-07-12 |
 | 7     | [liyewen521][90]   | ¥20   | 2020-07-27 |
+| 8     | [xht19980305][91]  | ¥20   | 2020-08-14 |
 
 
 ## vimplus:star:趋势图
@@ -408,4 +409,5 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [88]: https://github.com/wh656325437
   [89]: https://github.com/luguifang
   [90]: https://github.com/liyewen521
+  [91]: https://github.com/xht19980305
 
