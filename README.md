@@ -60,6 +60,7 @@ An automatic configuration program for vim
 <td><a href="https://distrowatch.com/table.php?distribution=manjaro"><img src="https://distrowatch.com/images/yvzhuwbpy/manjaro.png"/></a><p align="center"></p></td>
 <td><a href="https://distrowatch.com/table.php?distribution=opensuse"><img src="https://distrowatch.com/images/yvzhuwbpy/opensuse.png"/></a><p align="center"></p></td>
 <td><a href="https://distrowatch.com/table.php?distribution=gentoo"><img src="https://distrowatch.com/images/yvzhuwbpy/gentoo.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=raspios"><img src="https://distrowatch.com/images/yvzhuwbpy/raspios.png"/></a><p align="center"></p></td>
 </tr>
 </table>
 
@@ -317,6 +318,9 @@ An automatic configuration program for vim
 </a>
 <a href="https://github.com/ardinzh" target="_blank" title="ardinzh">
 <img src="https://github.com/ardinzh.png?size=64" width="64" height="64" alt="ardinzh">
+</a>
+<a href="https://github.com/BD7IWD" target="_blank" title="BD7IWD">
+<img src="https://github.com/BD7IWD.png?size=64" width="64" height="64" alt="BD7IWD">
 </a>
 
 
