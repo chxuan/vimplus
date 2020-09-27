@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # 获取linux发行版名称
 function get_linux_distro()
@@ -350,6 +350,12 @@ function install_software_on_gentoo()
     fi
 }
 
+# 安装freebsd必备软件
+function install_prepare_software_on_freebsd()
+{
+    sudo pkg install vim ctags automake gcc cmake p5-ack python git fontconfig
+}
+
 # 安装opensuse必备软件
 function install_prepare_software_on_opensuse()
 {
@@ -561,6 +567,14 @@ function install_vimplus_on_gentoo()
     begin_install_vimplus
 }
 
+# 在FreeBSD上安装vimplus
+function install_vimplus_on_freebsd()
+{
+    backup_vimrc_and_vim
+    install_prepare_software_on_freebsd
+    begin_install_vimplus
+}
+
 # 在opensuse上安装vimplus
 function install_vimplus_on_opensuse()
 {
@@ -625,6 +639,8 @@ function main()
 
     if [ ${type} == "Darwin" ]; then
         install_vimplus_on_mac
+    elif [ ${type} == "FreeBSD" ]; then
+        install_vimplus_on_freebsd
     elif [ ${type} == "Linux" ]; then
         tp=$(uname -a)
         if [[ $tp =~ "Android" ]]; then
