@@ -7,6 +7,8 @@ function get_linux_distro()
         echo "Ubuntu"
     elif grep -Eq "Deepin" /etc/*-release; then
         echo "Deepin"
+    elif grep -Eq "Raspbian" /etc/*-release; then
+        echo "Raspbian"
     elif grep -Eq "uos" /etc/*-release; then
         echo "UOS"
     elif grep -Eq "LinuxMint" /etc/*-release; then
@@ -78,10 +80,10 @@ function backup_vimrc_file()
     fi
 }
 
-#备份原有的custom.plugins文件
+#备份原有的.vimrc.custom.plugins文件
 function backup_vimrc_custom_plugins_file()
 {
-    old_vimrc_plugins=$HOME"/.vim/custom.plugins"
+    old_vimrc_plugins=$HOME"/.vimrc.custom.plugins"
     is_exist=$(is_exist_file $old_vimrc_plugins)
     if [ $is_exist == 1 ]; then
         time=$(get_datetime)
@@ -93,10 +95,10 @@ function backup_vimrc_custom_plugins_file()
     fi
 }
 
-#备份原有的custom.config文件
+#备份原有的.vimrc.custom.config文件
 function backup_vimrc_custom_config_file()
 {
-    old_vimrc_config=$HOME"/.vim/custom.config"
+    old_vimrc_config=$HOME"/.vimrc.custom.config"
     is_exist=$(is_exist_file $old_vimrc_config)
     if [ $is_exist == 1 ]; then
         time=$(get_datetime)
@@ -358,16 +360,16 @@ function install_prepare_software_on_opensuse()
 function copy_files()
 {
     rm -rf ~/.vimrc
-    ln -s ${PWD}/vimrc ~/.vimrc
+    ln -s ${PWD}/.vimrc ~
 
-    rm -rf ~/.vim/custom.plugins
-    cp ${PWD}/custom.plugins ~/.vim
+    rm -rf ~/.vimrc.custom.plugins
+    cp ${PWD}/.vimrc.custom.plugins ~
 
-    rm -rf ~/.vim/custom.config
-    cp ${PWD}/custom.config ~/.vim
+    rm -rf ~/.vimrc.custom.config
+    cp ${PWD}/.vimrc.custom.config ~
 
     rm -rf ~/.ycm_extra_conf.py
-    ln -s ${PWD}/ycm_extra_conf.py ~/.ycm_extra_conf.py
+    ln -s ${PWD}/.ycm_extra_conf.py ~
 
     mkdir ~/.vim
     rm -rf ~/.vim/colors
@@ -582,6 +584,8 @@ function install_vimplus_on_linux()
     elif [ ${distro} == "elementaryOS" ]; then
         install_vimplus_on_ubuntu_like
     elif [ ${distro} == "Debian" ]; then
+        install_vimplus_on_debian
+    elif [ ${distro} == "Raspbian" ]; then
         install_vimplus_on_debian
     elif [ ${distro} == "UOS" ]; then
         install_vimplus_on_debian

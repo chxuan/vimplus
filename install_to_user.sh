@@ -89,12 +89,12 @@ function backup_vimrc_file()
     fi
 }
 
-#备份原有的.vim/custom.plugins文件
+#备份原有的.vimrc.custom.plugins文件
 function backup_vimrc_custom_plugins_file()
 {
     user=$1
     home_path=$2
-    old_vimrc_plugins=$home_path".vim/custom.plugins"
+    old_vimrc_plugins=$home_path".vimrc.custom.plugins"
     is_exist=$(is_exist_file $old_vimrc_plugins)
     if [ $is_exist == 1 ]; then
         time=$(get_datetime)
@@ -107,12 +107,12 @@ function backup_vimrc_custom_plugins_file()
     fi
 }
 
-#备份原有的.vim/custom.config文件
+#备份原有的.vimrc.custom.config文件
 function backup_vimrc_custom_config_file()
 {
     user=$1
     home_path=$2
-    old_vimrc_config=$home_path".vim/custom.config"
+    old_vimrc_config=$home_path".vimrc.custom.config"
     is_exist=$(is_exist_file $old_vimrc_config)
     if [ $is_exist == 1 ]; then
         time=$(get_datetime)
@@ -230,13 +230,13 @@ function install_to_user_on_linux()
     cp -R $src_vimplus_path $desc_home_path
     chown -R $desc_username":"$desc_username $desc_vimplus_path
 
-    rm -rf $desc_home_path".vim/custom.plugins"
-    cp $desc_vimplus_path".vim/custom.plugins" $desc_home_path
-    chown $desc_username":"$desc_username $desc_home_path".vim/custom.plugins"
+    rm -rf $desc_home_path".vimrc.custom.plugins"
+    cp $desc_vimplus_path".vimrc.custom.plugins" $desc_home_path
+    chown $desc_username":"$desc_username $desc_home_path".vimrc.custom.plugins"
 
-    rm -rf $desc_home_path".vim/custom.config"
-    cp $desc_vimplus_path".vim/custom.config" $desc_home_path
-    chown $desc_username":"$desc_username $desc_home_path".vim/custom.config"
+    rm -rf $desc_home_path".vimrc.custom.config"
+    cp $desc_vimplus_path".vimrc.custom.config" $desc_home_path
+    chown $desc_username":"$desc_username $desc_home_path".vimrc.custom.config"
 
     # 创建软链接
     rm -rf $desc_home_path".vimrc"
