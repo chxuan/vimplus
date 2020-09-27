@@ -252,6 +252,12 @@ function install_prepare_software_on_mac()
     fi
 }
 
+# 安装FreeBSD必备软件
+function install_prepare_software_on_freebsd()
+{
+    sudo pkg install vim ctags automake gcc cmake p5-ack python git fontconfig
+}
+
 # 安装android平台必备软件
 function install_prepare_software_on_android()
 {
@@ -348,12 +354,6 @@ function install_software_on_gentoo()
         echo "Need Root password:"
         su - -c "emerge -v $pkg_need_install" -s /bin/bash
     fi
-}
-
-# 安装freebsd必备软件
-function install_prepare_software_on_freebsd()
-{
-    sudo pkg install vim ctags automake gcc cmake p5-ack python git fontconfig
 }
 
 # 安装opensuse必备软件
@@ -489,6 +489,14 @@ function install_vimplus_on_mac()
     print_logo
 }
 
+# 在FreeBSD上安装vimplus
+function install_vimplus_on_freebsd()
+{
+    backup_vimrc_and_vim
+    install_prepare_software_on_freebsd
+    begin_install_vimplus
+}
+
 # 在android平台安装vimplus
 function install_vimplus_on_android()
 {
@@ -564,14 +572,6 @@ function install_vimplus_on_gentoo()
 {
     backup_vimrc_and_vim
     install_prepare_software_on_gentoo
-    begin_install_vimplus
-}
-
-# 在FreeBSD上安装vimplus
-function install_vimplus_on_freebsd()
-{
-    backup_vimrc_and_vim
-    install_prepare_software_on_freebsd
     begin_install_vimplus
 }
 
