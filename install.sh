@@ -176,7 +176,7 @@ function compile_vim_on_ubuntu()
         --enable-multibyte \
         --enable-rubyinterp \
         --enable-pythoninterp \
-        --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu \
+        --with-python-config-dir=/usr/lib/python2.7/config-`dpkg-architecture -qDEB_HOST_MULTIARCH` \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
@@ -199,7 +199,7 @@ function compile_vim_on_debian()
         --enable-multibyte \
         --enable-rubyinterp \
         --enable-pythoninterp \
-        --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu \
+        --with-python-config-dir=/usr/lib/python2.7/config-`dpkg-architecture -qDEB_HOST_MULTIARCH` \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
