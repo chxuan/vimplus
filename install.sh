@@ -427,10 +427,24 @@ function install_ycm()
     read -p "Please choose to compile ycm with python2 or python3, if there is a problem with the current selection, please choose another one. [2/3] " version
     if [[ $version == "2" ]]; then
         echo "Compile ycm with python2."
-        python2.7 ./install.py --clang-completer
+        {
+            python2.7 ./install.py --clang-completer
+        } || {
+            echo "##########################################"
+            echo "Build error, trying rebuild without Clang."
+            echo "##########################################"
+            python2.7 ./install.py
+        }
     else
         echo "Compile ycm with python3."
-        python3 ./install.py --clang-completer
+        {
+            python3 ./install.py --clang-completer
+        } || {
+            echo "##########################################"
+            echo "Build error, trying rebuild without Clang."
+            echo "##########################################"
+            python3 ./install.py
+        }
     fi
 }
 
