@@ -60,6 +60,7 @@ An automatic configuration program for vim
 <td><a href="https://distrowatch.com/table.php?distribution=manjaro"><img src="https://distrowatch.com/images/yvzhuwbpy/manjaro.png"/></a><p align="center"></p></td>
 <td><a href="https://distrowatch.com/table.php?distribution=opensuse"><img src="https://distrowatch.com/images/yvzhuwbpy/opensuse.png"/></a><p align="center"></p></td>
 <td><a href="https://distrowatch.com/table.php?distribution=gentoo"><img src="https://distrowatch.com/images/yvzhuwbpy/gentoo.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=raspios"><img src="https://distrowatch.com/images/yvzhuwbpy/raspios.png"/></a><p align="center"></p></td>
 </tr>
 </table>
 
@@ -318,6 +319,9 @@ An automatic configuration program for vim
 <a href="https://github.com/ardinzh" target="_blank" title="ardinzh">
 <img src="https://github.com/ardinzh.png?size=64" width="64" height="64" alt="ardinzh">
 </a>
+<a href="https://github.com/BD7IWD" target="_blank" title="BD7IWD">
+<img src="https://github.com/BD7IWD.png?size=64" width="64" height="64" alt="BD7IWD">
+</a>
 
 
 ## 支持开源:heart:
@@ -334,11 +338,15 @@ An automatic configuration program for vim
 | 2     | [zhoumengkang][80] | ¥50   | 2019-09-29 |
 | 3     | [zibraque][85]     | ¥50   | 2019-11-25 |
 | 4     | [gfreewind][86]    | ¥20   | 2019-12-27 |
+| 5     | [wh656325437][88]  | ¥20   | 2020-07-02 |
+| 6     | [luguifang][89]    | ¥20   | 2020-07-12 |
+| 7     | [liyewen521][90]   | ¥20   | 2020-07-27 |
+| 8     | [xht19980305][91]  | ¥20   | 2020-08-14 |
 
 
 ## vimplus:star:趋势图
 
-[![Sparkline](https://stars.medv.io/chxuan/vimplus.svg)](https://stars.medv.io/chxuan/vimplus)
+![Stargazers over time](https://starchart.cc/chxuan/vimplus.svg)
 
 
 ## License
@@ -402,4 +410,8 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [85]: https://github.com/zibraque
   [86]: https://github.com/gfreewind
   [87]: https://termux.com/
+  [88]: https://github.com/wh656325437
+  [89]: https://github.com/luguifang
+  [90]: https://github.com/liyewen521
+  [91]: https://github.com/xht19980305
 
