@@ -292,7 +292,7 @@ let g:ycm_semantic_triggers =  {
             \ }
 nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
 " 已经使用cpp-mode插件提供的转到函数实现的功能
-" nnoremap <leader>i :YcmCompleter GoToDefinition<cr> 
+nnoremap <leader>i :YcmCompleter GoToDefinition<cr> 
 nnoremap <leader>o :YcmCompleter GoToInclude<cr>
 nnoremap <leader>ff :YcmCompleter FixIt<cr>
 nmap <F5> :YcmDiags<cr>
@@ -327,6 +327,8 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 
 " LeaderF
 nnoremap <leader>f :LeaderfFile .<cr>
+nnoremap <leader>m :Leaderf function<cr>
+nnoremap <leader>M :Leaderf searchHistory<cr>
 let g:Lf_WildIgnore = {
             \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh'],
             \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
@@ -334,7 +336,12 @@ let g:Lf_WildIgnore = {
 let g:Lf_UseCache = 0
 
 " ack
-nnoremap <leader>F :Ack!<space>
+nnoremap <leader>F :execute ":Ack! " . expand("<cword>")<cr>
+
+" AutoPair
+" let g:AutoPairsShortcutToggle = '<m-p>' 
+" let g:AutoPairsShortcutFastWrap= '<c-0>' 
+imap <C-d>d <M-e>
 
 " echodoc.vim
 let g:echodoc_enable_at_startup = 1
