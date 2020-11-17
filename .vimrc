@@ -296,6 +296,7 @@ nnoremap <leader>i :YcmCompleter GoToDefinition<cr>
 nnoremap <leader>o :YcmCompleter GoToInclude<cr>
 nnoremap <leader>ff :YcmCompleter FixIt<cr>
 nmap <F5> :YcmDiags<cr>
+nmap <F6> :!./build.sh<cr>
 
 " tagbar
 let g:tagbar_width = 30
