@@ -95,9 +95,9 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 if has("gui_running")
     let system = system('uname -s')
     if system == "Darwin\n"
-        set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ Complete:h18 " 设置字体
+        set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ Complete:h14 " 设置字体
     else
-        set guifont=DroidSansMono\ Nerd\ Font\ Regular\ 18      " 设置字体
+        set guifont=DroidSansMono\ Nerd\ Font\ Regular\ 14      " 设置字体
     endif
     set guioptions-=m           " 隐藏菜单栏
     set guioptions-=T           " 隐藏工具栏
@@ -337,7 +337,8 @@ let g:Lf_WildIgnore = {
 let g:Lf_UseCache = 0
 
 " ack
-nnoremap <leader>F :execute ":Ack! " . expand("<cword>")<cr>
+nnoremap <leader>F :execute ":Ack! " . expand("<cword>")<CR>
+" nnoremap <leader>F :Ack!
 
 " AutoPair
 " let g:AutoPairsShortcutToggle = '<m-p>' 
