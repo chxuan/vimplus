@@ -105,7 +105,8 @@ if has("gui_running")
     set guioptions-=r           " 隐藏右侧滚动条
     set guioptions-=b           " 隐藏底部滚动条
     set showtabline=0           " 隐藏Tab栏
-    set guicursor=n-v-c:ver5    " 设置光标为竖线
+"    set guicursor=n-v-c:ver5    " 设置光标为竖线
+    set gcr=a:block-blinkon0
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -160,6 +161,7 @@ Plug 'Shougo/echodoc.vim'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'rhysd/clever-f.vim'
 Plug 'vim-scripts/indentpython.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " 加载自定义插件
 if filereadable(expand($HOME . '/.vimrc.custom.plugins'))
@@ -183,7 +185,7 @@ nnoremap <leader>h :view +let\ &l:modifiable=0 ~/.vimplus/help.md<cr>
 nnoremap <leader>H :execute ":help " . expand("<cword>")<cr>
 
 " 重新加载vimrc文件
-nnoremap <leader>s :source $MYVIMRC<cr>
+nnoremap <leader>u :source $MYVIMRC<cr>
 
 " 安装、更新、删除插件
 nnoremap <leader><leader>i :PlugInstall<cr>
@@ -222,6 +224,8 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
+" Markdown
+let g:mkdp_brower = 'chromium'
 " cpp-mode
 nnoremap <leader>y :CopyCode<cr>
 nnoremap <leader>p :PasteCode<cr>
@@ -290,7 +294,7 @@ let g:ycm_semantic_triggers =  {
             \   'lua' : ['.', ':'],
             \   'erlang' : [':'],
             \ }
-nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
+" nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
 " 已经使用cpp-mode插件提供的转到函数实现的功能
 nnoremap <leader>i :YcmCompleter GoToDefinition<cr> 
 nnoremap <leader>o :YcmCompleter GoToInclude<cr>
@@ -311,6 +315,13 @@ map g/ <Plug>(incsearch-stay)
 let g:EasyMotion_smartcase = 1
 map <leader>w <Plug>(easymotion-bd-w)
 nmap <leader>w <Plug>(easymotion-overwin-w)
+nmap <leader>s <Plug>(easymotion-overwin-f2)
+nmap s <Plug>(easymotion-overwin-f)
+
+" JK motions: Line motions
+" map <Leader>j <Plug>(easymotion-j)
+" map <Leader>k <Plug>(easymotion-k)
+" map <Leader>l <Plug>(easymotion-lineforward)
 
 " nerdtree-git-plugin
 let g:NERDTreeGitStatusIndicatorMapCustom = {
@@ -339,6 +350,10 @@ let g:Lf_UseCache = 0
 " ack
 nnoremap <leader>F :execute ":Ack! " . expand("<cword>")<CR>
 " nnoremap <leader>F :Ack!
+
+" quickfix operate
+nmap <F3> :cp<cr>
+nmap <F4> :cn<cr>
 
 " AutoPair
 " let g:AutoPairsShortcutToggle = '<m-p>' 
