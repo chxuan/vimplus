@@ -178,7 +178,6 @@ function compile_vim_on_ubuntu()
         --enable-multibyte \
         --enable-rubyinterp \
         --enable-pythoninterp \
-        --with-python-config-dir=/usr/lib/python2.7/config-`dpkg-architecture -qDEB_HOST_MULTIARCH` \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
@@ -201,7 +200,6 @@ function compile_vim_on_debian()
         --enable-multibyte \
         --enable-rubyinterp \
         --enable-pythoninterp \
-        --with-python-config-dir=/usr/lib/python2.7/config-`dpkg-architecture -qDEB_HOST_MULTIARCH` \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
@@ -224,7 +222,6 @@ function compile_vim_on_parrot()
         --enable-multibyte \
         --enable-rubyinterp \
         --enable-pythoninterp \
-        --with-python-config-dir=/usr/lib/python2.7/config-`dpkg-architecture -qDEB_HOST_MULTIARCH` \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
@@ -253,7 +250,6 @@ function compile_vim_on_centos()
         --with-tlib=tinfo \
         --enable-rubyinterp=yes \
         --enable-pythoninterp=yes \
-        --with-python-config-dir=/lib64/python2.7/config \
         --enable-perlinterp=yes \
         --enable-luainterp=yes \
         --enable-gui=gtk2 \
