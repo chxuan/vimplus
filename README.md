@@ -324,6 +324,9 @@ An automatic configuration program for vim
 <a href="https://github.com/BD7IWD" target="_blank" title="BD7IWD">
 <img src="https://github.com/BD7IWD.png?size=64" width="64" height="64" alt="BD7IWD">
 </a>
+<a href="https://github.com/Ro0tk1t" target="_blank" title="Ro0tk1t">
+<img src="https://github.com/Ro0tk1t.png?size=64" width="64" height="64" alt="Ro0tk1t">
+</a>
 
 
 ## 支持开源:heart:
