@@ -19,6 +19,8 @@ function get_linux_distro()
         echo "Debian"
     elif grep -Eq "Kali" /etc/*-release; then
         echo "Kali"
+    elif grep -Eq "Parrot" /etc/*-release; then
+        echo "Parrot"
     elif grep -Eq "CentOS" /etc/*-release; then
         echo "CentOS"
     elif grep -Eq "fedora" /etc/*-release; then
@@ -176,7 +178,6 @@ function compile_vim_on_ubuntu()
         --enable-multibyte \
         --enable-rubyinterp \
         --enable-pythoninterp \
-        --with-python-config-dir=/usr/lib/python2.7/config-`dpkg-architecture -qDEB_HOST_MULTIARCH` \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
@@ -199,7 +200,28 @@ function compile_vim_on_debian()
         --enable-multibyte \
         --enable-rubyinterp \
         --enable-pythoninterp \
-        --with-python-config-dir=/usr/lib/python2.7/config-`dpkg-architecture -qDEB_HOST_MULTIARCH` \
+        --enable-perlinterp \
+        --enable-luainterp \
+        --enable-gui=gtk2 \
+        --enable-cscope \
+        --prefix=/usr
+    make
+    sudo make install
+    cd -
+}
+
+# 在parrot上源代码安装vim
+function compile_vim_on_parrot()
+{
+    sudo apt-get install -y libncurses5-dev libncurses5 libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 vim
+
+    rm -rf ~/vim82
+    git clone https://gitee.com/chxuan/vim82.git ~/vim82
+    cd ~/vim82
+    ./configure --with-features=huge \
+        --enable-multibyte \
+        --enable-rubyinterp \
+        --enable-pythoninterp \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
@@ -228,7 +250,6 @@ function compile_vim_on_centos()
         --with-tlib=tinfo \
         --enable-rubyinterp=yes \
         --enable-pythoninterp=yes \
-        --with-python-config-dir=/lib64/python2.7/config \
         --enable-perlinterp=yes \
         --enable-luainterp=yes \
         --enable-gui=gtk2 \
@@ -300,6 +321,14 @@ function install_prepare_software_on_debian()
     sudo apt-get update
     sudo apt-get install -y cmake exuberant-ctags build-essential python python-dev python3-dev fontconfig libfile-next-perl ack git
     compile_vim_on_debian
+}
+
+# 安装parrot必备软件
+function install_prepare_software_on_parrot()
+{
+    sudo apt-get update
+    sudo apt-get install -y cmake exuberant-ctags build-essential python python-dev python3-dev fontconfig libfile-next-perl ack git
+    compile_vim_on_parrot
 }
 
 # 安装centos必备软件
@@ -557,6 +586,14 @@ function install_vimplus_on_debian()
     begin_install_vimplus
 }
 
+# 在parrot上安装vimplus
+function install_vimplus_on_parrot()
+{
+    backup_vimrc_and_vim
+    install_prepare_software_on_parrot
+    begin_install_vimplus
+}
+
 # 在centos上安装vimplus
 function install_vimplus_on_centos()
 {
@@ -619,6 +656,8 @@ function install_vimplus_on_linux()
         install_vimplus_on_debian
     elif [ ${distro} == "Kali" ]; then
         install_vimplus_on_debian
+    elif [ ${distro} == "Parrot" ]; then
+        install_vimplus_on_parrot
     elif [ ${distro} == "CentOS" ]; then
         install_vimplus_on_centos
     elif [ ${distro} == "fedora" ]; then
