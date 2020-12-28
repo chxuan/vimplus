@@ -24,7 +24,7 @@ An automatic configuration program for vim
 
 #### 安装vimplus
 
-    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
+    git clone https://github.com/JokerX08/vimplus.git ~/.vimplus
     cd ~/.vimplus
     ./install.sh
     
