@@ -129,7 +129,7 @@ An automatic configuration program for vim
 | [prepare-code][67]                  | 新建文件时，生成预定义代码片段(I'm author:smile:)                              |
 | [vim-buffer][70]                    | vim缓存操作(I'm author:smile:)                                                 |
 | [vimplus-startify][66]              | vimplus开始页面(修改自[mhinz/vim-startify][25])                                |
-| [tagbar][74]                        | 使用[majutsushi/tagbar][13]的v2.3版本，[taglist][14]的替代品，显示类/方法/变量 |
+| [tagbar][13]                        | 使用[preservim/tagbar][13]的最新版本，[taglist][14]的替代品，显示类/方法/变量 |
 | [vim-plug][4]                       | 比[Vundle][54]下载更快的插件管理软件                                           |
 | [YouCompleteMe][5]                  | 史上最强大的基于语义的自动补全插件，支持C/C++、C#、Python、PHP等语言           |
 | [NerdTree][6]                       | 代码资源管理器                                                                 |
@@ -369,7 +369,7 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [9]: https://github.com/powerline/powerline
   [10]: https://github.com/jiangmiao/auto-pairs
   [12]: https://github.com/ctrlpvim/ctrlp.vim
-  [13]: https://github.com/majutsushi/tagbar
+  [13]: https://github.com/preservim/tagbar
   [14]: https://github.com/vim-scripts/taglist.vim
   [15]: https://github.com/ryanoasis/vim-devicons
   [16]: https://github.com/tpope/vim-surround
@@ -401,7 +401,6 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [68]: https://github.com/rhysd/clever-f.vim
   [70]: https://github.com/chxuan/vim-buffer
   [72]: https://github.com/chxuan/vim-edit
-  [74]: https://github.com/chxuan/tagbar
   [75]: https://github.com/chxuan/vimplus/blob/master/LICENSE
   [76]: https://blog.csdn.net/wang73ying/article/details/82491993
   [77]: https://blog.csdn.net/liuyangbo121/article/details/82971736
