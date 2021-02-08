@@ -364,7 +364,7 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [3]: https://brew.sh/
   [4]: https://github.com/junegunn/vim-plug
   [5]: https://github.com/Valloric/YouCompleteMe
-  [6]: https://github.com/scrooloose/nerdtree
+  [6]: https://github.com/preservim/nerdtree
   [8]: https://github.com/vim-airline/vim-airline
   [9]: https://github.com/powerline/powerline
   [10]: https://github.com/jiangmiao/auto-pairs
