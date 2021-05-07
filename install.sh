@@ -298,8 +298,9 @@ function install_prepare_software_on_ubuntu()
         sudo apt-get install -y cmake
     fi
 
-    sudo apt-get install -y exuberant-ctags build-essential python python-dev python3-dev fontconfig libfile-next-perl ack-grep git
-
+    sudo apt-get install -y build-essential python python-dev python3-dev fontconfig libfile-next-perl ack-grep git
+    sudo apt-get install -y universal-ctags || sudo apt-get install -y exuberant-ctags
+    
     if [ $version -ge 18 ];then
         sudo apt-get install -y vim
     else
@@ -311,7 +312,8 @@ function install_prepare_software_on_ubuntu()
 function install_prepare_software_on_ubuntu_like()
 {
     sudo apt-get update
-    sudo apt-get install -y cmake exuberant-ctags build-essential python python-dev python3-dev fontconfig libfile-next-perl ack-grep git
+    sudo apt-get install -y cmake build-essential python python-dev python3-dev fontconfig libfile-next-perl ack-grep git
+    sudo apt-get install -y universal-ctags || sudo apt-get install -y exuberant-ctags
     compile_vim_on_ubuntu
 }
 
@@ -319,7 +321,8 @@ function install_prepare_software_on_ubuntu_like()
 function install_prepare_software_on_debian()
 {
     sudo apt-get update
-    sudo apt-get install -y cmake exuberant-ctags build-essential python python-dev python3-dev fontconfig libfile-next-perl ack git
+    sudo apt-get install -y cmake build-essential python python-dev python3-dev fontconfig libfile-next-perl ack git
+    sudo apt-get install -y universal-ctags || sudo apt-get install -y exuberant-ctags
     compile_vim_on_debian
 }
 
