@@ -33,6 +33,8 @@ function get_linux_distro()
         echo "ManjaroLinux"
     elif grep -Eq "Gentoo" /etc/*-release; then
         echo "Gentoo"
+    elif grep -Eq "alpine" /etc/*-release; then
+        echo "Alpine"
     else
         echo "Unknow"
     fi
@@ -146,6 +148,14 @@ function get_ubuntu_version()
     echo ${version[0]}
 }
 
+# 获取alpine版本
+function get_alpine_version()
+{
+    version=$(cat /etc/os-release | grep 'VERSION_ID' | awk -F '=' '{print $2}')
+    
+    echo $version
+}
+
 # 获取centos版本
 function get_centos_version()
 {
@@ -162,6 +172,27 @@ function is_macos1014()
     else
         echo 0
     fi
+}
+
+# 在alpine上源代码安装vim
+function compile_vim_on_alpine()
+{
+    rm -rf ~/vim82
+    git clone https://gitee.com/chxuan/vim82.git ~/vim82
+    cd ~/vim82
+    ./configure --with-features=huge \
+        --enable-multibyte \
+        --with-tlib=ncurses \
+        --enable-rubyinterp=yes \
+        --enable-pythoninterp=yes \
+        --enable-perlinterp=yes \
+        --enable-luainterp=yes \
+        --enable-gui=gtk2 \
+        --enable-cscope \
+        --prefix=/usr
+    make
+    sudo make install
+    cd -
 }
 
 # 在ubuntu上源代码安装vim
@@ -284,6 +315,20 @@ function install_prepare_software_on_android()
 {
     pkg update
     pkg install -y git vim-python cmake python2 python ctags ack-grep ncurses-utils
+}
+
+# 安装alpine必备软件 需要更换源
+function install_prepare_software_on_alpine()
+{
+    sudo sed -i "s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g" /etc/apk/repositories
+
+    version=$(get_alpine_version)
+
+    apk update
+
+    apk add python3 python3-dev ruby ruby-dev lua lua-dev luajit luajit-dev ctags tcl tcl-dev perl perl-dev libx11 libx11-dev ncurses-dev g++ gcc git automake cmake fontconfig-dev
+
+    compile_vim_on_alpine
 }
 
 # 安装ubuntu必备软件
@@ -634,6 +679,14 @@ function install_vimplus_on_opensuse()
     begin_install_vimplus
 }
 
+# 在alpine上安装vimplus
+function install_vimplus_on_alpine()
+{
+    backup_vimrc_and_vim
+    install_prepare_software_on_alpine
+    begin_install_vimplus
+}
+
 # 在linux平上台安装vimplus
 function install_vimplus_on_linux()
 {
@@ -670,6 +723,8 @@ function install_vimplus_on_linux()
         install_vimplus_on_archlinux
     elif [ ${distro} == "Gentoo" ]; then
         install_vimplus_on_gentoo
+    elif [ ${distro} == "Alpine" ]; then
+        install_vimplus_on_alpine
     else
         echo "Not support linux distro: "${distro}
     fi
