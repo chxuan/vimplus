@@ -326,7 +326,7 @@ function install_prepare_software_on_alpine()
 
     apk update
 
-    apk add python3 python3-dev ruby ruby-dev lua lua-dev luajit luajit-dev ctags tcl tcl-dev perl perl-dev libx11 libx11-dev ncurses-dev g++ gcc git automake cmake fontconfig-dev
+    apk add python3 python3-dev ruby ruby-dev lua lua-dev luajit luajit-dev ctags tcl tcl-dev perl perl-dev libx11 libx11-dev ncurses ncurses-dev g++ gcc git automake cmake fontconfig-dev
 
     compile_vim_on_alpine
 }
