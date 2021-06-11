@@ -191,7 +191,7 @@ function compile_vim_on_alpine()
         --enable-cscope \
         --prefix=/usr
     make
-    sudo make install
+    make install
     cd -
 }
 
@@ -320,7 +320,7 @@ function install_prepare_software_on_android()
 # 安装alpine必备软件 需要更换源
 function install_prepare_software_on_alpine()
 {
-    sudo sed -i "s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g" /etc/apk/repositories
+    sed -i "s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g" /etc/apk/repositories
 
     version=$(get_alpine_version)
 
