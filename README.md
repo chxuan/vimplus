@@ -28,6 +28,8 @@ An automatic configuration program for vim
     cd ~/.vimplus
     ./install.sh
     
+注: apline用户请预先安装git,bash: apk add git bash  
+
 #### 设置Nerd Font
 
 为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`。
@@ -63,6 +65,7 @@ An automatic configuration program for vim
 <td><a href="https://distrowatch.com/table.php?distribution=parrot"><img src="https://distrowatch.com/images/yvzhuwbpy/parrot.png"/></a><p align="center"></p></td>
 <td><a href="https://distrowatch.com/table.php?distribution=raspios"><img src="https://distrowatch.com/images/yvzhuwbpy/raspios.png"/></a><p align="center"></p></td>
 <td><a href="https://distrowatch.com/table.php?distribution=freebsd"><img src="https://distrowatch.com/images/yvzhuwbpy/freebsd.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=alpine"><img src="https://distrowatch.com/images/yvzhuwbpy/alpine.png"/></a><p align="center"></p></td>
 </tr>
 </table>
 
