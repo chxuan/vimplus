@@ -33,6 +33,8 @@ function get_linux_distro()
         echo "ManjaroLinux"
     elif grep -Eq "Gentoo" /etc/*-release; then
         echo "Gentoo"
+    elif grep -Eq "alpine" /etc/*-release; then
+        echo "Alpine"
     else
         echo "Unknow"
     fi
@@ -146,6 +148,14 @@ function get_ubuntu_version()
     echo ${version[0]}
 }
 
+# 获取alpine版本
+function get_alpine_version()
+{
+    version=$(cat /etc/os-release | grep 'VERSION_ID' | awk -F '=' '{print $2}')
+    
+    echo $version
+}
+
 # 获取centos版本
 function get_centos_version()
 {
@@ -163,6 +173,13 @@ function is_macos1014()
         echo 0
     fi
 }
+
+# 在alpine上直装vim8.2
+# function compile_vim_on_alpine()
+# {
+#     apk --upgrade add vim
+#     cd -
+# }
 
 # 在ubuntu上源代码安装vim
 function compile_vim_on_ubuntu()
@@ -284,6 +301,18 @@ function install_prepare_software_on_android()
 {
     pkg update
     pkg install -y git vim-python cmake python2 python ctags ack-grep ncurses-utils
+}
+
+# 安装alpine必备软件 需要更换源
+function install_prepare_software_on_alpine()
+{
+    sed -i "s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g" /etc/apk/repositories
+
+    version=$(get_alpine_version)
+
+    apk update
+
+    apk add python3 python3-dev ruby ruby-dev lua lua-dev luajit luajit-dev ctags tcl tcl-dev perl perl-dev libx11 libx11-dev ncurses ncurses-dev g++ gcc make automake cmake fontconfig fontconfig-dev nerd-fonts gcompat clang clang-dev vim
 }
 
 # 安装ubuntu必备软件
@@ -461,11 +490,21 @@ function install_ycm()
     git clone https://gitee.com/chxuan/YouCompleteMe-clang.git ~/.vim/plugged/YouCompleteMe
 
     cd ~/.vim/plugged/YouCompleteMe
-
+    distro=`get_linux_distro`
     read -p "Please choose to compile ycm with python2 or python3, if there is a problem with the current selection, please choose another one. [2/3] " version
     if [[ $version == "2" ]]; then
         echo "Compile ycm with python2."
+        # alpine 忽略 --clang-completer 并将 let g:ycm_clangd_binary_path 注入 .vimrc
         {
+            if [ ${distro} == "Alpine" ]; then
+                echo "##########################################"
+                echo "Apline Build, need without GLIBC."
+                echo "##########################################"
+                sed -i "273ilet g:ycm_clangd_binary_path='/usr/bin/clang'" ~/.vimrc
+                python2.7 ./install.py
+                return
+            fi
+        } || {
             python2.7 ./install.py --clang-completer
         } || {
             echo "##########################################"
@@ -476,6 +515,16 @@ function install_ycm()
     else
         echo "Compile ycm with python3."
         {
+            # alpine 跳过该步骤
+            if [ ${distro} == "Alpine" ]; then
+                echo "##########################################"
+                echo "Apline Build, need without GLIBC."
+                echo "##########################################"
+                sed -i "273ilet g:ycm_clangd_binary_path='/usr/bin/clang'" ~/.vimrc
+                python3 ./install.py
+                return
+            fi
+        } || {
             python3 ./install.py --clang-completer
         } || {
             echo "##########################################"
@@ -637,6 +686,17 @@ function install_vimplus_on_opensuse()
     begin_install_vimplus
 }
 
+# 在alpine上安装vimplus
+function install_vimplus_on_alpine()
+{
+    backup_vimrc_and_vim
+    install_prepare_software_on_alpine
+    begin_install_vimplus
+
+    # 单独安装 ycm
+
+}
+
 # 在linux平上台安装vimplus
 function install_vimplus_on_linux()
 {
@@ -673,6 +733,8 @@ function install_vimplus_on_linux()
         install_vimplus_on_archlinux
     elif [ ${distro} == "Gentoo" ]; then
         install_vimplus_on_gentoo
+    elif [ ${distro} == "Alpine" ]; then
+        install_vimplus_on_alpine
     else
         echo "Not support linux distro: "${distro}
     fi
