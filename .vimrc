@@ -158,7 +158,6 @@ Plug 'kana/vim-textobj-function'
 Plug 'sgur/vim-textobj-parameter'
 Plug 'Shougo/echodoc.vim'
 Plug 'terryma/vim-smooth-scroll'
-Plug 'rhysd/clever-f.vim'
 Plug 'vim-scripts/indentpython.vim'
 
 " 加载自定义插件

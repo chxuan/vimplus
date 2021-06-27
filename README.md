@@ -155,7 +155,6 @@ An automatic configuration program for vim
 | [vim-slash][50]                     | 优化搜索，移动光标后清除高亮                                                   |
 | [echodoc][57]                       | 补全函数时在命令栏显示函数签名                                                 |
 | [vim-smooth-scroll][60]             | 让翻页更顺畅                                                                   |
-| [clever-f.vim][68]                  | 强化f和F键                                                                     |
 
 
 ## 快捷键
@@ -330,6 +329,9 @@ An automatic configuration program for vim
 <a href="https://github.com/Ro0tk1t" target="_blank" title="Ro0tk1t">
 <img src="https://github.com/Ro0tk1t.png?size=64" width="64" height="64" alt="Ro0tk1t">
 </a>
+<a href="https://github.com/xuthus5" target="_blank" title="xuthus5">
+<img src="https://github.com/xuthus5.png?size=64" width="64" height="64" alt="xuthus5">
+</a>
 
 
 ## 支持开源:heart:
@@ -401,7 +403,6 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [64]: https://github.com/junegunn/gv.vim
   [66]: https://github.com/chxuan/vimplus-startify
   [67]: https://github.com/chxuan/prepare-code
-  [68]: https://github.com/rhysd/clever-f.vim
   [70]: https://github.com/chxuan/vim-buffer
   [72]: https://github.com/chxuan/vim-edit
   [75]: https://github.com/chxuan/vimplus/blob/master/LICENSE
