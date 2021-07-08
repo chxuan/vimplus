@@ -28,6 +28,8 @@ An automatic configuration program for vim
     cd ~/.vimplus
     ./install.sh
     
+注: apline用户请预先安装git,bash: apk add git bash  
+
 #### 设置Nerd Font
 
 为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`。
@@ -60,8 +62,10 @@ An automatic configuration program for vim
 <td><a href="https://distrowatch.com/table.php?distribution=manjaro"><img src="https://distrowatch.com/images/yvzhuwbpy/manjaro.png"/></a><p align="center"></p></td>
 <td><a href="https://distrowatch.com/table.php?distribution=opensuse"><img src="https://distrowatch.com/images/yvzhuwbpy/opensuse.png"/></a><p align="center"></p></td>
 <td><a href="https://distrowatch.com/table.php?distribution=gentoo"><img src="https://distrowatch.com/images/yvzhuwbpy/gentoo.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=parrot"><img src="https://distrowatch.com/images/yvzhuwbpy/parrot.png"/></a><p align="center"></p></td>
 <td><a href="https://distrowatch.com/table.php?distribution=raspios"><img src="https://distrowatch.com/images/yvzhuwbpy/raspios.png"/></a><p align="center"></p></td>
 <td><a href="https://distrowatch.com/table.php?distribution=freebsd"><img src="https://distrowatch.com/images/yvzhuwbpy/freebsd.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=alpine"><img src="https://distrowatch.com/images/yvzhuwbpy/alpine.png"/></a><p align="center"></p></td>
 </tr>
 </table>
 
@@ -128,7 +132,7 @@ An automatic configuration program for vim
 | [prepare-code][67]                  | 新建文件时，生成预定义代码片段(I'm author:smile:)                              |
 | [vim-buffer][70]                    | vim缓存操作(I'm author:smile:)                                                 |
 | [vimplus-startify][66]              | vimplus开始页面(修改自[mhinz/vim-startify][25])                                |
-| [tagbar][74]                        | 使用[majutsushi/tagbar][13]的v2.3版本，[taglist][14]的替代品，显示类/方法/变量 |
+| [tagbar][13]                        | 使用[preservim/tagbar][13]的最新版本，[taglist][14]的替代品，显示类/方法/变量 |
 | [vim-plug][4]                       | 比[Vundle][54]下载更快的插件管理软件                                           |
 | [YouCompleteMe][5]                  | 史上最强大的基于语义的自动补全插件，支持C/C++、C#、Python、PHP等语言           |
 | [NerdTree][6]                       | 代码资源管理器                                                                 |
@@ -324,6 +328,9 @@ An automatic configuration program for vim
 <a href="https://github.com/BD7IWD" target="_blank" title="BD7IWD">
 <img src="https://github.com/BD7IWD.png?size=64" width="64" height="64" alt="BD7IWD">
 </a>
+<a href="https://github.com/Ro0tk1t" target="_blank" title="Ro0tk1t">
+<img src="https://github.com/Ro0tk1t.png?size=64" width="64" height="64" alt="Ro0tk1t">
+</a>
 
 
 ## 支持开源:heart:
@@ -361,12 +368,12 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [3]: https://brew.sh/
   [4]: https://github.com/junegunn/vim-plug
   [5]: https://github.com/Valloric/YouCompleteMe
-  [6]: https://github.com/scrooloose/nerdtree
+  [6]: https://github.com/preservim/nerdtree
   [8]: https://github.com/vim-airline/vim-airline
   [9]: https://github.com/powerline/powerline
   [10]: https://github.com/jiangmiao/auto-pairs
   [12]: https://github.com/ctrlpvim/ctrlp.vim
-  [13]: https://github.com/majutsushi/tagbar
+  [13]: https://github.com/preservim/tagbar
   [14]: https://github.com/vim-scripts/taglist.vim
   [15]: https://github.com/ryanoasis/vim-devicons
   [16]: https://github.com/tpope/vim-surround
@@ -398,7 +405,6 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [68]: https://github.com/rhysd/clever-f.vim
   [70]: https://github.com/chxuan/vim-buffer
   [72]: https://github.com/chxuan/vim-edit
-  [74]: https://github.com/chxuan/tagbar
   [75]: https://github.com/chxuan/vimplus/blob/master/LICENSE
   [76]: https://blog.csdn.net/wang73ying/article/details/82491993
   [77]: https://blog.csdn.net/liuyangbo121/article/details/82971736
