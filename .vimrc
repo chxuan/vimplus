@@ -109,6 +109,19 @@ if has("gui_running")
     set gcr=a:block-blinkon0
 endif
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 修改终端不支持 alt 键的问题
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+
+set timeout ttimeoutlen=50
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 卸载默认插件UnPlug
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -360,6 +373,7 @@ nmap <F4> :cn<cr>
 " let g:AutoPairsShortcutToggle = '<m-p>' 
 " let g:AutoPairsShortcutFastWrap= '<c-0>' 
 imap <C-d>d <M-e>
+imap <C-S-Right>  <M-e>
 
 " echodoc.vim
 let g:echodoc_enable_at_startup = 1
@@ -379,12 +393,23 @@ nnoremap <leader>g :GV<cr>
 nnoremap <leader>G :GV!<cr>
 nnoremap <leader>gg :GV?<cr>
 "Gutentags
+" let $GTAGSLABEL = 'native-pygments'
+" let $GTAGSCONF = '/usr/local/share/gtags/gtags.conf'
 "set tags=./tags,tags;
-"let g:gutentags_project_root = ['.svn', '.git', '.hg']
-"
+" let g:gutentags_project_root = ['.svn', '.git', '.hg','.project','.root']
+" let g:gutentags_ctags_tagfile = '.tags'
+" 同时开启 ctags 和 gtags 支持：
+" let g:gutentags_modules = []
+" if executable('ctags')
+" 	let g:gutentags_modules += ['ctags']
+" endif
+" if executable('gtags-cscope') && executable('gtags')
+"     let g:gutentags_modules += ['gtags_cscope']
+" endif
+
 let s:vim_tags = expand('~/.cache/tags')
 let g:gutentags_cache_dir = s:vim_tags
-"
+" 配置 ctags 的参数，老的 Exuberant-ctags 不能有 --extra=+q，注意
 "let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extras=+q']
 "let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
 "let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
