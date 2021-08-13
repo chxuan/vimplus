@@ -138,6 +138,9 @@ command! -nargs=1 -bar UnPlug call s:deregister(<args>)
 call plug#begin('~/.vim/plugged')
 
 Plug 'ludovicchabant/vim-gutentags' 
+Plug 'skywind3000/gutentags_plus'
+Plug 'skywind3000/vim-preview'
+Plug 'skywind3000/vim-quickui'
 Plug 'chxuan/cpp-mode'
 Plug 'chxuan/vim-edit'
 Plug 'chxuan/change-colorscheme'
@@ -220,6 +223,7 @@ nnoremap <leader><leader>p "+p
 
 " 打开文件自动定位到最后编辑的位置
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
+autocmd FileType c,cpp,cs,java          setlocal commentstring=//\ %s
 
 " 主题设置
 set background=dark
@@ -497,11 +501,13 @@ nnoremap <leader>g :GV<cr>
 nnoremap <leader>G :GV!<cr>
 nnoremap <leader>gg :GV?<cr>
 "Gutentags
-" let $GTAGSLABEL = 'native-pygments'
-" let $GTAGSCONF = '/usr/local/share/gtags/gtags.conf'
+"let $GTAGSLABEL = 'native-pygments'
+"let $GTAGSCONF = '/usr/local/share/gtags/gtags.conf'
 "set tags=./tags,tags;
-" let g:gutentags_project_root = ['.svn', '.git', '.hg','.project','.root']
-" let g:gutentags_ctags_tagfile = '.tags'
+" gutentags 搜索工程目录的标志，当前文件路径向上递归直到碰到这些文件/目录名
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
+" 所生成的数据文件的名称
+let g:gutentags_ctags_tagfile = '.tags'
 " 同时开启 ctags 和 gtags 支持：
 " let g:gutentags_modules = []
 " if executable('ctags')
@@ -510,20 +516,51 @@ nnoremap <leader>gg :GV?<cr>
 " if executable('gtags-cscope') && executable('gtags')
 "     let g:gutentags_modules += ['gtags_cscope']
 " endif
+let g:gutentags_modules = ['ctags', 'gtags_cscope']
 
 let s:vim_tags = expand('~/.cache/tags')
 let g:gutentags_cache_dir = s:vim_tags
 " 配置 ctags 的参数，老的 Exuberant-ctags 不能有 --extra=+q，注意
-"let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extras=+q']
-"let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
-"let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
-"let g:gutentags_ctags_extra_args += ['--output-format=e-ctags']
-"
+" let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+" let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+" let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+" 如果使用 universal ctags 需要增加下面一行，老的 Exuberant-ctags 不能加下一行
+" let g:gutentags_ctags_extra_args += ['--output-format=e-ctags']
+" 禁用 gutentags 自动加载 gtags 数据库的行为
+let g:gutentags_auto_add_gtags_cscope = 0
+let g:gutentags_plus_switch = 1
+
 if !isdirectory(s:vim_tags)
    silent! call mkdir(s:vim_tags, 'p')
 endif
 
 nnoremap <leader>o <c-]>
+
+" -------- for vim.preview --------------------
+autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
+autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
+" 0 or s: Find this symbol
+" 1 or g: Find this definition
+" 2 or d: Find functions called by this function
+" 3 or c: Find functions calling this function
+" 4 or t: Find this text string
+" 6 or e: Find this egrep pattern
+" 7 or f: Find this file
+" 8 or i: Find files #including this file
+" 9 or a: Find places where this symbol is assigned a value
+" redefine by self
+" noremap <silent> <leader>gs :GscopeFind s <C-R><C-W><cr>
+" noremap <silent> <leader>gg :GscopeFind g <C-R><C-W><cr>
+" noremap <silent> <leader>gc :GscopeFind c <C-R><C-W><cr>
+" noremap <silent> <leader>gt :GscopeFind t <C-R><C-W><cr>
+" noremap <silent> <leader>ge :GscopeFind e <C-R><C-W><cr>
+" noremap <silent> <leader>gf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>
+" noremap <silent> <leader>gi :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>
+" noremap <silent> <leader>gd :GscopeFind d <C-R><C-W><cr>
+" noremap <silent> <leader>ga :GscopeFind a <C-R><C-W><cr>
+" noremap <silent> <leader>gz :GscopeFind z <C-R><C-W><cr>
+
+
 "加载自定义配置
 if filereadable(expand($HOME . '/.vimrc.custom.config'))
     source $HOME/.vimrc.custom.config
