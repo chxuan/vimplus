@@ -39,6 +39,7 @@ set cursorline           " 高亮显示当前行
 set whichwrap+=<,>,h,l   " 设置光标键跨行
 set ttimeoutlen=0        " 设置<ESC>键响应时间
 set virtualedit=block,onemore   " 允许光标出现在最后一个字符的后面
+set listchars=tab:>-,trail:-    " TAB会被显示成 ">—" 而行尾多余的空白字符显示成 "-"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 代码缩进和排版
@@ -178,6 +179,7 @@ Plug 'Shougo/echodoc.vim'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'rhysd/clever-f.vim'
 Plug 'vim-scripts/indentpython.vim'
+Plug 'wojciechkepka/vim-github-dark'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " 加载自定义插件
@@ -228,7 +230,8 @@ autocmd FileType c,cpp,cs,java          setlocal commentstring=//\ %s
 " 主题设置
 set background=dark
 let g:onedark_termcolors=256
-colorscheme onedark
+colorscheme ghdark
+"let g:gh_color = "soft"
 
 " airline
 let g:airline_theme="dark"
@@ -529,6 +532,9 @@ let g:gutentags_cache_dir = s:vim_tags
 " 禁用 gutentags 自动加载 gtags 数据库的行为
 let g:gutentags_auto_add_gtags_cscope = 0
 let g:gutentags_plus_switch = 1
+" for Logic develop
+set tags+=~/.cache/tags/home-lihl-code-gerrit-logic-BUSINESSLOGIC-.tags:~/.cache/tags/home-lihl-code-gerrit-logic-D-BORDERCOLLIE-Core-build-.tags:~/.cache/tags/home-lihl-code-gerrit-logic-LogicProxy-.tags
+
 
 if !isdirectory(s:vim_tags)
    silent! call mkdir(s:vim_tags, 'p')
