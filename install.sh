@@ -36,7 +36,7 @@ function get_linux_distro()
     elif grep -Eq "alpine" /etc/*-release; then
         echo "Alpine"
     else
-        echo "Unknow"
+        echo "Unknown"
     fi
 }
 
