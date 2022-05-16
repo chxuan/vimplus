@@ -268,6 +268,12 @@ An automatic configuration program for vim
 - **`安装vimplus在“[ 95%] Building CXX object ycm/CMakeFiles/ycm_core.dir/ycm_core.cpp.o”等进度时出现编译报错`**
 
     编译ycm需要消耗较大内存，建议内存大于1G，实在不行也可以开启linux swap分区。
+    
+- **`启动 vim 时出现“The ycmd server SHUT DOWN xxxx` 错误怎么办？**
+    
+    进入 `~/.vim/plugged/YouCompleteMe` 目录，执行 `python2/python3 install.py` 尝试对 ycm 进行重新编译安装。
+    
+    若编译出现 `Found Python headers folder: /usr/include/python3.8` 错误， 尝试执行 `sudo apt-get install python3-dev` 后重新安装。
 
 - **`以上没有我遇到的问题怎么办？`**
 
