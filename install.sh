@@ -189,12 +189,12 @@ function compile_vim_on_ubuntu()
         libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
 
     rm -rf ~/vim82
-    git clone https://gitee.com/chxuan/vim82.git ~/vim82
+    git clone https://github.com/vim/vim.git ~/vim82
     cd ~/vim82
     ./configure --with-features=huge \
         --enable-multibyte \
         --enable-rubyinterp \
-        --enable-pythoninterp \
+        --enable-python3interp \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
@@ -211,12 +211,12 @@ function compile_vim_on_debian()
     sudo apt-get install -y libncurses5-dev libncurses5 libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
 
     rm -rf ~/vim82
-    git clone https://gitee.com/chxuan/vim82.git ~/vim82
+    git clone https://github.com/vim/vim.git ~/vim82
     cd ~/vim82
     ./configure --with-features=huge \
         --enable-multibyte \
         --enable-rubyinterp \
-        --enable-pythoninterp \
+        --enable-python3interp \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
@@ -233,12 +233,12 @@ function compile_vim_on_parrot()
     sudo apt-get install -y libncurses5-dev libncurses5 libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 vim
 
     rm -rf ~/vim82
-    git clone https://gitee.com/chxuan/vim82.git ~/vim82
+    git clone https://github.com/vim/vim.git ~/vim82
     cd ~/vim82
     ./configure --with-features=huge \
         --enable-multibyte \
         --enable-rubyinterp \
-        --enable-pythoninterp \
+        --enable-python3interp \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
@@ -260,13 +260,13 @@ function compile_vim_on_centos()
         perl-ExtUtils-Embed libX11-devel ncurses-devel
     
     rm -rf ~/vim82
-    git clone https://gitee.com/chxuan/vim82.git ~/vim82
+    git clone https://github.com/vim/vim.git ~/vim82
     cd ~/vim82
     ./configure --with-features=huge \
         --enable-multibyte \
         --with-tlib=tinfo \
         --enable-rubyinterp=yes \
-        --enable-pythoninterp=yes \
+        --enable-python3interp=yes \
         --enable-perlinterp=yes \
         --enable-luainterp=yes \
         --enable-gui=gtk2 \
@@ -282,7 +282,7 @@ function install_prepare_software_on_mac()
 {
     xcode-select --install
 
-    brew install vim gcc cmake ctags-exuberant ack
+    brew install vim gcc cmake universal-ctags ack
 
     macos1014=$(is_macos1014)
     if [ $macos1014 == 1 ]; then
@@ -330,7 +330,7 @@ function install_prepare_software_on_ubuntu()
     sudo apt-get install -y build-essential python python-dev python3-dev fontconfig libfile-next-perl ack-grep git
     sudo apt-get install -y universal-ctags || sudo apt-get install -y exuberant-ctags
     
-    if [ $version -ge 18 ];then
+    if [ $version -ge 20 ];then
         sudo apt-get install -y vim
     else
         compile_vim_on_ubuntu
@@ -359,7 +359,7 @@ function install_prepare_software_on_debian()
 function install_prepare_software_on_parrot()
 {
     sudo apt-get update
-    sudo apt-get install -y cmake exuberant-ctags build-essential python python-dev python3-dev fontconfig libfile-next-perl ack git
+    sudo apt-get install -y cmake universal-ctags build-essential python python-dev python3-dev fontconfig libfile-next-perl ack git
     compile_vim_on_parrot
 }
 
@@ -487,45 +487,22 @@ function install_vim_plugin()
 # 安装ycm插件
 function install_ycm()
 {
-    git clone https://gitee.com/chxuan/YouCompleteMe-clang.git ~/.vim/plugged/YouCompleteMe
+    git clone --recurse-submodules https://github.com/ycm-core/YouCompleteMe.git ~/.vim/plugged/YouCompleteMe
 
     cd ~/.vim/plugged/YouCompleteMe
     distro=`get_linux_distro`
-    read -p "Please choose to compile ycm with python2 or python3, if there is a problem with the current selection, please choose another one. [2/3] " version
-    if [[ $version == "2" ]]; then
-        echo "Compile ycm with python2."
-        # alpine 忽略 --clang-completer 并将 let g:ycm_clangd_binary_path 注入 .vimrc
-        {
-            if [ ${distro} == "Alpine" ]; then
-                echo "##########################################"
-                echo "Apline Build, need without GLIBC."
-                echo "##########################################"
-                sed -i "273ilet g:ycm_clangd_binary_path='/usr/bin/clang'" ~/.vimrc
-                python2.7 ./install.py
-                return
-            fi
-        } || {
-            python2.7 ./install.py --clang-completer
-        } || {
-            echo "##########################################"
-            echo "Build error, trying rebuild without Clang."
-            echo "##########################################"
-            python2.7 ./install.py
-        }
+    echo "Compile ycm with python3."
+    # alpine 忽略 --clang-completer 并将 let g:ycm_clangd_binary_path 注入 .vimrc
+    if [ ${distro} == "Alpine" ]; then
+        echo "##########################################"
+        echo "Alpine Build, need without GLIBC."
+        echo "##########################################"
+        sed -i "273ilet g:ycm_clangd_binary_path='/usr/bin/clang'" ~/.vimrc
+        python3 ./install.py
+        return
     else
-        echo "Compile ycm with python3."
         {
-            # alpine 跳过该步骤
-            if [ ${distro} == "Alpine" ]; then
-                echo "##########################################"
-                echo "Apline Build, need without GLIBC."
-                echo "##########################################"
-                sed -i "273ilet g:ycm_clangd_binary_path='/usr/bin/clang'" ~/.vimrc
-                python3 ./install.py
-                return
-            fi
-        } || {
-            python3 ./install.py --clang-completer
+            python3 ./install.py --clangd-completer
         } || {
             echo "##########################################"
             echo "Build error, trying rebuild without Clang."
@@ -538,18 +515,12 @@ function install_ycm()
 # 在android上安装ycm插件
 function install_ycm_on_android()
 {
-    git clone https://gitee.com/chxuan/YouCompleteMe-clang.git ~/.vim/plugged/YouCompleteMe
+    git clone --recurse-submodules https://github.com/ycm-core/YouCompleteMe.git ~/.vim/plugged/YouCompleteMe
 
     cd ~/.vim/plugged/YouCompleteMe
 
-    read -p "Please choose to compile ycm with python2 or python3, if there is a problem with the current selection, please choose another one. [2/3] " version
-    if [[ $version == "2" ]]; then
-        echo "Compile ycm with python2."
-        python2.7 ./install.py --clang-completer --system-libclang
-    else
-        echo "Compile ycm with python3."
-        python3 ./install.py --clang-completer --system-libclang
-    fi
+    echo "Compile ycm with python3."
+    python3 ./install.py --clangd-completer --system-libclang
 }
 
 # 打印logo
