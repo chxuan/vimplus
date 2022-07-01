@@ -24,7 +24,7 @@ An automatic configuration program for vim
 
 #### 安装vimplus
 
-    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
+    git clone https://github.com/JokerX08/vimplus.git ~/.vimplus
     cd ~/.vimplus
     ./install.sh
     
@@ -156,6 +156,7 @@ An automatic configuration program for vim
 | [echodoc][57]                       | 补全函数时在命令栏显示函数签名                                                 |
 | [vim-smooth-scroll][60]             | 让翻页更顺畅                                                                   |
 | [clever-f.vim][68]                  | 强化f和F键                                                                     |
+| [vim-gutentags][92]                 | 强大的代码跳跃插件，需要安装ctags,gtags                                           |
 
 
 ## 快捷键
@@ -421,4 +422,5 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [89]: https://github.com/luguifang
   [90]: https://github.com/liyewen521
   [91]: https://github.com/xht19980305
+  [92]: https://github.com/ludovicchabant/vim-gutentags
 

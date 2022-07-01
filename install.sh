@@ -188,9 +188,9 @@ function compile_vim_on_ubuntu()
         libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
         libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
 
-    rm -rf ~/vim82
-    git clone https://gitee.com/chxuan/vim82.git ~/vim82
-    cd ~/vim82
+    rm -rf ~/vim90
+    git clone https://github.com/vim/vim.git ~/vim90
+    cd ~/vim90
     ./configure --with-features=huge \
         --enable-multibyte \
         --enable-rubyinterp \
@@ -210,9 +210,9 @@ function compile_vim_on_debian()
 {
     sudo apt-get install -y libncurses5-dev libncurses5 libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
 
-    rm -rf ~/vim82
-    git clone https://gitee.com/chxuan/vim82.git ~/vim82
-    cd ~/vim82
+    rm -rf ~/vim90
+    git clone https://github.com/vim/vim.git ~/vim90
+    cd ~/vim90
     ./configure --with-features=huge \
         --enable-multibyte \
         --enable-rubyinterp \
@@ -232,9 +232,9 @@ function compile_vim_on_parrot()
 {
     sudo apt-get install -y libncurses5-dev libncurses5 libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 vim
 
-    rm -rf ~/vim82
-    git clone https://gitee.com/chxuan/vim82.git ~/vim82
-    cd ~/vim82
+    rm -rf ~/vim90
+    git clone https://github.com/vim/vim.git ~/vim90
+    cd ~/vim90
     ./configure --with-features=huge \
         --enable-multibyte \
         --enable-rubyinterp \
@@ -259,9 +259,9 @@ function compile_vim_on_centos()
         perl-ExtUtils-XSpp perl-ExtUtils-CBuilder \
         perl-ExtUtils-Embed libX11-devel ncurses-devel
     
-    rm -rf ~/vim82
-    git clone https://gitee.com/chxuan/vim82.git ~/vim82
-    cd ~/vim82
+    rm -rf ~/vim90
+    git clone https://github.com/vim/vim.git ~/vim90
+    cd ~/vim90
     ./configure --with-features=huge \
         --enable-multibyte \
         --with-tlib=tinfo \

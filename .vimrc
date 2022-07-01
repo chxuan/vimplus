@@ -39,6 +39,7 @@ set cursorline           " 高亮显示当前行
 set whichwrap+=<,>,h,l   " 设置光标键跨行
 set ttimeoutlen=0        " 设置<ESC>键响应时间
 set virtualedit=block,onemore   " 允许光标出现在最后一个字符的后面
+set listchars=tab:>-,trail:-    " TAB会被显示成 ">—" 而行尾多余的空白字符显示成 "-"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 代码缩进和排版
@@ -95,9 +96,10 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 if has("gui_running")
     let system = system('uname -s')
     if system == "Darwin\n"
-        set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ Complete:h18 " 设置字体
+        set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ Complete:h12
     else
-        set guifont=DroidSansMono\ Nerd\ Font\ Regular\ 18      " 设置字体
+        "set guifont=DroidSansMono\ Nerd\ Font\ Regular\ 12
+        set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 12
     endif
     set guioptions-=m           " 隐藏菜单栏
     set guioptions-=T           " 隐藏工具栏
@@ -105,8 +107,22 @@ if has("gui_running")
     set guioptions-=r           " 隐藏右侧滚动条
     set guioptions-=b           " 隐藏底部滚动条
     set showtabline=0           " 隐藏Tab栏
-    set guicursor=n-v-c:ver5    " 设置光标为竖线
+"    set guicursor=n-v-c:ver5    " 设置光标为竖线
+    set gcr=a:block-blinkon0
 endif
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 修改终端不支持 alt 键的问题
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+
+set timeout ttimeoutlen=50
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 卸载默认插件UnPlug
@@ -123,6 +139,10 @@ command! -nargs=1 -bar UnPlug call s:deregister(<args>)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
+Plug 'ludovicchabant/vim-gutentags' 
+Plug 'skywind3000/gutentags_plus'
+Plug 'skywind3000/vim-preview'
+Plug 'skywind3000/vim-quickui'
 Plug 'chxuan/cpp-mode'
 Plug 'chxuan/vim-edit'
 Plug 'chxuan/change-colorscheme'
@@ -160,6 +180,8 @@ Plug 'Shougo/echodoc.vim'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'rhysd/clever-f.vim'
 Plug 'vim-scripts/indentpython.vim'
+Plug 'wojciechkepka/vim-github-dark'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " 加载自定义插件
 if filereadable(expand($HOME . '/.vimrc.custom.plugins'))
@@ -183,7 +205,7 @@ nnoremap <leader>h :view +let\ &l:modifiable=0 ~/.vimplus/help.md<cr>
 nnoremap <leader>H :execute ":help " . expand("<cword>")<cr>
 
 " 重新加载vimrc文件
-nnoremap <leader>s :source $MYVIMRC<cr>
+nnoremap <leader>u :source $MYVIMRC<cr>
 
 " 安装、更新、删除插件
 nnoremap <leader><leader>i :PlugInstall<cr>
@@ -204,16 +226,27 @@ nnoremap <leader><leader>p "+p
 
 " 打开文件自动定位到最后编辑的位置
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
+autocmd FileType c,cpp,cs,java          setlocal commentstring=//\ %s
 
 " 主题设置
 set background=dark
 let g:onedark_termcolors=256
-colorscheme onedark
+colorscheme ghdark
+"let g:gh_color = "soft"
 
 " airline
-let g:airline_theme="onedark"
+let g:airline_theme="dark"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#fugitiveline#enabled = 1
+let g:airline_detect_modified=1
+let g:airline_detect_paste=1
+let g:airline_detect_crypt=1
+let g:airline_detect_spell=1
+let g:airline_detect_spelllang=1
+let g:airline_detect_iminsert=0
+let g:airline_mode_map = {} " see source for the defaults
+
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
@@ -222,6 +255,103 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
+" Markdown
+let g:mkdp_brower = 'chromium'
+" normal/insert
+nmap <C-s> <Plug>MarkdownPreview
+nmap <M-s> <Plug>MarkdownPreviewStop
+nmap <C-p> <Plug>MarkdownPreviewToggle
+
+" set to 1, nvim will open the preview window after entering the markdown buffer
+" default: 0
+let g:mkdp_auto_start = 0
+
+" set to 1, the nvim will auto close current preview window when change
+" from markdown buffer to another buffer
+" default: 1
+let g:mkdp_auto_close = 1
+
+" set to 1, the vim will refresh markdown when save the buffer or
+" leave from insert mode, default 0 is auto refresh markdown as you edit or
+" move the cursor
+" default: 0
+let g:mkdp_refresh_slow = 0
+
+" set to 1, the MarkdownPreview command can be use for all files,
+" by default it can be use in markdown file
+" default: 0
+let g:mkdp_command_for_global = 0
+
+" set to 1, preview server available to others in your network
+" by default, the server listens on localhost (127.0.0.1)
+" default: 0
+let g:mkdp_open_to_the_world = 0
+
+" use custom IP to open preview page
+" useful when you work in remote vim and preview on local browser
+" more detail see: https://github.com/iamcco/markdown-preview.nvim/pull/9
+" default empty
+let g:mkdp_open_ip = ''
+
+" specify browser to open preview page
+" default: ''
+let g:mkdp_browser = ''
+
+" set to 1, echo preview page url in command line when open preview page
+" default is 0
+let g:mkdp_echo_preview_url = 0
+
+" a custom vim function name to open preview page
+" this function will receive url as param
+" default is empty
+let g:mkdp_browserfunc = ''
+
+" options for markdown render
+" mkit: markdown-it options for render
+" katex: katex options for math
+" uml: markdown-it-plantuml options
+" maid: mermaid options
+" disable_sync_scroll: if disable sync scroll, default 0
+" sync_scroll_type: 'middle', 'top' or 'relative', default value is 'middle'
+"   middle: mean the cursor position alway show at the middle of the preview page
+"   top: mean the vim top viewport alway show at the top of the preview page
+"   relative: mean the cursor position alway show at the relative positon of the preview page
+" hide_yaml_meta: if hide yaml metadata, default is 1
+" sequence_diagrams: js-sequence-diagrams options
+" content_editable: if enable content editable for preview page, default: v:false
+" disable_filename: if disable filename header for preview page, default: 0
+let g:mkdp_preview_options = {
+    \ 'mkit': {},
+    \ 'katex': {},
+    \ 'uml': {},
+    \ 'maid': {},
+    \ 'disable_sync_scroll': 0,
+    \ 'sync_scroll_type': 'middle',
+    \ 'hide_yaml_meta': 1,
+    \ 'sequence_diagrams': {},
+    \ 'flowchart_diagrams': {},
+    \ 'content_editable': v:false,
+    \ 'disable_filename': 0
+    \ }
+
+" use a custom markdown style must be absolute path
+" like '/Users/username/markdown.css' or expand('~/markdown.css')
+let g:mkdp_markdown_css = ''
+
+" use a custom highlight style must absolute path
+" like '/Users/username/highlight.css' or expand('~/highlight.css')
+let g:mkdp_highlight_css = ''
+
+" use a custom port to start server or random for empty
+let g:mkdp_port = ''
+
+" preview page title
+" ${name} will be replace with the file name
+let g:mkdp_page_title = '「${name}」'
+
+" recognized filetypes
+" these filetypes will have MarkdownPreview... commands
+let g:mkdp_filetypes = ['markdown']
 " cpp-mode
 nnoremap <leader>y :CopyCode<cr>
 nnoremap <leader>p :PasteCode<cr>
@@ -277,6 +407,12 @@ let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_complete_in_comments = 1 
 let g:ycm_complete_in_strings = 1 
 let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_server_log_level = 'info'
+let g:ycm_min_num_identifier_candidate_chars = 2
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_key_invoke_completion = '<c-z>'
 let g:ycm_semantic_triggers =  {
             \   'c' : ['->', '.','re![_a-zA-z0-9]'],
             \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
@@ -290,12 +426,17 @@ let g:ycm_semantic_triggers =  {
             \   'lua' : ['.', ':'],
             \   'erlang' : [':'],
             \ }
-nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
+
+set completeopt=menu,menuone
+noremap <c-z> <NOP>
+
+" nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
 " 已经使用cpp-mode插件提供的转到函数实现的功能
-" nnoremap <leader>i :YcmCompleter GoToDefinition<cr> 
-nnoremap <leader>o :YcmCompleter GoToInclude<cr>
+nnoremap <leader>i :YcmCompleter GoToDefinition<cr> 
+"nnoremap <leader>o :YcmCompleter GoToInclude<cr>
 nnoremap <leader>ff :YcmCompleter FixIt<cr>
 nmap <F5> :YcmDiags<cr>
+nmap <F6> :!./build.sh<cr>
 
 " tagbar
 let g:tagbar_width = 30
@@ -310,6 +451,13 @@ map g/ <Plug>(incsearch-stay)
 let g:EasyMotion_smartcase = 1
 map <leader>w <Plug>(easymotion-bd-w)
 nmap <leader>w <Plug>(easymotion-overwin-w)
+nmap <leader>s <Plug>(easymotion-overwin-f2)
+nmap s <Plug>(easymotion-overwin-f)
+
+" JK motions: Line motions
+" map <Leader>j <Plug>(easymotion-j)
+" map <Leader>k <Plug>(easymotion-k)
+" map <Leader>l <Plug>(easymotion-lineforward)
 
 " nerdtree-git-plugin
 let g:NERDTreeGitStatusIndicatorMapCustom = {
@@ -327,6 +475,8 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 
 " LeaderF
 nnoremap <leader>f :LeaderfFile .<cr>
+nnoremap <leader>m :Leaderf function<cr>
+nnoremap <leader>M :Leaderf searchHistory<cr>
 let g:Lf_WildIgnore = {
             \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh'],
             \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
@@ -334,7 +484,18 @@ let g:Lf_WildIgnore = {
 let g:Lf_UseCache = 0
 
 " ack
-nnoremap <leader>F :Ack!<space>
+nnoremap <leader>F :execute ":Ack! " . expand("<cword>")<CR>
+" nnoremap <leader>F :Ack!
+
+" quickfix operate
+nmap <F3> :cp<cr>
+nmap <F4> :cn<cr>
+
+" AutoPair
+" let g:AutoPairsShortcutToggle = '<m-p>' 
+" let g:AutoPairsShortcutFastWrap= '<c-0>' 
+imap <C-d>d <M-e>
+imap <C-S-Right>  <M-e>
 
 " echodoc.vim
 let g:echodoc_enable_at_startup = 1
@@ -353,8 +514,70 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 nnoremap <leader>g :GV<cr>
 nnoremap <leader>G :GV!<cr>
 nnoremap <leader>gg :GV?<cr>
+"Gutentags
+"let $GTAGSLABEL = 'native-pygments'
+"let $GTAGSCONF = '/usr/local/share/gtags/gtags.conf'
+"set tags=./tags,tags;
+" gutentags 搜索工程目录的标志，当前文件路径向上递归直到碰到这些文件/目录名
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
+" 所生成的数据文件的名称
+let g:gutentags_ctags_tagfile = '.tags'
+" 同时开启 ctags 和 gtags 支持：
+let g:gutentags_modules = []
+if executable('ctags')
+	let g:gutentags_modules += ['ctags']
+endif
+if executable('gtags-cscope') && executable('gtags')
+    let g:gutentags_modules += ['gtags_cscope']
+endif
+" let g:gutentags_modules = ['ctags', 'gtags_cscope']
 
-" 加载自定义配置
+let s:vim_tags = expand('~/.cache/tags')
+let g:gutentags_cache_dir = s:vim_tags
+" 配置 ctags 的参数，老的 Exuberant-ctags 不能有 --extra=+q，注意
+let g:gutentags_ctags_extra_args = ['--fields=+niazS']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+" 如果使用 universal ctags 需要增加下面一行，老的 Exuberant-ctags 不能加下一行
+" let g:gutentags_ctags_extra_args += ['--output-format=e-ctags']
+" 禁用 gutentags 自动加载 gtags 数据库的行为
+let g:gutentags_auto_add_gtags_cscope = 0
+let g:gutentags_plus_switch = 1
+" for Logic develop
+set tags+=~/.cache/tags/home-lihl-code-edna-repo-edna_build_linux_debug_pc-.tags
+
+if !isdirectory(s:vim_tags)
+   silent! call mkdir(s:vim_tags, 'p')
+endif
+
+nnoremap <leader>o <c-]>
+
+" -------- for vim.preview --------------------
+autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
+autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
+" 0 or s: Find this symbol
+" 1 or g: Find this definition
+" 2 or d: Find functions called by this function
+" 3 or c: Find functions calling this function
+" 4 or t: Find this text string
+" 6 or e: Find this egrep pattern
+" 7 or f: Find this file
+" 8 or i: Find files #including this file
+" 9 or a: Find places where this symbol is assigned a value
+" redefine by self
+" noremap <silent> <leader>gs :GscopeFind s <C-R><C-W><cr>
+" noremap <silent> <leader>gg :GscopeFind g <C-R><C-W><cr>
+" noremap <silent> <leader>gc :GscopeFind c <C-R><C-W><cr>
+" noremap <silent> <leader>gt :GscopeFind t <C-R><C-W><cr>
+" noremap <silent> <leader>ge :GscopeFind e <C-R><C-W><cr>
+" noremap <silent> <leader>gf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>
+" noremap <silent> <leader>gi :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>
+" noremap <silent> <leader>gd :GscopeFind d <C-R><C-W><cr>
+" noremap <silent> <leader>ga :GscopeFind a <C-R><C-W><cr>
+" noremap <silent> <leader>gz :GscopeFind z <C-R><C-W><cr>
+
+
+"加载自定义配置
 if filereadable(expand($HOME . '/.vimrc.custom.config'))
     source $HOME/.vimrc.custom.config
 endif

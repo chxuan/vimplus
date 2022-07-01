@@ -8,8 +8,9 @@
 " 1.执行:w保存修改
 " 2.执行,s重新加载vim配置
 " 3.执行,,i进行插件安装
-" Plug 'iamcco/mathjax-support-for-mkdp'
-" (需要自己安装nodejs和yarn) Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+"Plug 'iamcco/mathjax-support-for-mkdp'
+"Plug 'iamcco/markdown-preview.vim'
+" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " Plug 'Yggdroot/indentLine'
 " Plug 'gorodinskiy/vim-coloresque'
 " Plug 'vim-scripts/DoxygenToolkit.vim'
