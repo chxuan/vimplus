@@ -88,6 +88,8 @@ flags = [
 '/usr/include/x86_64-linux-gnu',
 '-isystem',
 '/usr/local/include',
+'-isystem',
+'/home/lihl/code/edna-repo/edna_build_linux_debug_pc',
 
 # Termux
 '-isystem',
