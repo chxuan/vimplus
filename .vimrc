@@ -160,6 +160,7 @@ Plug 'Shougo/echodoc.vim'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'rhysd/clever-f.vim'
 Plug 'vim-scripts/indentpython.vim'
+Plug 'airblade/vim-gitgutter'
 
 " 加载自定义插件
 if filereadable(expand($HOME . '/.vimrc.custom.plugins'))
@@ -217,10 +218,12 @@ let g:airline#extensions#tabline#enabled = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = '  '
+let g:airline_symbols.dirty=' ⚡'
 
 " cpp-mode
 nnoremap <leader>y :CopyCode<cr>
