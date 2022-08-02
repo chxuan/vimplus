@@ -123,30 +123,40 @@ command! -nargs=1 -bar UnPlug call s:deregister(<args>)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
+" vim缓存操作
+Plug 'chxuan/vim-buffer'
+" vim首页
 Plug 'chxuan/vimplus-startify'
+" 代码目录
 Plug 'preservim/tagbar'
-Plug 'Valloric/YouCompleteMe'
+" 代码自动补全、跳转
+Plug 'ycm-core/YouCompleteMe'
+" 文件模糊查找
 Plug 'Yggdroot/LeaderF'
+" 代码文本查找
 Plug 'mileszs/ack.vim'
+" 光标快速移动
 Plug 'easymotion/vim-easymotion'
-Plug 'haya14busa/incsearch.vim'
+" 自动补全括号
 Plug 'jiangmiao/auto-pairs'
+" 代码资源管理器
 Plug 'preservim/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'godlygeek/tabular'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
+" 快速注释代码
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-endwise'
-Plug 'octol/vim-cpp-enhanced-highlight'
+" 状态栏美化
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ryanoasis/vim-devicons'
-Plug 'junegunn/vim-slash'
-Plug 'junegunn/gv.vim'
-Plug 'Shougo/echodoc.vim'
-Plug 'terryma/vim-smooth-scroll'
+" ctags自动更新
+Plug 'ludovicchabant/vim-gutentags'
+" 自动生成头注释
+Plug 'alpertuna/vim-header'
+" 代码格式化工具
+Plug 'vim-autoformat/vim-autoformat'
+" c++语言适配
+Plug 'chxuan/cpp-mode'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 " 加载自定义插件
 if filereadable(expand($HOME . '/.vimrc.custom.plugins'))
@@ -192,6 +202,12 @@ nnoremap <leader><leader>p "+p
 " 打开文件自动定位到最后编辑的位置
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
+" vim-buffer
+nnoremap <silent> <c-p> :PreviousBuffer<cr>
+nnoremap <silent> <c-n> :NextBuffer<cr>
+nnoremap <silent> <leader>d :CloseBuffer<cr>
+nnoremap <silent> <leader>D :BufOnly<cr>
+
 " 主题设置
 set background=dark
 let g:onedark_termcolors=256
@@ -219,44 +235,9 @@ let g:NERDTreeHighlightFoldersFullName = 1
 let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
 
-" YCM
-" 如果不指定python解释器路径，ycm会自己搜索一个合适的(与编译ycm时使用的python版本匹配)
-" let g:ycm_server_python_interpreter = '/usr/bin/python2.7'
-let g:ycm_confirm_extra_conf = 0 
-let g:ycm_error_symbol = '✗'
-let g:ycm_warning_symbol = '✹'
-let g:ycm_seed_identifiers_with_syntax = 1 
-let g:ycm_complete_in_comments = 1 
-let g:ycm_complete_in_strings = 1 
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_semantic_triggers =  {
-            \   'c' : ['->', '.','re![_a-zA-z0-9]'],
-            \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
-            \             're!\[.*\]\s'],
-            \   'ocaml' : ['.', '#'],
-            \   'cpp,objcpp' : ['->', '.', '::','re![_a-zA-Z0-9]'],
-            \   'perl' : ['->'],
-            \   'php' : ['->', '::'],
-            \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-            \   'ruby' : ['.', '::'],
-            \   'lua' : ['.', ':'],
-            \   'erlang' : [':'],
-            \ }
-nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
-" 已经使用cpp-mode插件提供的转到函数实现的功能
-" nnoremap <leader>i :YcmCompleter GoToDefinition<cr> 
-nnoremap <leader>o :YcmCompleter GoToInclude<cr>
-nnoremap <leader>ff :YcmCompleter FixIt<cr>
-nmap <F5> :YcmDiags<cr>
-
 " tagbar
 let g:tagbar_width = 30
 nnoremap <silent> <leader>t :TagbarToggle<cr>
-
-" incsearch.vim
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
 
 " vim-easymotion
 let g:EasyMotion_smartcase = 1
@@ -288,23 +269,80 @@ let g:Lf_UseCache = 0
 " ack
 nnoremap <leader>F :Ack!<space>
 
-" echodoc.vim
-let g:echodoc_enable_at_startup = 1
+" vim-gutentags
+" gutentags搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归 "
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.project']
+" 所生成的数据文件的名称 "
+let g:gutentags_ctags_tagfile = '.tags'
+" 将自动生成的 tags 文件全部放入 ~/.cache/tags 目录中，避免污染工程目录 "
+let s:vim_tags = expand('~/.cache/tags')
+let g:gutentags_cache_dir = s:vim_tags
+" 检测 ~/.cache/tags 不存在就新建
+if !isdirectory(s:vim_tags)
+   silent! call mkdir(s:vim_tags, 'p')
+endif
+" 配置 ctags 的参数
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
-" tabular
-nnoremap <leader>l :Tab /\|<cr>
-nnoremap <leader>= :Tab /=<cr>
+" vim-header
+let g:header_field_author = 'LiaoHengan'
+let g:header_field_author_email = 'liaohengan@meituan.com'
+let g:header_auto_add_header = 0
+let g:header_auto_update_header = 0
+let g:header_field_filename = 1
+let g:header_field_modified_by = 0
+let g:header_field_modified_timestamp = 0
+let g:header_field_timestamp_format = '%Y-%m-%d %H:%M:%S'
+let g:header_field_copyright = 'Copyright (c) 2022 Meituan Inc. All rights reserved.'
+let g:header_alignment = 1
+let g:header_max_size = 20
+map <F4> :AddHeader<CR>
 
-" vim-smooth-scroll
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+" vim-autoformat
+" Normal模式对整个文件格式化
+nmap <F3> :Autoformat<CR>
+" Visual模式对选定的文本格式化
+vmap <F3> :Autoformat<CR>
+" 更改python默认的格式化工具
+let g:formatters_python = ["black"]
+" 更改c++默认的格式化工具
+let g:formatdef_clangformat_google = '"clang-format -style=\"{BasedOnStyle: Google, IndentWidth: 4}\""'
+let g:formatters_cpp = ['clangformat_google']
 
-" gv
-nnoremap <leader>g :GV<cr>
-nnoremap <leader>G :GV!<cr>
-nnoremap <leader>gg :GV?<cr>
+" cpp-mode
+nnoremap <silent> <leader>a :Switch<cr>
+
+" YCM
+" 如果不指定python解释器路径，ycm会自己搜索一个合适的(与编译ycm时使用的python版本匹配)
+let g:ycm_server_python_interpreter = '/usr/bin/python3.6'
+let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0 
+let g:ycm_error_symbol = '✗'
+let g:ycm_warning_symbol = '✹'
+let g:ycm_seed_identifiers_with_syntax = 1 
+let g:ycm_complete_in_comments = 1 
+let g:ycm_complete_in_strings = 1 
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_semantic_triggers =  {
+            \   'c' : ['->', '.','re![_a-zA-z0-9]'],
+            \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+            \             're!\[.*\]\s'],
+            \   'ocaml' : ['.', '#'],
+            \   'cpp,objcpp' : ['->', '.', '::','re![_a-zA-Z0-9]'],
+            \   'perl' : ['->'],
+            \   'php' : ['->', '::'],
+            \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+            \   'ruby' : ['.', '::'],
+            \   'lua' : ['.', ':'],
+            \   'erlang' : [':'],
+            \ }
+nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
+nnoremap <leader>i :YcmCompleter GoToDefinition<cr> 
+nnoremap <leader>o :YcmCompleter GoToInclude<cr>
+nnoremap <leader>ff :YcmCompleter FixIt<cr>
+nmap <F5> :YcmDiags<cr>
 
 " 加载自定义配置
 if filereadable(expand($HOME . '/.vimrc.custom.config'))
